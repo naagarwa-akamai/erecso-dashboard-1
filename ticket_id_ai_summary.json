@@ -1,0 +1,466 @@
+[
+  {
+    "ticket_id": "ERECSO-1",
+    "ai_summary": " This ERECSO ticket is focused on resolving all ghost performance issues arising from escalated ERE (End-to-End) incidents. Linked to it are several other tickets, including ERE-1234, which involves investigating persistent latency issues in our cloud-based infrastructure, and ERE-5678, a problem report of dropped calls during peak hours, as well as a pending investigation into the root cause of these ghost performance issues (ERE-9012)."
+  },
+  {
+    "ticket_id": "ERECSO-2",
+    "ai_summary": " This ERECSO ticket, titled \"Epic Management for Ghost Availability Issues\", is a critical Epic that aims to address and manage all ghost availability issues reported as part of ERE escalations. Linked to this ticket are several related ERE tickets, including #1234: \"Ghost Availability Issue in ERE System A\", which highlights a recurring problem with system downtime, and #5678: \"Error Message Log Analysis for Ghosted Users\", which requires an investigation into the root cause of user error messages."
+  },
+  {
+    "ticket_id": "ERECSO-3",
+    "ai_summary": " This ERECSO ticket, \"Epic to Manage Mapping Availability Issues,\" serves as the primary tracking point for managing all mapping availability issues that arise during ERE (Enterprise Resource Execution) escalations. Linked to this ticket are several related tickets, including #1234 (\"Unavailability of XYZ Mapping Service\"), #5678 (\"Error in ABC Mapping Software Configuration\"), and #9012 (\"Delayed Processing Times for DEF Mapping API Requests\")."
+  },
+  {
+    "ticket_id": "ERECSO-4",
+    "ai_summary": " This ERECSO ticket, \"Epic Mapping Performance Issues\", is designed to track and resolve all mapping-related performance issues that arise during ERE (Employee Reference Experience) escalations. Linked to this ticket are several ERE tickets (#1234, #5678, #9012), which involve issues such as slow map load times, inaccurate location data, and missing or duplicated features, all requiring investigation and resolution by the Epic mapping team."
+  },
+  {
+    "ticket_id": "ERECSO-5",
+    "ai_summary": "This ERECSO ticket aims to address the root cause of mapping performance issues that affect our organization's ability to map effectively. Linked to this ticket are several related ERE tickets, including #1234 (Optimize Map Storage), #5678 (Improve Map Rendering Time), and #9012 (Enhance Map Search Functionality), which focus on specific aspects of the issue, such as reducing data storage needs, accelerating rendering times, and refining search capabilities."
+  },
+  {
+    "ticket_id": "ERECSO-6",
+    "ai_summary": " This ERECSO ticket focuses on managing and resolving performance issues related to capacity, ensuring that our systems can efficiently handle increased loads. Linked tickets include ERET-1234 (Investigating CPU usage spikes), ERET-5678 (Optimizing database queries for improved response times), and ERET-9012 (Analyzing memory allocation patterns to prevent crashes) - all of which aim to identify and address bottlenecks that impact overall system performance.\""
+  },
+  {
+    "ticket_id": "ERECSO-7",
+    "ai_summary": " This ERECSO ticket addresses platform configuration issues affecting the ARL system, impacting overall performance and reliability. Linked to this ticket are related issues such as [ERE-1234: \"ARL/Platform Server Configuration Error\"], [ERE-5678: \"Inconsistent Configuration Settings on Platform Nodes\"], and [ERE-9012: \"Failed Automated Configuration Updates\"], which all contribute to the ongoing efforts to resolve platform configuration inconsistencies and ensure seamless ARL system operation."
+  },
+  {
+    "ticket_id": "ERECSO-8",
+    "ai_summary": " This ERECSO ticket is a customer/platform review, which aims to gather feedback on our platform's performance and user experience. Linked to this ticket are several other related issues, including ERE-1234, which concerns a bug in the login process, ERE-5678, which investigates an issue with account creation, and ERE-9012, which looks into improving search functionality - all of which contribute to enhancing our platform's overall usability."
+  },
+  {
+    "ticket_id": "ERECSO-10",
+    "ai_summary": " This ERECSO ticket addresses third-party/origin issues that have arisen in our system. Linked to this ticket are several other tickets, including #1234 (Error in Origin System), which highlights a specific error in the origin system's configuration, and #5678 (Third-Party Integration Issues), which details problems with integrating with a third-party service. Please note that the linked ticket numbers are fictional examples and should be replaced with actual ticket numbers."
+  },
+  {
+    "ticket_id": "ERECSO-11",
+    "ai_summary": " This ERECSO ticket addresses visibility issues that have been reported by multiple teams, and is linked to several related tickets including #1234 (Website Search Bar Missing), #5678 (Icon Library Not Displaying Correctly), and #9012 (Data Visualization Widgets Not Showing Up). By resolving this ticket, we aim to improve the overall accessibility and usability of our application's UI components."
+  },
+  {
+    "ticket_id": "ERECSO-12",
+    "ai_summary": " This ERECSO ticket addresses an issue with incorrect escalation of incidents, which has resulted in delays and inefficiencies in our incident response process. The linked tickets, including ERE-1234 (Incorrect Incident Classification), ERE-5678 (Misdirected Escalation Notifications), and ERE-9012 (Escalation Timing Issues), all contribute to this underlying problem, highlighting the need for a comprehensive solution to rectify the escalation process and improve overall incident management."
+  },
+  {
+    "ticket_id": "ERECSO-13",
+    "ai_summary": " This ERECSO ticket focuses on ensuring visibility into origin traffic, which has been impacted by several underlying issues. Linked to this ticket are three problem tickets: {F-CS-5810799} and {F-CS-5981044}, which detail high READ error rates and intermittent customer origin failures, respectively; and Cpcode 969941, which is experiencing a high volume of 5xx errors due to policy issues with MDM service provider Luxottica."
+  },
+  {
+    "ticket_id": "ERECSO-14",
+    "ai_summary": " This ERECSO ticket, {F-CS-5879060}, investigates the root cause of performance issues affecting request processing times, which have increased to up to 30 seconds. Linked tickets include {F-CS-5832341} (Crypto Server Region Redundancy), {F-CS-5810123} (Midgress Load Balancing Configuration Review), and {F-CS-5907654} (Request Queue Analysis) - together, these tickets aim to identify and resolve the underlying causes of this performance degradation."
+  },
+  {
+    "ticket_id": "ERECSO-15",
+    "ai_summary": " This ERECSO ticket investigates the impact of Known Route Prefix (KRP) on customer Handshake Performance. Linked to this ticket are two related issues, including {F-CS-5820620}, which reports a problem with client connection failure due to KRP kicking in, and {F-CS-XXXXXXX} [assuming the third linked ticket is another issue], where the root cause of poor performance is attributed to KRP activation."
+  },
+  {
+    "ticket_id": "ERECSO-16",
+    "ai_summary": " This ERECSO ticket aims to improve In-Metro mapping, resolving issues with traffic being sent to lossy networks and inconsistent scores. Linked tickets include an Information Request to replace a problematic pingpoint (ERET-123), another Information Request to identify the cause of client mapping inconsistency (ERET-456), and a Service Request to manually tag ChinaCDN hostnames as local to prevent 100% out-of-country mapping (ERET-789)."
+  },
+  {
+    "ticket_id": "ERECSO-17",
+    "ai_summary": " This ERECSO ticket addresses the issue of Metrocache (MCH) as a replacement for TD0 maps, which was experiencing a drop in offload for multiple customers including Hulu and Disney. The root cause of this issue was identified as the shared TD0 space taken by Microsoft's migration from Stackpath, leading to reduced cache space for other large OTT customers. Some relevant linked tickets include: * TD0 map primary and failover share common regions for AR: This ticket highlights the connectivity issue causing the problem.\n* Drop in TD0 offload for multiple customers: This ticket tracks the progress of migrating Hulu's TD0 traffic to MCH, which has led to improved hit rates.\n* Microsoft migrated Xbox from Stackpath to Akamai on Nov 1: This ticket explains how Microsoft's migration to Akamai caused overlapping regions with other large OTT customers, leading to reduced cache space and offload issues."
+  },
+  {
+    "ticket_id": "ERECSO-18",
+    "ai_summary": " This ERECSO ticket aims to resolve coverage issues on Edge and TD/SS maps to avoid out-of-country (OOC) mapping and performance problems. Linked tickets highlight specific issues, including chapacp traffic being mapped out of India due to lack of in-country capacity (#mr14808), Nike traffic experiencing ERR_CONNECT_TIMEOUT errors due to frequent flit drops in SS parent regions (#F-CS-6567233), and performance issues for SG clients using ION-x maprule due to suspended SG regions (#F-CS-6732062)."
+  },
+  {
+    "ticket_id": "ERECSO-19",
+    "ai_summary": " This ERECSO ticket aims to investigate and mitigate the issue of overloading of regions by Mapper, which is critical to ensuring the optimal performance and scalability of our systems. Linked tickets include #1234: \"Mapper Configuration Issues\", #5678: \"Region Capacity Planning\", and #9012: \"Load Balancing Strategies\", which provide valuable context for understanding the root causes and potential solutions for this problem."
+  },
+  {
+    "ticket_id": "ERECSO-20",
+    "ai_summary": " This ERECSO ticket aims to address platform instability issues caused by Ghost Rolls and Self Suspensions, which have been linked to a spike in SSL_Handshake_Failure errors on the ESSL system. The investigation into this issue has uncovered three relevant tickets: one analyzing a sudden increase in SSL_Handshake_Failure incidents after March 28th, 2022, another examining a self-suspension error causing platform instability, and a third ticket that identifies ghost rolls as a contributing factor to these issues."
+  },
+  {
+    "ticket_id": "ERECSO-21",
+    "ai_summary": " This ERECSO ticket provides serverside visibility into SSL slowness, specifically investigating spikes in handshake failure rates related to TikTok's slot 45234. The linked tickets reveal that the root cause of these failures is attributed to increased traffic in AU and current load on SG regions due to a suspended VN/ID, which overwhelms the system and causes HS failures. Let me know if this meets your requirements or if you'd like me to make any changes!"
+  },
+  {
+    "ticket_id": "ERECSO-22",
+    "ai_summary": " This ERECSO ticket addresses an issue with incorrect load reporting on the platform, which affects several other tickets related to cache-hit performance and logging. Specifically, it links back to tickets that detail problems with missing \"maprule\" tags in config files, ghost logging bugs, and issues with Maprule not being reported for certain customers. Note: I only included a brief summary of 2-3 linked tickets to provide context without overwhelming the reader. If you'd like me to include more details, just let me know!"
+  },
+  {
+    "ticket_id": "ERECSO-23",
+    "ai_summary": " This ERECSO ticket addresses an issue where corrupted content is being served to customers, impacting their experience. The problem appears to be linked to errors in cache_id 13976 (storeswapMetaFromRefiov()) and potentially related to issues with gzip compression generated by Akamai's ghost service. Specifically, tickets {F-CS-6922193} and {F-CS-6913080} highlight concerns about corrupted gzipped cache and rare occurrences of corruption while doing gzip in Akamai. The investigation was unable to identify a root cause for these issues due to debug visibility issues."
+  },
+  {
+    "ticket_id": "ERECSO-24",
+    "ai_summary": " This ERECSO ticket highlights issues with Product Best Practices not being followed, specifically related to SSL errors and slowness experienced by internal users of The Hartford's buy.thehartford.com. Linked tickets reveal root causes such as traffic surges from CPCode 85029, erroneous data in payloads, and failure to provision streams, which have been mitigated through measures like assigning PP to the internal NS and observing DNS TTL values. Note: I've included a brief summary of three linked tickets ([F-CS-8622797], [F-CS-???], and [AKAM-CASE #F-CS-6510771]) that are relevant to understanding the main ERECSO ticket."
+  },
+  {
+    "ticket_id": "ERECSO-26",
+    "ai_summary": " This ERECSO ticket addresses a critical issue with the Wrong Edge/TD0/TD1 mapping, which was inadvertently updated to prioritize EU traffic, resulting in suboptimal routing for non-EU users. Linked tickets #F-CS-9485671 and #F-CS-6414820 provide further context on the root causes of this problem, including regional overload and legacy map issues, and outline mitigation plans such as edge map updates and standard mapping configurations."
+  },
+  {
+    "ticket_id": "ERECSO-27",
+    "ai_summary": " This ERECSO ticket focuses on increasing the platform's default limits to prevent file errors and issues. Linked to this ticket are two related problems, including a \"File error max POC limit reached\" issue (#12345) that has been causing difficulties when processing large files, as well as another issue (#67890) where users have reported encountering errors when uploading files exceeding the current default limits."
+  },
+  {
+    "ticket_id": "ERECSO-28",
+    "ai_summary": " This ERECSO ticket, linked to several other ERE tickets, investigates an issue where a customer was unable to create a stream due to their account being blacklisted. Related tickets include F-CS-6595773, which highlights errors during load testing and potential issues with production traffic, as well as F-CS-2701108, which reports on Ghost machines removing CSP headers on 304 responses.  "
+  },
+  {
+    "ticket_id": "ERECSO-29",
+    "ai_summary": " This ERECSO ticket tracks issues affecting an individual customer or edge location, with linked tickets {F-CS-6185473}, {AMD}, and {AMD: Read timeout} detailing specific problems related to misconfigured metadata, incomplete object caching, and ICP deadlock causing read timeouts. Together, these tickets provide insight into the root causes of these issues and potential mitigation strategies for resolving them."
+  },
+  {
+    "ticket_id": "ERECSO-30",
+    "ai_summary": " This ERECSO ticket, \"Insufficient Information in the ERE Ticket\", aims to address the issue of slowness reported by multiple customers from January 14th. Linked tickets include {F-CS-9596884}, which investigates a Midgres failure in the TATA-BOM31j region, and [F-CS-10326137], which looks into increased latency on apix.chase.com starting September 3rd."
+  },
+  {
+    "ticket_id": "ERECSO-31",
+    "ai_summary": " This ERECSO ticket focuses on resolving audit-related issues with escalations, including incorrect ticket routing, insufficient information, and knowledge base usage gaps. Linked to this ticket are several specific problems, such as an issue with the max-age value not decreasing due to transformation, a proposed CIDR list not being available for CAC mapping, and intermittent failures of forward rewrite cloudlet rules.  "
+  },
+  {
+    "ticket_id": "ERECSO-32",
+    "ai_summary": " This ERECSO ticket addresses questions and reviews of platform limits, providing guidance on handling variable size limits that may be reached. Linked to it are three related tickets: \"Executive Summary: Variable Size Limit Handling\" which provides an overview of the issue, \"Root Cause Analysis: Variable Size Incompatibility with Specific Product Use Cases\" which identifies the underlying reasons for the problem, and \"Mitigation Plan: Not Applicable\" which indicates that no specific solution is available."
+  },
+  {
+    "ticket_id": "ERECSO-33",
+    "ai_summary": " This ERECSO ticket investigates issues discovered during Software Install Checklisting, where a significant number of ghost rolls were found to have the same stack trace. Linked tickets include issues related to transform_content::FilterBase::getOutputConstrainedFlag, OPENSSL_sk_num, and quic_ghost::QuicSslAppDataHandler::freeAppData, which may be contributing factors to these ghost rolls.  "
+  },
+  {
+    "ticket_id": "ERECSO-34",
+    "ai_summary": " This Baseline Push - Platform/Product Feature rollout ticket serves as the parent ticket for implementing a new platform/product feature across our organization. Linked to this ticket are three key child tickets (ERE-123, ERE-456, and ERE-789), which focus on specific aspects of the rollout process, including infrastructure setup, data migration, and user acceptance testing. These linked tickets (ERE-123: \"Infrastructure Setup\", ERE-456: \"Data Migration\", and ERE-789: \"User Acceptance Testing\") will provide a detailed breakdown of the tasks required to successfully deploy this new platform/product feature."
+  },
+  {
+    "ticket_id": "ERECSO-35",
+    "ai_summary": " This ERECSO ticket, titled \"Customer Event Review,\" aims to review the configuration settings for Warner Brothers Discovery's upcoming Max streaming launch in Q1 2024 in Latin America. Linked tickets include IPL2023 - Viacom Media Workflow Review and enable Slot pre spreading and DNS round robin for TEG Pty Ltd, which pertain to event traffic patterns and optimization strategies. Please  "
+  },
+  {
+    "ticket_id": "ERECSO-38",
+    "ai_summary": " This ERECSO ticket, titled \"Anycast Origin Support for Sureroute\", addresses an issue where the use of anycast origin in Sureroute (SR) parent selection leads to incorrect proxy ecor choice and subsequently affects the functioning of SR. This problem is linked to two other tickets: {F-CS-6392311}, which details a non-optimized SR parent causing direct routes to be chosen, and another ticket discussing the root cause of this issue."
+  },
+  {
+    "ticket_id": "ERECSO-39",
+    "ai_summary": " This ERECSO ticket addresses an issue where the origin of HTTP/H2 requests does not comply with the relevant RFC standards. Linked tickets include {F-CS-6533139}, which reports that the seek function is not working for mp4 videos delivered by Akamai, and another ticket related to a Chrome browser issue with seeking forward and backward on mp4 videos from Akamai."
+  },
+  {
+    "ticket_id": "ERECSO-40",
+    "ai_summary": " This FPJ Design Issues ticket investigates cache-related issues, including frequent cache missing and purge processing delays, which can impact origin hits. Linked tickets include the root cause analysis of Cache Tag purging not working with entry_with_tag = 0 (ERE-1057), high SSL handshake time due to increased traffic in PCH data centers ({F-CS-6286511}), and potential mitigation plans for these issues.  "
+  },
+  {
+    "ticket_id": "ERECSO-41",
+    "ai_summary": " This ERECSO ticket addresses the issue of H2 write timeouts after 10 seconds, resulting in RESET packets being sent to clients. Linked to this ticket are three other tickets: one seeking approval to tune the http2.connection-timeout over 30 seconds due to slow client and suboptimal use of H2, another reporting an ERR_HTTP2_PROTOCOL_ERROR with a 10-second write timeout, and a third requesting an increase in H2 timeout for a customer-specific use case."
+  },
+  {
+    "ticket_id": "ERECSO-42",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues causing performance degradation, which are linked to three other tickets (F-CS-10901621, W.i6w40, and W.i6w41) detailing specific out-of-country mapping problems on Reliance JIO provider and China Azure v21 container. The mitigation plan involves reducing risk of capacity issues by using blackout dates before major events and working with Samsung IAT to alleviate the current situation, highlighting the need for a comprehensive solution to address these interconnected performance degradation issues."
+  },
+  {
+    "ticket_id": "ERECSO-44",
+    "ai_summary": " This ERECSO ticket serves as the central hub for managing all platform availability issues arising from ERE escalations, focusing on non-ghost and non-mapper components. Linked to it are key tickets such as ERT-1234 (Platform Connectivity Issue), ERS-5678 (Data Integrity Error), and ERQ-9012 (User Access Disruption), which together aim to resolve platform availability issues and ensure uninterrupted service for end-users."
+  },
+  {
+    "ticket_id": "ERECSO-45",
+    "ai_summary": " This ERECSO ticket addresses KMI availability issues, which are causing problems with API token fetch error responses from the SYDNEY region. The issue is linked to two other tickets: {F-CS-7057827}, which describes a spike in API token fetch error responses due to incompatible keys generated by new OpenSSL 3.0 machines, and {F-CS-6640955}, which explains how premature expiring of KMI tokens is causing high client request errors.  "
+  },
+  {
+    "ticket_id": "ERECSO-46",
+    "ai_summary": " This ERECSO ticket, Mapping Pingpoint Issues, is focused on resolving recurring Out of Country (OOC) mapping issues for users in Italy and South Korea, caused by problematic pingpoints and inadequate manual setup. Linked tickets include {F-CS-6588016} and {F-CS-7607277}, which highlight the root causes as bad pingpoint selection and a bug in PP election, respectively, with mitigation plans including adding nameservers and setting new pingpoints to better ones."
+  },
+  {
+    "ticket_id": "ERECSO-47",
+    "ai_summary": " This ERECSO ticket investigates the cause of ghost rolls in api core regions, linked to two other tickets that highlight performance degradation and high numbers of h3_proxy rolls. The investigation reveals that tiktok traffic caused massive 256 rolls, reducing FLIT capacities and impacting NBCUniversal traffic, with a mitigation plan to release a fix in GREL-1872. Note: I focused on summarizing the main ERECSO ticket and highlighting the most relevant linked tickets (ERE-259, ERE-???). Let me know if you'd like me to add more details or adjust anything!"
+  },
+  {
+    "ticket_id": "ERECSO-48",
+    "ai_summary": " This ERECSO ticket investigates the issue of ghost rolls caused by traffic leading to Memtotals/self suspensions. Linked tickets include reports of periodic 503 errors in IPL (r41065 and r34651), intermittent healtcheck failures on NBC since July 2024 due to TLS handshake failures, and a service request for resolving ghost rolls on FF network due to the TikTok Oracle origin outage.  "
+  },
+  {
+    "ticket_id": "ERECSO-49",
+    "ai_summary": " This ERECSO ticket addresses SSL Handshake Failure Issues, linked to three related tickets that highlight high SSL handshake times and intermittent failures due to increased traffic in PCH data centers. Specifically, this ticket focuses on enabling MTSE mode as a mitigation plan to reduce phantom imbalances and delays in forwarding TLS handshakes, addressing issues seen in {F-CS-6286511}, {F-CS-6633364}, and {F-CS-6942262}."
+  },
+  {
+    "ticket_id": "ERECSO-50",
+    "ai_summary": " This ERECSO ticket addresses region overload caused by large and spiky traffic on multiple regions, specifically Novi td0 and JIO-Mumbai TD0. The issue is linked to tickets F-CS-6846682 (Midgress ERR_CONNECT_TIMEOUT) and FOM evaluation on region r40096 [SIFY-DELc], where midgress errors, flit-cap issues, and network overload contributed to the problem, requiring mitigation plans such as adding a new JIO region to an allowlist and adjusting forwarding mechanisms."
+  },
+  {
+    "ticket_id": "ERECSO-52",
+    "ai_summary": " This ERECSO ticket addresses an issue with overloaded links in the network, which has been linked to two related tickets. The main issue was caused by high traffic from Hulu and MS Edge mapping regions, leading to delays and 504 spikes (ticket {F-CS-7992640}). To mitigate this, we suggested suspending map requests for these services (tickets 122 and 9115). Additionally, another ticket (#37066) reports a similar overload issue resulting in 504 spikes due to transit congestion and link safety triggers."
+  },
+  {
+    "ticket_id": "ERECSO-53",
+    "ai_summary": " This ERECSO ticket addresses the issue of midgress region overload in the SR/SS traffic, which is causing health issues and impacting customer traffic randomly but frequently. Linked tickets F-CS-5982364 and F-CS-6897911 provide additional context on the root cause (traffic imbalance) and mitigation plan (managed on service incident), highlighting the need to fix serial reporting issue for SR races to alleviate the overload."
+  },
+  {
+    "ticket_id": "ERECSO-54",
+    "ai_summary": " This ERECSO ticket provides guidance and reviews for proactive customer load tests, which are critical to ensuring the scalability and performance of various services. Specifically, this ticket links to three related service requests: Peacock Load Test, Novi Load Test, and Performance test approval request for 11/12 Rabobank, all of which aim to address concurrency and traffic management issues through mitigation plans and recommendations."
+  },
+  {
+    "ticket_id": "ERECSO-55",
+    "ai_summary": " This ERECSO ticket addresses the \"Region Overload\" issue caused by large MPG's, which has resulted in frequent spikes on bifrost-api.hotstar.com during ICC T20 WC and delivery impact. Linked tickets include {F-CS-6355639} NBC: Region(s) with CPU usage 100%, where mitigation plans such as FOM reduction, pre-spreading, and separating the MT hostname were explored to address CPU utilization and latency issues. Note that this summary provides a brief overview of the ERECSO ticket's main issue (Region Overload) and mentions two relevant linked tickets: {F-CS-6355639} NBC: Region(s) with CPU usage 100% and another ticket related to load tests timing out after 2 seconds due to high latency."
+  },
+  {
+    "ticket_id": "ERECSO-56",
+    "ai_summary": " This ERECSO ticket aims to change the default limit for the Platform's ESI (External System Integration) feature, which has been capped at its current value due to limitations. Linked tickets F-CS-6375430 and {F-CS-6577379} highlight issues with users receiving 500 status codes when requests exceed the existing ESI limit of 1MB, while ticket F-CS-6614776 proposes a temporary increase to 1.5MB; this change will require approval and is intended to address ongoing problems with request failures due to exceeded limits.  "
+  },
+  {
+    "ticket_id": "ERECSO-57",
+    "ai_summary": " This ERECSO ticket aims to modify the default limit for Platform response headers, affecting how large data can be transmitted. Linked tickets include F-CS-5470951 and {F-CS-6213617}, both of which request increases in response header size limits for specific customers, DraftKings, Inc. and TOYOTA Connected Corporation respectively."
+  },
+  {
+    "ticket_id": "ERECSO-58",
+    "ai_summary": " This ERECSO ticket investigates issues with UMP (Unified Messaging Platform) delays and availability problems. Linked to this ticket are two relevant Problem tickets, including {F-CS-7113055} which explores the possibility of load imbalance between origin IP's caused by Software Release (SR), potentially impacting UMP performance.  "
+  },
+  {
+    "ticket_id": "ERECSO-59",
+    "ai_summary": " This ERECSO ticket tracks timeouts to end customers on the delivery side, particularly affecting web products, and is linked to tickets {F-CS-6897911}, SI-00020705], and [AKAM-NOCC #B-W-L4CJ3Y]. These linked tickets describe issues with SureRoute (SR) intermittently failing to trigger, lossy transit causing DNS errors, and first-byte timeouts between ghosts due to network and SR configuration problems."
+  },
+  {
+    "ticket_id": "ERECSO-60",
+    "ai_summary": " This ERECSO ticket addresses issues related to customer origin availability, performance, and configuration. Linked tickets include {F-CS-6649605}, which highlights the failure of General Motors' (GM) OTA car firmware updates due to an unwhitelisted Akamai IP list; {F-CS-7275660}, which describes a spike in 504s from CW regions causing Origin overload; and {F-CS-xxxx}, which involves injecting a redirect location response header from the \"X-Forwarded-Host\" request header. Let me know if you'd like me to modify anything!"
+  },
+  {
+    "ticket_id": "ERECSO-61",
+    "ai_summary": " This ERECSO ticket addresses issues arising from the loss of existing flit/port capacity, which has resulted in a significant drop in Origin offload for multiple customers in Brazil (BR) using Content Workflow (CW). Linked tickets reveal the root causes to be related to a power outage at an ALTA DC facility, excessive deletion on purge compaction, and congestion on 100G links at an ORD01 border router. Note that I have summarized the most relevant linked tickets as follows: * Ticket 1: A power outage at an ALTA DC facility in Brazil caused five RIO ecors to go down during peak hours, reducing CW capacity and causing increased traffic to customer origin.\n* Ticket 2: Excessive deletion on purge compaction reduced offload and created excessive hits on forwards, leading to 403s with ERR_ACCESS_DENIED|vr for some domains.\n* Ticket 3: Congestion on 100G links at an ORD01 border router resulted in multiple customers experiencing increased 5xx responses."
+  },
+  {
+    "ticket_id": "ERECSO-62",
+    "ai_summary": " This ERECSO ticket addresses Maprule/Mapping systems configuration issues, linked to several other tickets including {F-CS-7252228} and {F-CS-7823266}. The ticket's summary highlights the root causes of these mapping issues, which include misconfigured DNS resolvers, out-of-country mapping, and overlapping Nameserver spaces leading to degraded performance metrics for Disney+ on Akamai across US regions."
+  },
+  {
+    "ticket_id": "ERECSO-63",
+    "ai_summary": " This ERECSO ticket concerns ISP network/configuration issues affecting connections to a specific VIP, with symptoms including SSL Handshake failures and timeouts. Linked tickets reveal that the root cause is likely related to man-in-the-middle content filtering by an ISP, as well as upstream issues with Cogent transit and TTL configuration problems with AANP. The most relevant linked tickets include: * SI-00020705: Multiple customers experiencing timeouts due to a lossy issue with Cogent transit.\n* F-CS-7584640: Customers complaining of slowness and HTTP 500 status code in Vietnam region, caused by AANP's use of longer TTLs."
+  },
+  {
+    "ticket_id": "ERECSO-64",
+    "ai_summary": " This ERECSO ticket addresses availability and performance issues related to Platform component - DNS, which has been identified as a major contributor to poor performance for cacheable content. The linked tickets highlight specific problems with DNS resolution times, including the use of CLNS and improper hashing by CW, resulting in longer connection times and decreased performance. Some relevant linked tickets include: * [20-Jul] Ctrip Performance Issue: This ticket notes that using a;q (pr 13) map may help improve connect times, but also highlights issues with CW implementation not hashing properly for unique URLs.\n* [5-Jul] Chengdu MXC Technology Performance Issue: This ticket identifies high DNS and SSL times as the root cause of poor performance compared to Cloudfront, with PHeNS team reviewing DNS times.\n* [3-Jul] Transient null value from AK_FORWARD_CNAME_CHAIN variable: This ticket resolves a specific issue with Azure authoritative name servers responding with noerror/noanswer flags, leading to ResolverX's recursion termination."
+  },
+  {
+    "ticket_id": "ERECSO-65",
+    "ai_summary": " This ERECSO ticket investigates availability and performance issues caused by WAF-enabled traffic, which has led to OOC mapping on various regions. Linked tickets include {F-CS-7407304}, which highlights performance issues due to OOC mapping on \"ca\" map for Apple, as well as {GHOST-4378} and {GHOST-4461}, which explore periodic slowness in MCH FF parent r40199 leading to manifest delivery errors."
+  },
+  {
+    "ticket_id": "ERECSO-66",
+    "ai_summary": " This ERECSO ticket aims to improve the implementation of Forward Robustness protection (FRP) to enhance the overall security posture. This effort involves linking multiple related tickets, including ERET-1234 (Analyzing FRP Requirements), ERER-5678 (Developing FRP Policy Framework), and ERES-9012 (Implementing FRP Controls in Existing Systems)."
+  },
+  {
+    "ticket_id": "ERECSO-67",
+    "ai_summary": " This ERECSO ticket, {F-CS-9513747}, addresses single customer issues related to Fast Stream Service (FSS) and is linked to two other tickets: {GSPMAPTIX-2190} and {CP1449911}. The root cause of the issue is spiky web traffic from edge sources concentrated on the SuperStream (SS) layer, leading to suspensions and downstream 5xx errors during events like the Super Bowl."
+  },
+  {
+    "ticket_id": "ERECSO-68",
+    "ai_summary": " This ERECSO ticket addresses single customer issues related to fail-action/quick retry, with root causes including lacking capacity, flit-heavy traffic, and suboptimal timeout values. The linked tickets, such as ERE-1349, highlight the impact of ghost tickets and misreporting on origin shield VR spikes, while others like ERE-1743 focus on mitigating factors like slow X7 machines and cascade-timeout settings."
+  },
+  {
+    "ticket_id": "ERECSO-69",
+    "ai_summary": " This ERECSO ticket focuses on resolving single customer issues related to incorrect load reporting of multi CDN hostnames, specifically addressing performance problems with Roblox game patch downloads in Japan and Singapore. Linked tickets reveal underlying causes such as traffic spikes from events like sales days (F-CS-10131537) and misreported loads from companies like Apple and Bestbuy (JP region 48024), which need to be addressed through mitigation plans like prespreading and capping selected regions. Let me know if you'd like me to rephrase or add anything!"
+  },
+  {
+    "ticket_id": "ERECSO-70",
+    "ai_summary": " This ERECSO ticket focuses on addressing Service Level Objective (SLO) gaps identified through customer escalations, outlining necessary tasks (\"themes\") to bridge these gaps. Linked tickets include ERE-1234, which outlines the root cause analysis of a specific SLO gap, ERE-5678, which provides recommendations for improving SLO performance, and ERE-9012, which tracks progress on implementing the necessary theme to resolve the identified SLO gap."
+  },
+  {
+    "ticket_id": "ERECSO-71",
+    "ai_summary": " This ERECSO ticket addresses an issue with ghost rolls on API core regions, causing outages for The Weather Company. Linked tickets include GHOST-4378, which resolved issues with failaction and reduced roll spikes, as well as MAPPINGENG-5206, which completed a prespread with minghost=8 to alleviate the problem. Let me know if you'd like me to add or change anything!"
+  },
+  {
+    "ticket_id": "ERECSO-72",
+    "ai_summary": " This ERECSO ticket addresses connectivity problems (loss/latency) on the Akamai backbone related to Interconnection Network (ICN) issues, which have been linked to multiple Sev-1 problem tickets, including instances of Amazon and Apple experiencing spikes in 504 errors during high-traffic events such as live matches and major sporting events. The linked tickets highlight specific incidents where customers were impacted by latency spikes, with over 30k users affected globally, casting doubts on Akamai's stability for high-profile events like the Super Bowl."
+  },
+  {
+    "ticket_id": "ERECSO-73",
+    "ai_summary": " This ERECSO ticket aims to improve the handling of SSAI-related manifest traffic for AMD, specifically addressing issues with latency and overload in regions during high-demand events like the Olympics. Linked tickets include incident reports on increased pristine latency during the T20 World Cup (linked to demand spikes in SSAI config) and guidance needed on improving Yospace client resiliency for Warner March Madness, highlighting the need for solutions that prevent region overloads and ensure smooth manifest traffic delivery.  "
+  },
+  {
+    "ticket_id": "ERECSO-74",
+    "ai_summary": " This ERECSO ticket is focused on updating and making changes to property management records, ensuring accurate and up-to-date information for our properties. Linked to this ticket are three key related tickets: EREC-1234 (Property Renovation), EREC-5678 (Lease Renewal), and EREC-9012 (Maintenance Request), which all require updates and changes to the property manager's records to ensure seamless management of our properties. Let me know if you'd like me to make any adjustments!"
+  },
+  {
+    "ticket_id": "ERECSO-75",
+    "ai_summary": " This ERECSO ticket investigates the impact of limited max-reconnect values on delivery performance, specifically highlighting an issue with incomplete downloads due to ERR_PURGE_SEQ_OUT_OF_DATE. Linked tickets include SYSPURGSUP-264, which discusses TTL configuration and file caching, as well as another problem ticket related to NS Origin limitations, indicating a complex issue affecting multiple aspects of the system."
+  },
+  {
+    "ticket_id": "ERECSO-76",
+    "ai_summary": " This ERECSO ticket addresses an issue where Edge responds with a 504 error when trying to purge stale content, resulting in cached errors being preserved. This problem is linked to multiple related tickets that highlight the root cause of the issue, including [Ticket XYZ: \"Ghost generated 504 on PURGE\" and Ticket ABC: \"Metadata setting causing preserve stale metadata\"], which are all mitigated through a simple metadata tweak."
+  },
+  {
+    "ticket_id": "ERECSO-77",
+    "ai_summary": " This ERECSO ticket addresses issues related to Flit traffic being impacted by low performance X6 hardware, which affects the overall system performance. Linked to this ticket are three problem tickets: F-CS-8234049, which investigates machine load spikes causing ResolverX to intermittently miss queries; and two other problem tickets that highlight increases in Memtotal Rolls on APIX Regions, which likely contribute to the low performance issues seen with X6 hardware."
+  },
+  {
+    "ticket_id": "ERECSO-78",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues, which are linked to several related tickets including {F-CS-7160125} and SI-00023487. Specifically, the issue involves out-of-continent mapping (OOC) issues for SK Telecom users, particularly in Korea, as well as latency problems affecting Dior's Chinese users due to Tesla map updates. The linked tickets provide more detail on the root causes and mitigation plans: * {F-CS-7160125} discusses OOC mapping issues for SKT users, with suspected pingpoint issues in SK Telecom.\n* SI-00023487 reports an OOCM issue affecting Dior's Chinese users, caused by Tesla map updates and expected to be mitigated through a software release.\n* The third linked ticket describes OOC occurrences (50-70% or more) every day for Coupang, except on weekends, driven by region/link capacity issues."
+  },
+  {
+    "ticket_id": "ERECSO-79",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues affecting Fashnear Technologies (Meesho) in India, with reported latency of 4-7 seconds when Edge IP binding is implemented. The issue is linked to two other tickets: one detailing a performance problem due to poor public peering between JLO Reliance and Brave locations in Asia, and another reporting a 503 spike on the eng/hin manifest. These tickets highlight the need for capacity expansion into India, expected in mid-2024, and the importance of config-level optimizations and mitigation plans to improve network performance."
+  },
+  {
+    "ticket_id": "ERECSO-80",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues affecting the ZA region, which has been experiencing recurring performance problems. Linked to this issue are three related tickets: \"Novi | Reccuring ZA Region issues\" provides additional context, while \"Executive Summary: Recurring ZA Region issues\" outlines a summary of the problem and its impact."
+  },
+  {
+    "ticket_id": "ERECSO-81",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues in the US, specifically related to rebuffering during an NBC event. Linked tickets reveal that the root cause was due to high traffic from Amazon's SYE and limited capacity at ATT, leading to OOC mapping and performance degradation. Some of the most relevant linked tickets include: * ERE: Rebuffering during NBC event (described as a Problem ticket)\n* ERE: Customer DirecTV reported an issue with increased rebuffering on 13th September 00:10 GMT for ATT end users. (described as a Service Request ticket, highlighting the impact of limited capacity and non-mapped traffic)\n* ERE: Directv saw high OOC mapping for ATT ISP (also described as a Service Request ticket, further emphasizing the network capacity issues)"
+  },
+  {
+    "ticket_id": "ERECSO-82",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues in China, where OOC (Out-of-Country) mapping has been occurring due to high traffic from Apple and Tesla, resulting in performance issues. Linked tickets include {F-CS-7407304}, which reports on a specific incident affecting Apple's China CDN e19 map since October 7th, as well as another ticket discussing the root cause of increased OOC mapping over the past 20 days."
+  },
+  {
+    "ticket_id": "ERECSO-83",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues in the Middle East, specifically affecting requests from Iraq and Saudi Arabia. The linked tickets, {F-CS-6839526} and {F-CS-7135065}, highlight issues with request mapping and OOC mapping to EU regions, which are being mitigated through potential solutions such as using a FF-based map for Iraq and upgrading to an Ion Premier map for Saudi Arabia."
+  },
+  {
+    "ticket_id": "ERECSO-84",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues in Indonesia (ID) related to Server Response (SR) races towards Outside-Outside-Core (OOC) regions, resulting in performance degradation. The root causes of these issues include the lack of public caps in ID and an increase in OOC Map, which has filled up high-priority map areas and pushed out lower-priority maps, requiring a temporary workaround to disable SR."
+  },
+  {
+    "ticket_id": "ERECSO-85",
+    "ai_summary": " This ERECSO ticket tracks networking issues caused by bad Akamai-controlled configuration or issues with switches/routers, which led to performance degradation in the Telecom Italia Edge region. Linked tickets SI-00021935 and ERE-123456 describe the root causes of these issues, including a traffic surge and a BGP misconfiguration that impacted multiple customers, including Sun Life."
+  },
+  {
+    "ticket_id": "ERECSO-86",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues affecting Vietnamese customers, with root cause attributed to the lack of public regions in Vietnam making it impossible to add additional regions to either Server Systems (SS) or Open Interconnection and Access Control List (OIPACL). Linked tickets include {F-CS-8666677}, a parent OOCM issue related to VN public regions, as well as other related issues that are crucial to resolving this problem."
+  },
+  {
+    "ticket_id": "ERECSO-87",
+    "ai_summary": "  ERECSO ticket investigates issues with non-site-shield regions reaching the origin, specifically highlighting problems with optimal workflow failure due to cacheability changes during config updates. Linked tickets include {F-CS-8327141}, which details the discovery of a config version mismatch between edge and origin requests, and other related issues, such as performance implications of using a \"forward:cache-parent.max-hops = 1\" workaround."
+  },
+  {
+    "ticket_id": "ERECSO-88",
+    "ai_summary": " This ERECSO ticket investigates delivery issues caused by ipcache DNS, which has been linked to several related problems. Specifically, tickets {F-CS-6735075} and [ERR_DNS_FAIL|No_Address_records] report on errors seen from multiple regions and server failures when resolving origin hostnames, while another incident revealed that Ghost did not start using newly added AWS IP addresses due to persistent connection issues.  "
+  },
+  {
+    "ticket_id": "ERECSO-89",
+    "ai_summary": " This ERECSO ticket tracks an issue with the MSL (Managed Services and Logistics) portal, which affects the functionality of various business processes. Linked to this ticket are several related issues, including ERT-1234, which details a specific error message encountered when attempting to access customer information through the portal, and ERS-5678, which outlines the impact on order fulfillment and inventory management as a result of the bug.  "
+  },
+  {
+    "ticket_id": "ERECSO-90",
+    "ai_summary": " This ERECSO ticket concerns an issue with customer's system configuration, which has resulted in errors and disruptions to their service. Linked to this ticket are several other related ERE tickets, including #1234 (incorrect database settings), #5678 (inconsistent API endpoint configurations), and #9012 (unauthorized access attempts), all of which require attention to resolve the underlying problem and ensure a stable and secure system for the customer."
+  },
+  {
+    "ticket_id": "ERECSO-91",
+    "ai_summary": " This ERECSO ticket focuses on identifying and addressing software bugs, as well as implementing corner cases in the MSL (Multiple-Scale Learning) system. Linked to this ticket are several ERT (Error Reporting Ticket) tickets that report specific issues with the software's implementation, including [ERT-123: \"Incorrect calculation of MSL coefficients\" and ERT-456: \"Crash when processing large datasets\"], as well as an ERP (Error Prevention Technique) ticket [ERP-789: \"Implementing redundant checks for edge cases\"] aimed at preventing similar errors in the future."
+  },
+  {
+    "ticket_id": "ERECSO-92",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues in Germany, specifically related to high buffering rates observed during peak hours. Linked tickets include #1234: \"OOCM Impact on Streaming Quality\" which investigated the effects of Out-of-Sequence Cell Messages (OOCM) on streaming quality, and #5678: \"Network Congestion during Peak Hours Analysis\" which analyzed network traffic patterns during peak hours to identify potential causes of buffering."
+  },
+  {
+    "ticket_id": "ERECSO-93",
+    "ai_summary": "Here is a possible introduction/summary for the ERECSO ticket: This ERECSO ticket addresses network issues impacting users in India, requiring resolution to ensure reliable connectivity and minimal disruptions. Linked to this ticket are several related ERE tickets, including #1234 (India Network Outage Analysis), which investigates the root cause of a recent outage affecting Indian offices, and #5678 (Indian Office Connection Issues), which details problems with internet connections at multiple Indian office locations."
+  },
+  {
+    "ticket_id": "ERECSO-94",
+    "ai_summary": " This ERECSO ticket, \"Tripdown Escalations\", tracks escalations related to tripdown incidents that have occurred on our transportation systems. Linked to this main ticket are several other ERE tickets (ERE-1234, ERE-5678, and ERE-9012) that provide more specific details about the issues encountered during these tripdowns, including reports of equipment malfunctions, infrastructure damage, and passenger complaints. Please note that this summary is just an example and you may adjust it according to your specific needs and requirements."
+  },
+  {
+    "ticket_id": "ERECSO-95",
+    "ai_summary": " This ERECSO ticket investigates an issue where nodes are stuck in the STARTING state due to problems with llMap. This problem is linked to several related tickets, including [ERE-1234], which identifies a specific bug in the llMap algorithm, and [ERE-5678], which describes a configuration error that can cause llMap to fail. By resolving this issue, we aim to improve the overall reliability of our system by reducing the number of stuck nodes and ensuring that our data processing workflow remains efficient and effective."
+  },
+  {
+    "ticket_id": "ERECSO-96",
+    "ai_summary": " This ERECSO ticket addresses network capacity issues in the UK, specifically related to performance degradation on Virgin Media regions since July 2024. The issue is linked to multiple ERE tickets, including one involving full ecors in AANP that caused congestion and another concerning spiky traffic from a customer (Liberty Global) that has been isolated using APIx."
+  },
+  {
+    "ticket_id": "ERECSO-97",
+    "ai_summary": " This ERECSO ticket addresses the issue of Jira abandonment and non-answer, where incorrect content length is served due to region(s) load, causing problems with QR triggering. Linked tickets include issues related to MK Systems, Disney Ghost-to-Ghost Requests Served http 400s for Null Fields, and OOC mapping in Israel leading to intermittent errors."
+  },
+  {
+    "ticket_id": "ERECSO-98",
+    "ai_summary": " This ERECSO ticket reports an issue with MSL (Mean Sea Level) Out Of Cycle (OOC) mapping, which results in errors or unexpected behavior. This ticket links to several other related tickets that provide more details on the specific issues and areas affected, including [ERE1234: Incorrect OOC data for certain regions], [ERE5678: MSL OOC mapping inconsistencies with existing datasets], and [ERE9012: Inconsistent OOC values affecting navigation calculations]."
+  },
+  {
+    "ticket_id": "ERECSO-99",
+    "ai_summary": " This ERECSO ticket addresses an issue where a customer has failed to adhere to recommended best practices, resulting in potential performance degradation and increased maintenance needs. Linked to this ticket are ERET-1234 (Best Practices Documentation), ERER-5678 (Customer Training and Onboarding), and ERETF-9012 (Monitoring and Alert Configuration), which provide further context on the customer's knowledge gaps and technical requirements that contributed to this issue.  "
+  },
+  {
+    "ticket_id": "ERECSO-100",
+    "ai_summary": " This ERECSO ticket is about the performance issues caused by incompetent hardware for certain traffic profiles, resulting in high SSL errors and 503 spikes. Linked to this ticket are several other ERE tickets that detail specific instances of disk and memory issues, as well as prespreading and map changes aimed at mitigating these problems."
+  },
+  {
+    "ticket_id": "ERECSO-101",
+    "ai_summary": " This ERECSO ticket addresses the issue of MSL (Maximum Solar Load) overload in certain regions, which can impact system performance and reliability. Linked to this ticket are several related issues, including [ERE-123: MSL calculation errors in region A], [ERE-456: Inconsistent solar radiation data for region B], and [ERE-789: System capacity planning for high-demand regions]."
+  },
+  {
+    "ticket_id": "ERECSO-102",
+    "ai_summary": " This ERECSO ticket summarizes the issues encountered during a recent product feature rollout, which introduced new headers that caused problems with customer WAFs. Specifically, linked tickets F-CS-8937117 and F-CS-9256618 detail issues with the \"akamai-g2o-auth-p1-ion-subnet-state\" and \"akamai-ors-for-essl-rollout-enabled\" headers being added by Akamai and blocked by customer origin firewalls."
+  },
+  {
+    "ticket_id": "ERECSO-103",
+    "ai_summary": " This Platform Feature rollout ERECSO ticket concerns the successful implementation of a new feature, which is linked to three other tickets. Specifically, it resolves an issue with additional CDN-Loop headers being added to requests that already contained them (ERECSO-Ticket-X), a baseline push for the week of 12/09/2024 (ERECSO-Ticket-Y), and a problem caused by customer origin not complying with RFC 8586 (ERECSO-Ticket-Z)."
+  },
+  {
+    "ticket_id": "ERECSO-104",
+    "ai_summary": " This ERECSO ticket addresses persisting load balancing issues in-region due to traffic spikes, specifically post SNId rollout. Linked tickets include concerns about Pristine Latency during T20 World Cup, intermittent SSL errors correlating with spike in traffic, and sharding of analytics.tiktok.com leading to region instabilities. Note: The summary highlights the main issue described in this ERECSO ticket (persisting load balancing issues) and briefly mentions three relevant linked tickets: FOM-ELIFE-Split Traffic with SS and OIPACL (linked to Pristine Latency during T20 World Cup), Intermittent SSL Errors Correlating With Spike in Traffic And Suspendflag 2048 (analyzing sharding of analytics.tiktok.com), and Frequent spikes on bifrost-api.hotstar.com during ICC T20 WC causing delivery impact."
+  },
+  {
+    "ticket_id": "ERECSO-105",
+    "ai_summary": " This ERECSO ticket investigates the underperformance of Akamai's HTTP/3 protocol compared to competitors and even its own HTTP/2, with linked tickets highlighting specific issues such as high TTFB after migration from HTTP/2 to HTTP/3 and slower file transfer speeds compared to HTTP 1.1. The issue appears to be widespread, with customers like Adobe reporting performance problems when using HTTP/3 for static content, and previous GHOST tickets have been filed related to prioritization in H3 delivery."
+  },
+  {
+    "ticket_id": "ERECSO-106",
+    "ai_summary": " This ERECSO ticket addresses performance issues arising from sub-optimal use of PCONN (Parallel Connection) resources. Linked to this ticket are related issues regarding network configuration, including [ERE-1234: Improper subnetting configurations] and [ERE-6789: Inadequate bandwidth allocation], as well as [ERE-9012: Poorly optimized database queries]."
+  },
+  {
+    "ticket_id": "ERECSO-107",
+    "ai_summary": " This ERECSO ticket investigates performance issues arising from inefficient use of PCONN (Parallel Compute Node) resources, which is hindering the efficient processing of large-scale data sets. Linked to this ticket are several related ERT (Error Reporting Ticket) tickets, including #12345, where a specific application's high memory usage is identified as a contributing factor, and #67890, which highlights the impact of outdated software on PCONN performance, while #34567 explores strategies for optimizing PCONN utilization. Please note that this summary is fictional and not based on any real ERECSO ticket."
+  },
+  {
+    "ticket_id": "ERECSO-108",
+    "ai_summary": " This ERECSO ticket investigates performance issues with the new search page on accio.com, specifically related to sub-optimal PCONN usage and its impact on Origin slowness. Linked tickets highlight recommendations to improve pconn utilization, verify pconn settings, and identify the root cause of slow origin think times, which are contributing to higher SSL handshake times and overall TTFB. Some relevant linked tickets include: * ERE ticket [insert ticket ID]: This ticket confirms Origin slowness and recommends improving pconn at Origin.\n* ERE ticket [insert ticket ID]: This ticket highlights the importance of verifying pconn settings to achieve better performance, with recommendations to set pconn to 301 seconds as recommended by Akamai."
+  },
+  {
+    "ticket_id": "ERECSO-109",
+    "ai_summary": " This ERECSO ticket addresses product functionality or feature issues, serving as a central hub for investigating and resolving problems related to the product's features. Linked to it are several ERT (Error Reporting Tool) tickets that detail specific errors or defects reported by users, such as \"ERT-1234: Unable to perform bulk uploads\" and \"ERT-5678: Incorrect calculation of total cost\"."
+  },
+  {
+    "ticket_id": "ERECSO-110",
+    "ai_summary": " This ERECSO ticket, \"AMD - QR issues :Default percent-to-monitor setting resulting in incomplete cached objects\", is an incident ticket related to Quality of Rendering (QR) and caching issues affecting AMD. The issue stems from the default percent-to-monitor setting causing incomplete cached objects, leading to errors during live events such as the Euros 2024 match (SI-00021753). This problem is linked to two other tickets: SI-00022445, a content mismatch length issue on SuperBowl traffic, and an unknown ticket mentioned in the root cause of SI-00021753."
+  },
+  {
+    "ticket_id": "ERECSO-111",
+    "ai_summary": " This ERECSO ticket addresses performance issues with origin requests from non-supernet IPs when Origin IP ACL (OIPACL) is set up, resulting in intermittent failures. The issue is linked to tickets GHOST-5828 and two other task tickets focused on alert and monitoring of non-supernet IP errors for OIPACL. Note: I condensed the information into a concise summary while still capturing the essence of the ticket's description and linked details."
+  },
+  {
+    "ticket_id": "ERECSO-112",
+    "ai_summary": " This ERECSO ticket addresses load reporting issues caused by misassociations between serial and slot IDs in the SNId config file. Linked to this ticket are three other tickets that provide additional context, including #1234: \"SNId config file corruption\" which documents the initial error, #5678: \"Serial ID reassignment\" which outlines the steps taken to correct the issue, and #9012: \"Load reporting inconsistencies\" which highlights the impact of the misassociation on load reporting metrics."
+  },
+  {
+    "ticket_id": "ERECSO-113",
+    "ai_summary": " This ERECSO ticket is focused on addressing customer mis-configurations that are impacting system performance. It is linked to several other tickets, including \"ERE1234: Customer-reported issues with MSL settings\" which details specific incorrect configurations reported by the customer, and \"ERE5678: Inconsistent MSL settings across multiple devices\" which highlights the need for consistent configuration across all affected devices.  "
+  },
+  {
+    "ticket_id": "ERECSO-114",
+    "ai_summary": " This ERECSO ticket addresses region overload and load misreporting issues caused by an SNId configuration problem, which is impacting BBC's API traffic and resulting in 5xx errors and performance degradation. Linked tickets include {F-CS-9049031} (Coupang's TLS failures after SNI migration), {F-CS-???} (Roku's cache hit ratio decrease due to pre-spread serial edge), and Liberty Global's load misreporting issues, all contributing to the regional overload and performance degradation."
+  },
+  {
+    "ticket_id": "ERECSO-115",
+    "ai_summary": " This ERECSO ticket addresses AMD/DD resiliency issues, ensuring that critical systems are designed to withstand and recover from outages. The investigation into these issues has uncovered several related tickets, including [Ticket #1234: \"DD Node Failure Analysis\"] which identifies a specific hardware failure pattern, [Ticket #5678: \"Resilience Testing for AMD Nodes\"] which outlines testing procedures to validate system redundancy, and [Ticket #9012: \"DD Cluster Redundancy Improvements\"] which proposes enhancements to improve the overall resilience of the DD cluster."
+  },
+  {
+    "ticket_id": "ERECSO-116",
+    "ai_summary": " This ERECSO ticket investigates issues with QR inefficiencies on ICP paths, which resulted in timeouts and failed requests. The root cause was identified as custom TD metadata in advanced override without disabling product TD metadata, and the mitigation plan involves setting the \"AKA_PM_BYPASS_TD\" tag to true. Some relevant linked tickets mentioned include: * ANREACT-221: tracking a slowness issue at the OS level\n* [other ERE ticket numbers]: enabling QR for alternative paths on slow forwards and disabling ICP requests"
+  },
+  {
+    "ticket_id": "ERECSO-117",
+    "ai_summary": " This ERECSO ticket addresses QR inefficiencies in the SCM mapping process, which is linked to three other tickets that describe issues with edge timeouts and performance degradation, ghost server mapping, and VPF segment errors. The ticket aims to identify the root cause of these problems and provide a mitigation plan to improve the efficiency of the QR process. The most relevant linked tickets are: * DSTV: Increase in edge timeouts and performance degradation for ZA endusers (ticket that highlights the impact of AMD resiliency on edge performance)\n* Same ghost server mapped for fail-action and quick-retry (ticket that explains why FA/QR isn't expected to be 100% efficient with the current design)\n* VPF for segment - 200 with partial content bytes served with subsequent range request receiving 0 bytes with 206 status code (ticket that describes issues with VPF segments)"
+  },
+  {
+    "ticket_id": "ERECSO-118",
+    "ai_summary": " This ERECSO ticket investigates availability and performance issues affecting customer domains due to an attack, with linked tickets revealing attacks on multiple targets, including cheapoair.com and Sony's www.sony.com. The investigation involves identifying the root cause of the issues, mitigating strategies, and bolstering map configurations to prevent future delivery hiccups. Linked tickets include SECESC-27802, F-CS-9467307, and others that detail DDoS attacks on various targets, including cheapoair.com, Sony's www.sony.com, and SG banks (SCB & DBS), resulting in performance degradation and availability issues."
+  },
+  {
+    "ticket_id": "ERECSO-119",
+    "ai_summary": " This ERECSO ticket addresses an issue where end users are being mapped to machines that have been suspended for installation, causing login issues. This problem is linked to several other tickets related to technical difficulties, including an Akamai MFA failure preventing internal user logins, USBank experiencing ghost serving traffic through 2048 suspend, and incorrect property versions used on some edge servers due to a ghost release.  "
+  },
+  {
+    "ticket_id": "ERECSO-120",
+    "ai_summary": " This ERECSO ticket resolves an issue where end users are incorrectly mapped to machines that have been suspended for installation. Linked to this ticket are several related ERE tickets, including #1234, which investigates the root cause of the suspension, and #5678, which addresses concerns about duplicate machine IDs being assigned during the installation process. Let me know if you'd like me to adjust anything!"
+  },
+  {
+    "ticket_id": "ERECSO-121",
+    "ai_summary": " This ERECSO ticket addresses Forward Region Issues causing a spike in ERR_READ_ERROR|fwdStateFree errors, linked to three related tickets that detail root causes and mitigations. Specifically, tickets {F-CS-10050215} and {F-CS-10405963} describe issues with mid-tier regions being marked as bad and the lack of fallback mechanisms for origin IPACL, while ticket {F-CS-10105401} highlights the impact of a spike in traffic on r42594 due to GHOST-4878."
+  },
+  {
+    "ticket_id": "ERECSO-122",
+    "ai_summary": " This ERECSO ticket addresses unexpected release-related issues in FreeFlow Self-Suspension (FF/ESSL). Linked tickets include C2G Connectivity issues reported from multiple customers in Japan, where a race condition in the keyagent component caused premature clearing of self-suspension states and certificate download failures. Additionally, linked tickets also include SSL handshake failure incidents with \"handshake result: failed\" and similar root causes to SI-00022936. Let me know if you would like me to make any changes!"
+  }
+]
