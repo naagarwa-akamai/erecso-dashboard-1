@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERE-Sustenance Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f7f9;
+            --border-color: #d1d9e0;
+            --table-header-bg: #e9eff5;
+            --text-main: #333;
+            --link-color: #0052cc;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 20px;
+            color: #172b4d;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .back-btn {
+            padding: 5px 14px;
+            border-radius: 4px;
+            border: 1px solid #0052cc;
+            background: #fff;
+            color: #0052cc;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #e8f0fe;
+        }
+
+        .dashboard-container {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            color: #172b4d;
+            text-align: left;
+            min-width: 120px;
+            padding: 10px 8px;
+            border-bottom: 2px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+            color: var(--text-main);
+        }
+
+        tr:hover td {
+            background-color: #f0f4ff;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-header">
+        <h1>ERE-Sustenance Data</h1>
+        <a href="/" class="back-btn"><i class="bi bi-arrow-left"></i> Back to Dashboard</a>
+    </div>
+
+    <div class="dashboard-container">
+        <table id="sustenanceTable">
+            <thead>
+                <tr>
+                    <th>Issue Key</th>
+                    <th>Summary</th>
+                    <th>Status</th>
+                    <th>Issue Type</th>
+                    <th>Created Date</th>
+                    <th>Labels</th>
+                </tr>
+            </thead>
+            <tbody id="sustenanceTableBody">
+                <tr>
+                    <td colspan="6" class="empty-state">Loading sustenance data...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const res = await fetch('/api/tickets');
+                if (!res.ok) throw new Error('Failed to fetch tickets');
+                const tickets = await res.json();
+
+                // Filter for sustenance-related tickets (labels or summary containing "sustenance")
+                const sustenance = tickets.filter(t => {
+                    const labels = (t.labels || []).join(' ').toLowerCase();
+                    const summary = (t.summary || '').toLowerCase();
+                    const type = (t.issue_type || '').toLowerCase();
+                    return labels.includes('sustenance') || summary.includes('sustenance') || type.includes('sustenance');
+                });
+
+                const tbody = document.getElementById('sustenanceTableBody');
+
+                if (sustenance.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">No sustenance tickets found.</td></tr>`;
+                    return;
+                }
+
+                tbody.innerHTML = sustenance.map(t => {
+                    const labels = (t.labels || []).map(l => `<span style="display:inline-block;background:#e9eff5;color:#0052cc;padding:2px 6px;margin:2px;border-radius:4px;font-size:10px;font-weight:bold;">${l}</span>`).join('');
+                    const issueUrl = `https://jira.akamai.com/browse/${t.ticket_id}`;
+                    return `<tr>
+                        <td><a href="${issueUrl}" target="_blank">${t.ticket_id || ''}</a></td>
+                        <td>${t.summary || ''}</td>
+                        <td>${t.status || ''}</td>
+                        <td>${t.issue_type || ''}</td>
+                        <td>${t.created || ''}</td>
+                        <td>${labels}</td>
+                    </tr>`;
+                }).join('');
+            } catch (e) {
+                document.getElementById('sustenanceTableBody').innerHTML =
+                    `<tr><td colspan="6" class="empty-state">Error loading data: ${e.message}</td></tr>`;
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+</html>

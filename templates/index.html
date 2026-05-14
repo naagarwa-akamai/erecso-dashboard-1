@@ -1,0 +1,1480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Escalations Dashboard</title>
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <!-- Include Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f7f9;
+            --table-header-bg: #e9eff5;
+            --border-color: #d1d9e0;
+            --text-main: #333;
+            --link-color: #0052cc;
+            --bg-page: #f4f7fa;
+            --tile-bg: #ffffff;
+            --text-label: #6c757d;
+            --text-data: #212529;
+            --text-sub: #868e96;
+            --color-blue: #007bff;
+            --color-green: #28a745;
+            --color-red: #dc3545;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .status-open {
+            display: inline-block;
+            background-color: #f8f0ed;
+            color: #8b4100;
+            padding: 2px 6px;
+            margin: 2px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        graphs-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 20px;
+        }
+
+        .graph-wrapper {
+            background: var(--tile-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .graph-wrapper h3 {
+            margin-top: 0;
+            font-size: 14px;
+            color: var(--text-label);
+            margin-bottom: 20px;
+        }
+
+        /* Chart canvas dimensions (required) */
+        .chart-container {
+            position: relative;
+            height: 250px; /* Force height for the chart drawing area */
+            width: 100%;
+        }
+
+        .status-resolved {
+            display: inline-block;
+            background-color: #e9f5ee;
+            color: #008b53;
+            padding: 2px 6px;
+            margin: 2px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .status-in-progress {
+            display: inline-block;
+            background-color: #f2e9f5;
+            color: #5f008b;
+            padding: 2px 6px;
+            margin: 2px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+
+        .label-tag {
+            display: inline-block;
+            background-color: #e9eff5;
+            color: #0052cc;
+            padding: 2px 6px;
+            margin: 2px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .dashboard-container {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: #5e6c84;
+            padding: 10px 5px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        canvas {
+            width: 600px;
+            height: auto !important;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            overflow-x: scroll;
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            color: #172b4d;
+            text-align: left;
+            min-width: 120px;
+            padding: 10px 8px;
+            border-bottom: 2px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+            color: var(--text-main);
+        }
+
+        input[type="number"] {
+            padding: 4px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            font-size: 11px;
+        }
+
+
+        /* Filter Row Styling */
+        .filter-row input {
+            width: 90%;
+            padding: 4px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            font-size: 11px;
+        }
+
+        /* Status & Priority Tags */
+        .issue-key {
+            color: var(--link-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .ai-summary {
+            max-width: 800px;
+            min-width: 400px;
+            line-height: 1.5;
+            color: #444;
+            white-space: pre-line;
+        }
+
+        .flag-important {
+            background: #fffae6;
+            border: 1px solid #ff9900;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: bold;
+            color: #a54800;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .cso-mapper-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cso-mapper-details li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .cso-mapper-details li strong {
+            color: #000;
+        }
+
+        .flag-dropdown.indevelopment {
+            background: #f0f8ff;
+            color: #007bff;
+        }
+
+        .flag-dropdown.planned {
+            background: #e7f3e7;
+            color: #28a745;
+        }
+
+        .flag-dropdown.willnotimplement {
+            background: #f8d7da;
+            color: #dc3545;
+        }
+
+        .flag-dropdown.notfiled {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .flag-dropdown.futureconsideration {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .flag-dropdown.beingdiscussed {
+            background: #e2e3e5;
+            color: #6c757d;
+        }
+
+        .flag-dropdown.underreview {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .flag-dropdown.needmoreinformation {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .flag-dropdown.shipped {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .flag-dropdown.onhold {
+            background: #fefefe;
+            color: #6c757d;
+        }
+
+        .flag-dropdown.cancelled {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        h2.overview-title {
+            color: #1a202c;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* --- TILE CONTAINER --- */
+        .metrics-grid {
+            display: flex;
+            gap: 15px; /* Space between tiles */
+            flex-wrap: wrap; /* Wraps on smaller screens */
+            margin-bottom: 30px;
+        }
+
+        /* --- INDIVIDUAL TILE STYLING --- */
+        .metric-tile {
+            background: var(--tile-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            flex: 1 1 calc(11.11% - 15px); /* Forces 9 tiles to share 100% width, min 11.11% */
+            padding: 15px;
+            text-align: center;
+            box-sizing: border-box; /* Crucial for padding/border calcs */
+            min-width: 130px; /* Minimum width before wrapping */
+        }
+
+        /* Label (Top Text) */
+        .metric-tile .label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 11px;
+            color: var(--text-label);
+            font-weight: 700;
+            margin-bottom: 8px;
+            white-space: nowrap; /* Keep labels on one line */
+        }
+
+        /* Main Data Number */
+        .metric-tile .data-value {
+            display: block;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        /* Secondary Data (Bottom Text) */
+        .metric-tile .sub-text {
+            display: block;
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+        .color-blue { color: var(--color-blue); }
+        .color-green { color: var(--color-green); }
+        .color-red { color: var(--color-red); }
+        .color-dark { color: var(--text-data); }
+    </style>
+</head>
+
+<body>
+    <a href="/ere-sustenance" target="_blank">
+        <button style=" padding: 4px 14px; border-radius: 4px; border: 1px solid #4a4b4c; background: #4d4d4e; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.2s;">
+            ERE-Sustenance Data - Click Here
+        </button>
+    </a>
+
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 class="overview-title" style="margin: 0;">ERECSO-Executive Overview <span style="font-size:10px;color:#888;">* This dashboard updates at 2:00 P.M IST daily</span></h2>
+
+        <label class="switch-toggle" style="display: flex; align-items: center; gap: 8px; cursor: pointer; width: max-content;">
+            <span id="monthlyLabel" style="font-size: 13px; font-weight: 400; min-width: 70px; text-align: left;">Monthly View</span>
+
+            <input type="checkbox" id="viewchangetoggle" checked style="margin: 0 8px;">
+            <span class="slider" style="width:30px"></span>
+            <span id="quarterlyLabel" style="font-size: 13px; font-weight: 400; min-width: 70px; text-align: right;">Quarterly View</span>
+        </label>
+        <script>
+            // Toggle label update logic
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggle = document.getElementById('viewchangetoggle');
+                const quarterlyLabel = document.getElementById('quarterlyLabel');
+                const monthlyLabel = document.getElementById('monthlyLabel');
+                function updateViewLabels() {
+                    if (toggle.checked) {
+                        quarterlyLabel.style.fontWeight = '700';
+                        quarterlyLabel.style.color = '#0052cc';
+                        monthlyLabel.style.fontWeight = '400';
+                        monthlyLabel.style.color = '#444';
+                    } else {
+                        quarterlyLabel.style.fontWeight = '400';
+                        quarterlyLabel.style.color = '#444';
+                        monthlyLabel.style.fontWeight = '700';
+                        monthlyLabel.style.color = '#0052cc';
+                    }
+                }
+                toggle.addEventListener('change', function () {
+                    updateViewLabels();
+                    // Optionally trigger view mode change logic here
+                    // Example: setViewMode(toggle.checked ? 'quarterly' : 'monthly');
+                });
+                updateViewLabels();
+            });
+        </script>
+    </div>
+
+    <!-- <script>
+// Toggle view mode (quarterly/monthly)
+
+
+</script> -->
+
+    <div class="metrics-grid" >
+        <!-- Monthly View Placeholder -->
+
+        <script>
+    // Monthly/Quarterly view toggle logic
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('viewchangetoggle');
+        const quarterlyDiv = document.getElementById('quarterlyView');
+        const monthlyDiv = document.getElementById('monthlyView');
+        const monthfilter = document.getElementById('monthFilter');
+        const monthfilterLabel= document.getElementById('monthFilterLabel');
+        const resultCountDiv = document.getElementById('resultCount');
+        const monthlyResultCountDiv = document.getElementById('monthlyResultCount');
+        function updateViewDisplay() {
+            if (toggle.checked) {
+                quarterlyDiv.style.display = '';
+                monthlyDiv.style.display = 'none';
+                monthfilter.style.display = 'none';
+                monthfilterLabel.style.display = 'none';
+                if (resultCountDiv) resultCountDiv.style.display = '';
+                if (monthlyResultCountDiv) monthlyResultCountDiv.style.display = 'none';
+            } else {
+                quarterlyDiv.style.display = 'none';
+                monthlyDiv.style.display = '';
+                monthfilter.style.display = '';
+                monthfilterLabel.style.display = '';
+                if (monthlyResultCountDiv) monthlyResultCountDiv.style.display = '';
+                if (resultCountDiv) resultCountDiv.style.display = 'none';
+            }
+        }
+        toggle.addEventListener('change', updateViewDisplay);
+        updateViewDisplay();
+    });
+</script>
+
+        <div class="metric-tile">
+            <span class="label">ERECSO Tickets (Not-Epic and Ongoing)</span>
+            <span id="totalErecsoTickets" class="data-value color-dark">36</span>
+            <span class="sub-text">Excluding Not-ERE ERECSO tickets </span>
+        </div>
+<div class="metric-tile">
+            <span id="ereLinkedIssuesHeading" class="label">Total ERE Linked Issues in 2026</span>
+            <span id="ereLinkedIssuesCount" class="data-value color-dark">—</span>
+            <span class="sub-text">till last updated</span>
+        </div>
+        
+
+        <div class="metric-tile">
+            <span class="label">Total Open ERECSO Tickets</span>
+            <span id="totalOpenInProgress" class="data-value color-dark">51</span>
+            <span class="sub-text">till last updated</span>
+        </div>
+
+        <div class="metric-tile">
+            <span class="label">Total Closed ERECSO Tickets</span>
+            <span id="totalClosedTickets" class="data-value color-dark">352</span>
+            <span class="sub-text">till last updated</span>
+        </div>
+
+        
+
+        <div class="metric-tile">
+            <span class="label" id="erecsoCreatedHeading">ERECSO Ticket Created in 2026</span>
+            <span class="data-value color-dark" id="erecsoCreatedCount">—</span>
+            <span class="sub-text">till last updated</span>
+        </div>
+
+        <div class="metric-tile">
+            <span class="label">Total ERE Linked Tickets</span>
+            <span id="totalLinkedTickets" class="data-value color-dark">40</span>
+            <span class="sub-text">till last updated</span>
+        </div>
+
+    </div>
+
+    <div class="graphs-container">
+
+        <div class="graph-wrapper">
+            <h3>CSO Label Mapper Details</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p class="description">
+                        Below are the details of the CSO Mapper components and their related stories:
+                    </p>
+                    <ul class="cso-mapper-details">
+                        <li><strong>CSO_Mapper:</strong> Mapper components related stories</li>
+                        <li><strong>CSO_Ghost:</strong> Ghost related stories agnostic to a Product/Feature.</li>
+                        <li><strong>CSO_Product:</strong> Product enhancement stories.</li>
+                        <li><strong>CSO_Feature:</strong> Feature related stories. Ghost or metadata issues related to a feature.</li>
+                        <li><strong>CSO_Network:</strong> Network or Capacity related stories.</li>
+                        <li><strong>CSO_Hardware:</strong> Unqualified or underpowered servers</li>
+                        <li><strong>CSO_Telemetry:</strong> Lack of visibility due to missing logging/reporting</li>
+                        <li><strong>CSO_Process:</strong> Not following or lack of process or KB thereof.</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="chart-container">
+                        <canvas id="labelsPieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br/>
+        <!-- <div class="graph-wrapper">
+            <h3>Linked Ticket Quarterly Wise</h3>
+            <div class="chart-container">
+                <canvas class='a' id="quarterlyLineChart"></canvas>
+            </div>
+        </div> -->
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; margin-top: 20px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <h2 style="margin: 0;">ERECSO - Escalations</h2>
+            <label class="switch-toggle" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="checkbox" id="toggleOpenTickets" checked>
+                <span class="slider"></span>
+                <span id="toggleLabel" style="font-size: 10px; font-weight: 400;">Open ERECSO Only</span>
+            </label>
+            <button id="typeFilterBtn" style="margin-left: 10px; padding: 4px 12px; border-radius: 4px; border: 1px solid #5b6064; background: #f7f6f6; color: #393838; font-size: 12px; cursor: pointer; transition: background 0.2s;">Show Sub-task/Task/Story</button>
+            <label class="switch-toggle" style="display: flex; align-items: center; gap: 8px; cursor: pointer; margin-left: 10px;">
+                <input type="checkbox" id="excludeNotEreTicketsToggle" checked>
+                <span class="slider"></span>
+                <span id="excludeNotEreTicketsLabel" style="font-size: 10px; font-weight: 400;">Not-ERE Tickets(Excluded)</span>
+            </label>
+
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; justify-content: flex-end;">
+            <div style="display: flex; align-items:center;justify-content:  flex-end; gap: 4px;">
+
+                <label for="yearInput" style="font-size: 11px;align-items: center; font-weight: 500; color: #444;">Select Year:</label>
+                <input type="number" id="yearInput" value="2026" onchange="updateYear()" placeholder="Enter Year">
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; justify-content: flex-end;">
+                <label for="monthFilter" id="monthFilterLabel" style="font-size: 11px; font-weight: 500; color: #444;">Select Month:</label>
+                <select id="monthFilter" style="font-size: 11px; font-weight: 500; color: #444;" onchange="filterByMonth()">
+                    <option value="" style="font-size: 11px; font-weight: 500; color: #444;">All </option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                    </div>
+        </div>
+    </div>
+
+    <style>
+            /* Slide Toggle Styles */
+            .switch-toggle {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                user-select: none;
+            }
+            .switch-toggle input[type="checkbox"] {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            .slider {
+                position: relative;
+                width: 30px;
+                height: 16px;
+                background-color: #ccc;
+                border-radius: 22px;
+                transition: background 0.3s;
+                margin-right: 4px;
+            }
+            .slider:before {
+                content: "";
+                position: absolute;
+                left: 1.5px;
+                top: 1.5px;
+                width: 12px;
+                height: 12px;
+                background: #e3b4b4;
+                border-radius: 50%;
+                transition: transform 0.3s;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+            }
+            .switch-toggle input:checked + .slider {
+                background-color: #5b5c5e;
+            }
+            .switch-toggle input:checked + .slider:before {
+                transform: translateX(18px);
+            }
+    </style>
+
+    <div id="resultCount" style="font-size:11px; color:#444; margin: 10px 0 5px 0; font-weight:500;"></div>
+    <div id="monthlyResultCount" style="font-size:11px; color:#444; margin: 10px 0 5px 0; font-weight:500;"></div>
+
+
+        <div class="dashboard-container" id="quarterlyView">
+            <table id="escalationTable">
+                
+                <thead>
+                    
+                    <tr>
+                        <th>Flags - <span class="btn btn-success mt-3 px-4 py-2  shadow-lg" style="cursor: pointer;"
+                                onclick="saveFlags()">
+                                <i class="bi bi-save"></i>Save
+                            </span></th>
+                        <th onclick="sortTable('key', this)" style="cursor: pointer;">Issue Key <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th>Summary</th>
+                        <th>Aha-Idea</th>
+                        <th onclick="sortTable('status' ,this)" style="cursor: pointer;">Status <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th onclick="sortTable('issue_type', this)" style="cursor: pointer;">Issue Type <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th onclick="sortTable('created', this)" style="cursor: pointer;">Created Date <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th>Labels</th>
+                        <th style="min-width:400px; max-width:800px; width: 20vw;">AI Summary</th>
+                        <th onclick="sortTable('totalERETickets', this)" style="cursor: pointer;">Total ERE Tickets <i class="bi bi-arrow-down-up sort-icon"></i></th> 
+                        <th id="q1Header">Q1 2026</th>
+                        <th id="q2Header">Q2 2026</th>
+                        <th id="q3Header">Q3 2026</th>
+                        <th id="q4Header">Q4 2026</th>  
+                        <th id="q5Header">ERE Cases linked in 2026</th> <th id="q6Header">TOTAL LOE IN 2026</th> <th id="q7header">Fractional FTE Utilization in 2026</th>            </tr>
+                        <tr class="filter-row">
+                        <td><input type="text" placeholder="filter..."></td>
+                        <td><input type="text" id="issueKeyFilter" placeholder="Search Issue Key..." onkeyup="filterIssueKey()"></td>
+                        <td><input type="text" id="summaryFilter" placeholder="Search Summary..." onkeyup="filterSummary()"></td>
+                        <td></td>
+                        <td><input type="text" id="statusFilter" placeholder="Search Status..." onkeyup="filterStatus()"></td>
+                        <td><input type="text" id="issueTypeFilter" placeholder="Search Issue Type..." onkeyup="filterIssueType()"></td>
+                        <td><input type="text" id="createdDateFilter" placeholder="Select Date Range" onkeyup="filterCreatedDate()"></td>
+                        <td><input type="text" id="labelsFilter" placeholder="Search Labels (e.g., coreperf_feature, coreperf_ui)" onkeyup="filterLabels()"></td>
+                        <td></td>
+
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="11" style="text-align:center;">Loading escalations...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+
+
+    <div class="dashboard-container" id="monthlyView" style="display:none;">
+            <table id="escalationTable">
+                <thead>
+                    <tr>
+                        <th>Flags - <span class="btn btn-success mt-3 px-4 py-2  shadow-lg" style="cursor: pointer;"
+                                onclick="saveFlags()">
+                                <i class="bi bi-save"></i>Save
+                            </span></th>
+                        <th onclick="sortTable('key', this)" style="cursor: pointer;">Issue Key <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th>Summary</th>
+                        <th>Aha-Idea</th>
+                        <th onclick="sortTable('status' ,this)" style="cursor: pointer;">Status <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th onclick="sortTable('issue_type', this)" style="cursor: pointer;">Issue Type <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th onclick="sortTable('created', this)" style="cursor: pointer;">Created Date <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th>Labels</th>
+                        <th onclick="sortTable('totalERETickets', this)" style="cursor: pointer;">Total ERE Tickets <i class="bi bi-arrow-down-up sort-icon"></i></th>
+                        <th>Linked Tickets in This Month</th>
+                        <th>Linked Ticket Keys (This Month)</th>
+                        <th id="q6Header">Total LOE in This Month</th>
+                        <th id="q7header">Fractional FTE Utilization</th>
+                        
+                        <th style="min-width:400px; max-width:800px; width: 20vw;">The CORE Objective-AI Inference</th>
+                        <th style="min-width:250px; max-width:400px; width: 15vw;">Progressive Work-AI Inference</th>
+                        <th style="min-width:250px; max-width:400px; width: 15vw;">Patterns & Trends-AI Inference</th>
+                    </tr>
+                        <!-- <tr class="filter-row">
+                        <td><input type="text" placeholder="filter..."></td>
+                        <td><input type="text" id="issueKeyFilter" placeholder="Search Issue Key..." onkeyup="filterIssueKey()"></td>
+                        <td><input type="text" id="summaryFilter" placeholder="Search Summary..." onkeyup="filterSummary()"></td>
+                        <td></td>
+                        <td><input type="text" id="statusFilter" placeholder="Search Status..." onkeyup="filterStatus()"></td>
+                        <td><input type="text" id="issueTypeFilter" placeholder="Search Issue Type..." onkeyup="filterIssueType()"></td>
+                        <td><input type="text" id="createdDateFilter" placeholder="Select Date Range" onkeyup="filterCreatedDate()"></td>
+                        <td><input type="text" id="labelsFilter" placeholder="Search Labels (e.g., coreperf_feature, coreperf_ui)" onkeyup="filterLabels()"></td>
+                        <td></td>
+
+                    </tr> -->
+                </thead>
+                <tbody id="tableBodyMonthly">
+                    <tr>
+                        <td colspan="11" style="text-align:center;">Loading monthly data...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <script>
+        let currentViewMode = 'quarterly';
+        let allData = [];
+        let parentFilteredData = [];
+        let sortOrder = {};
+        const flagOptions = [
+            "-",
+            "In development",
+            "Planned",
+            "Will not implement",
+            "Not Filed",
+            "Future consideration",
+            "Being discussed",
+            "Under Review",
+            "Need More Information",
+            "Shipped",
+            "On Hold",
+            "Cancelled"
+        ];
+        typeFilterActive=false;
+        document.addEventListener('DOMContentLoaded', function () {
+
+        
+
+            // Slide toggle functionality for open/all tickets
+            const toggle = document.getElementById('toggleOpenTickets');
+            const toggleLabel = document.getElementById('toggleLabel');
+                    const typeFilterBtn = document.getElementById('typeFilterBtn');
+                    typeFilterBtn.addEventListener('click', function () {
+                        typeFilterActive = !typeFilterActive;
+                        typeFilterBtn.textContent = typeFilterActive ? 'Show All Types' : 'Show Sub-task/Task/Story';
+                        filterByToggle();
+                    });
+
+
+            toggle.addEventListener('change', function () {
+                filterByToggle();
+                toggleLabel.textContent = toggle.checked ? 'Open ERECSO Only' : 'All';
+            });
+            const excludeNotEreTicketsToggle = document.getElementById('excludeNotEreTicketsToggle');
+            const excludeNotEreTicketsLabel = document.getElementById('excludeNotEreTicketsLabel');
+            excludeNotEreTicketsToggle.addEventListener('change', function () {
+                filterByToggle();
+                excludeNotEreTicketsLabel.textContent = excludeNotEreTicketsToggle.checked ? 'Not-ERE Tickets(Excluded)' : 'Include Not-ERE Tickets(Included)';
+            });
+
+            flatpickr("#createdDateFilter", {
+                mode: "range", // Enable range mode
+                dateFormat: "Y-m-d", // Format as YYYY-MM-DD
+                onChange: filterCreatedDate // Trigger filter function on date change
+            });
+        // End of DOMContentLoaded
+
+            flatpickr("#createdDateFilter", {
+                mode: "range", // Enable range mode
+                dateFormat: "Y-m-d", // Format as YYYY-MM-DD
+                onChange: filterCreatedDate // Trigger filter function on date change
+            });
+        });
+
+        // Mock API Endpoints
+        // const API_URLS = [
+        //     'https://api.example.com/escalations-internal',
+        //     'https://api.example.com/escalations-external'
+        // ];
+        let selectedYear = 2026; // Default year
+        let quarterlyData = { Q1: 0, Q2: 0, Q3: 0, Q4: 0 }; // Initialize quarterly data
+// Function to update the selected year
+function updateYear() {
+    const yearInput = document.getElementById('yearInput');
+    selectedYear = parseInt(yearInput.value) || 2026; // Default to 2026 if input is invalid
+    document.getElementById('q1Header').textContent = `Q1 ${selectedYear}`;
+    document.getElementById('q2Header').textContent = `Q2 ${selectedYear}`;
+    document.getElementById('q3Header').textContent = `Q3 ${selectedYear}`;
+    document.getElementById('q4Header').textContent = `Q4 ${selectedYear}`;
+    document.getElementById('q5Header').textContent = `ERE Cases linked in ${selectedYear}`;
+    document.getElementById('q6Header').textContent = `Total LOE in ${selectedYear}`;
+    document.getElementById('q7header').textContent = `Fractional FTE Utilization in ${selectedYear}`;
+    document.getElementById('ereLinkedIssuesHeading').textContent = `ERE Linked Issues in ${selectedYear}`;
+    updateEreLinkedIssuesCount();
+    updateErecsoCreatedCount();
+    quarterlyData = { Q1: 0, Q2: 0, Q3: 0, Q4: 0 };
+    renderTable(allData); // Re-render the table with the updated year
+}
+
+function updateEreLinkedIssuesCount() {
+    // Load the linked tickets dictionary
+    fetch('/linked-tickets')
+        .then(response => response.json())
+        .then(linkedTicketsDict => {
+            // Calculate the number of ERE Linked Issues for the selected year
+            const ereLinkedIssuesCount = allData.reduce((count, item) => {
+                if (Array.isArray(item.issue_links)) {
+                    item.issue_links.forEach(link => {
+                        const linkedTicket = linkedTicketsDict[link.key]; // Fetch linked ticket details
+                        if (linkedTicket && linkedTicket.resolution_date) {
+                            const resolutionDate = new Date(linkedTicket.resolution_date);
+                            if (resolutionDate.getFullYear() === selectedYear) {
+                                count++;
+                            }
+                        }
+                    });
+                }
+                return count;
+            }, 0);
+
+            // Update the count in the UI
+            document.getElementById('ereLinkedIssuesCount').textContent = ereLinkedIssuesCount;
+        })
+        .catch(error => {
+            console.error("Error fetching linked tickets:", error);
+            document.getElementById('ereLinkedIssuesCount').textContent = "Error";
+        });
+}
+
+function filterByToggle() {
+    const toggle = document.getElementById('toggleOpenTickets');
+    typeFilterActive = document.getElementById('typeFilterBtn').textContent === 'Show All Types';
+    const excludeNotEreTicketsToggle = document.getElementById('excludeNotEreTicketsToggle');
+    let filtered = allData;
+    // Filter by status if toggle is ON
+    if (toggle && toggle.checked) {
+        filtered = filtered.filter(item => {
+            const status = item.status ? item.status.toLowerCase() : '';
+            return status === 'open' || status === 'in progress';
+        });
+    }
+    // Filter by type if typeFilterActive is ON
+    if (typeFilterActive) {
+        filtered = filtered.filter(item => {
+            const type = (item.issue_type || '').toLowerCase();
+            return type === 'sub-task' || type === 'task' || type === 'story';
+        });
+    }
+    // Exclude Not-ERE Tickets if toggle is ON
+    if (excludeNotEreTicketsToggle && excludeNotEreTicketsToggle.checked) {
+        const excludeNames = ['Angela Wang', 'Cesar Arias [X]'];
+        filtered = filtered.filter(item => {
+            const creator = (item.creator || '').trim();
+            const reporter = (item.reporter || '').trim();
+            const assignee = (item.assignee || '').trim();
+            return !(
+                excludeNames.includes(creator) ||
+                excludeNames.includes(reporter) ||
+                excludeNames.includes(assignee)
+            );
+        });
+    }
+    parentFilteredData = filtered;
+    // Determine which view is active and render the appropriate table
+    const quarterlyDiv = document.getElementById('quarterlyView');
+    const monthlyDiv = document.getElementById('monthlyView');
+    const monthFilter = document.getElementById('monthFilter');
+    if (quarterlyDiv && quarterlyDiv.style.display !== 'none') {
+        renderTable(parentFilteredData);
+    } else if (monthlyDiv && monthlyDiv.style.display !== 'none') {
+        renderTableMonthly(parentFilteredData, monthFilter ? monthFilter.value : '');
+    }
+}
+function renderLabelsPieChart(data) {
+    // Define the allowed labels
+    const allowedLabels = [
+        'CSO_Mapper',
+        'CSO_Ghost',
+        'CSO_Product',
+        'CSO_Feature',
+        'CSO_Network',
+        'CSO_Hardware',
+        'CSO_Telemetry',
+        'CSO_Process'
+    ];
+
+    // Extract labels and calculate their counts
+    const labelCounts = data.reduce((counts, ticket) => {
+        if (Array.isArray(ticket.labels)) {
+            ticket.labels.forEach(label => {
+                if (allowedLabels.includes(label)) {
+                    counts[label] = (counts[label] || 0) + 1;
+                }
+            });
+        }
+        return counts;
+    }, {});
+
+    // Prepare data for the pie chart
+    const labels = Object.keys(labelCounts);
+    const counts = Object.values(labelCounts);
+
+    // Get the canvas element
+    const ctx = document.getElementById('labelsPieChart').getContext('2d');
+
+    // Render the pie chart
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: counts,
+                backgroundColor: [
+                    '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#FFCD56', '#C9CBCF'
+                ],
+                hoverBackgroundColor: [
+                    '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#FFCD56', '#C9CBCF'
+                ]
+            }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '50%', // This creates the "thin ring" look
+        plugins: {
+            legend: {
+                display: true,
+                position: 'right', // Moves legend to the right like the screenshot
+                labels: {
+                    usePointStyle: true, // Makes legend icons circles/squares instead of rectangles
+                    boxWidth: 10,
+                    padding: 10,
+                    font: {
+                        size: 13,
+                        weight: 'bold'
+                    }
+                }
+            },
+            tooltip: {
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return ` ${tooltipItem.label}: ${tooltipItem.raw}`;
+                    }
+                }
+            },
+            datalabels: {
+                display: true // The screenshot doesn't show labels inside the ring
+            }
+        }
+    },
+        plugins: [ChartDataLabels]
+    });
+}
+// Call this function after fetching allData
+
+
+
+        async function fetchAndRenderData() {
+            try {
+                const API_URL = '/api/tickets'; // Use the existing API endpoint
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                allData = await response.json(); // Parse the JSON response
+                
+                updateOverviewMetrics(allData);
+                updateEreLinkedIssuesCount();
+                updateErecsoCreatedCount();
+                renderLabelsPieChart(allData);
+                filterByToggle(); // Use toggle state to filter
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                document.getElementById('tableBody').innerHTML =
+                    '<tr><td colspan="11">Error loading data.</td></tr>';
+            }
+        }
+        function updateErecsoCreatedCount() {
+    // Calculate the number of ERECSO Tickets Created in the selected year
+    const erecsoCreatedCount = allData.reduce((count, item) => {
+        if (item.created) {
+            const createdDate = new Date(item.created);
+            if (createdDate.getFullYear() === selectedYear) {
+                count++;
+            }
+        }
+        return count;
+    }, 0);
+
+    // Update the heading and count in the UI
+    document.getElementById('erecsoCreatedHeading').textContent = `ERECSO Tickets Created in ${selectedYear}`;
+    document.getElementById('erecsoCreatedCount').textContent = erecsoCreatedCount;
+}
+
+        function formatDate(dateString) {
+            if (!dateString) return "N/A"; // Handle missing dates
+            const date = new Date(dateString);
+            return date.toISOString().split("T")[0]; // Format as YYYY-MM-DD
+        }
+
+
+        function filterSummary() {
+            const searchValue = document.getElementById('summaryFilter').value.toLowerCase();
+            const filteredData = parentFilteredData.filter(item => item.summary && item.summary.toLowerCase().includes(searchValue));
+            renderTable(filteredData);
+        }
+
+
+
+        function updateOverviewMetrics(data) {
+    // Total ERECSO Tickets (Open, issue_type: sub-task, task, or story, Not-ERE: reporter/assignee not Angela Wang or Cesar Arias [X])
+    const excludeNames = ['Angela Wang', 'Cesar Arias [X]'];
+    const totalErecsoTickets = data.filter(item => {
+        const status = item.status ? item.status.toLowerCase() : '';
+        const issueType = item.issue_type ? item.issue_type.toLowerCase() : '';
+        const reporter = (item.reporter || '').trim();
+        const assignee = (item.assignee || '').trim();
+        return (status === 'open' || status === 'in progress') &&
+            (issueType === 'sub-task' || issueType === 'task' || issueType === 'story') &&
+            !excludeNames.includes(reporter) &&
+            !excludeNames.includes(assignee);
+    }).length;
+
+    // Total Linked Tickets
+    const totalLinkedTickets = data.reduce((total, item) => {
+        return total + (item.issue_links ? item.issue_links.length : 0);
+    }, 0);
+
+    // Total Open or InProgress Tickets
+    const totalOpenInProgress = data.filter(item => {
+        const status = item.status ? item.status.toLowerCase() : '';
+        return status === 'open' || status === 'in progress';
+    }).length;
+
+    // Total Closed Tickets
+    const totalClosedTickets = data.filter(item => {
+        const status = item.status ? item.status.toLowerCase() : '';
+        return status === 'resolved' || status === 'closed';
+    }).length;
+
+    // Update the tiles
+    document.getElementById('totalErecsoTickets').textContent = totalErecsoTickets;
+    document.getElementById('totalLinkedTickets').textContent = totalLinkedTickets;
+    document.getElementById('totalOpenInProgress').textContent = totalOpenInProgress;
+    document.getElementById('totalClosedTickets').textContent = totalClosedTickets;
+}
+
+
+
+        function filterCreatedDate(selectedDates) {
+            let filteredDataa;
+            if (!selectedDates || selectedDates.length === 0) {
+                filteredDataa = parentFilteredData;
+            } else {
+                const [start, end] = selectedDates;
+                filteredDataa = parentFilteredData.filter(item => {
+                    const createdDate = new Date(item.created);
+                    return createdDate >= start && createdDate <= end;
+                });
+            }
+            renderTable(filteredDataa);
+        }
+
+        function filterIssueKey() {
+            const searchValue = document.getElementById('issueKeyFilter').value.toLowerCase();
+            const filteredData = parentFilteredData.filter(item => item.ticket_id && item.ticket_id.toLowerCase().includes(searchValue));
+            renderTable(filteredData);
+        }
+        // Function to filter the table by Status
+        function filterStatus() {
+            const searchValue = document.getElementById('statusFilter').value.toLowerCase();
+            const searchTerms = searchValue.split(',').map(term => term.trim());
+            let filteredData;
+            if (searchTerms.length === 0 || searchTerms[0] === '') {
+                filteredData = parentFilteredData;
+            } else {
+                filteredData = parentFilteredData.filter(item => {
+                    return item.status && searchTerms.some(term => item.status.toLowerCase().includes(term));
+                });
+            }
+            renderTable(filteredData);
+        }
+
+        async function saveFlags() {
+            try {
+                const response = await fetch('/api/update-ticket', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(allData), // Send the updated data to the server
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                alert(result.message || "Flags saved successfully!");
+            } catch (error) {
+                console.error("Error saving flags:", error);
+                alert("Failed to save flags.");
+            }
+        }
+
+        // Function to render labels as tags
+        function renderLabels(labels) {
+            if (!Array.isArray(labels) || labels.length === 0) return "N/A"; // Handle empty or invalid labels
+            return labels.map(label => `
+        <span class="label-tag">${label.trim()}</span>
+    `).join(' '); // Iterate over the array, trim whitespace, and render as tags
+        }
+
+
+        async function renderTable(data) {
+            // Show total result count
+            const resultCountDiv = document.getElementById('resultCount');
+            resultCountDiv.textContent = 'Total Results: ' + data.length;
+
+            // Sort data by total linked cases in descending order
+            data = [...data].sort((a, b) => {
+                const aLinks = Array.isArray(a.issue_links) ? a.issue_links.length : 0;
+                const bLinks = Array.isArray(b.issue_links) ? b.issue_links.length : 0;
+                return bLinks - aLinks;
+            });
+
+            console.log("Rendering table with data:", data); // Debug log to check the data being rendered
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = ''; // Clear loader
+            const jiraBaseUrl = "https://track.akamai.com/jira/browse/";
+            const linkedTicketsDict = await fetch('/linked-tickets').then(response => response.json());
+            quarterlyData = { Q1: 0, Q2: 0, Q3: 0, Q4: 0 };
+
+            data.forEach((item, index) => {
+                const row = document.createElement('tr');
+                const quarters = { Q1: 0, Q2: 0, Q3: 0, Q4: 0 };
+                let totalTimespent = 0; // Initialize total timespent for the ERECSO ticket
+
+                if (Array.isArray(item.issue_links)) {
+            item.issue_links.forEach(link => {
+                const linkedTicket = linkedTicketsDict[link.key]; // Fetch linked ticket details
+                if (linkedTicket && linkedTicket.resolution_date) {
+                    const resolutionDate = new Date(linkedTicket.resolution_date);
+                    const year = resolutionDate.getFullYear();
+                    const month = resolutionDate.getMonth() + 1; // Months are 0-indexed
+                    if (year === selectedYear) {
+                        totalTimespent += linkedTicket.timespent || 0;
+                        if (month >= 1 && month <= 3){ quarters.Q1++;quarterlyData.Q1++;}
+                        else if (month >= 4 && month <= 6) {quarters.Q2++;  quarterlyData.Q2++;}
+                        else if (month >= 7 && month <= 9) {quarters.Q3++;quarterlyData.Q3++;}
+                        else if (month >= 10 && month <= 12) {quarters.Q4++;quarterlyData.Q4++;}
+                    }
+                }
+            });
+        }
+
+                const totalLinkedCases = Array.isArray(item.issue_links) ? item.issue_links.length : 0; // Calculate total linked cases
+                const totalERELinkedTickets = Array.isArray(item.issue_links)
+            ? item.issue_links.filter(link => link.key && link.key.startsWith('ERE')).length
+            : 0;
+
+            let statusClass = '';
+        if (item.status) {
+            const status = item.status.toLowerCase();
+            if (status === 'open') {
+                statusClass = 'status-open';
+            } else if (status === 'closed') {
+                statusClass = 'status-resolved';
+            } else if (status === 'in progress') {
+                statusClass = 'status-in-progress';
+            }
+        }
+                row.innerHTML = `
+                    <td>
+                        <select class="flag-dropdown ${item.flag.toLowerCase().replace(/ /g, "")}" data-index="${index}" onchange="updateFlag(${index}, this.value)">
+                            ${flagOptions.map(option => `
+                                <option value="${option}" ${option === item.flag ? "selected" : ""}>
+                                    ${option}
+                                </option>
+                            `).join("")}
+                        </select>
+                    </td>
+                    <td><a href="${jiraBaseUrl}${item.ticket_id}"target="_blank" class="issue-key">${item.ticket_id || "N/A"}</a></td>
+                    <td>${item.summary || "N/A"}</td>
+                    <td>${item.aha_link ? `<a href="${item.aha_link}" target="_blank">Aha Link</a>` : "-"}</td>
+                    <td class="${statusClass}">${item.status || "N/A"}</td>
+                    <td>${item.issue_type || "N/A"}</td>
+                    <td>${formatDate(item.created) || "N/A"}</td>
+                    <td>${renderLabels(item.labels) || "N/A"}</td>
+                    <td class="ai-summary">${item.ai_summary ? item.ai_summary : "-"}</td>
+                    <!-- Removed Total Linked Cases column -->
+                     <td>${totalERELinkedTickets}</td>
+                    <td>${quarters.Q1}</td>
+                    <td>${quarters.Q2}</td>
+                    <td>${quarters.Q3}</td>
+                    <td>${quarters.Q4}</td>
+                    <td>${quarters.Q1+quarters.Q2+quarters.Q3+quarters.Q4}</td>
+                    <td>${(totalTimespent/3600).toFixed(2)} hours</td>
+                     <td>${(totalTimespent/(3600*160*7)).toFixed(2)}</td>
+                `;
+                tbody.appendChild(row);
+            });
+            renderQuarterlyLineChart(quarterlyData);
+        }
+
+
+
+        function renderQuarterlyLineChart(quarterlyData) {
+    // Prepare data for the chart
+    const labels = ['Q1', 'Q2', 'Q3', 'Q4'];
+    const values = [quarterlyData.Q1, quarterlyData.Q2, quarterlyData.Q3, quarterlyData.Q4];
+
+    // Get the canvas element
+    const ctx = document.getElementById('quarterlyLineChart').getContext('2d');
+
+    // Render the line chart
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Linked Tickets',
+                data: values,
+                borderColor: '#36A2EB',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderWidth: 2,
+                tension: 0.4 // Cubic interpolation for smooth curves
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                    labels: {
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return `${tooltipItem.label}: ${tooltipItem.raw}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Quarters',
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Number of Linked Tickets',
+                        font: {
+                            size: 14
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+
+
+// Render table for monthly view
+async function renderTableMonthly(data, selectedMonth) {
+    // Show only tickets with at least one linked ticket created in the selected month
+    const monthlyResultCountDiv = document.getElementById('monthlyResultCount');
+    const jiraBaseUrl = "https://track.akamai.com/jira/browse/";
+    const linkedTicketsDict = await fetch('/linked-tickets').then(response => response.json());
+    let filtered = data.filter(item => {
+        if (!Array.isArray(item.issue_links)) return false;
+        return item.issue_links.some(link => {
+            const linkedTicket = linkedTicketsDict[link.key];
+            if (!linkedTicket || !linkedTicket.resolution_date) return false;
+            const resolutionDate = new Date(linkedTicket.resolution_date);
+            return resolutionDate.getFullYear() === selectedYear && (selectedMonth === '' || (resolutionDate.getMonth() + 1) === Number(selectedMonth));
+        });
+    });
+    // Show filtered count in monthly view
+    if (monthlyResultCountDiv) {
+        monthlyResultCountDiv.textContent = 'Monthly Results: ' + filtered.length;
+    }
+    // Sort by 'Linked Tickets in This Month' in descending order
+    filtered = filtered.sort((a, b) => {
+        // Count linked tickets in this month for each item
+        function countLinkedInMonth(item) {
+            if (!Array.isArray(item.issue_links)) return 0;
+            let count = 0;
+            item.issue_links.forEach(link => {
+                const linkedTicket = linkedTicketsDict[link.key];
+                if (linkedTicket && linkedTicket.resolution_date) {
+                    const resolutionDate = new Date(linkedTicket.resolution_date);
+                    if (resolutionDate.getFullYear() === selectedYear && (selectedMonth === '' || (resolutionDate.getMonth() + 1) === Number(selectedMonth))) {
+                        count++;
+                    }
+                }
+            });
+            return count;
+        }
+        return countLinkedInMonth(b) - countLinkedInMonth(a);
+    });
+    
+    const tbody = document.getElementById('tableBodyMonthly');
+    tbody.innerHTML = '';
+    if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="13" style="text-align:center;">No data for selected month.</td></tr>';
+        return;
+    }
+    filtered.forEach(async (item, index) => {
+        let totalTimespent = 0;
+        let linkedTicketsInMonth = 0;
+        let linkedKeysInMonth = [];
+        if (Array.isArray(item.issue_links)) {
+            item.issue_links.forEach(link => {
+                const linkedTicket = linkedTicketsDict[link.key];
+                if (linkedTicket && linkedTicket.resolution_date) {
+                    const resolutionDate = new Date(linkedTicket.resolution_date);
+                    if (resolutionDate.getFullYear() === selectedYear && (selectedMonth === '' || (resolutionDate.getMonth() + 1) === Number(selectedMonth))) {
+                        totalTimespent += linkedTicket.timespent || 0;
+                        linkedTicketsInMonth++;
+                        linkedKeysInMonth.push(link.key);
+                    }
+                }
+            });
+        }
+        const totalLinkedCases = Array.isArray(item.issue_links) ? item.issue_links.length : 0;
+        const totalERELinkedTickets = Array.isArray(item.issue_links)
+            ? item.issue_links.filter(link => link.key && link.key.startsWith('ERE')).length
+            : 0;
+        let statusClass = '';
+        if (item.status) {
+            const status = item.status.toLowerCase();
+            if (status === 'open') statusClass = 'status-open';
+            else if (status === 'closed') statusClass = 'status-resolved';
+            else if (status === 'in progress') statusClass = 'status-in-progress';
+        }
+        const row = document.createElement('tr');
+        // Placeholder for AI summary cell
+        row.innerHTML = `
+            <td>
+                <select class="flag-dropdown ${item.flag ? item.flag.toLowerCase().replace(/ /g, "") : ''}" data-index="${index}" onchange="updateFlag(${index}, this.value)">
+                    ${flagOptions.map(option => `<option value="${option}" ${item.flag === option ? 'selected' : ''}>${option}</option>`).join('')}
+                </select>
+            </td>
+            <td><a href="${jiraBaseUrl}${item.ticket_id}" target="_blank" class="issue-key">${item.ticket_id || "N/A"}</a></td>
+            <td>${item.summary || "N/A"}</td>
+            <td>${item.aha_link ? `<a href="${item.aha_link}" target="_blank">Aha Link</a>` : "-"}</td>
+            <td class="${statusClass}">${item.status || "N/A"}</td>
+            <td>${item.issue_type || "N/A"}</td>
+            <td>${formatDate(item.created) || "N/A"}</td>
+            <td>${renderLabels(item.labels) || "N/A"}</td>
+            <!-- Removed Total Linked Cases column -->
+            <td>${totalERELinkedTickets}</td>
+            <td>${linkedTicketsInMonth}</td>
+            <td>${linkedKeysInMonth.length > 0 ? linkedKeysInMonth.map(key => `<a href='${jiraBaseUrl}${key}' target='_blank'>${key}</a>`).join(', ') : '-'}</td>
+            <td>${(totalTimespent/3600).toFixed(2)} hours</td>
+            <td>${(totalTimespent/(3600*160*7)).toFixed(2)}</td>
+            
+            <td class="ai-summary" id="ai-summary-${item.ticket_id}">Loading...</td>
+            <td class="ai-summary" id="progressive-work-${item.ticket_id}">Loading...</td>
+            <td class="ai-summary" id="patterns-trends-${item.ticket_id}">Loading...</td>
+        `;
+        tbody.appendChild(row);
+        // Fetch AI summary and inferences from a different API for monthly view
+        try {
+            // Pass selectedMonth as a query parameter
+            const response = await fetch(`/api/monthly-ai-summary/${item.ticket_id}?month=${selectedMonth}`);
+            if (response.ok) {
+                const result = await response.json();
+                function formatAIField(text) {
+                    if (!text) return '-';
+                    // Replace headings with bold and new line
+                    return text
+                        .replace(/(Problem|Action|Engineering|Leadership|Expected Outcome|Gap Addressed|Outcome|Missing|Flit vs\. Bits|Blast Radius|Cloud Concentration|Flit-Density Shift|Noisy Neighbor|Scaling Gap|Evolution|Pass-Through Culture|Diagnostic Decay|Frequency|Trend|Resource Contagion|Decay|Cloud-Origin Dominance|Map Specialization|Systemic Contagion|Retry Amplification|Map Specialization|Functional Isolation|Gap_Addressed|Backbone Fragility|Concurrency Correlation|Functional Specialization|Localized Blindness|Recovery Lag Trend|Resource Contention Shift|Self-Infliction Pattern|Functional Specialization|Content Evolution|Resiliency Conflict|Side-Effect Bugs|Backbone-Centric Failures|Strategic Rerouting|Intermittency|Flit-Dominance|Cloud Grouping|Systemic Fragility|Retry Feedback Loops|Component Friction|External-to-Internal Trend|Toil Density|Hybrid Evolution|Scaling Friction|Self-Inflicted OOCM|Market Saturation|Invisible Failures|Cloud Funneling|Flit Volatility|Structural Shift|Diagnostic Toil|Telemetry Lag|In-Country Sensitivity|Automation Imperative|Operational Bottlenecks|Noisy Neighbor Evolution|Forward Path Vulnerability|Complexity Trend):/gi, '<b>$1:</b>')
+                        .replace(/\n/g, '<br>');
+                }
+                document.getElementById(`ai-summary-${item.ticket_id}`).innerHTML = formatAIField(result.outcome || result.summary || 'Loading...');
+                document.getElementById(`progressive-work-${item.ticket_id}`).innerHTML = formatAIField(result.progressive_work || 'Loading...');
+                document.getElementById(`patterns-trends-${item.ticket_id}`).innerHTML = formatAIField(result.patterns_trends || 'Loading...');
+            } else {
+                document.getElementById(`ai-summary-${item.ticket_id}`).textContent = 'Loading...';
+                document.getElementById(`progressive-work-${item.ticket_id}`).textContent = 'Loading...';
+                document.getElementById(`patterns-trends-${item.ticket_id}`).textContent = 'Loading...';
+            }
+        } catch (e) {
+            document.getElementById(`ai-summary-${item.ticket_id}`).textContent = 'Loading...';
+            document.getElementById(`progressive-work-${item.ticket_id}`).textContent = 'Loading...';
+            document.getElementById(`patterns-trends-${item.ticket_id}`).textContent = 'Loading...';
+        }
+    });
+}
+// Listen for month filter changes and render monthly table
+document.addEventListener('DOMContentLoaded', function () {
+    const monthFilter = document.getElementById('monthFilter');
+    if (monthFilter) {
+        monthFilter.addEventListener('change', function () {
+            renderTableMonthly(parentFilteredData, monthFilter.value);
+        });
+        // Initial render for all months
+        renderTableMonthly(parentFilteredData, monthFilter.value);
+    }
+});
+
+
+
+
+        function filterLabels() {
+            const searchValue = document.getElementById('labelsFilter').value.toLowerCase();
+            const searchTerms = searchValue.split(',').map(term => term.trim());
+            let filteredData;
+            if (searchTerms.length === 0 || searchTerms[0] === '') {
+                filteredData = parentFilteredData;
+            } else {
+                filteredData = parentFilteredData.filter(item => {
+                    const labelsString = Array.isArray(item.labels) ? item.labels.join(',').toLowerCase() : '';
+                    return searchTerms.some(term => labelsString.includes(term));
+                });
+            }
+            renderTable(filteredData);
+        }
+function filterIssueType() {
+    const searchValue = document.getElementById('issueTypeFilter').value.toLowerCase();
+    const filteredData = parentFilteredData.filter(item => item.issue_type && item.issue_type.toLowerCase().includes(searchValue));
+    renderTable(filteredData);
+}
+
+
+        function sortTable(column, headerElement) {
+            let valA, valB;
+            // Toggle the sort order for the column
+            sortOrder[column] = !sortOrder[column];
+
+            // Sort the data
+            parentFilteredData.sort((a, b) => {
+                if (column === 'totalLinkedCases') {
+                    valA = Array.isArray(a.issue_links) ? a.issue_links.length : 0;
+                    valB = Array.isArray(b.issue_links) ? b.issue_links.length : 0;
+                } else if (column === 'totalERETickets') {
+                    valA = Array.isArray(a.issue_links)
+                        ? a.issue_links.filter(link => link.key && link.key.startsWith('ERE')).length
+                        : 0;
+                    valB = Array.isArray(b.issue_links)
+                        ? b.issue_links.filter(link => link.key && link.key.startsWith('ERE')).length
+                        : 0;
+                } else {
+                    valA = a[column] || '';
+                    valB = b[column] || '';
+                }
+
+                if (valA < valB) return sortOrder[column] ? -1 : 1;
+                if (valA > valB) return sortOrder[column] ? 1 : -1;
+                return 0;
+            });
+            // Update the sort icon
+            updateSortIcon(headerElement, sortOrder[column]);
+
+            // Re-render the table
+            renderTable(parentFilteredData);
+        }
+
+        function updateSortIcon(headerElement, isAscending) {
+            // Remove the sort icon from all headers
+            document.querySelectorAll('.sort-icon').forEach(icon => {
+                icon.className = 'bi bi-arrow-down-up sort-icon'; // Reset to default
+            });
+
+            // Update the icon for the current header
+            const icon = headerElement.querySelector('.sort-icon');
+            if (isAscending) {
+                icon.className = 'bi bi-arrow-down sort-icon'; // Down arrow for ascending
+            } else {
+                icon.className = 'bi bi-arrow-up sort-icon'; // Up arrow for descending
+            }
+        }
+
+        function updateFlag(index, newFlag) {
+            console.log(newFlag.toLowerCase().replace(/ /g, "")) // For debugging
+            allData[index].flag = newFlag;
+
+            // Update only the specific row
+            const row = document.querySelector(`#tableBody tr:nth-child(${index + 1})`);
+            const flagCell = row.querySelector('select.flag-dropdown');
+            flagCell.className = `flag-dropdown ${newFlag.toLowerCase().replace(/ /g, "")}`;
+            flagCell.value = newFlag;
+
+        }
+        // Initialize
+        fetchAndRenderData();
+    </script>
+</body>
+
+</html>
