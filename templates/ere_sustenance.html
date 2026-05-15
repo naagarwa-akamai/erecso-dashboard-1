@@ -466,7 +466,7 @@
 
             const rows = [
                 {
-                    indicator: 'Self-Resolution Rate',
+                    indicator: `Self-Resolution Rate (${monthLabel})`,
                     value: selfResolutionValue,
                     note: selfResolutionNote,
                     statusText: selfResolutionStatusText,
@@ -474,9 +474,9 @@
                 },
                 {
                     indicator: `Median Backlog (${monthLabel})`,
-                    value: '-',
+                    value: '<a href="https://track.akamai.com/jira/plugins/servlet/eazybi/accounts/246/cubes/Issues/reports/2822-trend-of-backlogs" target="_blank" rel="noopener noreferrer" style="font-size:12px;font-weight:600;">View Backlog Trend</a>',
                     note: '',
-                    statusText: 'Pending input',
+                    statusText: 'Reference',
                     statusClass: 'pending'
                 },
                 {
