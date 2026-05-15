@@ -114,6 +114,31 @@
             color: #444;
         }
 
+        .indicator-status.good {
+            color: #1e7e34;
+            font-weight: 700;
+        }
+
+        .indicator-status.medium {
+            color: #b36b00;
+            font-weight: 700;
+        }
+
+        .indicator-status.high {
+            color: #b71c1c;
+            font-weight: 700;
+        }
+
+        .indicator-status.engaged {
+            color: #0052cc;
+            font-weight: 700;
+        }
+
+        .indicator-status.pending {
+            color: #6b778c;
+            font-weight: 700;
+        }
+
         .metric-value {
             font-size: 20px;
             font-weight: 700;
@@ -230,6 +255,7 @@
         </div>
     </div>
 
+    <div class="section-label">Demand and Throughput</div>
     <div class="summary-table-wrap dashboard-container">
         <table class="summary-table">
             <thead>
@@ -242,6 +268,20 @@
                 </tr>
             </thead>
             <tbody id="summaryTableBody"></tbody>
+        </table>
+    </div>
+
+    <div class="section-label">Efficiency & Toil Reduction </div>
+    <div class="summary-table-wrap dashboard-container">
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Indicator</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="indicatorTableBody"></tbody>
         </table>
     </div>
 
@@ -273,6 +313,7 @@
             'July', 'August', 'September', 'October', 'November', 'December'
         ];
         let allSustenanceTickets = [];
+        let allSreincTickets = [];
         const monthColumnIds = ['monthCol1', 'monthCol2', 'monthCol3'];
 
         function parseDate(value) {
@@ -289,6 +330,99 @@
             const selected = document.getElementById('monthFilter').value;
             if (!selected) return null;
             return Number(selected) - 1;
+        }
+
+        function getLatestDateFromTickets(ticketList, fieldName = 'created') {
+            return ticketList
+                .map(ticket => parseDate(ticket[fieldName]))
+                .filter(Boolean)
+                .sort((a, b) => a - b)
+                .pop() || null;
+        }
+
+        function getActiveMonthYear() {
+            const selectedMonthIndex = getSelectedMonthIndex();
+            if (selectedMonthIndex !== null) {
+                const latestDate = getLatestDateFromTickets(allSustenanceTickets, 'created');
+                const year = latestDate ? latestDate.getFullYear() : new Date().getFullYear();
+                return { monthIndex: selectedMonthIndex, year };
+            }
+
+            const latestDate = getLatestDateFromTickets(allSustenanceTickets, 'created') || new Date();
+            return { monthIndex: latestDate.getMonth(), year: latestDate.getFullYear() };
+        }
+
+        function getMonthYearLabel(monthIndex, year) {
+            return `${monthNames[monthIndex]} '${String(year).slice(-2)}`;
+        }
+
+        function getIncidentStatusClass(count) {
+            if (count === 0) return 'good';
+            if (count >= 1 && count <= 3) return 'medium';
+            return 'high';
+        }
+
+        function getIncidentStatusText(count) {
+            if (count === 0) return 'Good';
+            if (count >= 1 && count <= 3) return 'Medium';
+            return 'High';
+        }
+
+        function renderIndicatorTable() {
+            const { monthIndex, year } = getActiveMonthYear();
+            const monthLabel = getMonthYearLabel(monthIndex, year);
+
+            const incidentsDeliveryCount = allSustenanceTickets.filter(ticket => {
+                const createdDate = parseDate(ticket.created);
+                if (!createdDate) return false;
+                const hasServiceIncident = ticket.service_incident !== null && ticket.service_incident !== undefined && String(ticket.service_incident).trim() !== '';
+                return hasServiceIncident && createdDate.getMonth() === monthIndex && createdDate.getFullYear() === year;
+            }).length;
+
+            const pmrRepresentedCount = allSreincTickets.filter(ticket => {
+                const createdDate = parseDate(ticket.created);
+                if (!createdDate) return false;
+                return createdDate.getMonth() === monthIndex && createdDate.getFullYear() === year;
+            }).length;
+
+            const incidentStatusClass = getIncidentStatusClass(incidentsDeliveryCount);
+            const incidentStatusText = getIncidentStatusText(incidentsDeliveryCount);
+
+            const rows = [
+                {
+                    indicator: 'Self-Resolution Rate',
+                    value: '-',
+                    statusText: 'Pending input',
+                    statusClass: 'pending'
+                },
+                {
+                    indicator: `Median Backlog (${monthLabel})`,
+                    value: '-',
+                    statusText: 'Pending input',
+                    statusClass: 'pending'
+                },
+                {
+                    indicator: `Incidents Delivery (${monthLabel})`,
+                    value: String(incidentsDeliveryCount),
+                    statusText: incidentStatusText,
+                    statusClass: incidentStatusClass
+                },
+                {
+                    indicator: `PMRs Represented in ${monthLabel}`,
+                    value: String(pmrRepresentedCount),
+                    statusText: 'Engaged*',
+                    statusClass: 'engaged'
+                }
+            ];
+
+            const tbody = document.getElementById('indicatorTableBody');
+            tbody.innerHTML = rows.map(row => `
+                <tr>
+                    <td class="metric-cell">${row.indicator}</td>
+                    <td><div class="metric-value">${row.value}</div></td>
+                    <td class="indicator-status ${row.statusClass}">${row.statusText}</td>
+                </tr>
+            `).join('');
         }
 
         function getMonthWindow(ticketList) {
@@ -463,14 +597,25 @@
 
             updateHeading(selectedMonth, allSustenanceTickets);
             renderSummaryTable(allSustenanceTickets);
+            renderIndicatorTable();
             renderTableRows(filteredTickets);
         }
 
         async function loadData() {
             try {
-                const res = await fetch('/api/ere-sustenance-tickets');
+                const [res, sreincRes] = await Promise.all([
+                    fetch('/api/ere-sustenance-tickets'),
+                    fetch('/api/ere-sustenance-tickets-sreinc')
+                ]);
+
                 if (!res.ok) throw new Error('Failed to fetch tickets');
                 const tickets = await res.json();
+
+                if (sreincRes.ok) {
+                    allSreincTickets = await sreincRes.json();
+                } else {
+                    allSreincTickets = [];
+                }
 
                 const filteredTickets = tickets.filter(t => {
                     const requestType = (t.request_type || '').toLowerCase().trim();
@@ -485,6 +630,7 @@
                     allSustenanceTickets = [];
                     updateHeading('', []);
                     renderSummaryTable([]);
+                    renderIndicatorTable();
                     renderTableRows([]);
                     return;
                 }

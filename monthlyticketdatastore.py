@@ -2,8 +2,11 @@ import requests
 import json
 
 API_URL = "https://track-api.akamai.com/jira/rest/api/2/issue"
+SEARCH_API_URL = "https://track-api.akamai.com/jira/rest/api/2/search"
 CERT_PATH = "certs/certs/naagarwa.pem"
 KEY_PATH = "certs/certs/naagarwa.key"
+
+SREINC_JQL = 'project = SREINC AND assignee in membersOf("dl-gpo-ops-inside-escalations") and createdDate >= startOfYear() order by key desc'
 
 
 def fetch_ticket_details(ticket_id):
@@ -163,7 +166,70 @@ def fetch_ticket_details(ticket_id):
     return ticket_details
 
 
+def fetch_tickets_from_jql(jql_query):
+    """Fetch issue keys from Jira search API for a given JQL."""
+    ticket_ids = []
+    start_at = 0
+    max_results = 100
+
+    while True:
+        try:
+            response = requests.get(
+                SEARCH_API_URL,
+                params={
+                    "jql": jql_query,
+                    "startAt": start_at,
+                    "maxResults": max_results,
+                    "fields": "key"
+                },
+                cert=(CERT_PATH, KEY_PATH),
+                verify=False
+            )
+
+            if response.status_code != 200:
+                print(f"Failed to fetch JQL results. Status Code: {response.status_code}")
+                break
+
+            data = response.json()
+            issues = data.get("issues", [])
+
+            if not issues:
+                break
+
+            ticket_ids.extend([issue.get("key") for issue in issues if issue.get("key")])
+
+            total = data.get("total", 0)
+            start_at += len(issues)
+            if start_at >= total:
+                break
+
+        except Exception as e:
+            print(f"Error fetching JQL results: {e}")
+            break
+
+    return ticket_ids
+
+
+def fetch_and_store_sreinc_service_incidents(output_file="./ere_sustenance_ticket_details_sreinc.json"):
+    """Fetch SREINC tickets from JQL, enrich details, and store them in JSON."""
+    ticket_ids = fetch_tickets_from_jql(SREINC_JQL)
+    ticket_details = []
+
+    for ticket_id in ticket_ids:
+        print(f"Fetching details for ticket: {ticket_id}")
+        ticket_data = fetch_ticket_details(ticket_id)
+        if ticket_data:
+            ticket_details.append(ticket_data)
+
+    with open(output_file, "w", encoding="utf-8") as file:
+        json.dump(ticket_details, file, indent=4)
+
+    print(f"SREINC ticket details saved to {output_file}")
+    return ticket_details
+
+
 if __name__ == "__main__":
+    fetch_and_store_sreinc_service_incidents()
 
     ticket_number = 3110
     ticket_details = []

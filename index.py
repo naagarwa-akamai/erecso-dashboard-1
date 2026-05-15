@@ -19,6 +19,7 @@ GURU_TICKETS=[]
 
 LINKED_TICKET_DICT_FILE = './linked_tickets_dict.json'
 ERESUSTENANCE_JSON_FILE_PATH = './ere_sustenance_ticket_details.json'
+ERESUSTENANCE_SREINC_JSON_FILE_PATH = './ere_sustenance_ticket_details_sreinc.json'
 
 
 
@@ -118,6 +119,21 @@ def get_ere_sustenance_ticket_details():
             sustenance_ticket_details = json.load(file)
 
         return jsonify(sustenance_ticket_details), 200
+
+    except Exception as e:
+        return jsonify({"error": f"An error occurred: {str(e)}"}), 500
+
+
+@app.route('/api/ere-sustenance-tickets-sreinc', methods=['GET'])
+def get_ere_sustenance_sreinc_ticket_details():
+    try:
+        if not os.path.exists(ERESUSTENANCE_SREINC_JSON_FILE_PATH):
+            return jsonify({"error": "SREINC sustenance JSON file not found"}), 404
+
+        with open(ERESUSTENANCE_SREINC_JSON_FILE_PATH, 'r', encoding='utf-8') as file:
+            sreinc_ticket_details = json.load(file)
+
+        return jsonify(sreinc_ticket_details), 200
 
     except Exception as e:
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500
