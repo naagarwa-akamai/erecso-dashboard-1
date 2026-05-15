@@ -36,6 +36,36 @@
             letter-spacing: 0.5px;
         }
 
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .month-select-label {
+            font-size: 12px;
+            color: #444;
+            font-weight: 600;
+        }
+
+        .month-select {
+            padding: 6px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 12px;
+            color: #172b4d;
+            background: #fff;
+        }
+
+        .sub-heading {
+            margin: 0 0 12px;
+            font-size: 14px;
+            color: #5e6c84;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
         .back-btn {
             padding: 5px 14px;
             border-radius: 4px;
@@ -107,8 +137,28 @@
 
     <div class="page-header">
         <h1>ERE-Sustenance Data</h1>
-        <a href="/" class="back-btn"><i class="bi bi-arrow-left"></i> Back to Dashboard</a>
+        <div class="header-controls">
+            <label for="monthFilter" class="month-select-label">Select Month:</label>
+            <select id="monthFilter" class="month-select">
+                <option value="">All</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <a href="/" class="back-btn"><i class="bi bi-arrow-left"></i> Back to Dashboard</a>
+        </div>
     </div>
+
+    <h2 id="ticketStatsHeading" class="sub-heading">ERE Ticket Stats - All Months</h2>
 
     <div class="dashboard-container">
         <table id="sustenanceTable">
@@ -131,6 +181,74 @@
     </div>
 
     <script>
+        const monthNames = [
+            'January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        let allSustenanceTickets = [];
+
+        function getDisplayYearSuffix(ticketList) {
+            const ticketWithDate = ticketList.find(t => t.created);
+            if (ticketWithDate) {
+                const date = new Date(ticketWithDate.created);
+                if (!Number.isNaN(date.getTime())) {
+                    return String(date.getFullYear()).slice(-2);
+                }
+            }
+            return String(new Date().getFullYear()).slice(-2);
+        }
+
+        function updateHeading(selectedMonth, ticketList) {
+            const heading = document.getElementById('ticketStatsHeading');
+            if (!selectedMonth) {
+                heading.textContent = 'ERE Ticket Stats - All Months';
+                return;
+            }
+
+            const monthLabel = monthNames[Number(selectedMonth) - 1] || '';
+            const yearSuffix = getDisplayYearSuffix(ticketList);
+            heading.textContent = `ERE Ticket Stats - ${monthLabel} ${yearSuffix}`;
+        }
+
+        function renderTableRows(ticketList) {
+            const tbody = document.getElementById('sustenanceTableBody');
+
+            if (ticketList.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="empty-state">No sustenance tickets found for selected month.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = ticketList.map(t => {
+                const labels = (t.labels || []).map(l => `<span style="display:inline-block;background:#e9eff5;color:#0052cc;padding:2px 6px;margin:2px;border-radius:4px;font-size:10px;font-weight:bold;">${l}</span>`).join('');
+                const issueUrl = `https://jira.akamai.com/browse/${t.ticket_id}`;
+                return `<tr>
+                    <td><a href="${issueUrl}" target="_blank">${t.ticket_id || ''}</a></td>
+                    <td>${t.summary || ''}</td>
+                    <td>${t.status || ''}</td>
+                    <td>${t.issue_type || ''}</td>
+                    <td>${t.created || ''}</td>
+                    <td>${labels}</td>
+                </tr>`;
+            }).join('');
+        }
+
+        function applyMonthFilter() {
+            const selectedMonth = document.getElementById('monthFilter').value;
+            let filteredTickets = allSustenanceTickets;
+
+            if (selectedMonth) {
+                filteredTickets = allSustenanceTickets.filter(t => {
+                    if (!t.created) return false;
+                    const createdDate = new Date(t.created);
+                    if (Number.isNaN(createdDate.getTime())) return false;
+                    return (createdDate.getMonth() + 1) === Number(selectedMonth);
+                });
+            }
+
+            updateHeading(selectedMonth, filteredTickets.length ? filteredTickets : allSustenanceTickets);
+            renderTableRows(filteredTickets);
+        }
+
         async function loadData() {
             try {
                 const res = await fetch('/api/tickets');
@@ -145,31 +263,22 @@
                     return labels.includes('sustenance') || summary.includes('sustenance') || type.includes('sustenance');
                 });
 
-                const tbody = document.getElementById('sustenanceTableBody');
-
                 if (sustenance.length === 0) {
-                    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">No sustenance tickets found.</td></tr>`;
+                    allSustenanceTickets = [];
+                    updateHeading('', []);
+                    renderTableRows([]);
                     return;
                 }
 
-                tbody.innerHTML = sustenance.map(t => {
-                    const labels = (t.labels || []).map(l => `<span style="display:inline-block;background:#e9eff5;color:#0052cc;padding:2px 6px;margin:2px;border-radius:4px;font-size:10px;font-weight:bold;">${l}</span>`).join('');
-                    const issueUrl = `https://jira.akamai.com/browse/${t.ticket_id}`;
-                    return `<tr>
-                        <td><a href="${issueUrl}" target="_blank">${t.ticket_id || ''}</a></td>
-                        <td>${t.summary || ''}</td>
-                        <td>${t.status || ''}</td>
-                        <td>${t.issue_type || ''}</td>
-                        <td>${t.created || ''}</td>
-                        <td>${labels}</td>
-                    </tr>`;
-                }).join('');
+                allSustenanceTickets = sustenance;
+                applyMonthFilter();
             } catch (e) {
                 document.getElementById('sustenanceTableBody').innerHTML =
                     `<tr><td colspan="6" class="empty-state">Error loading data: ${e.message}</td></tr>`;
             }
         }
 
+        document.getElementById('monthFilter').addEventListener('change', applyMonthFilter);
         loadData();
     </script>
 </body>
