@@ -18,6 +18,7 @@ AI_SUMMARY_FILE_PATH = './ticket_id_ai_summary.json'
 GURU_TICKETS=[]
 
 LINKED_TICKET_DICT_FILE = './linked_tickets_dict.json'
+ERESUSTENANCE_JSON_FILE_PATH = './ere_sustenance_ticket_details.json'
 
 
 
@@ -105,6 +106,22 @@ def update_ticket_details():
 
     except Exception as e:
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500
+# --------------------------------------------------------------------------------------------------------
+
+@app.route('/api/ere-sustenance-tickets', methods=['GET'])
+def get_ere_sustenance_ticket_details():
+    try:
+        if not os.path.exists(ERESUSTENANCE_JSON_FILE_PATH):
+            return jsonify({"error": "Sustenance JSON file not found"}), 404
+
+        with open(ERESUSTENANCE_JSON_FILE_PATH, 'r', encoding='utf-8') as file:
+            sustenance_ticket_details = json.load(file)
+
+        return jsonify(sustenance_ticket_details), 200
+
+    except Exception as e:
+        return jsonify({"error": f"An error occurred: {str(e)}"}), 500
+
 # --------------------------------------------------------------------------------------------------------
 
     

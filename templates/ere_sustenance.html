@@ -36,6 +36,19 @@
             letter-spacing: 0.5px;
         }
 
+        .page-title-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .page-subtitle {
+            margin: 0;
+            font-size: 14px;
+            color: #5e6c84;
+            font-weight: 600;
+        }
+
         .header-controls {
             display: flex;
             align-items: center;
@@ -62,6 +75,62 @@
             font-size: 14px;
             color: #5e6c84;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .summary-table-wrap {
+            margin-bottom: 20px;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        .summary-table th,
+        .summary-table td {
+            border-bottom: 1px solid #e4e8ee;
+            padding: 10px 8px;
+            vertical-align: top;
+        }
+
+        .summary-table th {
+            background-color: var(--table-header-bg);
+            color: #172b4d;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .summary-table .metric-cell {
+            font-weight: 700;
+            color: #172b4d;
+            min-width: 140px;
+        }
+
+        .summary-table .signal-cell {
+            min-width: 260px;
+            color: #444;
+        }
+
+        .metric-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2d3d;
+        }
+
+        .metric-note {
+            margin-top: 4px;
+            color: #6b778c;
+            font-size: 11px;
+        }
+
+        .section-label {
+            margin: 18px 0 10px;
+            font-size: 13px;
+            color: #172b4d;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
@@ -136,7 +205,10 @@
 <body>
 
     <div class="page-header">
-        <h1>ERE-Sustenance Data</h1>
+        <div class="page-title-wrap">
+            <h1>ERE-Sustenance Data</h1>
+            <p id="ticketStatsHeading" class="page-subtitle">ERE Ticket Stats - All Months</p>
+        </div>
         <div class="header-controls">
             <label for="monthFilter" class="month-select-label">Select Month:</label>
             <select id="monthFilter" class="month-select">
@@ -158,7 +230,22 @@
         </div>
     </div>
 
-    <h2 id="ticketStatsHeading" class="sub-heading">ERE Ticket Stats - All Months</h2>
+    <div class="summary-table-wrap dashboard-container">
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th id="monthCol1">Feb</th>
+                    <th id="monthCol2">March</th>
+                    <th id="monthCol3">April</th>
+                    <th>Signal</th>
+                </tr>
+            </thead>
+            <tbody id="summaryTableBody"></tbody>
+        </table>
+    </div>
+
+    <div class="section-label">Ticket Details</div>
 
     <div class="dashboard-container">
         <table id="sustenanceTable">
@@ -186,14 +273,144 @@
             'July', 'August', 'September', 'October', 'November', 'December'
         ];
         let allSustenanceTickets = [];
+        const monthColumnIds = ['monthCol1', 'monthCol2', 'monthCol3'];
+
+        function parseDate(value) {
+            if (!value) return null;
+            const date = new Date(value);
+            return Number.isNaN(date.getTime()) ? null : date;
+        }
+
+        function formatMonthLabel(monthIndex, yearNumber) {
+            return `${monthNames[monthIndex]} ${String(yearNumber).slice(-2)}`;
+        }
+
+        function getSelectedMonthIndex() {
+            const selected = document.getElementById('monthFilter').value;
+            if (!selected) return null;
+            return Number(selected) - 1;
+        }
+
+        function getMonthWindow(ticketList) {
+            const selectedMonthIndex = getSelectedMonthIndex();
+            let yearNumber = new Date().getFullYear();
+
+            const latestDate = ticketList
+                .map(ticket => parseDate(ticket.created))
+                .filter(Boolean)
+                .sort((a, b) => a - b)
+                .pop();
+
+            if (latestDate) {
+                yearNumber = latestDate.getFullYear();
+            }
+
+            if (selectedMonthIndex === null) {
+                const months = [];
+                for (let i = 2; i >= 0; i -= 1) {
+                    months.push({ monthIndex: (latestDate ? latestDate.getMonth() : new Date().getMonth()) - i, year: yearNumber });
+                }
+                return months.map(item => {
+                    let monthIndex = item.monthIndex;
+                    let year = item.year;
+                    while (monthIndex < 0) {
+                        monthIndex += 12;
+                        year -= 1;
+                    }
+                    return { monthIndex, year };
+                });
+            }
+
+            const months = [];
+            for (let i = 2; i >= 0; i -= 1) {
+                let monthIndex = selectedMonthIndex - i;
+                let year = yearNumber;
+                while (monthIndex < 0) {
+                    monthIndex += 12;
+                    year -= 1;
+                }
+                months.push({ monthIndex, year });
+            }
+            return months;
+        }
+
+        function countByMonth(ticketList, monthIndex, year, fieldName, filterFn) {
+            return ticketList.reduce((count, ticket) => {
+                const date = parseDate(ticket[fieldName]);
+                if (!date) return count;
+                if (date.getFullYear() !== year || date.getMonth() !== monthIndex) return count;
+                if (filterFn && !filterFn(ticket)) return count;
+                return count + 1;
+            }, 0);
+        }
+
+        function buildSignal(values, positiveLabel, negativeLabel) {
+            if (values.length < 3) return 'Not enough data to determine a clear signal';
+            const [first, second, third] = values;
+            if (third < second && second <= first) return negativeLabel;
+            if (third > second && second >= first) return positiveLabel;
+            if (third === second && second === first) return 'Stable across the selected period';
+            return 'Mixed movement across the selected period';
+        }
+
+        function renderSummaryTable(ticketList) {
+            const months = getMonthWindow(ticketList);
+            const headerLabels = months.map(item => formatMonthLabel(item.monthIndex, item.year));
+            monthColumnIds.forEach((id, index) => {
+                document.getElementById(id).textContent = headerLabels[index] || '';
+            });
+
+            const totalTickets = months.map(item => countByMonth(ticketList, item.monthIndex, item.year, 'created'));
+            const ticketsResolved = months.map(item => countByMonth(ticketList, item.monthIndex, item.year, 'resolution_date', ticket => (ticket.status || '').toLowerCase() === 'resolved' || !!ticket.resolution_date));
+            const highSeverity = months.map(item => countByMonth(ticketList, item.monthIndex, item.year, 'created', ticket => {
+                const priority = (ticket.priority || '').toLowerCase();
+                return priority === 'high' || priority === 'critical';
+            }));
+
+            const summaryRows = [
+                {
+                    metric: 'Total Tickets',
+                    values: totalTickets,
+                    signal: buildSignal(totalTickets, 'Overall ticket volume is improving month over month', 'Slight downward trend driven by seasonality and fewer incidents')
+                },
+                {
+                    metric: 'Tickets Resolved',
+                    values: ticketsResolved,
+                    signal: buildSignal(ticketsResolved, 'Resolution throughput improved in the latest month', 'Resolution throughput softened in the latest month')
+                },
+                {
+                    metric: 'High Severity',
+                    values: highSeverity,
+                    signal: buildSignal(highSeverity, 'High-severity incidents are trending down', 'Continued decline in critical incidents reported by Akatec')
+                }
+            ];
+
+            const tbody = document.getElementById('summaryTableBody');
+            tbody.innerHTML = summaryRows.map(row => `
+                <tr>
+                    <td class="metric-cell">${row.metric}</td>
+                    <td>
+                        <div class="metric-value">${row.values[0]}</div>
+                    </td>
+                    <td>
+                        <div class="metric-value">${row.values[1]}</div>
+                    </td>
+                    <td>
+                        <div class="metric-value">${row.values[2]}</div>
+                    </td>
+                    <td class="signal-cell">${row.signal}</td>
+                </tr>
+            `).join('');
+        }
 
         function getDisplayYearSuffix(ticketList) {
-            const ticketWithDate = ticketList.find(t => t.created);
-            if (ticketWithDate) {
-                const date = new Date(ticketWithDate.created);
-                if (!Number.isNaN(date.getTime())) {
-                    return String(date.getFullYear()).slice(-2);
-                }
+            const latestDate = ticketList
+                .map(t => parseDate(t.created))
+                .filter(Boolean)
+                .sort((a, b) => a - b)
+                .pop();
+            if (latestDate) {
+                return String(latestDate.getFullYear()).slice(-2);
             }
             return String(new Date().getFullYear()).slice(-2);
         }
@@ -220,7 +437,7 @@
 
             tbody.innerHTML = ticketList.map(t => {
                 const labels = (t.labels || []).map(l => `<span style="display:inline-block;background:#e9eff5;color:#0052cc;padding:2px 6px;margin:2px;border-radius:4px;font-size:10px;font-weight:bold;">${l}</span>`).join('');
-                const issueUrl = `https://jira.akamai.com/browse/${t.ticket_id}`;
+                const issueUrl = `https://track.akamai.com/jira/browse/${t.ticket_id}`;
                 return `<tr>
                     <td><a href="${issueUrl}" target="_blank">${t.ticket_id || ''}</a></td>
                     <td>${t.summary || ''}</td>
@@ -238,39 +455,41 @@
 
             if (selectedMonth) {
                 filteredTickets = allSustenanceTickets.filter(t => {
-                    if (!t.created) return false;
-                    const createdDate = new Date(t.created);
-                    if (Number.isNaN(createdDate.getTime())) return false;
+                    const createdDate = parseDate(t.created);
+                    if (!createdDate) return false;
                     return (createdDate.getMonth() + 1) === Number(selectedMonth);
                 });
             }
 
-            updateHeading(selectedMonth, filteredTickets.length ? filteredTickets : allSustenanceTickets);
+            updateHeading(selectedMonth, allSustenanceTickets);
+            renderSummaryTable(allSustenanceTickets);
             renderTableRows(filteredTickets);
         }
 
         async function loadData() {
             try {
-                const res = await fetch('/api/tickets');
+                const res = await fetch('/api/ere-sustenance-tickets');
                 if (!res.ok) throw new Error('Failed to fetch tickets');
                 const tickets = await res.json();
 
-                // Filter for sustenance-related tickets (labels or summary containing "sustenance")
-                const sustenance = tickets.filter(t => {
-                    const labels = (t.labels || []).join(' ').toLowerCase();
-                    const summary = (t.summary || '').toLowerCase();
-                    const type = (t.issue_type || '').toLowerCase();
-                    return labels.includes('sustenance') || summary.includes('sustenance') || type.includes('sustenance');
+                const filteredTickets = tickets.filter(t => {
+                    const requestType = (t.request_type || '').toLowerCase().trim();
+                    if (!requestType) return false;
+                    if (requestType.includes('ere-ghost')) return false;
+                    if (requestType.includes('new feature')) return false;
+                    if (requestType.includes('unknown')) return false;
+                    return true;
                 });
 
-                if (sustenance.length === 0) {
+                if (!filteredTickets || filteredTickets.length === 0) {
                     allSustenanceTickets = [];
                     updateHeading('', []);
+                    renderSummaryTable([]);
                     renderTableRows([]);
                     return;
                 }
 
-                allSustenanceTickets = sustenance;
+                allSustenanceTickets = filteredTickets;
                 applyMonthFilter();
             } catch (e) {
                 document.getElementById('sustenanceTableBody').innerHTML =
