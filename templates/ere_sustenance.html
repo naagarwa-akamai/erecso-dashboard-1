@@ -544,6 +544,7 @@
 
             const total = toilValues.reduce((sum, value) => sum + value, 0);
             const average = total / toilValues.length;
+            console.log(`Calculated average toil percent: ${average}`);
             const allowedToilValues = [0, 33, 66, 100];
             return allowedToilValues.reduce((closest, current) => {
                 if (Math.abs(current - average) < Math.abs(closest - average)) {
@@ -553,15 +554,50 @@
             }, allowedToilValues[0]);
         }
 
+        function parseTimespentSeconds(value) {
+            if (value === null || value === undefined || value === '') return null;
+            if (typeof value === 'number' && Number.isFinite(value)) return value;
+
+            const parsed = Number(value);
+            return Number.isFinite(parsed) ? parsed : null;
+        }
+
+        function getMedian(numbers) {
+            if (!numbers.length) return null;
+            const sorted = [...numbers].sort((a, b) => a - b);
+            const middle = Math.floor(sorted.length / 2);
+            if (sorted.length % 2 === 0) {
+                return (sorted[middle - 1] + sorted[middle]) / 2;
+            }
+            return sorted[middle];
+        }
+
+        function calculateMedianLoeHours(monthIndex, year, ticketList) {
+            const timespentSeconds = ticketList
+                .filter(ticket => {
+                    const createdDate = parseDate(ticket.created);
+                    if (!createdDate) return false;
+                    return createdDate.getMonth() === monthIndex && createdDate.getFullYear() === year;
+                })
+                .map(ticket => parseTimespentSeconds(ticket.timespent))
+                .filter(value => value !== null);
+
+            const medianSeconds = getMedian(timespentSeconds);
+            if (medianSeconds === null) return null;
+
+            return (medianSeconds / 3600).toFixed(2);
+        }
+
         function renderReliabilityTable() {
             const { monthIndex, year } = getActiveMonthYear();
             const monthHeader = `${monthNames[monthIndex]} ${String(year).slice(-2)} Status`;
             document.getElementById('reliabilityMonthStatus').textContent = monthHeader;
 
             const avgToilPercent = calculateAvgToilPercent(monthIndex, year, allSustenanceTickets);
+            const medianLoeHours = calculateMedianLoeHours(monthIndex, year, allSustenanceTickets);
 
             const rows = [
-                { area: 'Median LOE/FTE', status: '-' },
+                { area: 'Median LOE', status: medianLoeHours === null ? '-' : `${medianLoeHours} hrs` },
                 { area: 'Avg Toil', status: avgToilPercent === null ? '-' : `${avgToilPercent}%` },
                 { area: 'Initiatives Identified', status: '-' },
                 { area: 'Completed', status: '-' },
