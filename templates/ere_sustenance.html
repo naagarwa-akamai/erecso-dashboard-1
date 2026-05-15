@@ -285,6 +285,19 @@
         </table>
     </div>
 
+    <div class="section-label">Reliability & Effectiveness</div>
+    <div class="summary-table-wrap dashboard-container">
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th id="reliabilityMonthStatus">Status</th>
+                </tr>
+            </thead>
+            <tbody id="reliabilityTableBody"></tbody>
+        </table>
+    </div>
+
     <div class="section-label">Ticket Details</div>
 
     <div class="dashboard-container">
@@ -508,6 +521,64 @@
             `).join('');
         }
 
+        function parseToilPercent(value) {
+            if (value === null || value === undefined) return null;
+            if (typeof value === 'number' && Number.isFinite(value)) return value;
+
+            const normalized = String(value).replace('%', '').trim();
+            const parsed = parseFloat(normalized);
+            return Number.isFinite(parsed) ? parsed : null;
+        }
+
+        function calculateAvgToilPercent(monthIndex, year, ticketList) {
+            const toilValues = ticketList
+                .filter(ticket => {
+                    const createdDate = parseDate(ticket.created);
+                    if (!createdDate) return false;
+                    return createdDate.getMonth() === monthIndex && createdDate.getFullYear() === year;
+                })
+                .map(ticket => parseToilPercent(ticket.toil_percent))
+                .filter(value => value !== null);
+
+            if (toilValues.length === 0) return null;
+
+            const total = toilValues.reduce((sum, value) => sum + value, 0);
+            const average = total / toilValues.length;
+            const allowedToilValues = [0, 33, 66, 100];
+            return allowedToilValues.reduce((closest, current) => {
+                if (Math.abs(current - average) < Math.abs(closest - average)) {
+                    return current;
+                }
+                return closest;
+            }, allowedToilValues[0]);
+        }
+
+        function renderReliabilityTable() {
+            const { monthIndex, year } = getActiveMonthYear();
+            const monthHeader = `${monthNames[monthIndex]} ${String(year).slice(-2)} Status`;
+            document.getElementById('reliabilityMonthStatus').textContent = monthHeader;
+
+            const avgToilPercent = calculateAvgToilPercent(monthIndex, year, allSustenanceTickets);
+
+            const rows = [
+                { area: 'Median LOE/FTE', status: '-' },
+                { area: 'Avg Toil', status: avgToilPercent === null ? '-' : `${avgToilPercent}%` },
+                { area: 'Initiatives Identified', status: '-' },
+                { area: 'Completed', status: '-' },
+                { area: 'In Progress', status: '-' },
+                { area: 'Not Started / Planning', status: '-' },
+                { area: 'Total Potential Savings', status: '-' }
+            ];
+
+            const tbody = document.getElementById('reliabilityTableBody');
+            tbody.innerHTML = rows.map(row => `
+                <tr>
+                    <td class="metric-cell">${row.area}</td>
+                    <td><div class="metric-value">${row.status}</div></td>
+                </tr>
+            `).join('');
+        }
+
         function getMonthWindow(ticketList) {
             const selectedMonthIndex = getSelectedMonthIndex();
             let yearNumber = new Date().getFullYear();
@@ -681,6 +752,7 @@
             updateHeading(selectedMonth, allSustenanceTickets);
             renderSummaryTable(allSustenanceTickets);
             renderIndicatorTable();
+            renderReliabilityTable();
             renderTableRows(filteredTickets);
         }
 
@@ -714,6 +786,7 @@
                     updateHeading('', []);
                     renderSummaryTable([]);
                     renderIndicatorTable();
+                    renderReliabilityTable();
                     renderTableRows([]);
                     return;
                 }
