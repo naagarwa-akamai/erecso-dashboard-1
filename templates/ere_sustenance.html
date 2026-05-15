@@ -341,6 +341,7 @@
         let allSustenanceTickets = [];
         let allSreincTickets = [];
         let aiInitiativesRows = [];
+        let toilActivityRows = [];
         const monthColumnIds = ['monthCol1', 'monthCol2', 'monthCol3'];
         const devTicketPrefixes = [
             'ORS-', 'CPSSRE-', 'MAPPINGENG-', 'SRMM-', 'DPEXREQ-',
@@ -606,18 +607,62 @@
             const { monthIndex, year } = getActiveMonthYear();
             const monthHeader = `${monthNames[monthIndex]} ${String(year).slice(-2)} Status`;
             document.getElementById('reliabilityMonthStatus').textContent = monthHeader;
+            const monthAreaPrefix = `${monthNames[monthIndex]} '${String(year).slice(-2)}`;
 
             const avgToilPercent = calculateAvgToilPercent(monthIndex, year, allSustenanceTickets);
             const medianLoeHours = calculateMedianLoeHours(monthIndex, year, allSustenanceTickets);
 
+            const parseSheetDate = (value) => {
+                if (!value) return null;
+                const trimmed = String(value).trim();
+                const parts = trimmed.split('/');
+                if (parts.length === 3) {
+                    const month = Number(parts[0]);
+                    const day = Number(parts[1]);
+                    let yearPart = Number(parts[2]);
+                    if (!Number.isNaN(month) && !Number.isNaN(day) && !Number.isNaN(yearPart)) {
+                        if (yearPart < 100) yearPart += 2000;
+                        const parsed = new Date(yearPart, month - 1, day);
+                        return Number.isNaN(parsed.getTime()) ? null : parsed;
+                    }
+                }
+                const fallback = new Date(trimmed);
+                return Number.isNaN(fallback.getTime()) ? null : fallback;
+            };
+
+            const getDetectedKey = (rows, regex) => {
+                if (!rows.length) return null;
+                const keys = Object.keys(rows[0]);
+                return keys.find(key => regex.test(key)) || null;
+            };
+
+            const dateKey = getDetectedKey(toilActivityRows, /date/i);
+            const statusKey = getDetectedKey(toilActivityRows, /status/i);
+            const savingsKey = getDetectedKey(toilActivityRows, /(fte|saving)/i);
+
+            const monthRows = toilActivityRows
+
+            const normalizeStatus = (value) => String(value || '').trim().toLowerCase();
+            const statusOf = (row) => normalizeStatus(statusKey ? row[statusKey] : '');
+
+            const completedCount = monthRows.filter(row => /completed|complete|done|closed/.test(statusOf(row))).length;
+            const inProgressCount = monthRows.filter(row => /in\s*progress|testing|wip/.test(statusOf(row))).length;
+            const notStartedPlanningCount = monthRows.filter(row => /not\s*started|planning|planned|backlog|rejected/.test(statusOf(row))).length;
+            const initiativesIdentifiedCount = monthRows.length;
+            const totalPotentialSavings = monthRows.reduce((sum, row) => {
+                const rawValue = savingsKey ? row[savingsKey] : null;
+                const parsed = parseFloat(String(rawValue || '').trim());
+                return Number.isNaN(parsed) ? sum : sum + parsed;
+            }, 0);
+
             const rows = [
-                { area: 'Median LOE', status: medianLoeHours === null ? '-' : `${medianLoeHours} hrs` },
-                { area: 'Avg Toil', status: avgToilPercent === null ? '-' : `${avgToilPercent}%` },
-                { area: 'Initiatives Identified', status: '-' },
-                { area: 'Completed', status: '-' },
-                { area: 'In Progress', status: '-' },
-                { area: 'Not Started / Planning', status: '-' },
-                { area: 'Total Potential Savings', status: '-' }
+                { area: `Median LOE (${monthAreaPrefix})`, status: medianLoeHours === null ? '-' : `${medianLoeHours} hrs` },
+                { area: `Toil% (${monthAreaPrefix})`, status: avgToilPercent === null ? '-' : `${avgToilPercent}%` },
+                { area: `Total Initiatives Identified`, status: String(initiativesIdentifiedCount) },
+                { area: 'Completed', status: String(completedCount) },
+                { area: 'In Progress', status: String(inProgressCount) },
+                { area: 'Not Started / Planning', status: String(notStartedPlanningCount) },
+                { area: 'Total Potential Savings', status: `${totalPotentialSavings.toFixed(2)} FTE` }
             ];
 
             const tbody = document.getElementById('reliabilityTableBody');
@@ -633,6 +678,7 @@
             const { monthIndex, year } = getActiveMonthYear();
             const monthHeader = `${monthNames[monthIndex]} ${String(year).slice(-2)} Status`;
             document.getElementById('aiInitiativesMonthStatus').textContent = monthHeader;
+            const monthAreaPrefix = `${monthNames[monthIndex]} '${String(year).slice(-2)}`;
 
             const parseSheetDate = (value) => {
                 if (!value) return null;
@@ -676,7 +722,7 @@
             const rows = [
 
                 {area:'Total Initiative',status:String(aiInitiativesRows.length)},
-                { area: 'Initiatives Identified this month', status: String(initiativesIdentified) },
+                { area: `Initiatives Identified this month (${monthAreaPrefix})`, status: String(initiativesIdentified) },
                 { area: 'Total In-progress/Testing', status: String(inProgressCount) },
                 { area: 'Total Initiated', status: String(initiatedCount) },
                 { area: 'Total Not Started /Planning', status: String(notStartedPlanningCount) },
@@ -872,10 +918,11 @@
 
         async function loadData() {
             try {
-                const [res, sreincRes, initiativesRes] = await Promise.all([
+                const [res, sreincRes, initiativesRes, toilRes] = await Promise.all([
                     fetch('/api/ere-sustenance-tickets'),
                     fetch('/api/ere-sustenance-tickets-sreinc'),
-                    fetch('/api/gsheet-initiatives')
+                    fetch('/api/gsheet-initiatives'),
+                    fetch('/api/gsheet-toil-activity')
                 ]);
 
                 if (!res.ok) throw new Error('Failed to fetch tickets');
@@ -896,6 +943,21 @@
                     });
                 } else {
                     aiInitiativesRows = [];
+                }
+
+                if (toilRes.ok) {
+                    const toilData = await toilRes.json();
+                    const titleKey = toilData.length > 0
+                        ? (Object.keys(toilData[0]).find(key => /title/i.test(key)) || null)
+                        : null;
+
+                    toilActivityRows = toilData.filter(row => {
+                        if (!titleKey) return true;
+                        const titleValue = String(row[titleKey] || '').trim();
+                        return titleValue !== '';
+                    });
+                } else {
+                    toilActivityRows = [];
                 }
 
                 const filteredTickets = tickets.filter(t => {

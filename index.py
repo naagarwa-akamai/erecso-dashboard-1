@@ -27,6 +27,7 @@ GOOGLE_SERVICE_ACCOUNT_FILE = './google_service_account.json'
 GSHEETS_SPREADSHEET_ID = '1d3uheG-wxBEm6jS9UDGb_z95wjDn3QrbEn7iQilYvn8'
 GSHEETS_SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 GSHEETS_DEFAULT_TAB = 'ERE AI Agent Registry'
+GSHEETS_TOIL_TAB = 'Toil Activity Tracker'
 
 
 
@@ -219,6 +220,31 @@ def get_gsheet_initiatives():
         rows = result.get('values', [])
         if not rows:
             return jsonify([]), 200
+        headers = rows[0]
+        data = [dict(zip(headers, row)) for row in rows[1:]]
+        return jsonify(data), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/gsheet-toil-activity', methods=['GET'])
+def get_gsheet_toil_activity():
+    try:
+        sheet_range = request.args.get('range', f"'{GSHEETS_TOIL_TAB}'")
+        creds = service_account.Credentials.from_service_account_file(
+            GOOGLE_SERVICE_ACCOUNT_FILE,
+            scopes=GSHEETS_SCOPES
+        )
+        service = build('sheets', 'v4', credentials=creds)
+
+        result = service.spreadsheets().values().get(
+            spreadsheetId=GSHEETS_SPREADSHEET_ID,
+            range=sheet_range
+        ).execute()
+        rows = result.get('values', [])
+        if not rows:
+            return jsonify([]), 200
+
         headers = rows[0]
         data = [dict(zip(headers, row)) for row in rows[1:]]
         return jsonify(data), 200
