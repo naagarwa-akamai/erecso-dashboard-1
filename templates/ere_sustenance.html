@@ -315,6 +315,10 @@
         let allSustenanceTickets = [];
         let allSreincTickets = [];
         const monthColumnIds = ['monthCol1', 'monthCol2', 'monthCol3'];
+        const devTicketPrefixes = [
+            'ORS-', 'CPSSRE-', 'MAPPINGENG-', 'SRMM-', 'DPEXREQ-',
+            'EWDEVESC-', 'GDPM-', 'DXRE-', 'DBATTERY-', 'SECESC-'
+        ];
 
         function parseDate(value) {
             if (!value) return null;
@@ -368,9 +372,60 @@
             return 'High';
         }
 
+        function hasDevLink(ticket) {
+            if (!ticket.issue_links || !Array.isArray(ticket.issue_links)) return false;
+            return ticket.issue_links.some(link => {
+                const linkKey = (link.key || '').toUpperCase();
+                return devTicketPrefixes.some(prefix => linkKey.startsWith(prefix));
+            });
+        }
+
+        function calculateSelfResolutionRate(monthIndex, year, ticketList) {
+            const resolvedTickets = ticketList.filter(ticket => {
+                const createdDate = parseDate(ticket.created);
+                if (!createdDate) return false;
+                if (createdDate.getMonth() !== monthIndex || createdDate.getFullYear() !== year) return false;
+                const status = (ticket.status || '').toLowerCase();
+                return status === 'resolved' || status === 'closed' || !!ticket.resolution_date;
+            });
+
+            if (resolvedTickets.length === 0) return null;
+
+            const withDevLinks = resolvedTickets.filter(ticket => hasDevLink(ticket)).length;
+            const selfResolved = resolvedTickets.length - withDevLinks;
+            const rate = (selfResolved / resolvedTickets.length) * 100;
+
+            return {
+                selfResolved,
+                withDevLinks,
+                totalResolved: resolvedTickets.length,
+                rate: rate.toFixed(2)
+            };
+        }
+
+        function getSelfResolutionStatusClass(rate) {
+            if (rate === null) return 'pending';
+            const numRate = parseFloat(rate);
+            if (numRate === 0) return 'high';
+            if (numRate > 0 && numRate < 50) return 'high';
+            if (numRate >= 50 && numRate < 80) return 'medium';
+            return 'good';
+        }
+
+        function getSelfResolutionStatusText(rate) {
+            if (rate === null) return 'Pending input';
+            const numRate = parseFloat(rate);
+            if (numRate === 0) return 'Low';
+            if (numRate > 0 && numRate < 50) return 'Low';
+            if (numRate >= 50 && numRate < 80) return 'Medium';
+            return 'High';
+        }
+
         function renderIndicatorTable() {
             const { monthIndex, year } = getActiveMonthYear();
             const monthLabel = getMonthYearLabel(monthIndex, year);
+
+            const selfResolutionData = calculateSelfResolutionRate(monthIndex, year, allSustenanceTickets);
 
             const incidentsDeliveryCount = allSustenanceTickets.filter(ticket => {
                 const createdDate = parseDate(ticket.created);
@@ -388,28 +443,37 @@
             const incidentStatusClass = getIncidentStatusClass(incidentsDeliveryCount);
             const incidentStatusText = getIncidentStatusText(incidentsDeliveryCount);
 
+            const selfResolutionValue = selfResolutionData ? `${selfResolutionData.rate}%` : '-';
+            const selfResolutionNote = selfResolutionData ? `${selfResolutionData.selfResolved} / ${selfResolutionData.totalResolved}` : '';
+            const selfResolutionStatusClass = getSelfResolutionStatusClass(selfResolutionData ? selfResolutionData.rate : null);
+            const selfResolutionStatusText = getSelfResolutionStatusText(selfResolutionData ? selfResolutionData.rate : null);
+
             const rows = [
                 {
                     indicator: 'Self-Resolution Rate',
-                    value: '-',
-                    statusText: 'Pending input',
-                    statusClass: 'pending'
+                    value: selfResolutionValue,
+                    note: selfResolutionNote,
+                    statusText: selfResolutionStatusText,
+                    statusClass: selfResolutionStatusClass
                 },
                 {
                     indicator: `Median Backlog (${monthLabel})`,
                     value: '-',
+                    note: '',
                     statusText: 'Pending input',
                     statusClass: 'pending'
                 },
                 {
                     indicator: `Incidents Delivery (${monthLabel})`,
                     value: String(incidentsDeliveryCount),
+                    note: '',
                     statusText: incidentStatusText,
                     statusClass: incidentStatusClass
                 },
                 {
                     indicator: `PMRs Represented in ${monthLabel}`,
                     value: String(pmrRepresentedCount),
+                    note: '',
                     statusText: 'Engaged*',
                     statusClass: 'engaged'
                 }
@@ -419,7 +483,10 @@
             tbody.innerHTML = rows.map(row => `
                 <tr>
                     <td class="metric-cell">${row.indicator}</td>
-                    <td><div class="metric-value">${row.value}</div></td>
+                    <td>
+                        <div class="metric-value">${row.value}</div>
+                        ${row.note ? `<div class="metric-note">${row.note}</div>` : ''}
+                    </td>
                     <td class="indicator-status ${row.statusClass}">${row.statusText}</td>
                 </tr>
             `).join('');
