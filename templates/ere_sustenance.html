@@ -298,6 +298,19 @@
         </table>
     </div>
 
+    <div class="section-label">AI Initiatives <a href="https://docs.google.com/spreadsheets/d/1d3uheG-wxBEm6jS9UDGb_z95wjDn3QrbEn7iQilYvn8/edit?gid=1998619361#gid=1998619361" target="_blank" rel="noopener noreferrer" style="font-size:11px;font-weight:600;text-transform:none;letter-spacing:0;">More detail</a></div>
+    <div class="summary-table-wrap dashboard-container">
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>AI Initiatives</th>
+                    <th id="aiInitiativesMonthStatus">Status</th>
+                </tr>
+            </thead>
+            <tbody id="aiInitiativesTableBody"></tbody>
+        </table>
+    </div>
+
     <div class="section-label">Ticket Details</div>
 
     <div class="dashboard-container">
@@ -327,6 +340,7 @@
         ];
         let allSustenanceTickets = [];
         let allSreincTickets = [];
+        let aiInitiativesRows = [];
         const monthColumnIds = ['monthCol1', 'monthCol2', 'monthCol3'];
         const devTicketPrefixes = [
             'ORS-', 'CPSSRE-', 'MAPPINGENG-', 'SRMM-', 'DPEXREQ-',
@@ -615,6 +629,69 @@
             `).join('');
         }
 
+        function renderAiInitiativesTable() {
+            const { monthIndex, year } = getActiveMonthYear();
+            const monthHeader = `${monthNames[monthIndex]} ${String(year).slice(-2)} Status`;
+            document.getElementById('aiInitiativesMonthStatus').textContent = monthHeader;
+
+            const parseSheetDate = (value) => {
+                if (!value) return null;
+                const trimmed = String(value).trim();
+                const parts = trimmed.split('/');
+                if (parts.length === 3) {
+                    const month = Number(parts[0]);
+                    const day = Number(parts[1]);
+                    let yearPart = Number(parts[2]);
+                    if (!Number.isNaN(month) && !Number.isNaN(day) && !Number.isNaN(yearPart)) {
+                        if (yearPart < 100) yearPart += 2000;
+                        const parsed = new Date(yearPart, month - 1, day);
+                        return Number.isNaN(parsed.getTime()) ? null : parsed;
+                    }
+                }
+                const fallback = new Date(trimmed);
+                return Number.isNaN(fallback.getTime()) ? null : fallback;
+            };
+
+            const monthRows = aiInitiativesRows.filter(row => {
+                const date = parseSheetDate(row.Date);
+                if (!date) return false;
+                return date.getMonth() === monthIndex && date.getFullYear() === year;
+            });
+
+            const scopedRows = monthRows.length > 0 ? aiInitiativesRows : [];
+
+            const normalizeStatus = (statusValue) => String(statusValue || '').trim().toLowerCase();
+            const inProgressStatuses = new Set(['in progress', 'testing']);
+            const planningStatuses = new Set(['not started', 'not started/planning', 'planning', 'rejected']);
+
+            const initiativesIdentified = monthRows.length;
+            const inProgressCount = scopedRows.filter(row => inProgressStatuses.has(normalizeStatus(row.Status))).length;
+            const initiatedCount = scopedRows.filter(row => normalizeStatus(row.Status) === 'initiated').length;
+            const notStartedPlanningCount = scopedRows.filter(row => planningStatuses.has(normalizeStatus(row.Status))).length;
+            const totalPotentialSavings = scopedRows.reduce((sum, row) => {
+                const value = parseFloat(String(row['FTE Savings Estimate'] || '').trim());
+                return Number.isNaN(value) ? sum : sum + value;
+            }, 0);
+
+            const rows = [
+
+                {area:'Total Initiative',status:String(aiInitiativesRows.length)},
+                { area: 'Initiatives Identified this month', status: String(initiativesIdentified) },
+                { area: 'Total In-progress/Testing', status: String(inProgressCount) },
+                { area: 'Total Initiated', status: String(initiatedCount) },
+                { area: 'Total Not Started /Planning', status: String(notStartedPlanningCount) },
+                { area: 'Total Potential Savings', status: `${totalPotentialSavings.toFixed(2)} FTE` }
+            ];
+
+            const tbody = document.getElementById('aiInitiativesTableBody');
+            tbody.innerHTML = rows.map(row => `
+                <tr>
+                    <td class="metric-cell">${row.area}</td>
+                    <td><div class="metric-value">${row.status}</div></td>
+                </tr>
+            `).join('');
+        }
+
         function getMonthWindow(ticketList) {
             const selectedMonthIndex = getSelectedMonthIndex();
             let yearNumber = new Date().getFullYear();
@@ -789,14 +866,16 @@
             renderSummaryTable(allSustenanceTickets);
             renderIndicatorTable();
             renderReliabilityTable();
+            renderAiInitiativesTable();
             renderTableRows(filteredTickets);
         }
 
         async function loadData() {
             try {
-                const [res, sreincRes] = await Promise.all([
+                const [res, sreincRes, initiativesRes] = await Promise.all([
                     fetch('/api/ere-sustenance-tickets'),
-                    fetch('/api/ere-sustenance-tickets-sreinc')
+                    fetch('/api/ere-sustenance-tickets-sreinc'),
+                    fetch('/api/gsheet-initiatives')
                 ]);
 
                 if (!res.ok) throw new Error('Failed to fetch tickets');
@@ -806,6 +885,17 @@
                     allSreincTickets = await sreincRes.json();
                 } else {
                     allSreincTickets = [];
+                }
+
+                if (initiativesRes.ok) {
+                    const initiativesData = await initiativesRes.json();
+                    aiInitiativesRows = initiativesData.filter(row => {
+                        const dateValue = String(row.Date || '').trim();
+                        const titleValue = String(row.Title || '').trim();
+                        return dateValue !== '' && titleValue !== '';
+                    });
+                } else {
+                    aiInitiativesRows = [];
                 }
 
                 const filteredTickets = tickets.filter(t => {
@@ -823,6 +913,7 @@
                     renderSummaryTable([]);
                     renderIndicatorTable();
                     renderReliabilityTable();
+                    renderAiInitiativesTable();
                     renderTableRows([]);
                     return;
                 }
