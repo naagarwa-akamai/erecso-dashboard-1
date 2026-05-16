@@ -163,6 +163,34 @@
             letter-spacing: 0.3px;
         }
 
+        .section-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .export-btn {
+            padding: 7px 14px;
+            border-radius: 4px;
+            border: 1px solid #0052cc;
+            background: #0052cc;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .export-btn:hover {
+            background: #0041a8;
+        }
+
+        .export-btn:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+        }
+
         .back-btn {
             padding: 5px 14px;
             border-radius: 4px;
@@ -361,7 +389,10 @@
         <canvas id="issuesByCauseChart" height="450" width="1100"></canvas>
     </div>
 </div>
-    <div class="section-label">Ticket Details</div>
+    <div class="section-header-row">
+        <div class="section-label" style="margin-bottom:0;">Ticket Details</div>
+        <button id="exportTicketTableBtn" class="export-btn" type="button">Export to Google Sheet</button>
+    </div>
 
     <div class="dashboard-container">
         <table id="sustenanceTable">
@@ -589,6 +620,45 @@
                     <td class="indicator-status ${row.statusClass}">${row.statusText}</td>
                 </tr>
             `).join('');
+        }
+
+        async function exportTicketTableToGoogleSheet() {
+            const button = document.getElementById('exportTicketTableBtn');
+            const selectedMonth = document.getElementById('monthFilter').value || '';
+
+            if (!button) return;
+
+            button.disabled = true;
+            const originalLabel = button.textContent;
+            button.textContent = 'Exporting...';
+
+            try {
+                const response = await fetch('/api/export-ere-sustenance-table', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ selectedMonth })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Export failed');
+                }
+
+                button.textContent = 'Exported';
+                setTimeout(() => {
+                    button.textContent = originalLabel;
+                }, 1500);
+
+                alert(`Exported ${result.rows_exported} rows to ${result.sheet_title}.`);
+            } catch (error) {
+                button.textContent = originalLabel;
+                alert(`Unable to export table: ${error.message}`);
+            } finally {
+                button.disabled = false;
+            }
         }
 
         function parseToilPercent(value) {
@@ -1351,6 +1421,7 @@
         }
 
         document.getElementById('monthFilter').addEventListener('change', applyMonthFilter);
+        document.getElementById('exportTicketTableBtn').addEventListener('click', exportTicketTableToGoogleSheet);
         loadData();
     </script>
 </body>

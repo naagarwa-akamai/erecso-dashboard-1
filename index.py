@@ -2,7 +2,7 @@
 # API for monthly view AI summary from xyz.json
 
 from flask import Flask, jsonify, render_template, request
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask_cors import CORS
 import json
 import csv
@@ -25,9 +25,133 @@ ERESUSTENANCE_JSON_FILE_PATH = './ere_sustenance_ticket_details.json'
 ERESUSTENANCE_SREINC_JSON_FILE_PATH = './ere_sustenance_ticket_details_sreinc.json'
 GOOGLE_SERVICE_ACCOUNT_FILE = './google_service_account.json'
 GSHEETS_SPREADSHEET_ID = '1d3uheG-wxBEm6jS9UDGb_z95wjDn3QrbEn7iQilYvn8'
-GSHEETS_SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+GSHEETS_EXPORT_SPREADSHEET_ID = '1Cgv7kG44zOg2GxZOVecTSFzq0Zx59hTqsqgezHTsJug'
+GSHEETS_SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 GSHEETS_DEFAULT_TAB = 'ERE AI Agent Registry'
 GSHEETS_TOIL_TAB = 'Toil Activity Tracker'
+GSHEETS_EXPORT_TAB = 'ERE Sustenance Export'
+
+
+def parse_datetime_value(value):
+    if not value:
+        return None
+
+    text = str(value).strip()
+    if not text:
+        return None
+
+    candidates = [text]
+    if text.endswith('Z'):
+        candidates.append(text[:-1] + '+00:00')
+
+    for candidate in candidates:
+        try:
+            return datetime.fromisoformat(candidate)
+        except ValueError:
+            continue
+
+    return None
+
+
+def format_export_date_only(value):
+    parsed = parse_datetime_value(value)
+    if not parsed:
+        return ''
+    return parsed.strftime('%Y-%m-%d')
+
+
+def ensure_sheet_tab(service, spreadsheet_id, sheet_title):
+    metadata = service.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
+    sheets = metadata.get('sheets', [])
+
+    for sheet in sheets:
+        props = sheet.get('properties', {})
+        if props.get('title') == sheet_title:
+            return
+
+    service.spreadsheets().batchUpdate(
+        spreadsheetId=spreadsheet_id,
+        body={
+            'requests': [
+                {
+                    'addSheet': {
+                        'properties': {
+                            'title': sheet_title
+                        }
+                    }
+                }
+            ]
+        }
+    ).execute()
+
+
+def build_unique_export_sheet_title(service, spreadsheet_id, base_title):
+    metadata = service.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
+    sheets = metadata.get('sheets', [])
+    existing_titles = {
+        sheet.get('properties', {}).get('title', '')
+        for sheet in sheets
+    }
+
+    timestamp = datetime.now().strftime('%Y-%m-%d %H-%M-%S')
+    candidate = f"{base_title} {timestamp}"
+    if candidate not in existing_titles:
+        return candidate
+
+    suffix = 2
+    while True:
+        candidate = f"{base_title} {timestamp} ({suffix})"
+        if candidate not in existing_titles:
+            return candidate
+        suffix += 1
+
+
+def get_exportable_sustenance_tickets(selected_month=None):
+    if not os.path.exists(ERESUSTENANCE_JSON_FILE_PATH):
+        return []
+
+    with open(ERESUSTENANCE_JSON_FILE_PATH, 'r', encoding='utf-8') as file:
+        sustenance_tickets = json.load(file)
+
+    month_number = None
+    if selected_month not in (None, '', 'all'):
+        try:
+            month_number = int(selected_month)
+        except (TypeError, ValueError):
+            month_number = None
+
+    exported_rows = []
+    for ticket in sustenance_tickets:
+        request_type = str(ticket.get('request_type', '')).lower().strip()
+        if not request_type:
+            continue
+        if 'ere-ghost' in request_type:
+            continue
+        if 'new feature' in request_type:
+            continue
+        if 'unknown' in request_type:
+            continue
+
+        created_dt = parse_datetime_value(ticket.get('created'))
+        if not created_dt:
+            continue
+
+        created_dt = created_dt + timedelta(hours=12)
+        if month_number and created_dt.month != month_number:
+            continue
+
+        exported_rows.append({
+            'Issue Key': ticket.get('ticket_id', ''),
+            'Summary': ticket.get('summary', ''),
+            'Status': ticket.get('status', ''),
+            'Issue Type': ticket.get('issue_type', ''),
+            'Product Type': ticket.get('product_type', ''),
+            'Requesting Team': ticket.get('requesting_team', ''),
+            'Created Date': created_dt.strftime('%Y-%m-%d'),
+            'Labels': ', '.join(ticket.get('labels', [])) if isinstance(ticket.get('labels'), list) else str(ticket.get('labels', '') or '')
+        })
+
+    return exported_rows
 
 
 
@@ -248,6 +372,62 @@ def get_gsheet_toil_activity():
         headers = rows[0]
         data = [dict(zip(headers, row)) for row in rows[1:]]
         return jsonify(data), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/export-ere-sustenance-table', methods=['POST'])
+def export_ere_sustenance_table():
+    try:
+        payload = request.get_json(silent=True) or {}
+        selected_month = payload.get('selectedMonth')
+
+        rows = get_exportable_sustenance_tickets(selected_month)
+        if not rows:
+            return jsonify({"error": "No sustenance tickets available to export"}), 400
+
+        creds = service_account.Credentials.from_service_account_file(
+            GOOGLE_SERVICE_ACCOUNT_FILE,
+            scopes=GSHEETS_SCOPES
+        )
+        service = build('sheets', 'v4', credentials=creds)
+
+        sheet_title = build_unique_export_sheet_title(service, GSHEETS_EXPORT_SPREADSHEET_ID, GSHEETS_EXPORT_TAB)
+
+        created_sheet = service.spreadsheets().batchUpdate(
+            spreadsheetId=GSHEETS_EXPORT_SPREADSHEET_ID,
+            body={
+                'requests': [
+                    {
+                        'addSheet': {
+                            'properties': {
+                                'title': sheet_title
+                            }
+                        }
+                    }
+                ]
+            }
+        ).execute()
+
+        new_sheet_props = created_sheet.get('replies', [{}])[0].get('addSheet', {}).get('properties', {})
+        new_sheet_gid = new_sheet_props.get('sheetId')
+
+        headers = list(rows[0].keys())
+        values = [headers] + [[row.get(header, '') for header in headers] for row in rows]
+
+        service.spreadsheets().values().update(
+            spreadsheetId=GSHEETS_EXPORT_SPREADSHEET_ID,
+            range=f"'{sheet_title}'!A1",
+            valueInputOption='RAW',
+            body={'values': values}
+        ).execute()
+
+        return jsonify({
+            'message': 'Exported sustenance table successfully',
+            'rows_exported': len(rows),
+            'sheet_title': sheet_title,
+            'sheet_url': f"https://docs.google.com/spreadsheets/d/{GSHEETS_EXPORT_SPREADSHEET_ID}/edit#gid={new_sheet_gid}"
+        }), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
