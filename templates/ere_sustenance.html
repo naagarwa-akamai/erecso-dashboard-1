@@ -399,18 +399,31 @@
             <thead>
                 <tr>
                     <th>Issue Key</th>
-                    <th>Summary</th>
                     <th>Status</th>
-                    <th>Issue Type</th>
-                    <th>Product Type</th>
-                    <th>Requesting Team</th>
+                    <th>Priority</th>
                     <th>Created Date</th>
-                    <th>Labels</th>
+                    <th>Incident/High Priority ?</th>
+                    <th>Product Type</th>
+                    <th>Account Name</th>
+                    <th>Summary</th>
+                    <th>Issue summary post review</th>
+                    <th>Custom field (Requesting Team)</th>
+                    <th>Request Type</th>
+                    <th>Assignee</th>
+                    <th>Reporter</th>
+                    <th>Service Incident</th>
+                    <th>Time Spent (sec)</th>
+                    <th>FTE (no of hours/40)</th>
+                    <th>Time spent in hours</th>
+                    <th>Component</th>
+                    <th>ERECSO</th>
+                    <th>DEV TICKETS</th>
+                    <th>Product Breakdown</th>
                 </tr>
             </thead>
             <tbody id="sustenanceTableBody">
                 <tr>
-                    <td colspan="8" class="empty-state">Loading sustenance data...</td>
+                    <td colspan="21" class="empty-state">Loading sustenance data...</td>
                 </tr>
             </tbody>
         </table>
@@ -433,6 +446,27 @@
             'ORS-', 'CPSSRE-', 'MAPPINGENG-', 'SRMM-', 'DPEXREQ-',
             'EWDEVESC-', 'GDPM-', 'DXRE-', 'DBATTERY-', 'SECESC-'
         ];
+
+        function getDevTicketKeys(ticket) {
+            if (!ticket.issue_links || !Array.isArray(ticket.issue_links)) return [];
+            return ticket.issue_links
+                .map(link => (link.key || '').toUpperCase().trim())
+                .filter(linkKey => devTicketPrefixes.some(prefix => linkKey.startsWith(prefix)));
+        }
+
+        function getTicketTimeSpentSeconds(ticket) {
+            const rawValue = ticket.timespent ?? ticket.time_spent ?? ticket['Time Spent (sec)'];
+            const parsed = Number(rawValue);
+            return Number.isFinite(parsed) ? parsed : 0;
+        }
+
+        function getIncidentHighPriorityValue(ticket) {
+            const serviceIncident = ticket.service_incident;
+            const priority = String(ticket.priority || '').toLowerCase();
+            if (serviceIncident !== null && serviceIncident !== undefined && String(serviceIncident).trim() !== '') return 'Yes';
+            if (priority === 'high' || priority === 'critical') return 'Yes';
+            return 'No';
+        }
 
         function parseDate(value) {
             if (!value) return null;
@@ -1300,21 +1334,41 @@
             const tbody = document.getElementById('sustenanceTableBody');
 
             if (ticketList.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="8" class="empty-state">No sustenance tickets found for selected month.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="21" class="empty-state">No sustenance tickets found for selected month.</td></tr>`;
                 return;
             }
 
             tbody.innerHTML = ticketList.map(t => {
-                const labels = (t.labels || []).map(l => `<span style="display:inline-block;background:#e9eff5;color:#0052cc;padding:2px 6px;margin:2px;border-radius:4px;font-size:10px;font-weight:bold;">${l}</span>`).join('');
+                const devTickets = getDevTicketKeys(t).join(', ');
+                const labels = Array.isArray(t.labels)
+                    ? t.labels.join(', ')
+                    : String(t.labels || '');
+                const timeSpentSeconds = getTicketTimeSpentSeconds(t);
+                const timeSpentHours = timeSpentSeconds ? (timeSpentSeconds / 3600) : 0;
+                const fteValue = timeSpentHours ? (timeSpentHours / 40) : 0;
+                const postReviewSummary = t.executive_summary || t.resolution_description || t.longterm_mitigation || t.root_cause || '';
                 const issueUrl = `https://track.akamai.com/jira/browse/${t.ticket_id}`;
                 return `<tr>
                     <td><a href="${issueUrl}" target="_blank">${t.ticket_id || ''}</a></td>
-                    <td>${t.summary || ''}</td>
                     <td>${t.status || ''}</td>
-                    <td>${t.issue_type || ''}</td>
-                    <td>${t.product_type || ''}</td>
-                    <td>${t.requesting_team || ''}</td>
+                    <td>${t.priority || ''}</td>
                     <td>${formatDateOnly(t.created) || ''}</td>
+                    <td>${getIncidentHighPriorityValue(t)}</td>
+                    <td>${t.product_type || ''}</td>
+                    <td>${t.account_name || t.account || t.customer || t.customer_name || ''}</td>
+                    <td>${t.summary || ''}</td>
+                    <td>${postReviewSummary}</td>
+                    <td>${t.requesting_team || ''}</td>
+                    <td>${t.request_type || ''}</td>
+                    <td>${t.assignee || ''}</td>
+                    <td>${t.reporter || ''}</td>
+                    <td>${t.service_incident ?? ''}</td>
+                    <td>${timeSpentSeconds || ''}</td>
+                    <td>${fteValue ? fteValue.toFixed(4) : ''}</td>
+                    <td>${timeSpentHours ? timeSpentHours.toFixed(2) : ''}</td>
+                    <td>${t.components || t.component || ''}</td>
+                    <td>${t.flag || ''}</td>
+                    <td>${devTickets}</td>
                     <td>${labels}</td>
                 </tr>`;
             }).join('');
@@ -1416,7 +1470,7 @@
                 applyMonthFilter();
             } catch (e) {
                 document.getElementById('sustenanceTableBody').innerHTML =
-                    `<tr><td colspan="8" class="empty-state">Error loading data: ${e.message}</td></tr>`;
+                    `<tr><td colspan="21" class="empty-state">Error loading data: ${e.message}</td></tr>`;
             }
         }
 

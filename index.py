@@ -30,6 +30,10 @@ GSHEETS_SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 GSHEETS_DEFAULT_TAB = 'ERE AI Agent Registry'
 GSHEETS_TOIL_TAB = 'Toil Activity Tracker'
 GSHEETS_EXPORT_TAB = 'ERE Sustenance Export'
+DEV_TICKET_PREFIXES = [
+    'ORS-', 'CPSSRE-', 'MAPPINGENG-', 'SRMM-', 'DPEXREQ-',
+    'EWDEVESC-', 'GDPM-', 'DXRE-', 'DBATTERY-', 'SECESC-','GREL-'
+]
 
 
 def parse_datetime_value(value):
@@ -140,15 +144,50 @@ def get_exportable_sustenance_tickets(selected_month=None):
         if month_number and created_dt.month != month_number:
             continue
 
+        issue_links = ticket.get('issue_links', [])
+        dev_ticket_keys = []
+        if isinstance(issue_links, list):
+            for link in issue_links:
+                if not isinstance(link, dict):
+                    continue
+                link_key = str(link.get('key', '')).upper().strip()
+                if any(link_key.startswith(prefix) for prefix in DEV_TICKET_PREFIXES):
+                    dev_ticket_keys.append(link_key)
+
+        time_spent_seconds = ticket.get('timespent')
+        try:
+            time_spent_seconds = int(float(str(time_spent_seconds).strip())) if str(time_spent_seconds).strip() else 0
+        except (TypeError, ValueError):
+            time_spent_seconds = 0
+
+        time_spent_hours = round(time_spent_seconds / 3600, 2) if time_spent_seconds else 0
+        fte_value = round(time_spent_hours / 40, 4) if time_spent_hours else 0
+        incident_priority = str(ticket.get('priority', '')).strip().lower() in {'high', 'critical'}
+        service_incident = ticket.get('service_incident')
+        incident_flag = 'Yes' if (service_incident not in (None, '', '-', False) or incident_priority) else 'No'
+
         exported_rows.append({
             'Issue Key': ticket.get('ticket_id', ''),
-            'Summary': ticket.get('summary', ''),
             'Status': ticket.get('status', ''),
-            'Issue Type': ticket.get('issue_type', ''),
-            'Product Type': ticket.get('product_type', ''),
-            'Requesting Team': ticket.get('requesting_team', ''),
+            'Priority': ticket.get('priority', ''),
             'Created Date': created_dt.strftime('%Y-%m-%d'),
-            'Labels': ', '.join(ticket.get('labels', [])) if isinstance(ticket.get('labels'), list) else str(ticket.get('labels', '') or '')
+            'Incident/High Priority ?': incident_flag,
+            'Product Type': ticket.get('product_type', ''),
+            'Account Name': ticket.get('account_name') or ticket.get('account') or ticket.get('customer') or ticket.get('customer_name') or '',
+            'Summary': ticket.get('summary', ''),
+            'Issue summary post review': ticket.get('executive_summary') or ticket.get('resolution_description') or ticket.get('longterm_mitigation') or ticket.get('root_cause') or '',
+            'Custom field (Requesting Team)': ticket.get('requesting_team', ''),
+            'Request Type': ticket.get('request_type', ''),
+            'Assignee': ticket.get('assignee', ''),
+            'Reporter': ticket.get('reporter', ''),
+            'Service Incident': service_incident if service_incident not in (None, '') else '',
+            'Time Spent (sec)': str(time_spent_seconds) if time_spent_seconds else '',
+            'FTE (no of hours/40)': f'{fte_value:.4f}' if fte_value else '',
+            'Time spent in hours': f'{time_spent_hours:.2f}' if time_spent_hours else '',
+            'Component': ticket.get('components') or ticket.get('component') or '',
+            'ERECSO': ticket.get('flag', ''),
+            'DEV TICKETS': ', '.join(dev_ticket_keys),
+            'Product Breakdown': ', '.join(ticket.get('labels', [])) if isinstance(ticket.get('labels'), list) else str(ticket.get('labels', '') or '')
         })
 
     return exported_rows
