@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERE-Sustenance Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <style>
         :root {
             --bg-color: #f4f7f9;
@@ -27,6 +29,7 @@
             justify-content: space-between;
             margin-bottom: 20px;
         }
+        .chart-container { width: 800px; border: 1px solid #ddd; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 
         .page-header h1 {
             font-size: 20px;
@@ -225,6 +228,25 @@
             color: #888;
             font-size: 13px;
         }
+
+        .dual-table-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .dual-table-item {
+            flex: 1 1 460px;
+            min-width: 320px;
+        }
+
+        @media (max-width: 900px) {
+            .dual-table-item {
+                flex-basis: 100%;
+                min-width: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -285,32 +307,60 @@
         </table>
     </div>
 
-    <div class="section-label">Reliability & Effectiveness</div>
-    <div class="summary-table-wrap dashboard-container">
-        <table class="summary-table">
-            <thead>
-                <tr>
-                    <th>Area</th>
-                    <th id="reliabilityMonthStatus">Status</th>
-                </tr>
-            </thead>
-            <tbody id="reliabilityTableBody"></tbody>
-        </table>
-    </div>
+    <div class="dual-table-row">
+        <div class="dual-table-item">
+            <div class="section-label">Reliability & Effectiveness <a href="https://docs.google.com/spreadsheets/d/1d3uheG-wxBEm6jS9UDGb_z95wjDn3QrbEn7iQilYvn8/edit?gid=994247161#gid=994247161" target="_blank" rel="noopener noreferrer" style="font-size:11px;font-weight:600;text-transform:none;letter-spacing:0;">More detail</a></div>
+            <div class="summary-table-wrap dashboard-container">
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Area</th>
+                            <th id="reliabilityMonthStatus">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reliabilityTableBody"></tbody>
+                </table>
+            </div>
+        </div>
 
-    <div class="section-label">AI Initiatives <a href="https://docs.google.com/spreadsheets/d/1d3uheG-wxBEm6jS9UDGb_z95wjDn3QrbEn7iQilYvn8/edit?gid=1998619361#gid=1998619361" target="_blank" rel="noopener noreferrer" style="font-size:11px;font-weight:600;text-transform:none;letter-spacing:0;">More detail</a></div>
-    <div class="summary-table-wrap dashboard-container">
-        <table class="summary-table">
-            <thead>
-                <tr>
-                    <th>AI Initiatives</th>
-                    <th id="aiInitiativesMonthStatus">Status</th>
-                </tr>
-            </thead>
-            <tbody id="aiInitiativesTableBody"></tbody>
-        </table>
+        <div class="dual-table-item">
+            <div class="section-label">AI Initiatives <a href="https://docs.google.com/spreadsheets/d/1d3uheG-wxBEm6jS9UDGb_z95wjDn3QrbEn7iQilYvn8/edit?gid=1998619361#gid=1998619361" target="_blank" rel="noopener noreferrer" style="font-size:11px;font-weight:600;text-transform:none;letter-spacing:0;">More detail</a></div>
+            <div class="summary-table-wrap dashboard-container">
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>AI Initiatives</th>
+                            <th id="aiInitiativesMonthStatus">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="aiInitiativesTableBody"></tbody>
+                </table>
+            </div>
+        </div>
     </div>
-
+<div style="display:flex;gap:10px;flex-wrap:wrap; justify-content: space-between; height: 200;">
+    <div>
+    <div class="section-label">Product Type Trend</div>
+    <div class="summary-table-wrap dashboard-container" style="padding: 16px; max-width: 700px;">
+        <h3 id="productChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">ERE Sustenance Products</h3>
+        <canvas id="productTypeChart" height="450" width="1100"></canvas>
+    </div>
+</div>
+ <div>
+    <div class="section-label">Escalating Groups</div>
+    <div class="summary-table-wrap dashboard-container" style="padding: 16px; max-width: 700px; ">
+        <h3 id="escalatingGroupsChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Escalating Groups</h3>
+        <canvas id="escalatingGroupsChart" height="450" width="1100"></canvas>
+    </div>
+    </div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: auto;">
+    <div class="section-label">Top Issues By Cause</div>
+    <div class="summary-table-wrap dashboard-container" style="padding: 16px; max-width: 620px;">
+        <h3 id="issuesByCauseChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Top Issues by Cause</h3>
+        <canvas id="issuesByCauseChart" height="450" width="1100"></canvas>
+    </div>
+</div>
     <div class="section-label">Ticket Details</div>
 
     <div class="dashboard-container">
@@ -321,13 +371,15 @@
                     <th>Summary</th>
                     <th>Status</th>
                     <th>Issue Type</th>
+                    <th>Product Type</th>
+                    <th>Requesting Team</th>
                     <th>Created Date</th>
                     <th>Labels</th>
                 </tr>
             </thead>
             <tbody id="sustenanceTableBody">
                 <tr>
-                    <td colspan="6" class="empty-state">Loading sustenance data...</td>
+                    <td colspan="8" class="empty-state">Loading sustenance data...</td>
                 </tr>
             </tbody>
         </table>
@@ -342,6 +394,9 @@
         let allSreincTickets = [];
         let aiInitiativesRows = [];
         let toilActivityRows = [];
+        let productTypeChartInstance = null;
+        let escalatingGroupsChartInstance = null;
+        let issuesByCauseChartInstance = null;
         const monthColumnIds = ['monthCol1', 'monthCol2', 'monthCol3'];
         const devTicketPrefixes = [
             'ORS-', 'CPSSRE-', 'MAPPINGENG-', 'SRMM-', 'DPEXREQ-',
@@ -603,6 +658,301 @@
             return (medianSeconds / 3600).toFixed(2);
         }
 
+        function getPreviousMonth(monthIndex, year) {
+            if (monthIndex === 0) {
+                return { monthIndex: 11, year: year - 1 };
+            }
+            return { monthIndex: monthIndex - 1, year };
+        }
+
+        function getProductBucket(productType) {
+            const value = String(productType || '').toLowerCase().trim();
+            
+            if (value === 'ere-api-acceleration') return 'API Acceleration';
+            if (value.includes('provision')) return 'Provisioning Services';
+            if (value === 'ere-amd') return 'AMD';
+            if (value === 'ere-ion') return 'ION';
+            if (value.includes('cw') || value.includes('ew')) return 'Others (CW+EW)';
+            return 'Others (CW+EW)';
+        }
+
+        function countProductsByMonth(ticketList, monthIndex, year) {
+            const buckets = {
+                'AMD': 0,
+                'ION': 0,
+                'API Acceleration': 0,
+                'Provisioning Services': 0,
+                'Others (CW+EW)': 0
+            };
+
+            ticketList.forEach(ticket => {
+                const createdDate = parseDate(ticket.created);
+                if (!createdDate) return;
+                if (createdDate.getMonth() !== monthIndex || createdDate.getFullYear() !== year) return;
+                const productSource = ticket.product_type;
+                
+                const bucket = getProductBucket(productSource);
+                buckets[bucket] += 1;
+            });
+
+            return buckets;
+        }
+
+        function renderProductTypeChart() {
+            const { monthIndex, year } = getActiveMonthYear();
+            const previous = getPreviousMonth(monthIndex, year);
+
+            const currentCounts = countProductsByMonth(allSustenanceTickets, monthIndex, year);
+            const previousCounts = countProductsByMonth(allSustenanceTickets, previous.monthIndex, previous.year);
+
+            const labels = ['AMD', 'ION', 'API Acceleration', 'Provisioning Services', 'Others (CW+EW)'];
+            const currentLabel = `${monthNames[monthIndex]} ${year}`;
+            const previousLabel = `${monthNames[previous.monthIndex]} ${previous.year}`;
+
+            document.getElementById('productChartTitle').textContent = `ERE Sustenance Products ${previousLabel} / ${currentLabel}`;
+
+            const ctx = document.getElementById('productTypeChart');
+            if (!ctx) return;
+
+            if (productTypeChartInstance) {
+                productTypeChartInstance.destroy();
+            }
+
+            productTypeChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [
+                        {
+                            label: previousLabel,
+                            data: labels.map(label => previousCounts[label]),
+                            backgroundColor: '#4e7e31',
+                            barThickness: 18
+                        },
+                        {
+                            label: currentLabel,
+                            data: labels.map(label => currentCounts[label]),
+                            backgroundColor: '#4a90e2',
+                            barThickness: 18
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { stepSize: 1 }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: { enabled: true }
+                    }
+                }
+            });
+        }
+
+        function getEscalatingGroupBucket(requestingTeam) {
+            const value = String(requestingTeam || '').toLowerCase().trim();
+            if (value === 'akatec-psg') return 'Akatec-PSG';
+            if (value === 'iat') return 'IAT';
+
+            const otherTeams = ['ere-internal', 'amg', 'nocc', 'bocc'];
+            if (otherTeams.includes(value)) return 'Others (ERE-Internal + AMG + NOCC + BOCC)';
+
+            return 'Others (ERE-Internal + AMG + NOCC + BOCC)';
+        }
+
+        function countEscalatingGroupsByMonth(ticketList, monthIndex, year) {
+            const buckets = {
+                'Akatec-PSG': 0,
+                'IAT': 0,
+                'Others (ERE-Internal + AMG + NOCC + BOCC)': 0
+            };
+
+            ticketList.forEach(ticket => {
+                const createdDate = parseDate(ticket.created);
+                if (!createdDate) return;
+                if (createdDate.getMonth() !== monthIndex || createdDate.getFullYear() !== year) return;
+
+                const bucket = getEscalatingGroupBucket(ticket.requesting_team);
+                buckets[bucket] += 1;
+            });
+
+            return buckets;
+        }
+
+        function renderEscalatingGroupsChart() {
+            const { monthIndex, year } = getActiveMonthYear();
+            const previous = getPreviousMonth(monthIndex, year);
+
+            const currentCounts = countEscalatingGroupsByMonth(allSustenanceTickets, monthIndex, year);
+            const previousCounts = countEscalatingGroupsByMonth(allSustenanceTickets, previous.monthIndex, previous.year);
+
+            const labels = [
+                'Akatec-PSG',
+                'IAT',
+                ['Others', '(ERE-Internal +', 'AMG + NOCC +', 'BOCC)']
+            ];
+
+            const dataKeys = [
+                'Akatec-PSG',
+                'IAT',
+                'Others (ERE-Internal + AMG + NOCC + BOCC)'
+            ];
+
+            const currentLabel = `${monthNames[monthIndex]} ${year}`;
+            const previousLabel = `${monthNames[previous.monthIndex]} ${previous.year}`;
+
+            document.getElementById('escalatingGroupsChartTitle').textContent = `Escalating Groups ${previousLabel} and ${currentLabel}`;
+
+            const ctx = document.getElementById('escalatingGroupsChart');
+            if (!ctx) return;
+
+            if (escalatingGroupsChartInstance) {
+                escalatingGroupsChartInstance.destroy();
+            }
+
+            escalatingGroupsChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [
+                        {
+                            label: previousLabel,
+                            data: dataKeys.map(key => previousCounts[key]),
+                            backgroundColor: '#d98c45',
+                            barThickness: 25
+                        },
+                        {
+                            label: currentLabel,
+                            data: dataKeys.map(key => currentCounts[key]),
+                            backgroundColor: '#6b46a1',
+                            barThickness: 25
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { stepSize: 1 }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Requesting Team'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        }
+                    }
+                }
+            });
+        }
+
+        function getEreCausesFromLabels(ticket) {
+            const labels = Array.isArray(ticket.labels) ? ticket.labels : [];
+            const causes = labels
+                .map(label => String(label || '').trim())
+                .filter(label => label.toLowerCase().startsWith('ere-cause:'))
+                .map(label => {
+                    const rawCause = label.split(':').slice(1).join(':').trim().toLowerCase();
+                    return rawCause || 'not-specified';
+                });
+
+            if (causes.length === 0) return ['not-specified'];
+
+            // Avoid double counting when duplicate ere-cause labels appear on the same ticket.
+            return [...new Set(causes)];
+        }
+
+        function renderIssuesByCauseChart() {
+            const { monthIndex, year } = getActiveMonthYear();
+            const monthLabel = `${monthNames[monthIndex]} ${year}`;
+            document.getElementById('issuesByCauseChartTitle').textContent = `Top ${monthLabel} Issues by ERE Cause`;
+
+            const monthTickets = allSustenanceTickets.filter(ticket => {
+                const createdDate = parseDate(ticket.created);
+                if (!createdDate) return false;
+                return createdDate.getMonth() === monthIndex && createdDate.getFullYear() === year;
+            });
+
+            const causeCounts = monthTickets.reduce((acc, ticket) => {
+                const causes = getEreCausesFromLabels(ticket);
+                causes.forEach(cause => {
+                    acc[cause] = (acc[cause] || 0) + 1;
+                });
+                return acc;
+            }, {});
+
+            const orderedCauses = Object.keys(causeCounts).sort((a, b) => causeCounts[b] - causeCounts[a]);
+            const total = monthTickets.length;
+
+            const labels = orderedCauses.map(cause => `${cause} (${causeCounts[cause]} issue${causeCounts[cause] === 1 ? '' : 's'})`);
+            const percentages = orderedCauses.map(cause => {
+                if (total === 0) return 0;
+                return Number(((causeCounts[cause] / total) * 100).toFixed(1));
+            });
+
+            const palette = [
+                '#4a86e8', '#ea4335', '#fabc05', '#34a853', '#ff6d01',
+                '#4db6ac', '#76a5af', '#ab47bc', '#8d6e63', '#42a5f5',
+                '#66bb6a', '#ffa726'
+            ];
+            const colors = orderedCauses.map((_, index) => palette[index % palette.length]);
+
+            const ctx = document.getElementById('issuesByCauseChart');
+            if (!ctx) return;
+
+            if (issuesByCauseChartInstance) {
+                issuesByCauseChartInstance.destroy();
+            }
+
+            issuesByCauseChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels,
+                    datasets: [{
+                        data: percentages,
+                        backgroundColor: colors,
+                        borderWidth: 1,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    rotation: 0,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                boxWidth: 12,
+                                font: { size: 12 }
+                            }
+                        },
+                        datalabels: {
+                            color: '#000000',
+                            font: {
+                                size: 12,
+                                weight: 'normal'
+                            },
+                            formatter: (value) => `${value}%`
+                        }
+                    },
+                    cutout: '55%'
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+
         function renderReliabilityTable() {
             const { monthIndex, year } = getActiveMonthYear();
             const monthHeader = `${monthNames[monthIndex]} ${String(year).slice(-2)} Status`;
@@ -711,6 +1061,7 @@
             const planningStatuses = new Set(['not started', 'not started/planning', 'planning', 'rejected']);
 
             const initiativesIdentified = monthRows.length;
+            const completedCount = scopedRows.filter(row => /completed|complete|done|closed/.test(normalizeStatus(row.Status))).length;
             const inProgressCount = scopedRows.filter(row => inProgressStatuses.has(normalizeStatus(row.Status))).length;
             const initiatedCount = scopedRows.filter(row => normalizeStatus(row.Status) === 'initiated').length;
             const notStartedPlanningCount = scopedRows.filter(row => planningStatuses.has(normalizeStatus(row.Status))).length;
@@ -723,10 +1074,11 @@
 
                 {area:'Total Initiative',status:String(aiInitiativesRows.length)},
                 { area: `Initiatives Identified this month (${monthAreaPrefix})`, status: String(initiativesIdentified) },
+                { area: 'Total Completed', status: String(completedCount) },
                 { area: 'Total In-progress/Testing', status: String(inProgressCount) },
                 { area: 'Total Initiated', status: String(initiatedCount) },
                 { area: 'Total Not Started /Planning', status: String(notStartedPlanningCount) },
-                { area: 'Total Potential Savings', status: `${totalPotentialSavings.toFixed(2)} FTE` }
+                { area: 'Total Potential Savings', status: `${totalPotentialSavings.toFixed(2)} FTE` },
             ];
 
             const tbody = document.getElementById('aiInitiativesTableBody');
@@ -878,7 +1230,7 @@
             const tbody = document.getElementById('sustenanceTableBody');
 
             if (ticketList.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="6" class="empty-state">No sustenance tickets found for selected month.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="8" class="empty-state">No sustenance tickets found for selected month.</td></tr>`;
                 return;
             }
 
@@ -890,6 +1242,8 @@
                     <td>${t.summary || ''}</td>
                     <td>${t.status || ''}</td>
                     <td>${t.issue_type || ''}</td>
+                    <td>${t.product_type || ''}</td>
+                    <td>${t.requesting_team || ''}</td>
                     <td>${formatDateOnly(t.created) || ''}</td>
                     <td>${labels}</td>
                 </tr>`;
@@ -913,6 +1267,9 @@
             renderIndicatorTable();
             renderReliabilityTable();
             renderAiInitiativesTable();
+            renderProductTypeChart();
+            renderEscalatingGroupsChart();
+            renderIssuesByCauseChart();
             renderTableRows(filteredTickets);
         }
 
@@ -989,7 +1346,7 @@
                 applyMonthFilter();
             } catch (e) {
                 document.getElementById('sustenanceTableBody').innerHTML =
-                    `<tr><td colspan="6" class="empty-state">Error loading data: ${e.message}</td></tr>`;
+                    `<tr><td colspan="8" class="empty-state">Error loading data: ${e.message}</td></tr>`;
             }
         }
 
