@@ -292,7 +292,7 @@
                 <option value="2">February</option>
                 <option value="3">March</option>
                 <option value="4">April</option>
-                <option value="5">May</option>
+                <option value="5" selected>May</option>
                 <option value="6">June</option>
                 <option value="7">July</option>
                 <option value="8">August</option>
@@ -452,6 +452,13 @@
             return ticket.issue_links
                 .map(link => (link.key || '').toUpperCase().trim())
                 .filter(linkKey => devTicketPrefixes.some(prefix => linkKey.startsWith(prefix)));
+        }
+
+        function getErecsoTicketKeys(ticket) {
+            if (!ticket.issue_links || !Array.isArray(ticket.issue_links)) return [];
+            return ticket.issue_links
+                .map(link => (link.key || '').toUpperCase().trim())
+                .filter(linkKey => linkKey.startsWith('ERECSO-'));
         }
 
         function getTicketTimeSpentSeconds(ticket) {
@@ -1340,6 +1347,7 @@
 
             tbody.innerHTML = ticketList.map(t => {
                 const devTickets = getDevTicketKeys(t).join(', ');
+                const erecsoTickets = getErecsoTicketKeys(t).join(', ');
                 const labels = Array.isArray(t.labels)
                     ? t.labels.join(', ')
                     : String(t.labels || '');
@@ -1367,7 +1375,7 @@
                     <td>${fteValue ? fteValue.toFixed(4) : ''}</td>
                     <td>${timeSpentHours ? timeSpentHours.toFixed(2) : ''}</td>
                     <td>${t.components || t.component || ''}</td>
-                    <td>${t.flag || ''}</td>
+                    <td>${erecsoTickets}</td>
                     <td>${devTickets}</td>
                     <td>${labels}</td>
                 </tr>`;
@@ -1461,12 +1469,7 @@
                     return;
                 }
 
-                const ticketsWithAdjustedDates = filteredTickets.map(t => ({
-                    ...t,
-                    created: addHoursToDate(t.created, 12)
-                }));
-
-                allSustenanceTickets = ticketsWithAdjustedDates;
+                allSustenanceTickets = filteredTickets;
                 applyMonthFilter();
             } catch (e) {
                 document.getElementById('sustenanceTableBody').innerHTML =

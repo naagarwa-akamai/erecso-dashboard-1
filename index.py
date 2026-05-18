@@ -140,7 +140,6 @@ def get_exportable_sustenance_tickets(selected_month=None):
         if not created_dt:
             continue
 
-        created_dt = created_dt + timedelta(hours=12)
         if month_number and created_dt.month != month_number:
             continue
 
