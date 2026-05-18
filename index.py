@@ -518,6 +518,7 @@ def refresh_monthly_data():
 
     return jsonify({
         "message": "Data refreshed successfully",
+        "refreshed_at": datetime.now().isoformat(timespec='seconds'),
         "output": (result.stdout or '').strip()
     }), 200
 

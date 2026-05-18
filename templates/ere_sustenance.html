@@ -63,6 +63,19 @@
             gap: 10px;
         }
 
+        .refresh-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        .refresh-timestamp {
+            font-size: 11px;
+            color: #5e6c84;
+            line-height: 1.2;
+        }
+
         .month-select-label {
             font-size: 12px;
             color: #444;
@@ -306,11 +319,15 @@
                 <option value="11">November</option>
                 <option value="12">December</option>
             </select>
-            <button id="refreshDataBtn" class="export-btn" type="button">Refresh Data</button>
+            <div class="refresh-controls">
+                <button id="refreshDataBtn" class="export-btn" type="button">Refresh Data</button>
+                
+            </div>
             <a href="/" class="back-btn"><i class="bi bi-arrow-left"></i> Back to Dashboard</a>
         </div>
+        
     </div>
-
+<div  style="float: right;"  id="refreshTimestamp" class="refresh-timestamp">Last refreshed: -</div>
     <div class="section-label">Demand and Throughput</div>
     <div class="summary-table-wrap dashboard-container">
         <table class="summary-table">
@@ -752,6 +769,7 @@
                 }
 
                 button.textContent = 'Refreshed';
+                updateRefreshTimestamp(result.refreshed_at || new Date().toISOString());
                 await loadData();
                 alert(result.message || 'Data refreshed successfully.');
             } catch (error) {
@@ -762,6 +780,24 @@
                     button.textContent = originalLabel;
                 }, 12000);
                 button.disabled = false;
+            }
+        }
+
+        function formatRefreshTimestamp(timestamp) {
+            const parsed = parseDate(timestamp);
+            if (!parsed) return '-';
+            return parsed.toLocaleString();
+        }
+
+        function updateRefreshTimestamp(timestamp) {
+            const label = document.getElementById('refreshTimestamp');
+            if (!label) return;
+
+            const formatted = formatRefreshTimestamp(timestamp);
+            label.textContent = `Last refreshed: ${formatted}`;
+
+            if (formatted !== '-') {
+                localStorage.setItem('ereSustenanceLastRefreshed', timestamp);
             }
         }
 
@@ -1644,6 +1680,7 @@
         document.getElementById('monthFilter').addEventListener('change', applyMonthFilter);
         document.getElementById('refreshDataBtn').addEventListener('click', refreshMonthlyData);
         document.getElementById('exportTicketTableBtn').addEventListener('click', exportTicketTableToGoogleSheet);
+        updateRefreshTimestamp(localStorage.getItem('ereSustenanceLastRefreshed'));
         loadData();
     </script>
 </body>

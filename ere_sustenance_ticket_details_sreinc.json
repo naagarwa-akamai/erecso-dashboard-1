@@ -55,7 +55,7 @@
                 "key": "ERE-3268"
             }
         ],
-        "account_name": "-"
+        "account_name": null
     },
     {
         "flag": "-",
@@ -94,7 +94,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": null
     },
     {
         "flag": "-",
@@ -143,7 +143,7 @@
                 "key": "ERE-3162"
             }
         ],
-        "account_name": "-"
+        "account_name": null
     },
     {
         "flag": "-",
@@ -194,6 +194,6 @@
                 "key": "ERE-3153"
             }
         ],
-        "account_name": "-"
+        "account_name": null
     }
 ]

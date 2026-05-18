@@ -104,8 +104,8 @@ def fetch_ticket_details(ticket_id):
             ticket_resolution_date = ticket_data.get("fields", {}).get("resolutiondate", None)
             ticket_mitigation_plan = ticket_data.get("fields", {}).get("customfield_11806", None)  # Replace with actual field ID
             ticket_longterm_mitigation = ticket_data.get("fields", {}).get("customfield_14430", None)  # Replace with actual field ID
-            account_name = ticket_data.get("fields", {}).get("customfield_14729", {})
-            ticket_account_name = account_name.get("value", "Unknown") if isinstance(account_name, dict) else "-"
+            ticket_account_name = ticket_data.get("fields", {}).get("customfield_14729", {})
+            # ticket_account_name = account_name.get("value", "Unknown") if isinstance(account_name, dict) else "-"
             issuelinks = ticket_data.get("fields", {}).get("issuelinks", [])
             ticket_issue_links = []
 
