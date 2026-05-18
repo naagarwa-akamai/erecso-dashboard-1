@@ -48,7 +48,8 @@
                 "direction": "outward",
                 "key": "ERECSO-118"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -104,7 +105,8 @@
                 "direction": "outward",
                 "key": "ERE-3123"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -157,7 +159,8 @@
                 "direction": "outward",
                 "key": "ERECSO-78"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -218,7 +221,8 @@
                 "direction": "outward",
                 "key": "GURU-1325"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -273,7 +277,8 @@
                 "direction": "inward",
                 "key": "GHOST-7192"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -344,7 +349,8 @@
                 "direction": "inward",
                 "key": "EPREMO-3139"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -389,7 +395,8 @@
         "resolution_date": "2026-01-02T09:44:50.811+0000",
         "mitigation_plan": "N/A",
         "longterm_mitigation": "N/A",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -446,7 +453,8 @@
                 "direction": "inward",
                 "key": "ERE-3118"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -503,7 +511,8 @@
                 "direction": "outward",
                 "key": "ERE-3117"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -560,7 +569,8 @@
                 "direction": "inward",
                 "key": "ERECSO-118"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -621,7 +631,8 @@
                 "direction": "inward",
                 "key": "ERECSO-118"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -681,7 +692,8 @@
                 "direction": "inward",
                 "key": "ERE-3232"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -732,7 +744,8 @@
                 "direction": "outward",
                 "key": "GHOST-7212"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -787,7 +800,8 @@
                 "direction": "inward",
                 "key": "ERE-3111"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -839,7 +853,8 @@
                 "direction": "outward",
                 "key": "ERECSO-42"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -888,7 +903,8 @@
                 "direction": "inward",
                 "key": "ERE-3140"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -932,7 +948,8 @@
         "resolution_date": "2026-01-09T06:54:18.248+0000",
         "mitigation_plan": "DD properties could use a;dscm and mrsuspend HK/Macau regions",
         "longterm_mitigation": "DPM to support all country legal requirements.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -981,7 +998,8 @@
                 "direction": "outward",
                 "key": "GHOST-7260"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1027,7 +1045,8 @@
         "resolution_date": "2026-01-14T04:13:28.826+0000",
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1083,7 +1102,8 @@
                 "direction": "inward",
                 "key": "ERECSO-103"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1145,7 +1165,8 @@
                 "direction": "inward",
                 "key": "GHOST-7049"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1204,7 +1225,8 @@
                 "direction": "inward",
                 "key": "ERE-3139"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1267,7 +1289,8 @@
                 "direction": "inward",
                 "key": "ERE-3254"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1322,7 +1345,8 @@
                 "direction": "outward",
                 "key": "GHOST-7228"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1368,7 +1392,8 @@
         "resolution_date": "2026-01-23T18:13:10.848+0000",
         "mitigation_plan": "FOM (Fault Override Map) adjustment applied to TATA-DEL region (r35329) while root cause investigation was ongoing. SS-MapOps engaged to review SiteShield map (mr:11857) for capacity. Flipkart IAT engaged to review increased CPU traffic pattern from rukminim2.flixcart.com. Customer (SonyLIV) asked to acknowledge the SiteShield changes.",
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1414,7 +1439,8 @@
         "resolution_date": "2026-02-04T19:31:07.763+0000",
         "mitigation_plan": "consultation ",
         "longterm_mitigation": "consultation ",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1457,7 +1483,8 @@
         "resolution_date": "2026-04-04T03:30:10.688+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1502,7 +1529,8 @@
                 "direction": "outward",
                 "key": "GHOST-7255"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1547,7 +1575,8 @@
         "resolution_date": "2026-01-20T04:21:23.406+0000",
         "mitigation_plan": "NA",
         "longterm_mitigation": "Customer to use all api shards to spread load better .",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1607,7 +1636,8 @@
                 "direction": "inward",
                 "key": "ERE-3163"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1656,7 +1686,8 @@
                 "direction": "inward",
                 "key": "ERE-3158"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1722,7 +1753,8 @@
                 "direction": "inward",
                 "key": "ALERTS-39182"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1773,7 +1805,8 @@
                 "direction": "outward",
                 "key": "GURU-1237"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1820,7 +1853,8 @@
         "resolution_date": "2026-02-06T08:05:43.057+0000",
         "mitigation_plan": "IAT consulted. Customer confirmed and fixed their client-side bug (MediaTailor routing segments to pristine workflow). Recommendations provided: review feasibility of pre-spread serial for the pristine hostname, and consider GTM-based load distribution across API shards to prevent future traffic concentration on specific machines.",
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1864,7 +1898,8 @@
         "resolution_date": "2026-01-21T07:51:03.218+0000",
         "mitigation_plan": "Validated configuration changes and confirmed correct behavior post-fix. Communicated the correct usage of metadata stages to avoid similar misconfigurations.",
         "longterm_mitigation": "Introduce validation checks, warnings, or improved documentation in Property Manager to prevent configuring response header modifications at unsupported metadata stages. This will help avoid similar issues when stricter processing features like XML Optimization are enabled.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1903,7 +1938,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -1948,7 +1984,8 @@
         "resolution_date": "2026-03-11T18:54:49.253+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2000,7 +2037,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2039,7 +2077,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2090,7 +2129,8 @@
                 "direction": "inward",
                 "key": "ERECSO-47"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2141,7 +2181,8 @@
                 "direction": "inward",
                 "key": "ERE-3154"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2192,7 +2233,8 @@
                 "direction": "outward",
                 "key": "ERECSO-46"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2259,7 +2301,8 @@
                 "direction": "inward",
                 "key": "GURU-1396"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2311,7 +2354,8 @@
                 "direction": "inward",
                 "key": "SREINC-1178"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2362,7 +2406,8 @@
                 "direction": "outward",
                 "key": "ERE-3150"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2433,7 +2478,8 @@
                 "direction": "inward",
                 "key": "ERECSO-47"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2483,7 +2529,8 @@
                 "direction": "outward",
                 "key": "DPEXREQ-1128"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2528,7 +2575,8 @@
         "resolution_date": "2026-01-16T17:31:44.851+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2577,7 +2625,8 @@
                 "direction": "inward",
                 "key": "ERE-3166"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2631,7 +2680,8 @@
                 "direction": "inward",
                 "key": "ERE-3233"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2687,7 +2737,8 @@
                 "direction": "outward",
                 "key": "ERECSO-31"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2732,7 +2783,8 @@
         "resolution_date": "2026-02-02T05:04:35.197+0000",
         "mitigation_plan": "Destiny OS rolled back",
         "longterm_mitigation": "NA",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2783,7 +2835,8 @@
                 "direction": "inward",
                 "key": "SREINC-1182"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2838,7 +2891,8 @@
                 "direction": "inward",
                 "key": "ERE-3194"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2883,7 +2937,8 @@
         "resolution_date": "2026-02-04T03:57:44.487+0000",
         "mitigation_plan": "na",
         "longterm_mitigation": "na",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -2958,7 +3013,8 @@
                 "direction": "outward",
                 "key": "GURU-1242"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3007,7 +3063,8 @@
                 "direction": "inward",
                 "key": "ERE-3187"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3058,7 +3115,8 @@
                 "direction": "inward",
                 "key": "GURU-1396"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3110,7 +3168,8 @@
                 "direction": "outward",
                 "key": "ERECSO-31"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3159,7 +3218,8 @@
                 "direction": "inward",
                 "key": "PRTLDEVOPS-84647"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3210,7 +3270,8 @@
                 "direction": "outward",
                 "key": "ERECSO-31"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3254,7 +3315,8 @@
         "resolution_date": "2026-02-05T08:10:03.601+0000",
         "mitigation_plan": "Clarified system limits and exception criteria to avoid confusion and unnecessary escalations. Advised that a new request should be raised if implementation is required.",
         "longterm_mitigation": "Establish clear documentation and guidelines around CW capacity limits and exception handling to reduce repeated feasibility queries and ensure proper usage aligned with intended traffic types.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3305,7 +3367,8 @@
                 "direction": "outward",
                 "key": "ERECSO-35"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3350,7 +3413,8 @@
         "resolution_date": "2026-02-23T10:28:00.772+0000",
         "mitigation_plan": "NA, As the origin contains both Transfer-Encoding header field and a Content-Length header field, content length will be ignored.",
         "longterm_mitigation": "NA",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3393,7 +3457,8 @@
         "resolution_date": "2026-03-11T19:20:01.737+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3444,7 +3509,8 @@
                 "direction": "outward",
                 "key": "ERECSO-42"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3489,7 +3555,8 @@
         "resolution_date": "2026-02-04T08:17:40.831+0000",
         "mitigation_plan": "The only way to ensure an LL map entry for a region/serial remains available is by making regular requests to it. So, tt is required to test with frequent requests to eliminate the overall elevated DNS times.",
         "longterm_mitigation": "SRMM team have already increased the cache limit to 1000 from 200 to work around these kind of issues. \r\nIt looks like we would be requiring high cache limit with growing customer base. ",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3528,7 +3595,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3573,7 +3641,8 @@
         "resolution_date": "2026-02-11T19:38:31.744+0000",
         "mitigation_plan": "Discussing with IAT on what can be done to lower flits to cause less issues.",
         "longterm_mitigation": "thread opened on discussing what should be done generally on this kind of enablement. ",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3621,7 +3690,8 @@
                 "direction": "inward",
                 "key": "GHOST-7510"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3666,7 +3736,8 @@
         "resolution_date": null,
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3718,7 +3789,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3770,7 +3842,8 @@
                 "direction": "outward",
                 "key": "ERECSO-50"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3821,7 +3894,8 @@
                 "direction": "outward",
                 "key": "ERECSO-103"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3882,7 +3956,8 @@
                 "direction": "inward",
                 "key": "EWDEVESC-302"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3928,7 +4003,8 @@
         "resolution_date": "2026-04-09T07:37:59.743+0000",
         "mitigation_plan": "Disable ICP with TIER0 match then you are going to disable it at the TD0 TIER not the edge tier",
         "longterm_mitigation": "Disable ICP with TIER0 match then you are going to disable it at the TD0 TIER not the edge tier",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -3980,7 +4056,8 @@
                 "direction": "outward",
                 "key": "ERECSO-31"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4029,7 +4106,8 @@
                 "direction": "inward",
                 "key": "ERE-3209"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4073,7 +4151,8 @@
         "resolution_date": "2026-02-11T10:28:02.714+0000",
         "mitigation_plan": "Given its dedicated setup, capacity planning and deployments have to be done based on the demand expectation.",
         "longterm_mitigation": "Capacity planning and deployments have to be done based on the expected demand.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4125,7 +4204,8 @@
                 "direction": "outward",
                 "key": "ERECSO-42"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4175,7 +4255,8 @@
                 "direction": "outward",
                 "key": "ERECSO-35"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4224,7 +4305,8 @@
                 "direction": "outward",
                 "key": "GDPM-718"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4268,7 +4350,8 @@
         "resolution_date": "2026-02-11T04:59:34.375+0000",
         "mitigation_plan": "Recommended to add the header \"Used-Edc-to-determine-Accept-Video: 1\" to the incoming request. ",
         "longterm_mitigation": "Recommended to add the header \"Used-Edc-to-determine-Accept-Video: 1\" to the incoming request. ",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4313,7 +4396,8 @@
         "resolution_date": "2026-02-11T10:29:26.889+0000",
         "mitigation_plan": "Setting up lattice jobs to understand which hop in the path has the issue and try to fix it.",
         "longterm_mitigation": "Since international links would be highly limited b/w two countries, it is required to ensure their health beforehand and transient issues aren't completely preventable.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4368,7 +4452,8 @@
                 "direction": "inward",
                 "key": "ERE-3216"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4423,7 +4508,8 @@
                 "direction": "outward",
                 "key": "DBATTERY-8732"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4476,7 +4562,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4525,7 +4612,8 @@
                 "direction": "inward",
                 "key": "BOTMAN-19421"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4569,7 +4657,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4619,7 +4708,8 @@
                 "direction": "inward",
                 "key": "SECESC-30153"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4663,7 +4753,8 @@
         "resolution_date": "2026-03-16T05:50:17.733+0000",
         "mitigation_plan": "Based upon the given formula, Use the correct values to get the required threshold ",
         "longterm_mitigation": "Based upon the given formula, Use the correct values to get the required threshold ",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4714,7 +4805,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4759,7 +4851,8 @@
         "resolution_date": "2026-02-20T12:04:50.315+0000",
         "mitigation_plan": "Dev team removed the old EHNs which are having the same name but different EHNiDs",
         "longterm_mitigation": "Validation requires between the name between different EHNiDs",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4804,7 +4897,8 @@
         "resolution_date": "2026-02-18T08:13:12.310+0000",
         "mitigation_plan": "IAT/Akatec to work with NOCC to get back the cap.",
         "longterm_mitigation": "NOCC /MCH to have alert to identify too much loss in capacity in a metro/country.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4847,7 +4941,8 @@
         "resolution_date": "2026-02-17T05:56:26.058+0000",
         "mitigation_plan": "the step was skipped at the backend via a DBMC update and marked as successful..",
         "longterm_mitigation": "Long term fix is deployed in next release. As the step now automatically skip when EHN is not there.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4900,7 +4995,8 @@
                 "direction": "outward",
                 "key": "ERECSO-78"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4941,7 +5037,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -4997,7 +5094,8 @@
                 "direction": "inward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5041,7 +5139,8 @@
         "resolution_date": "2026-04-15T22:25:43.531+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5090,7 +5189,8 @@
                 "direction": "inward",
                 "key": "ERE-3212"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5134,7 +5234,8 @@
         "resolution_date": "2026-03-26T11:30:16.154+0000",
         "mitigation_plan": "ERE check about all the compliances are upto the mark or not before migration taking place",
         "longterm_mitigation": "Validation can be added on Move object Resource Migration tool",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5199,7 +5300,8 @@
                 "direction": "inward",
                 "key": "ERECSO-103"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5248,7 +5350,8 @@
                 "direction": "inward",
                 "key": "ERE-3220"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5299,7 +5402,8 @@
                 "direction": "outward",
                 "key": "ERECSO-55"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5351,7 +5455,8 @@
                 "direction": "outward",
                 "key": "ERECSO-46"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5396,7 +5501,8 @@
         "resolution_date": "2026-03-05T17:35:40.804+0000",
         "mitigation_plan": "consultation ",
         "longterm_mitigation": "Switch / and ghost upgrades to handle LR traffic a bit better.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5452,7 +5558,8 @@
                 "direction": "inward",
                 "key": "ERE-3239"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5508,7 +5615,8 @@
                 "direction": "inward",
                 "key": "MAPPINGENG-8220"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5547,7 +5655,8 @@
         "resolution_date": "2026-05-07T22:07:07.339+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5603,7 +5712,8 @@
                 "direction": "inward",
                 "key": "ERECSO-73"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5652,7 +5762,8 @@
                 "direction": "inward",
                 "key": "ERE-3228"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5697,7 +5808,8 @@
         "resolution_date": "2026-02-27T05:20:01.472+0000",
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5749,7 +5861,8 @@
                 "direction": "inward",
                 "key": "ERECSO-47"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5799,7 +5912,8 @@
                 "direction": "inward",
                 "key": "ERECSO-103"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5843,7 +5957,8 @@
         "resolution_date": "2026-03-05T12:29:52.364+0000",
         "mitigation_plan": "Nothing from ERE Side",
         "longterm_mitigation": "We have to wait for a little more time as the resources for handling the process in a queue is limited",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5892,7 +6007,8 @@
                 "direction": "outward",
                 "key": "GHOST-7530"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5944,7 +6060,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -5995,7 +6112,8 @@
                 "direction": "outward",
                 "key": "ERECSO-63"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6044,7 +6162,8 @@
                 "direction": "inward",
                 "key": "ERE-3238"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6096,7 +6215,8 @@
                 "direction": "outward",
                 "key": "ERECSO-55"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6142,7 +6262,8 @@
                 "direction": "outward",
                 "key": "GHOST-7541"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6193,7 +6314,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6254,7 +6376,8 @@
                 "direction": "inward",
                 "key": "ERE-3314"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6309,7 +6432,8 @@
                 "direction": "inward",
                 "key": "ERE-3286"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6360,7 +6484,8 @@
                 "direction": "outward",
                 "key": "GHOST-303"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6420,7 +6545,8 @@
                 "direction": "inward",
                 "key": "SREINC-1254"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6463,7 +6589,8 @@
         "resolution_date": "2026-03-17T10:56:51.530+0000",
         "mitigation_plan": "Adjustment of rate limits on the Open API endpoints to prevent update requests from exhausting the connection pool.",
         "longterm_mitigation": "Working on long-term architectural improvement to decouple the heavy synchronization tasks from the main request path",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6514,7 +6641,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6563,7 +6691,8 @@
                 "direction": "inward",
                 "key": "ERE-3248"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6619,7 +6748,8 @@
                 "direction": "inward",
                 "key": "ERE-3257"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6674,7 +6804,8 @@
                 "direction": "inward",
                 "key": "ERECSO-103"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6736,7 +6867,8 @@
                 "direction": "inward",
                 "key": "GURU-1433"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6781,7 +6913,8 @@
         "resolution_date": "2026-03-16T05:41:27.375+0000",
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6825,7 +6958,8 @@
         "resolution_date": "2026-03-12T15:17:17.116+0000",
         "mitigation_plan": "FOM reduction would be the immediate workaround. Since JioHotstar event is completed by now, not proceeding with FOM reduction. FOM can be reduced based on the regions' stability in the upcoming events.",
         "longterm_mitigation": "Handling the traffic spikes effectively in the platform.\r\nUsing MPG ID as key while constructing scorelist for Ghost MPGs to make sure regions are placed in different position for different MPGs of a ecor.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6866,7 +7000,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6904,7 +7039,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -6956,7 +7092,8 @@
                 "direction": "outward",
                 "key": "ERECSO-63"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7006,7 +7143,8 @@
                 "direction": "outward",
                 "key": "ERECSO-46"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7055,7 +7193,8 @@
                 "direction": "inward",
                 "key": "ERE-3259"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7096,7 +7235,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7142,7 +7282,8 @@
         "resolution_date": "2026-03-23T07:44:17.833+0000",
         "mitigation_plan": "Updates on SI-00023558.",
         "longterm_mitigation": "TBD as per SI-00023558.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7186,7 +7327,8 @@
         "resolution_date": "2026-03-23T04:28:15.212+0000",
         "mitigation_plan": "Kernel team to roll out a kernel tweak and a switch firmware fix.\r\nThe ETA for the kernel rollout, before 03/27\r\n",
         "longterm_mitigation": "NA",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7232,7 +7374,8 @@
         "resolution_date": "2026-04-10T06:07:35.484+0000",
         "mitigation_plan": "Nothing from ERE side",
         "longterm_mitigation": "Nothing from ERE side",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7284,7 +7427,8 @@
                 "direction": "inward",
                 "key": "ERE-3297"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7344,7 +7488,8 @@
                 "direction": "inward",
                 "key": "ERECSO-122"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7406,7 +7551,8 @@
                 "direction": "inward",
                 "key": "ERECSO-33"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7467,7 +7613,8 @@
                 "direction": "inward",
                 "key": "ERE-3267"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7512,7 +7659,8 @@
         "resolution_date": "2026-03-30T04:59:05.315+0000",
         "mitigation_plan": "Config reviewed and provided recommendations to help improving the performance in general.",
         "longterm_mitigation": "Platform to detect spiky traffic and manage it effectively.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7561,7 +7709,8 @@
                 "direction": "inward",
                 "key": "ERE-3270"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7599,7 +7748,8 @@
         "resolution_date": "2026-05-07T21:00:29.175+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7646,7 +7796,8 @@
                 "direction": "inward",
                 "key": "ERE-3319"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7733,7 +7884,8 @@
                 "direction": "inward",
                 "key": "GREL-5337"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7777,7 +7929,8 @@
         "resolution_date": "2026-03-31T13:26:57.720+0000",
         "mitigation_plan": "Proactive FOM reduction on regions serving spiky traffic",
         "longterm_mitigation": "Enhancement of a feature - using MPG ID as key rather than Pingpoint while constructing scorelist - this would help in spreading the forward requests more evenly/balanced",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7822,7 +7975,8 @@
         "resolution_date": "2026-04-15T05:00:57.387+0000",
         "mitigation_plan": "The migration date was verified against the Moratorium Calendar to avoid conflicts with global freezes.Data was extracted both before and after the update to ensure no data loss occurred during the UPDATE command.The manual DBMC served as a workaround for the lack of a self-service migration UI in the EIPB portal.",
         "longterm_mitigation": "We are already having a EIPB Migration tool in a resource migration tool but due to some ongoing issues reporter not able to use that and went for the traditional mitigation plan",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7875,7 +8029,8 @@
                 "direction": "outward",
                 "key": "ERECSO-63"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7925,7 +8080,8 @@
                 "direction": "outward",
                 "key": "ERECSO-35"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -7981,7 +8137,8 @@
                 "direction": "inward",
                 "key": "ERE-3285"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8043,7 +8200,8 @@
                 "direction": "outward",
                 "key": "SREINC-1264"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8096,7 +8254,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8145,7 +8304,8 @@
                 "direction": "inward",
                 "key": "ERE-3280"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8186,7 +8346,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8230,7 +8391,8 @@
                 "direction": "outward",
                 "key": "ANISUP-2169"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8281,7 +8443,8 @@
                 "direction": "outward",
                 "key": "ERECSO-35"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8338,7 +8501,8 @@
                 "direction": "inward",
                 "key": "ERECSO-33"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8383,7 +8547,8 @@
         "resolution_date": "2026-04-08T03:50:48.853+0000",
         "mitigation_plan": "Mitigation is under discussion with the CW Product team, focusing on either adding  the parameter for maximum keys to deny or deploying a dedicated VR bucket for TikTok to prevent impact on other footprints during future spikes.",
         "longterm_mitigation": "Anomaly detection VR feature to deny only the keys causing traffic spike anomalies",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8436,7 +8601,8 @@
                 "direction": "outward",
                 "key": "MAPPINGENG-8373"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8489,7 +8655,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8534,7 +8701,8 @@
         "resolution_date": "2026-04-06T06:31:25.182+0000",
         "mitigation_plan": "No Mitigation from ERE Side required",
         "longterm_mitigation": "We can increase the bandwidth from MROM Side to handling the requests in a queue",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8586,7 +8754,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8635,7 +8804,8 @@
                 "direction": "inward",
                 "key": "ERE-3295"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8680,7 +8850,8 @@
         "resolution_date": "2026-04-13T16:43:32.845+0000",
         "mitigation_plan": "The transition (Creation of a new CW configuration on account associated with a test property.and Removed the specific ARL & Immediately added those ARLs to the new Fox DTC CW configuration.) was recommended to be performed during off-peak hours.\r\nDuring the \"gap\" period while UMP configurations were propagating, traffic was directed to use the default Cloud Wrapper footprint available for each map. This ensured continuity of service, though it carried a minor risk of increased origin pull due to temporary cache evictions.",
         "longterm_mitigation": "It will suggested clearer guidance for IATs and internal integration guides to explicitly highlight the \"Partial Migration\" limitation. And Establish a standard \"Manual Move\" checklist for CW configurations when full contract migrations are not feasible, ensuring QA validation is performed in a lab environment prior to production changes.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8731,7 +8902,8 @@
                 "direction": "inward",
                 "key": "SRMM-103"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8778,7 +8950,8 @@
         "resolution_date": "2026-04-22T11:10:32.993+0000",
         "mitigation_plan": "N/A - consult",
         "longterm_mitigation": "N/A - consult",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8833,7 +9006,8 @@
                 "direction": "inward",
                 "key": "ORS-16191"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8913,7 +9087,8 @@
                 "direction": "inward",
                 "key": "EREPROD-4423"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -8963,7 +9138,8 @@
                 "direction": "outward",
                 "key": "ERE-3233"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9001,7 +9177,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9051,7 +9228,8 @@
                 "direction": "outward",
                 "key": "ERECSO-29"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9089,7 +9267,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9138,7 +9317,8 @@
                 "direction": "inward",
                 "key": "ERE-3308"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9146,7 +9326,7 @@
         "summary": "503 spikes for bolt-cp1.phonepe.com - Websocket review",
         "aha_link": null,
         "description": "Requesting you to help with any recommendations that can be done for this configuration: bolt-cp1.phonepe.com.\u00a0\r\n\r\nThis is also app-based end-user traffic but on websockets, the overall concurrency connection is 500k for websockets.\u00a0\r\n\r\nThe customer's traffic is at 20% on Akamai. Account level grafana \u00a0details for websocket(search by account name).\r\n\r\nHere is a summary of the technical issue and its resolution based on the investigation:\r\n\r\nWhat went wrong?\r\nThe domain bolt-cp1.phonepe.com experienced significant 503 error spikes between April 1st and April 2nd, 2026. While the errors were visible on the traffic dashboards, they did not appear on the origin server graphs, indicating the issue was occurring at the network edge.\r\n\r\n\r\nWhy did it happen?\r\nThe root cause was a WebSocket connection bottleneck at the edge server level:\r\nSocket Limits: The number of active WebSocket connections exceeded the 32K threshold per edge server, triggering an LRU (Least Recently Used) connection pruning.\r\nTraffic Hotspots: Because SureRoute (performance-based routing) was enabled, the system was funneling the majority of traffic through a few high-performing regions (specifically TATA-BOM32p and TATA-BOM32o).\r\n\r\n\r\nResult: These specific regions became \"hotspots\" that hit their connection limits, resulting in ERR_CONNECT_FAIL and \"Cannot assign requested address\" errors.\r\nWhat fixed it?\r\n\r\n\r\nA metadata (MTD) change was implemented on April 6th to change how traffic is distributed, this metadata is the same fix that we applied for SR+OIPACL issue:\r\nDisabled SureRoute: This stopped the system from concentrating traffic in a few \"fastest\" regions.\r\n\r\n\r\nEnforced CH42 RA Map: This shifted traffic to a more direct, distributed mapping.\r\nOutcome: Traffic is now more evenly spread across a larger number of servers. This prevents any single server from reaching the 32K socket limit, which has eliminated the 503 errors for now.",
-        "components": null,
+        "components": "API-X",
         "labels": [
             "KTLO"
         ],
@@ -9182,7 +9362,8 @@
                 "direction": "outward",
                 "key": "ERECSO-31"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9229,7 +9410,8 @@
                 "direction": "outward",
                 "key": "ERE-3254"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9285,7 +9467,8 @@
                 "direction": "outward",
                 "key": "ERE-3285"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9329,7 +9512,8 @@
                 "direction": "inward",
                 "key": "GHOST-5365"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9367,7 +9551,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9412,7 +9597,8 @@
         "resolution_date": "2026-04-28T14:57:55.393+0000",
         "mitigation_plan": "expectation",
         "longterm_mitigation": "Tiktok SRE informed about traffic pattern",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9457,7 +9643,8 @@
         "resolution_date": "2026-04-28T13:38:35.063+0000",
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9500,7 +9687,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9551,7 +9739,8 @@
                 "direction": "outward",
                 "key": "ERECSO-35"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9607,7 +9796,8 @@
                 "direction": "outward",
                 "key": "ERECSO-65"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9651,7 +9841,8 @@
                 "direction": "inward",
                 "key": "GHOST-7804"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9705,7 +9896,8 @@
                 "direction": "outward",
                 "key": "ERECSO-118"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9754,7 +9946,8 @@
                 "direction": "inward",
                 "key": "ERE-3317"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9804,7 +9997,8 @@
                 "direction": "inward",
                 "key": "ORS-16385"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9849,7 +10043,8 @@
         "resolution_date": "2026-04-29T08:13:27.443+0000",
         "mitigation_plan": "use e73 not the custom e73s",
         "longterm_mitigation": "use e73 not the custom e73s",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9893,7 +10088,8 @@
                 "direction": "inward",
                 "key": "GHOST-7762"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -9959,7 +10155,8 @@
                 "direction": "inward",
                 "key": "ERE-3285"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10012,7 +10209,8 @@
                 "direction": "outward",
                 "key": "ERECSO-31"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10068,7 +10266,8 @@
                 "direction": "outward",
                 "key": "ERE-3232"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10125,7 +10324,8 @@
                 "direction": "inward",
                 "key": "ALERTS-40618"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10163,7 +10363,14 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [
+            {
+                "type": "Linked Issue",
+                "direction": "outward",
+                "key": "GHOST-1931"
+            }
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10212,7 +10419,8 @@
                 "direction": "inward",
                 "key": "ERE-3327"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10246,7 +10454,7 @@
         "created": "2026-04-28T13:23:21.943+0000",
         "key": "ERE-3318",
         "timespent": 90900,
-        "service_incident": null,
+        "service_incident": "https://akamai.my.salesforce.com/apex/SC_SI_Viewer?sinumber=SI-00023700",
         "salesforce_case": "https://akamai.lightning.force.com/lightning/r/Case/500a700000qeIujAAE/view?ws=%2Flightning%2Fr%2FAccount%2F001A000000EicB6IAJ%2Fview",
         "resolution_date": null,
         "mitigation_plan": null,
@@ -10257,7 +10465,8 @@
                 "direction": "outward",
                 "key": "EREPROD-4674"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10301,7 +10510,8 @@
                 "direction": "outward",
                 "key": "ERE-3261"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10345,7 +10555,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10400,7 +10611,8 @@
                 "direction": "inward",
                 "key": "ERE-3334"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10451,7 +10663,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10490,7 +10703,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10534,7 +10748,8 @@
                 "direction": "inward",
                 "key": "GHOST-7869"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10586,7 +10801,8 @@
                 "direction": "outward",
                 "key": "ERECSO-104"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10624,7 +10840,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10673,7 +10890,8 @@
                 "direction": "inward",
                 "key": "ERE-3338"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10717,7 +10935,8 @@
         "resolution_date": "2026-05-07T07:35:13.864+0000",
         "mitigation_plan": "The team successfully implemented the serial 2047 update and advised the customer to desynchronize their request intervals to reduce sudden flit demand spikes.",
         "longterm_mitigation": "Future efforts will focus on evaluating \"Serial Update\" access for Professional Services to reduce manual intervention and updating internal documentation to replace obsolete Media Portal DevOps workflows with current processes.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10761,7 +10980,8 @@
         "resolution_date": "2026-05-06T03:35:38.907+0000",
         "mitigation_plan": "Manual changes has been done from application properties side by assigning new variable.",
         "longterm_mitigation": "For long-term prevention, the team should evaluate increasing the baseline hostname limits for high-value ELA contracts and explore automating the approval workflow to reduce manual \"toil\" and expedite future capacity requests.",
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10811,7 +11031,8 @@
                 "direction": "outward",
                 "key": "UXTW-12222"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10849,7 +11070,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10887,7 +11109,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10942,7 +11165,8 @@
                 "direction": "outward",
                 "key": "CHREG-1620"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -10992,7 +11216,8 @@
                 "direction": "outward",
                 "key": "ERECSO-50"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11036,7 +11261,8 @@
                 "direction": "outward",
                 "key": "GHOST-7875"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11074,7 +11300,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11118,7 +11345,8 @@
                 "direction": "outward",
                 "key": "ERE-3327"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11140,7 +11368,7 @@
         "request_type": "ERE-Performance",
         "executive_summary": null,
         "resolution_description": null,
-        "root_cause": "MCH region r48617 (FABRIC-ORD3k) experienced flit overload during the WWE live event (May 9-10, 2026). MCH regions are getting overwhelmed with the Tiktok midgress traffic,",
+        "root_cause": "MCH regions are getting overwhelmed by TikTok midgress traffic This resulted in errors for Disney Streaming live channels (CP codes 1257566, 1759486). FA did kick in as applicable.",
         "toil_percent": "66",
         "workaround": "Yes",
         "resolved_status": "Fixed",
@@ -11161,9 +11389,10 @@
         "service_incident": null,
         "salesforce_case": "http://crm.akamai.com/apex/OpenByAKAMid?Id=F-CS-11321389",
         "resolution_date": "2026-05-18T05:41:01.468+0000",
-        "mitigation_plan": "Apply FOM reduction on MCH region r48617.",
+        "mitigation_plan": "Apply FOMreduction on MCH region r48617 (FABRIC-ORD3k).",
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11213,7 +11442,8 @@
                 "direction": "inward",
                 "key": "SCM-4912"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11257,7 +11487,8 @@
                 "direction": "outward",
                 "key": "CHREG-1620"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11295,7 +11526,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11333,7 +11565,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11371,7 +11604,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11409,7 +11643,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11453,7 +11688,8 @@
                 "direction": "outward",
                 "key": "GHOST-7888"
             }
-        ]
+        ],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11491,7 +11727,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11529,7 +11766,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11548,10 +11786,10 @@
         "toil_percent": "0",
         "workaround": "Yes",
         "resolved_status": "Unresolved",
-        "assignee": "svc_Ere-Jira",
-        "worklog": 0,
+        "assignee": "Suman Mishra",
+        "worklog": "2h",
         "issue_type": "Problem",
-        "status": "Triaged",
+        "status": "More Info Needed",
         "creator": "Suman Mishra",
         "reporter": "Suman Mishra",
         "customer_impact": "Wrong-Behaviour",
@@ -11561,13 +11799,14 @@
         "workcategory": "WL: Fault Management and Escalations",
         "created": "2026-05-15T06:42:15.476+0000",
         "key": "ERE-3349",
-        "timespent": null,
+        "timespent": 7200,
         "service_incident": null,
         "salesforce_case": "https://akamai.lightning.force.com/lightning/r/Case/500a700000snNxFAAU/view",
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11605,7 +11844,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11643,7 +11883,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11681,7 +11922,8 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     },
     {
         "flag": "-",
@@ -11719,6 +11961,7 @@
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
-        "issue_links": []
+        "issue_links": [],
+        "account_name": "-"
     }
 ]

@@ -31,6 +31,11 @@
         }
         .chart-container { width: 800px; border: 1px solid #ddd; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 
+        td:empty::before {
+            content: '-';
+            color: var(--text-main);
+        }
+
         .page-header h1 {
             font-size: 20px;
             color: #172b4d;
@@ -301,6 +306,7 @@
                 <option value="11">November</option>
                 <option value="12">December</option>
             </select>
+            <button id="refreshDataBtn" class="export-btn" type="button">Refresh Data</button>
             <a href="/" class="back-btn"><i class="bi bi-arrow-left"></i> Back to Dashboard</a>
         </div>
     </div>
@@ -723,6 +729,38 @@
                 button.textContent = originalLabel;
                 alert(`Unable to export table: ${error.message}`);
             } finally {
+                button.disabled = false;
+            }
+        }
+
+        async function refreshMonthlyData() {
+            const button = document.getElementById('refreshDataBtn');
+            if (!button) return;
+
+            button.disabled = true;
+            const originalLabel = button.textContent;
+            button.textContent = 'Refreshing...It will take around 1-2 mins based on data size';
+
+            try {
+                const response = await fetch('/api/refresh-monthly-data', {
+                    method: 'POST'
+                });
+
+                const result = await response.json();
+                if (!response.ok) {
+                    throw new Error(result.details || result.error || 'Refresh failed');
+                }
+
+                button.textContent = 'Refreshed';
+                await loadData();
+                alert(result.message || 'Data refreshed successfully.');
+            } catch (error) {
+                button.textContent = originalLabel;
+                alert(`Unable to refresh data: ${error.message}`);
+            } finally {
+                setTimeout(() => {
+                    button.textContent = originalLabel;
+                }, 12000);
                 button.disabled = false;
             }
         }
@@ -1457,6 +1495,12 @@
             heading.textContent = `ERE Ticket Stats - ${monthLabel} ${yearSuffix}`;
         }
 
+        function displayCell(value) {
+            if (value === null || value === undefined) return '-';
+            const text = String(value).trim();
+            return text === '' ? '-' : text;
+        }
+
         function renderTableRows(ticketList) {
             const tbody = document.getElementById('sustenanceTableBody');
 
@@ -1473,29 +1517,30 @@
                 const timeSpentHours = timeSpentSeconds ? (timeSpentSeconds / 3600) : 0;
                 const fteValue = timeSpentHours ? (timeSpentHours / 40) : 0;
                 const postReviewSummary = t.executive_summary || t.resolution_description || t.longterm_mitigation || t.root_cause || '';
-                const issueUrl = `https://track.akamai.com/jira/browse/${t.ticket_id}`;
+                const issueKey = String(t.ticket_id || '').trim();
+                const issueUrl = `https://track.akamai.com/jira/browse/${issueKey}`;
                 return `<tr>
-                    <td><a href="${issueUrl}" target="_blank">${t.ticket_id || ''}</a></td>
-                    <td>${t.status || ''}</td>
-                    <td>${t.priority || ''}</td>
-                    <td>${formatDateOnly(t.created) || ''}</td>
-                    <td>${getIncidentHighPriorityValue(t)}</td>
-                    <td>${t.product_type || ''}</td>
-                    <td>${t.account_name || t.account || t.customer || t.customer_name || ''}</td>
-                    <td>${t.summary || ''}</td>
-                    <td>${postReviewSummary}</td>
-                    <td>${t.requesting_team || ''}</td>
-                    <td>${t.request_type || ''}</td>
-                    <td>${t.assignee || ''}</td>
-                    <td>${t.reporter || ''}</td>
-                    <td>${t.service_incident ?? ''}</td>
-                    <td>${timeSpentSeconds || ''}</td>
-                    <td>${fteValue ? fteValue.toFixed(4) : ''}</td>
-                    <td>${timeSpentHours ? timeSpentHours.toFixed(2) : ''}</td>
-                    <td>${t.components || t.component || ''}</td>
-                    <td>${erecsoTickets}</td>
-                    <td>${devTickets}</td>
-                    <td>${productBreakdown}</td>
+                    <td>${issueKey ? `<a href="${issueUrl}" target="_blank">${displayCell(issueKey)}</a>` : '-'}</td>
+                    <td>${displayCell(t.status)}</td>
+                    <td>${displayCell(t.priority)}</td>
+                    <td>${displayCell(formatDateOnly(t.created))}</td>
+                    <td>${displayCell(getIncidentHighPriorityValue(t))}</td>
+                    <td>${displayCell(t.product_type)}</td>
+                    <td>${displayCell(t.account_name || t.account || t.customer || t.customer_name)}</td>
+                    <td>${displayCell(t.summary)}</td>
+                    <td>${displayCell(postReviewSummary)}</td>
+                    <td>${displayCell(t.requesting_team)}</td>
+                    <td>${displayCell(t.request_type)}</td>
+                    <td>${displayCell(t.assignee)}</td>
+                    <td>${displayCell(t.reporter)}</td>
+                    <td>${displayCell(t.service_incident)}</td>
+                    <td>${displayCell(timeSpentSeconds || '')}</td>
+                    <td>${displayCell(fteValue ? fteValue.toFixed(4) : '')}</td>
+                    <td>${displayCell(timeSpentHours ? timeSpentHours.toFixed(2) : '')}</td>
+                    <td>${displayCell(t.components || t.component)}</td>
+                    <td>${displayCell(erecsoTickets)}</td>
+                    <td>${displayCell(devTickets)}</td>
+                    <td>${displayCell(productBreakdown)}</td>
                 </tr>`;
             }).join('');
         }
@@ -1597,6 +1642,7 @@
         }
 
         document.getElementById('monthFilter').addEventListener('change', applyMonthFilter);
+        document.getElementById('refreshDataBtn').addEventListener('click', refreshMonthlyData);
         document.getElementById('exportTicketTableBtn').addEventListener('click', exportTicketTableToGoogleSheet);
         loadData();
     </script>

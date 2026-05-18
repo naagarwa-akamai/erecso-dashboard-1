@@ -7,6 +7,8 @@ from flask_cors import CORS
 import json
 import csv
 import os
+import subprocess
+import sys
 import requests
 import google.auth
 from google.oauth2 import service_account
@@ -486,6 +488,38 @@ def export_ere_sustenance_table():
         }), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/refresh-monthly-data', methods=['POST'])
+def refresh_monthly_data():
+    script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'monthlyticketdatastore.py')
+
+    if not os.path.exists(script_path):
+        return jsonify({"error": "monthlyticketdatastore.py not found"}), 404
+
+    try:
+        result = subprocess.run(
+            [sys.executable, script_path],
+            cwd=os.path.dirname(script_path),
+            capture_output=True,
+            text=True,
+            timeout=600
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Data refresh timed out after 10 minutes"}), 504
+    except Exception as e:
+        return jsonify({"error": f"Failed to start refresh: {str(e)}"}), 500
+
+    if result.returncode != 0:
+        return jsonify({
+            "error": "Data refresh failed",
+            "details": (result.stderr or result.stdout or '').strip()
+        }), 500
+
+    return jsonify({
+        "message": "Data refreshed successfully",
+        "output": (result.stdout or '').strip()
+    }), 200
 
 @app.route('/')
 def index():
