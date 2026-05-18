@@ -405,19 +405,20 @@
     </div>
     </div>
 </div>
-<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: auto;">
-    <div>
-    <div class="section-label">Top Issues By Cause</div>
-    <div class="summary-table-wrap dashboard-container" style="padding: 16px; max-width: 620px;">
-        <h3 id="issuesByCauseChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Top Issues by Cause</h3>
-        <canvas id="issuesByCauseChart" height="450" width="1100"></canvas>
-    </div>
-    </div>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; width: 100%; height: auto;">
     <div> <div class="section-label">Product Breakdown</div>
     <div class="summary-table-wrap dashboard-container" style="padding: 16px; max-width: 820px; width: 100%;">
         <h3 id="productBreakdownChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Count of Product Breakdown</h3>
         <canvas id="productBreakdownChart" height="360" width="1100"></canvas>
     </div></div>
+    <div>
+    <div class="section-label">Top Issues By Cause</div>
+    <div class="summary-table-wrap dashboard-container" style="padding: 10px; max-width: 620px;">
+        <h3 id="issuesByCauseChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Top Issues by Cause</h3>
+        <canvas id="issuesByCauseChart" height="450" width="1100"></canvas>
+    </div>
+    </div>
+    
 </div>
 
     <div class="section-header-row">
@@ -756,7 +757,7 @@
 
             button.disabled = true;
             const originalLabel = button.textContent;
-            button.textContent = 'Refreshing...It will take around 1-2 mins based on data size';
+            button.textContent = 'Refreshing...It will take around 10 mins based on data size';
 
             try {
                 const response = await fetch('/api/refresh-monthly-data', {

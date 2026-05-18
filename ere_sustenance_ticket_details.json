@@ -49,7 +49,7 @@
                 "key": "ERECSO-118"
             }
         ],
-        "account_name": "-"
+        "account_name": "Xtelify Limited"
     },
     {
         "flag": "-",
@@ -106,7 +106,7 @@
                 "key": "ERE-3123"
             }
         ],
-        "account_name": "-"
+        "account_name": "WDR Westdeutscher Rundfunk"
     },
     {
         "flag": "-",
@@ -160,7 +160,7 @@
                 "key": "ERECSO-78"
             }
         ],
-        "account_name": "-"
+        "account_name": "AIG Global Operations, Inc."
     },
     {
         "flag": "-",
@@ -222,7 +222,7 @@
                 "key": "GURU-1325"
             }
         ],
-        "account_name": "-"
+        "account_name": "Disney Streaming Services"
     },
     {
         "flag": "-",
@@ -278,7 +278,7 @@
                 "key": "GHOST-7192"
             }
         ],
-        "account_name": "-"
+        "account_name": "Kakao Corp."
     },
     {
         "flag": "-",
@@ -350,7 +350,7 @@
                 "key": "EPREMO-3139"
             }
         ],
-        "account_name": "-"
+        "account_name": "Valve Corporation"
     },
     {
         "flag": "-",
@@ -396,7 +396,7 @@
         "mitigation_plan": "N/A",
         "longterm_mitigation": "N/A",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "NAVER Cloud Corp."
     },
     {
         "flag": "-",
@@ -454,7 +454,7 @@
                 "key": "ERE-3118"
             }
         ],
-        "account_name": "-"
+        "account_name": "Sony Interactive Entertainment - Platforms"
     },
     {
         "flag": "-",
@@ -512,7 +512,7 @@
                 "key": "ERE-3117"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -570,7 +570,7 @@
                 "key": "ERECSO-118"
             }
         ],
-        "account_name": "-"
+        "account_name": "Valve Corporation"
     },
     {
         "flag": "-",
@@ -632,7 +632,7 @@
                 "key": "ERECSO-118"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -693,7 +693,7 @@
                 "key": "ERE-3232"
             }
         ],
-        "account_name": "-"
+        "account_name": "Internal"
     },
     {
         "flag": "-",
@@ -745,7 +745,7 @@
                 "key": "GHOST-7212"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -801,7 +801,7 @@
                 "key": "ERE-3111"
             }
         ],
-        "account_name": "-"
+        "account_name": "WDR Westdeutscher Rundfunk"
     },
     {
         "flag": "-",
@@ -854,7 +854,7 @@
                 "key": "ERECSO-42"
             }
         ],
-        "account_name": "-"
+        "account_name": "Moet Hennesy"
     },
     {
         "flag": "-",
@@ -904,7 +904,7 @@
                 "key": "ERE-3140"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -949,7 +949,7 @@
         "mitigation_plan": "DD properties could use a;dscm and mrsuspend HK/Macau regions",
         "longterm_mitigation": "DPM to support all country legal requirements.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Garena Online Private Limited"
     },
     {
         "flag": "-",
@@ -999,7 +999,7 @@
                 "key": "GHOST-7260"
             }
         ],
-        "account_name": "-"
+        "account_name": "The Hong Kong Jockey Club"
     },
     {
         "flag": "-",
@@ -1046,7 +1046,7 @@
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "NBCUniversal Media, LLC"
     },
     {
         "flag": "-",
@@ -1103,7 +1103,7 @@
                 "key": "ERECSO-103"
             }
         ],
-        "account_name": "-"
+        "account_name": "Citigroup Global Markets Inc"
     },
     {
         "flag": "-",
@@ -1166,7 +1166,7 @@
                 "key": "GHOST-7049"
             }
         ],
-        "account_name": "-"
+        "account_name": "Shein Group Limited"
     },
     {
         "flag": "-",
@@ -1226,7 +1226,7 @@
                 "key": "ERE-3139"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -1290,7 +1290,7 @@
                 "key": "ERE-3254"
             }
         ],
-        "account_name": "-"
+        "account_name": "Valve Corporation"
     },
     {
         "flag": "-",
@@ -1346,7 +1346,7 @@
                 "key": "GHOST-7228"
             }
         ],
-        "account_name": "-"
+        "account_name": "Tiktok"
     },
     {
         "flag": "-",
@@ -1393,7 +1393,7 @@
         "mitigation_plan": "FOM (Fault Override Map) adjustment applied to TATA-DEL region (r35329) while root cause investigation was ongoing. SS-MapOps engaged to review SiteShield map (mr:11857) for capacity. Flipkart IAT engaged to review increased CPU traffic pattern from rukminim2.flixcart.com. Customer (SonyLIV) asked to acknowledge the SiteShield changes.",
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "CULVER MAX ENTERTAINMENT PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -1440,7 +1440,7 @@
         "mitigation_plan": "consultation ",
         "longterm_mitigation": "consultation ",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Associated Newspapers Limited"
     },
     {
         "flag": "-",
@@ -1484,7 +1484,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "IE ONLINE MEDIA SERVICES PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -1530,7 +1530,7 @@
                 "key": "GHOST-7255"
             }
         ],
-        "account_name": "-"
+        "account_name": "NAVER Cloud Corp."
     },
     {
         "flag": "-",
@@ -1576,7 +1576,7 @@
         "mitigation_plan": "NA",
         "longterm_mitigation": "Customer to use all api shards to spread load better .",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Coupang Co. Ltd.,"
     },
     {
         "flag": "-",
@@ -1637,7 +1637,7 @@
                 "key": "ERE-3163"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -1687,7 +1687,7 @@
                 "key": "ERE-3158"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -1754,7 +1754,7 @@
                 "key": "ALERTS-39182"
             }
         ],
-        "account_name": "-"
+        "account_name": "internal"
     },
     {
         "flag": "-",
@@ -1806,7 +1806,7 @@
                 "key": "GURU-1237"
             }
         ],
-        "account_name": "-"
+        "account_name": "DoD Iwp"
     },
     {
         "flag": "-",
@@ -1854,7 +1854,7 @@
         "mitigation_plan": "IAT consulted. Customer confirmed and fixed their client-side bug (MediaTailor routing segments to pristine workflow). Recommendations provided: review feasibility of pre-spread serial for the pristine hostname, and consider GTM-based load distribution across API shards to prevent future traffic concentration on specific machines.",
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -1899,7 +1899,7 @@
         "mitigation_plan": "Validated configuration changes and confirmed correct behavior post-fix. Communicated the correct usage of metadata stages to avoid similar misconfigurations.",
         "longterm_mitigation": "Introduce validation checks, warnings, or improved documentation in Property Manager to prevent configuring response header modifications at unsupported metadata stages. This will help avoid similar issues when stricter processing features like XML Optimization are enabled.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "LinkedIn Corporation"
     },
     {
         "flag": "-",
@@ -1939,7 +1939,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Citigroup Global Markets"
     },
     {
         "flag": "-",
@@ -1985,7 +1985,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Carl Zeiss AG"
     },
     {
         "flag": "-",
@@ -2038,7 +2038,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "AEON Financial Service Co.,Ltd"
     },
     {
         "flag": "-",
@@ -2078,7 +2078,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Samsung"
     },
     {
         "flag": "-",
@@ -2130,7 +2130,7 @@
                 "key": "ERECSO-47"
             }
         ],
-        "account_name": "-"
+        "account_name": "Fidelity Information Services, LLC"
     },
     {
         "flag": "-",
@@ -2182,7 +2182,7 @@
                 "key": "ERE-3154"
             }
         ],
-        "account_name": "-"
+        "account_name": "CBS Interactive Inc."
     },
     {
         "flag": "-",
@@ -2234,7 +2234,7 @@
                 "key": "ERECSO-46"
             }
         ],
-        "account_name": "-"
+        "account_name": "Times Internet Limited"
     },
     {
         "flag": "-",
@@ -2302,7 +2302,7 @@
                 "key": "GURU-1396"
             }
         ],
-        "account_name": "-"
+        "account_name": "NIKE, Inc."
     },
     {
         "flag": "-",
@@ -2355,7 +2355,7 @@
                 "key": "SREINC-1178"
             }
         ],
-        "account_name": "-"
+        "account_name": "Phone Pe"
     },
     {
         "flag": "-",
@@ -2407,7 +2407,7 @@
                 "key": "ERE-3150"
             }
         ],
-        "account_name": "-"
+        "account_name": "CBS Interactive Inc."
     },
     {
         "flag": "-",
@@ -2479,7 +2479,7 @@
                 "key": "ERECSO-47"
             }
         ],
-        "account_name": "-"
+        "account_name": "NTT DATA Corporation (CAFIS-RTP)"
     },
     {
         "flag": "-",
@@ -2530,7 +2530,7 @@
                 "key": "DPEXREQ-1128"
             }
         ],
-        "account_name": "-"
+        "account_name": "Schneider Electric Industries SAS"
     },
     {
         "flag": "-",
@@ -2576,7 +2576,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "TENCENT Inc."
     },
     {
         "flag": "-",
@@ -2626,7 +2626,7 @@
                 "key": "ERE-3166"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -2681,7 +2681,7 @@
                 "key": "ERE-3233"
             }
         ],
-        "account_name": "-"
+        "account_name": "Internal"
     },
     {
         "flag": "-",
@@ -2738,7 +2738,7 @@
                 "key": "ERECSO-31"
             }
         ],
-        "account_name": "-"
+        "account_name": "UOL Pagseguro"
     },
     {
         "flag": "-",
@@ -2784,7 +2784,7 @@
         "mitigation_plan": "Destiny OS rolled back",
         "longterm_mitigation": "NA",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Worldpay"
     },
     {
         "flag": "-",
@@ -2836,7 +2836,7 @@
                 "key": "SREINC-1182"
             }
         ],
-        "account_name": "-"
+        "account_name": "Moet Hennessy"
     },
     {
         "flag": "-",
@@ -2892,7 +2892,7 @@
                 "key": "ERE-3194"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -2938,7 +2938,7 @@
         "mitigation_plan": "na",
         "longterm_mitigation": "na",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Microsoft Corporation"
     },
     {
         "flag": "-",
@@ -3014,7 +3014,7 @@
                 "key": "GURU-1242"
             }
         ],
-        "account_name": "-"
+        "account_name": "TikTok"
     },
     {
         "flag": "-",
@@ -3064,7 +3064,7 @@
                 "key": "ERE-3187"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -3116,7 +3116,7 @@
                 "key": "GURU-1396"
             }
         ],
-        "account_name": "-"
+        "account_name": "Mastercard Technologies, LLC"
     },
     {
         "flag": "-",
@@ -3169,7 +3169,7 @@
                 "key": "ERECSO-31"
             }
         ],
-        "account_name": "-"
+        "account_name": "Mobile01"
     },
     {
         "flag": "-",
@@ -3219,7 +3219,7 @@
                 "key": "PRTLDEVOPS-84647"
             }
         ],
-        "account_name": "-"
+        "account_name": " JET2 PLC"
     },
     {
         "flag": "-",
@@ -3271,7 +3271,7 @@
                 "key": "ERECSO-31"
             }
         ],
-        "account_name": "-"
+        "account_name": "Mobile Rider LLC"
     },
     {
         "flag": "-",
@@ -3316,7 +3316,7 @@
         "mitigation_plan": "Clarified system limits and exception criteria to avoid confusion and unnecessary escalations. Advised that a new request should be raised if implementation is required.",
         "longterm_mitigation": "Establish clear documentation and guidelines around CW capacity limits and exception handling to reduce repeated feasibility queries and ensure proper usage aligned with intended traffic types.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "TV Today Network Limited"
     },
     {
         "flag": "-",
@@ -3368,7 +3368,7 @@
                 "key": "ERECSO-35"
             }
         ],
-        "account_name": "-"
+        "account_name": "Jiostar India Private Limited"
     },
     {
         "flag": "-",
@@ -3414,7 +3414,7 @@
         "mitigation_plan": "NA, As the origin contains both Transfer-Encoding header field and a Content-Length header field, content length will be ignored.",
         "longterm_mitigation": "NA",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Luxottica Group s.p.a."
     },
     {
         "flag": "-",
@@ -3458,7 +3458,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "NBCUniversal Media, LLC"
     },
     {
         "flag": "-",
@@ -3510,7 +3510,7 @@
                 "key": "ERECSO-42"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -3556,7 +3556,7 @@
         "mitigation_plan": "The only way to ensure an LL map entry for a region/serial remains available is by making regular requests to it. So, tt is required to test with frequent requests to eliminate the overall elevated DNS times.",
         "longterm_mitigation": "SRMM team have already increased the cache limit to 1000 from 200 to work around these kind of issues. \r\nIt looks like we would be requiring high cache limit with growing customer base. ",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Charles Schwab"
     },
     {
         "flag": "-",
@@ -3596,7 +3596,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Multiple accounts"
     },
     {
         "flag": "-",
@@ -3642,7 +3642,7 @@
         "mitigation_plan": "Discussing with IAT on what can be done to lower flits to cause less issues.",
         "longterm_mitigation": "thread opened on discussing what should be done generally on this kind of enablement. ",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Fubon Multimedia Technology Co., Ltd-W-P15AEB"
     },
     {
         "flag": "-",
@@ -3691,7 +3691,7 @@
                 "key": "GHOST-7510"
             }
         ],
-        "account_name": "-"
+        "account_name": "Fidelity Investments"
     },
     {
         "flag": "-",
@@ -3737,7 +3737,7 @@
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Expedia Inc"
     },
     {
         "flag": "-",
@@ -3790,7 +3790,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "Roblox Corporation"
     },
     {
         "flag": "-",
@@ -3843,7 +3843,7 @@
                 "key": "ERECSO-50"
             }
         ],
-        "account_name": "-"
+        "account_name": "Bitunix Exchange Limited"
     },
     {
         "flag": "-",
@@ -3895,7 +3895,7 @@
                 "key": "ERECSO-103"
             }
         ],
-        "account_name": "-"
+        "account_name": "HT Digital Streams Ltd"
     },
     {
         "flag": "-",
@@ -3957,7 +3957,7 @@
                 "key": "EWDEVESC-302"
             }
         ],
-        "account_name": "-"
+        "account_name": "Intuit Inc."
     },
     {
         "flag": "-",
@@ -4004,7 +4004,7 @@
         "mitigation_plan": "Disable ICP with TIER0 match then you are going to disable it at the TD0 TIER not the edge tier",
         "longterm_mitigation": "Disable ICP with TIER0 match then you are going to disable it at the TD0 TIER not the edge tier",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "CBS Interactive Inc."
     },
     {
         "flag": "-",
@@ -4057,7 +4057,7 @@
                 "key": "ERECSO-31"
             }
         ],
-        "account_name": "-"
+        "account_name": "NBCUniversal Media, LLC"
     },
     {
         "flag": "-",
@@ -4107,7 +4107,7 @@
                 "key": "ERE-3209"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -4152,7 +4152,7 @@
         "mitigation_plan": "Given its dedicated setup, capacity planning and deployments have to be done based on the demand expectation.",
         "longterm_mitigation": "Capacity planning and deployments have to be done based on the expected demand.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Amazon.com Services LLC."
     },
     {
         "flag": "-",
@@ -4205,7 +4205,7 @@
                 "key": "ERECSO-42"
             }
         ],
-        "account_name": "-"
+        "account_name": "Lee Kum Kee (Hong Kong) Ltd"
     },
     {
         "flag": "-",
@@ -4256,7 +4256,7 @@
                 "key": "ERECSO-35"
             }
         ],
-        "account_name": "-"
+        "account_name": "WarnerMedia Services, LLC"
     },
     {
         "flag": "-",
@@ -4306,7 +4306,7 @@
                 "key": "GDPM-718"
             }
         ],
-        "account_name": "-"
+        "account_name": "d.vinci HR-Systems GmbH"
     },
     {
         "flag": "-",
@@ -4351,7 +4351,7 @@
         "mitigation_plan": "Recommended to add the header \"Used-Edc-to-determine-Accept-Video: 1\" to the incoming request. ",
         "longterm_mitigation": "Recommended to add the header \"Used-Edc-to-determine-Accept-Video: 1\" to the incoming request. ",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "THRON S.P.A."
     },
     {
         "flag": "-",
@@ -4397,7 +4397,7 @@
         "mitigation_plan": "Setting up lattice jobs to understand which hop in the path has the issue and try to fix it.",
         "longterm_mitigation": "Since international links would be highly limited b/w two countries, it is required to ensure their health beforehand and transient issues aren't completely preventable.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -4453,7 +4453,7 @@
                 "key": "ERE-3216"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -4509,7 +4509,7 @@
                 "key": "DBATTERY-8732"
             }
         ],
-        "account_name": "-"
+        "account_name": "Linode LLC (F-AC-4918716)"
     },
     {
         "flag": "-",
@@ -4563,7 +4563,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -4613,7 +4613,7 @@
                 "key": "BOTMAN-19421"
             }
         ],
-        "account_name": "-"
+        "account_name": "Moet Hennessy"
     },
     {
         "flag": "-",
@@ -4658,7 +4658,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Tiktok"
     },
     {
         "flag": "-",
@@ -4709,7 +4709,7 @@
                 "key": "SECESC-30153"
             }
         ],
-        "account_name": "-"
+        "account_name": "PhonePe Limited (Formerly known as \"PhonePe Private Limited\")"
     },
     {
         "flag": "-",
@@ -4754,7 +4754,7 @@
         "mitigation_plan": "Based upon the given formula, Use the correct values to get the required threshold ",
         "longterm_mitigation": "Based upon the given formula, Use the correct values to get the required threshold ",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Kakao Corp."
     },
     {
         "flag": "-",
@@ -4806,7 +4806,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "Netmarble Games Corp."
     },
     {
         "flag": "-",
@@ -4852,7 +4852,7 @@
         "mitigation_plan": "Dev team removed the old EHNs which are having the same name but different EHNiDs",
         "longterm_mitigation": "Validation requires between the name between different EHNiDs",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "PhonePe Limited (Formerly known as \"PhonePe Private Limited\")"
     },
     {
         "flag": "-",
@@ -4898,7 +4898,7 @@
         "mitigation_plan": "IAT/Akatec to work with NOCC to get back the cap.",
         "longterm_mitigation": "NOCC /MCH to have alert to identify too much loss in capacity in a metro/country.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Tiktok"
     },
     {
         "flag": "-",
@@ -4942,7 +4942,7 @@
         "mitigation_plan": "the step was skipped at the backend via a DBMC update and marked as successful..",
         "longterm_mitigation": "Long term fix is deployed in next release. As the step now automatically skip when EHN is not there.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Digipolis Antwerpen-V-6505RQM"
     },
     {
         "flag": "-",
@@ -4996,7 +4996,7 @@
                 "key": "ERECSO-78"
             }
         ],
-        "account_name": "-"
+        "account_name": "LVMH"
     },
     {
         "flag": "-",
@@ -5038,7 +5038,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "NA"
     },
     {
         "flag": "-",
@@ -5095,7 +5095,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -5140,7 +5140,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Macys.com, LLC"
     },
     {
         "flag": "-",
@@ -5190,7 +5190,7 @@
                 "key": "ERE-3212"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -5235,7 +5235,7 @@
         "mitigation_plan": "ERE check about all the compliances are upto the mark or not before migration taking place",
         "longterm_mitigation": "Validation can be added on Move object Resource Migration tool",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Source Account Name: RTL Nederland B.V. Source Account ID: F-AC-2234438 Destination Account Name: DPG Media Group NV Destination Account ID: F-AC-2046772"
     },
     {
         "flag": "-",
@@ -5301,7 +5301,7 @@
                 "key": "ERECSO-103"
             }
         ],
-        "account_name": "-"
+        "account_name": "THRON S.P.A."
     },
     {
         "flag": "-",
@@ -5351,7 +5351,7 @@
                 "key": "ERE-3220"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -5403,7 +5403,7 @@
                 "key": "ERECSO-55"
             }
         ],
-        "account_name": "-"
+        "account_name": "Brandlive, Inc."
     },
     {
         "flag": "-",
@@ -5456,7 +5456,7 @@
                 "key": "ERECSO-46"
             }
         ],
-        "account_name": "-"
+        "account_name": "IBM Watson Platform Cloud"
     },
     {
         "flag": "-",
@@ -5502,7 +5502,7 @@
         "mitigation_plan": "consultation ",
         "longterm_mitigation": "Switch / and ghost upgrades to handle LR traffic a bit better.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Disney Streaming "
     },
     {
         "flag": "-",
@@ -5559,7 +5559,7 @@
                 "key": "ERE-3239"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -5616,7 +5616,7 @@
                 "key": "MAPPINGENG-8220"
             }
         ],
-        "account_name": "-"
+        "account_name": "JPMorgan Chase & Co."
     },
     {
         "flag": "-",
@@ -5656,7 +5656,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Apple Inc - iCloud Private Relay"
     },
     {
         "flag": "-",
@@ -5713,7 +5713,7 @@
                 "key": "ERECSO-73"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIO STAR INDIA PVT LTD."
     },
     {
         "flag": "-",
@@ -5763,7 +5763,7 @@
                 "key": "ERE-3228"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -5809,7 +5809,7 @@
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Mastercard Technologies, LLC"
     },
     {
         "flag": "-",
@@ -5862,7 +5862,7 @@
                 "key": "ERECSO-47"
             }
         ],
-        "account_name": "-"
+        "account_name": "SVT - Sveriges Television AB"
     },
     {
         "flag": "-",
@@ -5913,7 +5913,7 @@
                 "key": "ERECSO-103"
             }
         ],
-        "account_name": "-"
+        "account_name": "Sun TV Network Ltd"
     },
     {
         "flag": "-",
@@ -5958,7 +5958,7 @@
         "mitigation_plan": "Nothing from ERE Side",
         "longterm_mitigation": "We have to wait for a little more time as the resources for handling the process in a queue is limited",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Shanghai Multibeauty Network Technology Co., LTD \uff08tiktik\uff09"
     },
     {
         "flag": "-",
@@ -6008,7 +6008,7 @@
                 "key": "GHOST-7530"
             }
         ],
-        "account_name": "-"
+        "account_name": "Comcast Cable Communications Management, LLC"
     },
     {
         "flag": "-",
@@ -6061,7 +6061,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "Netmarble Games Corp."
     },
     {
         "flag": "-",
@@ -6113,7 +6113,7 @@
                 "key": "ERECSO-63"
             }
         ],
-        "account_name": "-"
+        "account_name": "NA"
     },
     {
         "flag": "-",
@@ -6163,7 +6163,7 @@
                 "key": "ERE-3238"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -6216,7 +6216,7 @@
                 "key": "ERECSO-55"
             }
         ],
-        "account_name": "-"
+        "account_name": "WarnerMedia Services, LLC"
     },
     {
         "flag": "-",
@@ -6263,7 +6263,7 @@
                 "key": "GHOST-7541"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -6315,7 +6315,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -6377,7 +6377,7 @@
                 "key": "ERE-3314"
             }
         ],
-        "account_name": "-"
+        "account_name": "Internal"
     },
     {
         "flag": "-",
@@ -6433,7 +6433,7 @@
                 "key": "ERE-3286"
             }
         ],
-        "account_name": "-"
+        "account_name": "Internal"
     },
     {
         "flag": "-",
@@ -6485,7 +6485,7 @@
                 "key": "GHOST-303"
             }
         ],
-        "account_name": "-"
+        "account_name": "Versant Media Group, Inc."
     },
     {
         "flag": "-",
@@ -6546,7 +6546,7 @@
                 "key": "SREINC-1254"
             }
         ],
-        "account_name": "-"
+        "account_name": "BMW AG"
     },
     {
         "flag": "-",
@@ -6590,7 +6590,7 @@
         "mitigation_plan": "Adjustment of rate limits on the Open API endpoints to prevent update requests from exhausting the connection pool.",
         "longterm_mitigation": "Working on long-term architectural improvement to decouple the heavy synchronization tasks from the main request path",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Samsung Electronics Co., Ltd."
     },
     {
         "flag": "-",
@@ -6642,7 +6642,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -6692,7 +6692,7 @@
                 "key": "ERE-3248"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -6749,7 +6749,7 @@
                 "key": "ERE-3257"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -6805,7 +6805,7 @@
                 "key": "ERECSO-103"
             }
         ],
-        "account_name": "-"
+        "account_name": "Charles Schwab & Co., Inc."
     },
     {
         "flag": "-",
@@ -6868,7 +6868,7 @@
                 "key": "GURU-1433"
             }
         ],
-        "account_name": "-"
+        "account_name": "NTT Data corporation (Cafis-rtp)"
     },
     {
         "flag": "-",
@@ -6914,7 +6914,7 @@
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Netstorage Internal"
     },
     {
         "flag": "-",
@@ -6959,7 +6959,7 @@
         "mitigation_plan": "FOM reduction would be the immediate workaround. Since JioHotstar event is completed by now, not proceeding with FOM reduction. FOM can be reduced based on the regions' stability in the upcoming events.",
         "longterm_mitigation": "Handling the traffic spikes effectively in the platform.\r\nUsing MPG ID as key while constructing scorelist for Ghost MPGs to make sure regions are placed in different position for different MPGs of a ecor.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "PhonePe Limited (Formerly known as \"PhonePe Private Limited\")"
     },
     {
         "flag": "-",
@@ -7001,7 +7001,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Disney Streaming Services"
     },
     {
         "flag": "-",
@@ -7040,7 +7040,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "none"
     },
     {
         "flag": "-",
@@ -7093,7 +7093,7 @@
                 "key": "ERECSO-63"
             }
         ],
-        "account_name": "-"
+        "account_name": "Meesho Technologies Private Limited"
     },
     {
         "flag": "-",
@@ -7144,7 +7144,7 @@
                 "key": "ERECSO-46"
             }
         ],
-        "account_name": "-"
+        "account_name": "Bell Canada"
     },
     {
         "flag": "-",
@@ -7194,7 +7194,7 @@
                 "key": "ERE-3259"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -7236,7 +7236,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "BMW AG"
     },
     {
         "flag": "-",
@@ -7283,7 +7283,7 @@
         "mitigation_plan": "Updates on SI-00023558.",
         "longterm_mitigation": "TBD as per SI-00023558.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Tiktok"
     },
     {
         "flag": "-",
@@ -7328,7 +7328,7 @@
         "mitigation_plan": "Kernel team to roll out a kernel tweak and a switch firmware fix.\r\nThe ETA for the kernel rollout, before 03/27\r\n",
         "longterm_mitigation": "NA",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Amazon.com Services LLC."
     },
     {
         "flag": "-",
@@ -7375,7 +7375,7 @@
         "mitigation_plan": "Nothing from ERE side",
         "longterm_mitigation": "Nothing from ERE side",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Ryt bank Malaysia"
     },
     {
         "flag": "-",
@@ -7428,7 +7428,7 @@
                 "key": "ERE-3297"
             }
         ],
-        "account_name": "-"
+        "account_name": "Valve Corporation"
     },
     {
         "flag": "-",
@@ -7489,7 +7489,7 @@
                 "key": "ERECSO-122"
             }
         ],
-        "account_name": "-"
+        "account_name": "Cox Automotive - Bridge"
     },
     {
         "flag": "-",
@@ -7552,7 +7552,7 @@
                 "key": "ERECSO-33"
             }
         ],
-        "account_name": "-"
+        "account_name": "www.carparts.com"
     },
     {
         "flag": "-",
@@ -7614,7 +7614,7 @@
                 "key": "ERE-3267"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -7660,7 +7660,7 @@
         "mitigation_plan": "Config reviewed and provided recommendations to help improving the performance in general.",
         "longterm_mitigation": "Platform to detect spiky traffic and manage it effectively.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "ETERNAL LIMITED"
     },
     {
         "flag": "-",
@@ -7710,7 +7710,7 @@
                 "key": "ERE-3270"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -7749,7 +7749,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "CMA-CGM"
     },
     {
         "flag": "-",
@@ -7797,7 +7797,7 @@
                 "key": "ERE-3319"
             }
         ],
-        "account_name": "-"
+        "account_name": "S&P Global Inc"
     },
     {
         "flag": "-",
@@ -7885,7 +7885,7 @@
                 "key": "GREL-5337"
             }
         ],
-        "account_name": "-"
+        "account_name": "Liberty Global Services BV"
     },
     {
         "flag": "-",
@@ -7930,7 +7930,7 @@
         "mitigation_plan": "Proactive FOM reduction on regions serving spiky traffic",
         "longterm_mitigation": "Enhancement of a feature - using MPG ID as key rather than Pingpoint while constructing scorelist - this would help in spreading the forward requests more evenly/balanced",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -7976,7 +7976,7 @@
         "mitigation_plan": "The migration date was verified against the Moratorium Calendar to avoid conflicts with global freezes.Data was extracted both before and after the update to ensure no data loss occurred during the UPDATE command.The manual DBMC served as a workaround for the lack of a self-service migration UI in the EIPB portal.",
         "longterm_mitigation": "We are already having a EIPB Migration tool in a resource migration tool but due to some ongoing issues reporter not able to use that and went for the traditional mitigation plan",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Sharp Corporation"
     },
     {
         "flag": "-",
@@ -8030,7 +8030,7 @@
                 "key": "ERECSO-63"
             }
         ],
-        "account_name": "-"
+        "account_name": "CULVER MAX ENTERTAINMENT PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -8081,7 +8081,7 @@
                 "key": "ERECSO-35"
             }
         ],
-        "account_name": "-"
+        "account_name": "Jiostar India Private Limited"
     },
     {
         "flag": "-",
@@ -8138,7 +8138,7 @@
                 "key": "ERE-3285"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -8201,7 +8201,7 @@
                 "key": "SREINC-1264"
             }
         ],
-        "account_name": "-"
+        "account_name": "Samsung Electronics Co., Ltd."
     },
     {
         "flag": "-",
@@ -8255,7 +8255,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "Netmarble Games Corp."
     },
     {
         "flag": "-",
@@ -8305,7 +8305,7 @@
                 "key": "ERE-3280"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -8347,7 +8347,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "NA"
     },
     {
         "flag": "-",
@@ -8392,7 +8392,7 @@
                 "key": "ANISUP-2169"
             }
         ],
-        "account_name": "-"
+        "account_name": "Yupp Video Services LLC."
     },
     {
         "flag": "-",
@@ -8444,7 +8444,7 @@
                 "key": "ERECSO-35"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -8502,7 +8502,7 @@
                 "key": "ERECSO-33"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -8548,7 +8548,7 @@
         "mitigation_plan": "Mitigation is under discussion with the CW Product team, focusing on either adding  the parameter for maximum keys to deny or deploying a dedicated VR bucket for TikTok to prevent impact on other footprints during future spikes.",
         "longterm_mitigation": "Anomaly detection VR feature to deny only the keys causing traffic spike anomalies",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Shanghai Multibeauty Network Technology Co., LTD \uff08tiktik\uff09"
     },
     {
         "flag": "-",
@@ -8602,7 +8602,7 @@
                 "key": "MAPPINGENG-8373"
             }
         ],
-        "account_name": "-"
+        "account_name": "Coupang"
     },
     {
         "flag": "-",
@@ -8656,7 +8656,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "Disney Streaming Services "
     },
     {
         "flag": "-",
@@ -8702,7 +8702,7 @@
         "mitigation_plan": "No Mitigation from ERE Side required",
         "longterm_mitigation": "We can increase the bandwidth from MROM Side to handling the requests in a queue",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Century Games Pte. Ltd."
     },
     {
         "flag": "-",
@@ -8755,7 +8755,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -8805,7 +8805,7 @@
                 "key": "ERE-3295"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -8851,7 +8851,7 @@
         "mitigation_plan": "The transition (Creation of a new CW configuration on account associated with a test property.and Removed the specific ARL & Immediately added those ARLs to the new Fox DTC CW configuration.) was recommended to be performed during off-peak hours.\r\nDuring the \"gap\" period while UMP configurations were propagating, traffic was directed to use the default Cloud Wrapper footprint available for each map. This ensured continuity of service, though it carried a minor risk of increased origin pull due to temporary cache evictions.",
         "longterm_mitigation": "It will suggested clearer guidance for IATs and internal integration guides to explicitly highlight the \"Partial Migration\" limitation. And Establish a standard \"Manual Move\" checklist for CW configurations when full contract migrations are not feasible, ensuring QA validation is performed in a lab environment prior to production changes.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Fox Entertainment"
     },
     {
         "flag": "-",
@@ -8903,7 +8903,7 @@
                 "key": "SRMM-103"
             }
         ],
-        "account_name": "-"
+        "account_name": "Sky UK Limited"
     },
     {
         "flag": "-",
@@ -8951,7 +8951,7 @@
         "mitigation_plan": "N/A - consult",
         "longterm_mitigation": "N/A - consult",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Apple inc."
     },
     {
         "flag": "-",
@@ -9007,7 +9007,7 @@
                 "key": "ORS-16191"
             }
         ],
-        "account_name": "-"
+        "account_name": "WDR Westdeutscher Rundfunk"
     },
     {
         "flag": "-",
@@ -9088,7 +9088,7 @@
                 "key": "EREPROD-4423"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -9139,7 +9139,7 @@
                 "key": "ERE-3233"
             }
         ],
-        "account_name": "-"
+        "account_name": "Internal"
     },
     {
         "flag": "-",
@@ -9178,7 +9178,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Fidelity Investments"
     },
     {
         "flag": "-",
@@ -9229,7 +9229,7 @@
                 "key": "ERECSO-29"
             }
         ],
-        "account_name": "-"
+        "account_name": "Netmarble Games Corp."
     },
     {
         "flag": "-",
@@ -9268,7 +9268,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "CCM Benchmark Group"
     },
     {
         "flag": "-",
@@ -9318,7 +9318,7 @@
                 "key": "ERE-3308"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -9363,7 +9363,7 @@
                 "key": "ERECSO-31"
             }
         ],
-        "account_name": "-"
+        "account_name": "PhonePe Limited"
     },
     {
         "flag": "-",
@@ -9411,7 +9411,7 @@
                 "key": "ERE-3254"
             }
         ],
-        "account_name": "-"
+        "account_name": "Valve Corporation"
     },
     {
         "flag": "-",
@@ -9468,7 +9468,7 @@
                 "key": "ERE-3285"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -9513,7 +9513,7 @@
                 "key": "GHOST-5365"
             }
         ],
-        "account_name": "-"
+        "account_name": "Canon Europa N.V."
     },
     {
         "flag": "-",
@@ -9552,7 +9552,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "News Corporate Services Australia Pty Ltd"
     },
     {
         "flag": "-",
@@ -9598,7 +9598,7 @@
         "mitigation_plan": "expectation",
         "longterm_mitigation": "Tiktok SRE informed about traffic pattern",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Xtelify Limited"
     },
     {
         "flag": "-",
@@ -9644,7 +9644,7 @@
         "mitigation_plan": "NA",
         "longterm_mitigation": "NA",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "WDR Westdeutscher Rundfunk"
     },
     {
         "flag": "-",
@@ -9688,7 +9688,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -9740,7 +9740,7 @@
                 "key": "ERECSO-35"
             }
         ],
-        "account_name": "-"
+        "account_name": "Mediacorp Pte Ltd"
     },
     {
         "flag": "-",
@@ -9797,7 +9797,7 @@
                 "key": "ERECSO-65"
             }
         ],
-        "account_name": "-"
+        "account_name": "Disney Streaming Services"
     },
     {
         "flag": "-",
@@ -9842,7 +9842,7 @@
                 "key": "GHOST-7804"
             }
         ],
-        "account_name": "-"
+        "account_name": "WDR Westdeutscher Rundfunk"
     },
     {
         "flag": "-",
@@ -9897,7 +9897,7 @@
                 "key": "ERECSO-118"
             }
         ],
-        "account_name": "-"
+        "account_name": "PT Bank Mandiri (PERSERO) Tbk"
     },
     {
         "flag": "-",
@@ -9947,7 +9947,7 @@
                 "key": "ERE-3317"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -9998,7 +9998,7 @@
                 "key": "ORS-16385"
             }
         ],
-        "account_name": "-"
+        "account_name": "WDR Westdeutscher Rundfunk"
     },
     {
         "flag": "-",
@@ -10044,7 +10044,7 @@
         "mitigation_plan": "use e73 not the custom e73s",
         "longterm_mitigation": "use e73 not the custom e73s",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "NAVER Cloud Corp."
     },
     {
         "flag": "-",
@@ -10089,7 +10089,7 @@
                 "key": "GHOST-7762"
             }
         ],
-        "account_name": "-"
+        "account_name": "Samsung Electronics Co., Ltd."
     },
     {
         "flag": "-",
@@ -10156,7 +10156,7 @@
                 "key": "ERE-3285"
             }
         ],
-        "account_name": "-"
+        "account_name": "Idaho Central Credit Union"
     },
     {
         "flag": "-",
@@ -10210,7 +10210,7 @@
                 "key": "ERECSO-31"
             }
         ],
-        "account_name": "-"
+        "account_name": "JIOSTAR INDIA PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -10267,7 +10267,7 @@
                 "key": "ERE-3232"
             }
         ],
-        "account_name": "-"
+        "account_name": "Internal"
     },
     {
         "flag": "-",
@@ -10325,7 +10325,7 @@
                 "key": "ALERTS-40618"
             }
         ],
-        "account_name": "-"
+        "account_name": "Mizuho Financial Group, Inc."
     },
     {
         "flag": "-",
@@ -10370,7 +10370,7 @@
                 "key": "GHOST-1931"
             }
         ],
-        "account_name": "-"
+        "account_name": "Red Bull Media House GmbH"
     },
     {
         "flag": "-",
@@ -10420,7 +10420,7 @@
                 "key": "ERE-3327"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -10466,7 +10466,7 @@
                 "key": "EREPROD-4674"
             }
         ],
-        "account_name": "-"
+        "account_name": "Citigroup Global Markets Inc"
     },
     {
         "flag": "-",
@@ -10511,7 +10511,7 @@
                 "key": "ERE-3261"
             }
         ],
-        "account_name": "-"
+        "account_name": "S&P Global Inc"
     },
     {
         "flag": "-",
@@ -10556,7 +10556,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -10612,7 +10612,7 @@
                 "key": "ERE-3334"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -10664,7 +10664,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "KBC Group NV"
     },
     {
         "flag": "-",
@@ -10704,7 +10704,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Netmarble Games Corp."
     },
     {
         "flag": "-",
@@ -10749,7 +10749,7 @@
                 "key": "GHOST-7869"
             }
         ],
-        "account_name": "-"
+        "account_name": "Riot Games, Inc."
     },
     {
         "flag": "-",
@@ -10802,7 +10802,7 @@
                 "key": "ERECSO-104"
             }
         ],
-        "account_name": "-"
+        "account_name": "BBC public services"
     },
     {
         "flag": "-",
@@ -10841,7 +10841,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Tiktok Pte Ltd."
     },
     {
         "flag": "-",
@@ -10891,7 +10891,7 @@
                 "key": "ERE-3338"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -10936,7 +10936,7 @@
         "mitigation_plan": "The team successfully implemented the serial 2047 update and advised the customer to desynchronize their request intervals to reduce sudden flit demand spikes.",
         "longterm_mitigation": "Future efforts will focus on evaluating \"Serial Update\" access for Professional Services to reduce manual intervention and updating internal documentation to replace obsolete Media Portal DevOps workflows with current processes.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Verizon Wireless"
     },
     {
         "flag": "-",
@@ -10981,7 +10981,7 @@
         "mitigation_plan": "Manual changes has been done from application properties side by assigning new variable.",
         "longterm_mitigation": "For long-term prevention, the team should evaluate increasing the baseline hostname limits for high-value ELA contracts and explore automating the approval workflow to reduce manual \"toil\" and expedite future capacity requests.",
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Verizon Wireless"
     },
     {
         "flag": "-",
@@ -11032,7 +11032,7 @@
                 "key": "UXTW-12222"
             }
         ],
-        "account_name": "-"
+        "account_name": "TomTom International B.V."
     },
     {
         "flag": "-",
@@ -11071,7 +11071,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "NBA Media Ventures, LLC"
     },
     {
         "flag": "-",
@@ -11110,7 +11110,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Cathay Pacific (15R-Q7YD)"
     },
     {
         "flag": "-",
@@ -11166,7 +11166,7 @@
                 "key": "CHREG-1620"
             }
         ],
-        "account_name": "-"
+        "account_name": "na"
     },
     {
         "flag": "-",
@@ -11217,7 +11217,7 @@
                 "key": "ERECSO-50"
             }
         ],
-        "account_name": "-"
+        "account_name": "AEON Financial Service Co.,Ltd"
     },
     {
         "flag": "-",
@@ -11262,7 +11262,7 @@
                 "key": "GHOST-7875"
             }
         ],
-        "account_name": "-"
+        "account_name": "Mediacorp Pte Ltd"
     },
     {
         "flag": "-",
@@ -11301,7 +11301,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "ETERNAL LIMITED"
     },
     {
         "flag": "-",
@@ -11346,7 +11346,7 @@
                 "key": "ERE-3327"
             }
         ],
-        "account_name": "-"
+        "account_name": "N/A"
     },
     {
         "flag": "-",
@@ -11392,7 +11392,7 @@
         "mitigation_plan": "Apply FOMreduction on MCH region r48617 (FABRIC-ORD3k).",
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Disney Streaming Services"
     },
     {
         "flag": "-",
@@ -11443,7 +11443,7 @@
                 "key": "SCM-4912"
             }
         ],
-        "account_name": "-"
+        "account_name": "Network International L.L.C."
     },
     {
         "flag": "-",
@@ -11488,7 +11488,7 @@
                 "key": "CHREG-1620"
             }
         ],
-        "account_name": "-"
+        "account_name": "ADP, IBM MaaS"
     },
     {
         "flag": "-",
@@ -11508,7 +11508,7 @@
         "workaround": "Yes",
         "resolved_status": "Unresolved",
         "assignee": "Thilaga Raju",
-        "worklog": "1d 6h",
+        "worklog": "1d 7h 30m",
         "issue_type": "Problem",
         "status": "In Progress",
         "creator": "Dimitris Kim",
@@ -11520,14 +11520,14 @@
         "workcategory": "WL: Fault Management and Escalations",
         "created": "2026-05-14T03:51:22.136+0000",
         "key": "ERE-3342",
-        "timespent": 50400,
+        "timespent": 55800,
         "service_incident": "https://akamai.my.salesforce.com/apex/SC_SI_Viewer?sinumber=SI-00023773",
         "salesforce_case": "https://akamai.my.salesforce.com/500a700000sXGIF",
         "resolution_date": null,
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "ETERNAL LIMITED"
     },
     {
         "flag": "-",
@@ -11535,7 +11535,7 @@
         "summary": "End users getting timeouts before establishing a connection with EdgeServers via EIPB",
         "aha_link": null,
         "description": "Domain: oboqbr-eipb-prod-be.khp.cloud.dmdsdp.com\r\nIssue Time: 13 May 2026 around 10:30 CET (08:30 GMT)\r\n\r\nCustomer have STB clients connecting to AnyCast IPs: 104.94.220.194 (IPv4), 104.94.221.194 (IPv4) but their requests are not being forwarded to our Edge Servers before 5-8 seconds which is their limit.\r\n\r\nAkamai EIPB Anycast IPs connected to:\r\n2600:1480:1000:19d:: (IPv6)\r\n2600:1480:2000:19d:: (IPv6)\r\n104.94.220.194 (IPv4)\r\n104.94.221.194 (IPv4)\r\n\r\nIssue is experienced by Belgium users at random and there is no pattern. Latency of around 8 seconds is seen by the clients before they saw a 499 error on their end.\r\n\r\nSince the issue is intermittent Traffic Reports doesn't show any skews\r\nCollected the CP Code logs for the timeframe: 2026-05-13T08:30 to 2026-05-13T08:45 and checking for one of the given client IPs by the customer: 2a02:1810:cc1a:9a00:de73:6ff:fe15:877a. we found the EIP connection: 2a02:26f0:6d00:19::217:e284 --> Brave Region: r50750\r\n\r\narcd.aggregatedconns.log and arcd.log shows\r\n[netlink] Netlink: removed connection in bad state 2a02:1810:cc1a:9a00:de73:6ff:fe15:877a\r\n\r\nUpon running mtr traces and RHM graphs we can clearly see RHM loss at brave region. https://perf.akamai.com/cgi-bin/mahollan/rhm.cgi?region_input=50750&start_date=5%2F13%2F26+05%3A00&stop_date=5%2F13%2F26+21%3A00\r\n\r\nTraces and logs under\r\nEtherpad: https://etherpad.akam.ai/p/F-CS-11336988\r\n\r\nRegion is drained under https://issues.deploy.akamai.com/cgi-bin/view.cgi?issue_id=B-W-1GN01SR and customer is no longer seeing the issue\r\n\r\nNeed ERE's help in escalating to NOCC to find the root cause of RHM loss and fix.",
-        "components": null,
+        "components": "EIPB",
         "labels": [
             "KTLO"
         ],
@@ -11566,7 +11566,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Liberty Global Services BV"
     },
     {
         "flag": "-",
@@ -11605,7 +11605,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Coupang Co.,Ltd."
     },
     {
         "flag": "-",
@@ -11644,7 +11644,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "ETERNAL LIMITED"
     },
     {
         "flag": "-",
@@ -11689,7 +11689,7 @@
                 "key": "GHOST-7888"
             }
         ],
-        "account_name": "-"
+        "account_name": "POLICYBAZAAR INSURANCE BROKERS PRIVATE LIMITED"
     },
     {
         "flag": "-",
@@ -11728,7 +11728,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Choice Hotels International, Inc."
     },
     {
         "flag": "-",
@@ -11767,7 +11767,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "JPMorgan Chase & Co."
     },
     {
         "flag": "-",
@@ -11806,7 +11806,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Bank of New Zealand"
     },
     {
         "flag": "-",
@@ -11845,7 +11845,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Xero Ltd"
     },
     {
         "flag": "-",
@@ -11884,7 +11884,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "BBC Public Service"
     },
     {
         "flag": "-",
@@ -11923,7 +11923,7 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Special Broadcasting Service Corporation"
     },
     {
         "flag": "-",
@@ -11962,6 +11962,6 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [],
-        "account_name": "-"
+        "account_name": "Special Broadcasting Service Corporation"
     }
 ]

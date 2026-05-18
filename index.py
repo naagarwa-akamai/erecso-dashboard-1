@@ -503,10 +503,10 @@ def refresh_monthly_data():
             cwd=os.path.dirname(script_path),
             capture_output=True,
             text=True,
-            timeout=600
+            timeout=6000
         )
     except subprocess.TimeoutExpired:
-        return jsonify({"error": "Data refresh timed out after 10 minutes"}), 504
+        return jsonify({"error": "Data refresh timed out after 100 minutes"}), 504
     except Exception as e:
         return jsonify({"error": f"Failed to start refresh: {str(e)}"}), 500
 
