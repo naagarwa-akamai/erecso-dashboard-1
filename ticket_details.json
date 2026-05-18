@@ -1,45 +1,6 @@
 [
     {
         "flag": "-",
-        "ticket_id": "ERECSO-1",
-        "summary": "Ghost Performance",
-        "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to ghost performance and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Enduser/Forward/Origin slowness happening on Akamai network due to ghost.\r\n * The slowness is agnostic to customer/arl/config. Its happening to all customers on platform.\r\n * Issues due to crypto slowness happening in ghost or crypto network.",
-        "components": null,
-        "labels": [
-            "coreperf_feature",
-            "coreperf_ghost_perf"
-        ],
-        "request_type": "Unknown",
-        "executive_summary": "Epic to manage all ghost performance issues we see as part of ERE escalations.",
-        "resolution_description": null,
-        "root_cause": null,
-        "toil_percent": "0",
-        "workaround": "Yes",
-        "resolved_status": "Unresolved",
-        "assignee": "Unassigned",
-        "worklog": 0,
-        "issue_type": "Epic",
-        "status": "In Progress",
-        "creator": "Devashish Thakur [X]",
-        "reporter": "Devashish Thakur [X]",
-        "customer_impact": "",
-        "requesting_team": "Unknown",
-        "product_type": "Unknown",
-        "priority": "Undetermined",
-        "workcategory": "Ghost",
-        "created": "2022-09-25T20:31:59.050+0000",
-        "key": "ERECSO-1",
-        "timespent": null,
-        "service_incident": null,
-        "salesforce_case": null,
-        "resolution_date": null,
-        "mitigation_plan": null,
-        "longterm_mitigation": null,
-        "issue_links": []
-    },
-    {
-        "flag": "-",
         "ticket_id": "ERECSO-2",
         "summary": "Ghost Availability",
         "aha_link": null,
@@ -1807,6 +1768,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3288"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1025"
             },
             {
@@ -2120,6 +2086,16 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3296"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3313"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1099"
             },
             {
@@ -2141,6 +2117,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-3160"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3170"
             },
             {
                 "type": "Dependent",
@@ -3455,6 +3436,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3315"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1391"
             },
             {
@@ -3739,17 +3725,17 @@
             {
                 "type": "Relates",
                 "direction": "outward",
+                "key": "ERE-3018"
+            },
+            {
+                "type": "Relates",
+                "direction": "outward",
                 "key": "ERE-3076"
             },
             {
                 "type": "Relates",
                 "direction": "outward",
                 "key": "ERE-3149"
-            },
-            {
-                "type": "Relates",
-                "direction": "outward",
-                "key": "ERE-3018"
             },
             {
                 "type": "Relates",
@@ -4162,6 +4148,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-2498"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3335"
             },
             {
                 "type": "Dependent",
@@ -4603,7 +4594,8 @@
         "description": "Tracking issues caused due to large traffic getting mapped to a region from large MPG's eventually causing customer performance issues.\r\n\r\nWhile Fractional Assignment is globally enabled for all maprules, we continue to see issues where regions get overwhelmed due to a sudden influx of traffic from certain ASNs. Particularly, demand originating from cloud providers (AWS, GCP) seem to have fewer but larger MPGs. The issue is more significant for web/api maps that usually serve short lived, high f2b traffic. Things get worse if the requests don't arrive at a consistent rate, but fluctuate.\r\n\r\nLoad tests run from concentrated cloud agents often result in this problem. Majority of the demand gets mapped to a handful of regions, resulting in server overloads. While topology.xml exists for some of these larger providers today, this involves significant manual effort and is often updated reactively after an issue has already occurred. \r\n\r\nLarge MPG problem isn't isolated to cloud providers. Certain end user ASNs in Korea, Vietnam have significant portion of their demand associated with a handful of large MPGs. \r\n\r\nFractional Assignment doesn't seem to help in all scenarios - 1) When the demand is large enough that it cannot be fit into the current limit of 3 regions 2) Due to uFMP safeties, it might decide to map based on fallback.",
         "components": null,
         "labels": [
-            "CSO_Mapper"
+            "CSO_Mapper",
+            "PSGTopIssue"
         ],
         "request_type": "New Feature ",
         "executive_summary": null,
@@ -5626,6 +5618,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3305"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2685"
             }
         ]
@@ -5854,7 +5851,8 @@
         "description": "[https://akamai.aha.io/ideas/ideas/MD-I-19]\r\n\r\nHostnames that are load balanced among multiple CDNs or using GTM will need to include additional load reporting tags in the property to correctly report the incoming load on serial/map. This sometimes is missed either due to lack of awareness or an Akamai hostname switching to multiCDN in the future.\r\n\r\nThere are few variants of the tag. Either hard coding or not using the host header will also impact correct reporting of load at the Edge, eventually causing load balancing issues.\r\n\r\nThis is to explore the feasibility of a workaround or adding this tag automatically for customers that have multiCDN enabled hostnames.\r\n\r\ntags suggested - <reporting:maprule> or\u00a0 <reporting:maprule-host>\r\n\r\nExpanding the Scope of ERECSO-69\r\n\r\nIncorrect Load Reporting on Platform (ERECSO-22)\u00a0\r\n\r\nAha -\u00a0[https://akamai.aha.io/ideas/ideas/COREPERF-I-230]\r\n\r\nThere are number of scenarios where enduser traffic are not reported on the platform. This happens on any of the below scenarios.\r\n # Customer sends traffic on multiCDN hostname and when ghost resolves the hostname it may not resolve to Akamai.\r\n\r\n # ZAM (Zone access mapping) is enabled on edge hostname\r\n\r\n # Sureroute load is reported on RA map.\r\n\r\nWe need to get the reporting issue fixed so that mapper can loadbalance and move traffic around. Currently all this traffic is unassigned load that mapper cannot move.\r\n\r\nAlso we need to design a fix that can be done outside of customer arl.data.",
         "components": null,
         "labels": [
-            "CSO_Product"
+            "CSO_Product",
+            "PSGTopIssue"
         ],
         "request_type": "New Feature ",
         "executive_summary": null,
@@ -6264,7 +6262,7 @@
         "customer_impact": "",
         "requesting_team": "Unknown",
         "product_type": "Unknown",
-        "priority": "Undetermined",
+        "priority": "High",
         "workcategory": "Delivery",
         "created": "2024-04-04T14:23:02.180+0000",
         "key": "ERECSO-73",
@@ -6299,6 +6297,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-3268"
+            },
+            {
+                "type": "Linked Issue",
+                "direction": "outward",
+                "key": "SREINC-1264"
             },
             {
                 "type": "Relates",
@@ -7146,17 +7149,17 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-1985"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1730"
             },
             {
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-1738"
-            },
-            {
-                "type": "Dependent",
-                "direction": "inward",
-                "key": "ERE-1985"
             },
             {
                 "type": "Relates",
@@ -7902,6 +7905,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-1985"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2056"
             },
             {
@@ -7913,11 +7921,6 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-1738"
-            },
-            {
-                "type": "Dependent",
-                "direction": "inward",
-                "key": "ERE-1985"
             },
             {
                 "type": "Dependent",
@@ -8668,6 +8671,21 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3305"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3322"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3325"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2703"
             },
             {
@@ -9319,7 +9337,8 @@
         "description": "Related tickets:\u00a0\r\n\r\n[DEL-I-128|https://akamai.aha.io/ideas/ideas/DEL-I-128]\r\n\r\nMAPPINGENG-60 / MAPPINGENG-123\r\n\r\n[*CR\u00a04484696*|https://bugzilla.akamai.com/show_bug.cgi?id=4484696]\r\n\r\n\u00a0\r\n\r\nTracks customer performance escalations where QR was ineffective due to the choice of regions on alternate path with SCM mapping.\r\n\r\n\u00a0\r\n\r\n*Problem Statement:*\r\n\r\n1) Prior to MCH as the default TD0, a fair degree of disjointedness was ensured on the primary and alternate QR/FA paths. SCM mapping (ex: ch2p and ch2f) would be aware of the primary region handed out for an edge region and would choose an alternate parent region from the same allowlist, but a distinct ecor (or region). With MCH though, the traditional SCM mapping is no longer honored. There are no primary mappoints to consider to construct an effective disjoint alternate path. The allowlist of failover map can contain regions which are also part of MCH backend. Since the primary MCH and alternate path decisions are made independently (ex: primary: mch-ff-lo, alt: ch2f) certain requests that get hashed to a particular MCH backend region could also serve as the failover path region. There's no strict 'no-overlap' check as one would expect with traditional SCM TD rendering QR/FA ineffective in such cases.\r\n\r\n\u00a0\r\n\r\n2) SCM failover mapping in general isn't performant enough. The failover mappoints can often be mapped to farther locations, which can probably address some extreme primary path slowness, but might not necessarily be comparable to general primary path perf.\u00a0\u00a0\r\n\r\nSometimes, the primary and failover requests end up on the same region (even with traditional SCM pair such as ch2p/ch2f), resulting in no resiliency gain. There might be knobs ([https://collaborate.akamai.com/confluence/display/MAPENG/Failover+Mapping#FailoverMapping-GlobalRAloadbalancingoptions]) to strictly enforce this, but doesn't seem to be in place for most maprules.",
         "components": null,
         "labels": [
-            "CSO_Product"
+            "CSO_Product",
+            "PSGTopIssue"
         ],
         "request_type": "New Feature ",
         "executive_summary": null,
@@ -9374,8 +9393,8 @@
         "flag": "-",
         "ticket_id": "ERECSO-118",
         "summary": "Availability and performance issues due to attack against customer domains",
-        "aha_link": null,
-        "description": "This tracks escalations due to platform instability (Ghost Rolls, self-suspensions) triggered by localized or large scale attack against other customer properties. While the customers' properties may or may not be protected against the attack due to their WAF policies/security features, it often tends to have unintended side effects such as machines hitting their memory limit or experiencing seg faults resulting in significant percentage of Ghosts rolling.\r\n\r\nDepending on the nature of the attack, a swarm of requests against a customer property can hold up significant amount of resources (CPU, sockets) resulting in machines going down under load bringing the overall usable capacity down significantly.\u00a0\r\n\r\nCurrently, there aren't many options to workaround this problem other than blocking certain offending bot IPs and waiting for the attack to subside while absorbing most of the impact.\u00a0\r\n\r\n\u00a0\r\n\r\nOn ESSL, one option is to move the customer hostname to a quarantine map. This has operational overhead and involves coordination with IAT to move properties on to a different map with limited capacity. While this can reasonably shield rest of the platform, may not be a feasible solution for larger customers and without significantly impacting them.\u00a0\r\n\r\nOther options include limiting the spread of such traffic via internal dnsp spreadlimiter controls.\u00a0\r\n\r\nThere's active work on the CRP side which could potentially address some of the shortcomings by proactively blocking anomalous requests for certain customers. But the effectiveness is yet to be tested in prod.\u00a0\r\n\r\nAlso,  There have been multiple instances where amplification of retries leads larger % of suspensions and rolls on the network when origins are down or have issues due to OHD not being default or sheer cascading timeout without adaptive mechanism.",
+        "aha_link": "https://akamai.aha.io/ideas/ideas/MAPPER-I-40",
+        "description": "[https://akamai.aha.io/ideas/ideas/MAPPER-I-40]\r\n\r\n[https://akamai.aha.io/features/MAPPER-53]\r\n\r\nMore than 15 ERE cases. but underneath multiple customer impact including \r\nThis tracks escalations due to platform instability (Ghost Rolls, self-suspensions) triggered by localized or large scale attack against other customer properties. While the customers' properties may or may not be protected against the attack due to their WAF policies/security features, it often tends to have unintended side effects such as machines hitting their memory limit or experiencing seg faults resulting in significant percentage of Ghosts rolling.\r\n\r\nDepending on the nature of the attack, a swarm of requests against a customer property can hold up significant amount of resources (CPU, sockets) resulting in machines going down under load bringing the overall usable capacity down significantly.\u00a0\r\n\r\nCurrently, there aren't many options to workaround this problem other than blocking certain offending bot IPs and waiting for the attack to subside while absorbing most of the impact.\u00a0\r\n\r\n\u00a0\r\n\r\nOn ESSL, one option is to move the customer hostname to a quarantine map. This has operational overhead and involves coordination with IAT to move properties on to a different map with limited capacity. While this can reasonably shield rest of the platform, may not be a feasible solution for larger customers and without significantly impacting them.\u00a0\r\n\r\nOther options include limiting the spread of such traffic via internal dnsp spreadlimiter controls.\u00a0\r\n\r\nThere's active work on the CRP side which could potentially address some of the shortcomings by proactively blocking anomalous requests for certain customers. But the effectiveness is yet to be tested in prod.\u00a0\r\n\r\nAlso, There have been multiple instances where amplification of retries leads larger % of suspensions and rolls on the network when origins are down or have issues due to OHD not being default or sheer cascading timeout without adaptive mechanism.",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -9815,12 +9834,12 @@
             {
                 "type": "Relates",
                 "direction": "outward",
-                "key": "ERE-3255"
+                "key": "ERE-3262"
             },
             {
                 "type": "Relates",
                 "direction": "outward",
-                "key": "ERE-3262"
+                "key": "ERE-3255"
             }
         ]
     }

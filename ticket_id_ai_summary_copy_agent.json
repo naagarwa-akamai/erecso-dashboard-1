@@ -1,0 +1,462 @@
+[
+  {
+    "ticket_id": "ERECSO-2",
+    "ai_summary": "Problem: Ghost Availability. Impact: Service availability degradation or outage. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-3",
+    "ai_summary": "Problem: Mapping Availability. Impact: Service availability degradation or outage. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-4",
+    "ai_summary": "Problem: Mapping Performance. Impact: Performance degradation or slowness. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-5",
+    "ai_summary": "Problem: Mapping Maps limitation and Issues. Impact: System or customer impact. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-6",
+    "ai_summary": "Problem: Network Capacity Issues. Impact: System or customer impact. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-7",
+    "ai_summary": "Problem: ARL/Platform Configuration Issues. Impact: System or customer impact. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-8",
+    "ai_summary": "Problem: Customer/Platform Review. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-10",
+    "ai_summary": "Problem: Third party/origin Issues\t. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-11",
+    "ai_summary": "Problem: Visibility Issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-12",
+    "ai_summary": "Problem: Wrong escalation. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-13",
+    "ai_summary": "Problem: Visibility for origin traffic. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'PERFREL-306'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-486'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1402'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-638'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1070'}]"
+  },
+  {
+    "ticket_id": "ERECSO-14",
+    "ai_summary": "Problem: Cryptoserver Performance Issues. Impact: Performance degradation or slowness. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'PERFREL-324'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-525'}]"
+  },
+  {
+    "ticket_id": "ERECSO-15",
+    "ai_summary": "Problem: Impact of KRP on customer Handshake Performance. Impact: Performance degradation or slowness. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-550'}]"
+  },
+  {
+    "ticket_id": "ERECSO-16",
+    "ai_summary": "Problem: Improve In-Metro Mapping. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'PERFREL-221'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-568'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-601'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1197'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ANREACT-32'}]"
+  },
+  {
+    "ticket_id": "ERECSO-17",
+    "ai_summary": "Problem: Metrocache as a replacement for TD0 maps. Impact: System or customer impact. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'PERFREL-304'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-554'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1823'}]"
+  },
+  {
+    "ticket_id": "ERECSO-18",
+    "ai_summary": "Problem: Coverage on Edge and TD/SS maps to avoid OOC and performance issues. Impact: Performance degradation or slowness. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-1339'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1110'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1218'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2046'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2252'}]"
+  },
+  {
+    "ticket_id": "ERECSO-19",
+    "ai_summary": "Problem: Investigate and Mitigate Overloading of regions by Mapper. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-20",
+    "ai_summary": "Problem: Improve Platform instability caused by Ghost Rolls and Self Suspensions. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'PERFREL-332'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-584'}]"
+  },
+  {
+    "ticket_id": "ERECSO-21",
+    "ai_summary": "Problem: Serverside Visibility into SSL Slowness. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-559'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-606'}]"
+  },
+  {
+    "ticket_id": "ERECSO-22",
+    "ai_summary": "Problem: Incorrect Load Reporting on Platform. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-632'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-653'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-655'}]"
+  },
+  {
+    "ticket_id": "ERECSO-23",
+    "ai_summary": "Problem: Content Corruption Impacting Customers . Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'PERFREL-351'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1303'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1137'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1304'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1027'}]"
+  },
+  {
+    "ticket_id": "ERECSO-24",
+    "ai_summary": "Problem: Product Best Practices are not Followed. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Automation Link', 'direction': 'inward', 'key': 'ERE-2241'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-799'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1071'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1245'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1590'}]"
+  },
+  {
+    "ticket_id": "ERECSO-26",
+    "ai_summary": "Problem: Wrong Edge/TD0/TD1 map for Wrong traffic. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2584'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1079'}]"
+  },
+  {
+    "ticket_id": "ERECSO-27",
+    "ai_summary": "Problem: Increasing platform default limits. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2282'}]"
+  },
+  {
+    "ticket_id": "ERECSO-28",
+    "ai_summary": "Problem: Not following Knowledge Base (KB) article. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1060'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1129'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2219'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-862'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1037'}]"
+  },
+  {
+    "ticket_id": "ERECSO-29",
+    "ai_summary": "Problem: Issues limited to an individual customer or arl and not all customers. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-863'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-880'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1139'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1160'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1431'}]"
+  },
+  {
+    "ticket_id": "ERECSO-30",
+    "ai_summary": "Problem: Insufficient Information in the ERE Ticket. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1202'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2628'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2937'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2964'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1228'}]"
+  },
+  {
+    "ticket_id": "ERECSO-31",
+    "ai_summary": "Problem: Audit ERE Escalations - Incorrect Ticket Routing, Insufficient info, KB usage gaps, Best Practices. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Automation Link', 'direction': 'inward', 'key': 'ERE-3071'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1311'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1372'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2082'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2251'}]"
+  },
+  {
+    "ticket_id": "ERECSO-32",
+    "ai_summary": "Problem: Questions or Review of Platform Limits. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1029'}]"
+  },
+  {
+    "ticket_id": "ERECSO-33",
+    "ai_summary": "Problem: Issues discovered during Software Install Checklisting. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-2869'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-2882'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-2897'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1354'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1534'}]"
+  },
+  {
+    "ticket_id": "ERECSO-34",
+    "ai_summary": "Problem: Baseline Push - Platform/Product Feature rollout. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-35",
+    "ai_summary": "Problem: Customer Event Review. Impact: System or customer impact. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-1745'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1312'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1774'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2472'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2545'}]"
+  },
+  {
+    "ticket_id": "ERECSO-38",
+    "ai_summary": "Problem: Anycast Origin Support for Sureroute. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1042'}]"
+  },
+  {
+    "ticket_id": "ERECSO-39",
+    "ai_summary": "Problem: Origin not compliant with RFC for HTTP/H2. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1109'}]"
+  },
+  {
+    "ticket_id": "ERECSO-40",
+    "ai_summary": "Problem: FPJ Design Issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Automation Link', 'direction': 'outward', 'key': 'ERE-709'}, {'type': 'Automation Link', 'direction': 'outward', 'key': 'ERE-1115'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-950'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2093'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2113'}]"
+  },
+  {
+    "ticket_id": "ERECSO-41",
+    "ai_summary": "Problem: H2 Write Timeout after 10s causing RESET packets to be sent to Clients. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'GREL-1535'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'GHOST-4009'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'PERFREL-349'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2208'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-972'}]"
+  },
+  {
+    "ticket_id": "ERECSO-42",
+    "ai_summary": "Problem: Network capacity issues causing perf degradation. Impact: System or customer impact. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3175'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3124'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3189'}]"
+  },
+  {
+    "ticket_id": "ERECSO-44",
+    "ai_summary": "Problem: Platform Availability and Performance. Impact: Service availability degradation or outage. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-45",
+    "ai_summary": "Problem: KMI availability issues. Impact: Service availability degradation or outage. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1376'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1153'}]"
+  },
+  {
+    "ticket_id": "ERECSO-46",
+    "ai_summary": "Problem: Mapping Pingpoint Issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1130'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1451'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1687'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2466'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2486'}]"
+  },
+  {
+    "ticket_id": "ERECSO-47",
+    "ai_summary": "Problem: Ghost Rolls Caused by Software Issues. Impact: System or customer impact. Root Cause: Software bug or defect.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-470'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-590'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1586'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2027'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2289'}]"
+  },
+  {
+    "ticket_id": "ERECSO-48",
+    "ai_summary": "Problem: Ghost Rolls Caused by Traffic leading to Memtotals/self suspensions. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2041'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2272'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2658'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2935'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1217'}]"
+  },
+  {
+    "ticket_id": "ERECSO-49",
+    "ai_summary": "Problem: SSL Handshake Failure Issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-950'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1152'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1329'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-398'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2336'}]"
+  },
+  {
+    "ticket_id": "ERECSO-50",
+    "ai_summary": "Problem: Region overload caused due to large/spiky traffic on single/multiple regions. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-509'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1272'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1348'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1774'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1851'}]"
+  },
+  {
+    "ticket_id": "ERECSO-52",
+    "ai_summary": "Problem: Mapper causing overloaded links. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1894'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ERE-1512'}]"
+  },
+  {
+    "ticket_id": "ERECSO-53",
+    "ai_summary": "Problem: Midgress region overload due to SR/SS traffic. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-629'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-648'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1288'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2122'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2152'}]"
+  },
+  {
+    "ticket_id": "ERECSO-54",
+    "ai_summary": "Problem: Proactive Customer Load Test Reviews. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1611'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1459'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1826'}]"
+  },
+  {
+    "ticket_id": "ERECSO-55",
+    "ai_summary": "Problem: Region Overload caused due to Large MPG's. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-3207'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1031'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2296'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2512'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2842'}]"
+  },
+  {
+    "ticket_id": "ERECSO-56",
+    "ai_summary": "Problem: Change to Platform default limit - ESI . Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1045'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1136'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1111'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1048'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1684'}]"
+  },
+  {
+    "ticket_id": "ERECSO-57",
+    "ai_summary": "Problem: Change to Platform default limit - Response Header Size . Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-264'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1396'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-979'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1158'}, {'type': 'Relates', 'direction': 'outward', 'key': 'DPEREQ-254'}]"
+  },
+  {
+    "ticket_id": "ERECSO-58",
+    "ai_summary": "Problem: UMP Delays and Availability issues. Impact: Service availability degradation or outage. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1412'}]"
+  },
+  {
+    "ticket_id": "ERECSO-59",
+    "ai_summary": "Problem: Keep track of timeouts to the end customers on the delivery side, whether they are caused by network or regional issues, especially for web products. . Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1288'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1628'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2903'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3111'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ERE-2799'}]"
+  },
+  {
+    "ticket_id": "ERECSO-60",
+    "ai_summary": "Problem: Issues due to customer origin availability/performance/configuration. Impact: Service availability degradation or outage. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1165'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1497'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1710'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1793'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1947'}]"
+  },
+  {
+    "ticket_id": "ERECSO-61",
+    "ai_summary": "Problem: Issues arising from loss of existing flit/port capacity . Impact: System or customer impact. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1488'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1768'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1843'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2399'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ERE-1436'}]"
+  },
+  {
+    "ticket_id": "ERECSO-62",
+    "ai_summary": "Problem: Maprule/Mapping systems configuration issues. Impact: System or customer impact. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1484'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1799'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2018'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2052'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2252'}]"
+  },
+  {
+    "ticket_id": "ERECSO-63",
+    "ai_summary": "Problem: ISP network/configuration issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1386'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1628'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1671'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1775'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2030'}]"
+  },
+  {
+    "ticket_id": "ERECSO-64",
+    "ai_summary": "Problem: Availability and performance issues due to Platform component - DNS. Impact: Service availability degradation or outage. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1498'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1499'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1685'}]"
+  },
+  {
+    "ticket_id": "ERECSO-65",
+    "ai_summary": "Problem: Availability and performance issues due to WAF enabled traffic. Impact: Service availability degradation or outage. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1578'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2561'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1983'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2009'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3305'}]"
+  },
+  {
+    "ticket_id": "ERECSO-66",
+    "ai_summary": "Problem: Improve Implementation of Forward Robustness protection (FRP). Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-67",
+    "ai_summary": "Problem: Single customer issues related to FSS. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: In progress toward resolution\n\nResolution Status: IN PROGRESS - Status: In Progress | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2589'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2615'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1362'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1424'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1839'}]"
+  },
+  {
+    "ticket_id": "ERECSO-68",
+    "ai_summary": "Problem: Single customer issues related to Fail-action / Quick Retry. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1341'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1606'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1736'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1473'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1871'}]"
+  },
+  {
+    "ticket_id": "ERECSO-69",
+    "ai_summary": "Problem: Single customer issues related to incorrect load reporting of multi CDN hostnames. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2351'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2734'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2842'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2940'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1217'}]"
+  },
+  {
+    "ticket_id": "ERECSO-70",
+    "ai_summary": "Problem: CSO SLO Review. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'EPREMO-1634'}]"
+  },
+  {
+    "ticket_id": "ERECSO-71",
+    "ai_summary": "Problem: Ghost Rolls Due to Memtotals. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2006'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1948'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ERE-435'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ERE-694'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ERE-309'}]"
+  },
+  {
+    "ticket_id": "ERECSO-72",
+    "ai_summary": "Problem: Issues due to connectivity problems (loss/latency) on the Akamai backbone (IEN/ICN). Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1827'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1924'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1978'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2211'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2427'}]"
+  },
+  {
+    "ticket_id": "ERECSO-73",
+    "ai_summary": "Problem: Improving handling of SSAI related manifest traffic for AMD. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Automation Link', 'direction': 'inward', 'key': 'ERE-2274'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-3219'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2029'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2734'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3268'}]"
+  },
+  {
+    "ticket_id": "ERECSO-74",
+    "ai_summary": "Problem: Property manager updates and changes.. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-75",
+    "ai_summary": "Problem: Delivery impact by limited max-reconnect value. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2094'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'MRE-1831'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1530'}]"
+  },
+  {
+    "ticket_id": "ERECSO-76",
+    "ai_summary": "Problem: QR and preserve stale combination saved error response in cache . Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Relates', 'direction': 'outward', 'key': 'ERE-2109'}]"
+  },
+  {
+    "ticket_id": "ERECSO-77",
+    "ai_summary": "Problem: Flit intensive traffic impacted by low performance X6 hardware. Impact: Performance degradation or slowness. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2087'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1802'}]"
+  },
+  {
+    "ticket_id": "ERECSO-78",
+    "ai_summary": "Problem: Network Capacity Issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1451'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3205'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1159'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1421'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1437'}]"
+  },
+  {
+    "ticket_id": "ERECSO-79",
+    "ai_summary": "Problem: Network Capacity Issues - Country: IN. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1775'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2318'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2608'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2615'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2616'}]"
+  },
+  {
+    "ticket_id": "ERECSO-80",
+    "ai_summary": "Problem: Network Capacity Issues - Country: ZA. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1523'}]"
+  },
+  {
+    "ticket_id": "ERECSO-81",
+    "ai_summary": "Problem: Network Capacity Issues - Country: US. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1885'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2349'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2617'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1694'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1892'}]"
+  },
+  {
+    "ticket_id": "ERECSO-82",
+    "ai_summary": "Problem: Network Capacity Issues - Country: CN. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1578'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2373'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2394'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2533'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3062'}]"
+  },
+  {
+    "ticket_id": "ERECSO-83",
+    "ai_summary": "Problem: Network Capacity Issues - Middle East. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1261'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1434'}]"
+  },
+  {
+    "ticket_id": "ERECSO-84",
+    "ai_summary": "Problem: Network Capacity Issues - Country: ID. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3078'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2148'}]"
+  },
+  {
+    "ticket_id": "ERECSO-85",
+    "ai_summary": "Problem: Networking issues due to bad Akamai-controlled configuration or issues with switches/routers. Impact: System or customer impact. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2198'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ERE-2338'}]"
+  },
+  {
+    "ticket_id": "ERECSO-86",
+    "ai_summary": "Problem: Network Capacity Issues - Country: VN. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2247'}]"
+  },
+  {
+    "ticket_id": "ERECSO-87",
+    "ai_summary": "Problem: Non site-shield regions reaching origin. Impact: System or customer impact. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Relates', 'direction': 'outward', 'key': 'ERE-2084'}]"
+  },
+  {
+    "ticket_id": "ERECSO-88",
+    "ai_summary": "Problem: Delivery issues impacted by ipcache DNS. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1044'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1234'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2433'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1985'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1730'}]"
+  },
+  {
+    "ticket_id": "ERECSO-89",
+    "ai_summary": "Problem: MSL Portal Bug. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'outward', 'key': 'ANREACT-162'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ANREACT-163'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ANREACT-160'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-187'}]"
+  },
+  {
+    "ticket_id": "ERECSO-90",
+    "ai_summary": "Problem: Customer incorrect configuration. Impact: System or customer impact. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-141'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-249'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-186'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-168'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-164'}]"
+  },
+  {
+    "ticket_id": "ERECSO-91",
+    "ai_summary": "Problem: MSL Software Bugs / Software Implementation / Corner Cases. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-140'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-246'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-90'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-95'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-131'}]"
+  },
+  {
+    "ticket_id": "ERECSO-92",
+    "ai_summary": "Problem: Network Capacity Issues - Country: DE. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2359'}]"
+  },
+  {
+    "ticket_id": "ERECSO-93",
+    "ai_summary": "Problem: India Network Issues. Impact: System or customer impact. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-136'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-137'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-63'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-105'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-125'}]"
+  },
+  {
+    "ticket_id": "ERECSO-94",
+    "ai_summary": "Problem: Tripd down Escalations . Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'MAPRE-753'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'MAPRE-800'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'MAPRE-748'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'MAPRE-799'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'MAPRE-867'}]"
+  },
+  {
+    "ticket_id": "ERECSO-95",
+    "ai_summary": "Problem: Nodes stuck in STARTING due to llMap issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'SCORING-2241'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'CLEANUP-7653'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'MAPRE-845'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'MAPRE-497'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'MAPRE-508'}]"
+  },
+  {
+    "ticket_id": "ERECSO-96",
+    "ai_summary": "Problem: Network Capacity Issues - Country: GB. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2353'}]"
+  },
+  {
+    "ticket_id": "ERECSO-97",
+    "ai_summary": "Problem: Jira abandonment and non-answer. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2307'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2310'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2396'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1985'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2056'}]"
+  },
+  {
+    "ticket_id": "ERECSO-98",
+    "ai_summary": "Problem: MSL OOC mapping introduces errors or incorrect behavior. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-192'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-193'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-5'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-111'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-82'}]"
+  },
+  {
+    "ticket_id": "ERECSO-99",
+    "ai_summary": "Problem: MSL: customer not follow best practices. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-166'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-183'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-238'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-245'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-60'}]"
+  },
+  {
+    "ticket_id": "ERECSO-100",
+    "ai_summary": "Problem: Performance Issues due to incompetent hardware for certain traffic profiles. Impact: Performance degradation or slowness. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3022'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2395'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2422'}]"
+  },
+  {
+    "ticket_id": "ERECSO-101",
+    "ai_summary": "Problem: MSL overloaded regions. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-180'}]"
+  },
+  {
+    "ticket_id": "ERECSO-102",
+    "ai_summary": "Problem: Product Feature rollout. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2350'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2488'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2559'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2684'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2890'}]"
+  },
+  {
+    "ticket_id": "ERECSO-103",
+    "ai_summary": "Problem: Platform Feature rollout. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'EREPROD-3656'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2485'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2491'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2504'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2516'}]"
+  },
+  {
+    "ticket_id": "ERECSO-104",
+    "ai_summary": "Problem: Persisting in-region load balancing issues due to traffic spikes post SNId rollout. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-3207'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-3219'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2512'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2802'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2842'}]"
+  },
+  {
+    "ticket_id": "ERECSO-105",
+    "ai_summary": "Problem: HTTP3 underperforms versus competitors and, at times, Akamai's own HTTP2.. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Relates', 'direction': 'outward', 'key': 'ERE-2267'}, {'type': 'Relates', 'direction': 'outward', 'key': 'ERE-2174'}]"
+  },
+  {
+    "ticket_id": "ERECSO-106",
+    "ai_summary": "Problem: Performance issues due to sub-optimal PCONN usage. Impact: Performance degradation or slowness. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-107",
+    "ai_summary": "Problem: Performance issues due to sub-optimal PCONN usage - g2g. Impact: Performance degradation or slowness. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-108",
+    "ai_summary": "Problem: Performance issues due to sub-optimal PCONN usage - g2o. Impact: Performance degradation or slowness. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2519'}]"
+  },
+  {
+    "ticket_id": "ERECSO-109",
+    "ai_summary": "Problem: Product functionality or feature issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-110",
+    "ai_summary": "Problem: AMD - QR issues :Default percent-to-monitor setting resulting in incomplete cached objects. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Continued monitoring and support\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2211'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2585'}, {'type': 'Relates', 'direction': 'outward', 'key': 'DPEREQ-253'}]"
+  },
+  {
+    "ticket_id": "ERECSO-111",
+    "ai_summary": "Problem: Origin requests from non-supernet IPs with OIPACL setup resulting in Intermittent failures. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'GHOST-5039'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'DPEREQ-299'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'GHOST-5828'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'DPEREQ-312'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-2587'}]"
+  },
+  {
+    "ticket_id": "ERECSO-112",
+    "ai_summary": "Problem: Load reporting issues due to serial/slot misassociation in the SNId config file. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Continued monitoring and support\n\nResolution Status: Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-113",
+    "ai_summary": "Problem: MSL: customer mis-configuration. Impact: System or customer impact. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-248'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-201'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-203'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-239'}, {'type': 'Linked Issue', 'direction': 'inward', 'key': 'ANREACT-209'}]"
+  },
+  {
+    "ticket_id": "ERECSO-114",
+    "ai_summary": "Problem: Region overload and load misreporting due to SNId configuration issue. Impact: System or customer impact. Root Cause: Misconfiguration or configuration-related issue.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-2501'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2412'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2599'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2694'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2582'}]"
+  },
+  {
+    "ticket_id": "ERECSO-115",
+    "ai_summary": "Problem: AMD/DD Resiliency Issues. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Linked Issue', 'direction': 'inward', 'key': 'GHOST-6235'}]"
+  },
+  {
+    "ticket_id": "ERECSO-116",
+    "ai_summary": "Problem: AMD/DD: QR inefficiencies on ICP path. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2707'}]"
+  },
+  {
+    "ticket_id": "ERECSO-117",
+    "ai_summary": "Problem: AMD/DD: QR inefficiencies due to SCM mapping. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2760'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2974'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2558'}, {'type': 'Relates', 'direction': 'inward', 'key': 'GURU-1279'}]"
+  },
+  {
+    "ticket_id": "ERECSO-118",
+    "ai_summary": "Problem: Availability and performance issues due to attack against customer domains. Impact: Service availability degradation or outage. Root Cause: Insufficient capacity or resource exhaustion.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-2943'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2564'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2737'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-3113'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2743'}]"
+  },
+  {
+    "ticket_id": "ERECSO-119",
+    "ai_summary": "Problem: End users are mapped to machines suspended for installation.. Impact: System or customer impact. Root Cause: Under investigation.\nAction:  ; Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Short-term:  \nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'ERE-2830'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1374'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2155'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-1898'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'ERE-2756'}]"
+  },
+  {
+    "ticket_id": "ERECSO-120",
+    "ai_summary": "Problem: End users are mapped to machines suspended for installation.. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases"
+  },
+  {
+    "ticket_id": "ERECSO-121",
+    "ai_summary": "Problem: Forward Region Issues causing spike in ERR_READ_ERROR|fwdStateFree. Impact: System or customer impact. Root Cause: Under investigation.\nAction: Workaround: Yes\nExpected Outcome: Issue resolved with status: Closed\n\nResolution Status: RESOLVED - Status: Closed | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'outward', 'key': 'GHOST-7069'}, {'type': 'Dependent', 'direction': 'outward', 'key': 'DPEREQ-399'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ERE-2814'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ERE-2833'}, {'type': 'Linked Issue', 'direction': 'outward', 'key': 'ERE-3057'}]"
+  },
+  {
+    "ticket_id": "ERECSO-122",
+    "ai_summary": "Problem: FF/ESSL unexpected release related issues . Impact: System or customer impact. Root Cause: Software bug or defect.\nAction: Workaround: Yes\nExpected Outcome: Awaiting implementation and deployment\n\nResolution Status: OPEN/UNRESOLVED - Status: Open | Workaround available: Yes\nPrevention/Mitigation: Continue monitoring and implement fixes in upcoming releases\nLinked tickets: [{'type': 'Dependent', 'direction': 'inward', 'key': 'GHOST-6629'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'GHOST-6637'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'GHOST-7294'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'PRE-7205'}, {'type': 'Dependent', 'direction': 'inward', 'key': 'GHOST-7293'}]"
+  }
+]
