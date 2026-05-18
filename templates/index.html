@@ -1058,12 +1058,17 @@ function renderLabelsPieChart(data) {
 
         async function saveFlags() {
             try {
+                const payload = allData.map(item => ({
+                    ticket_id: item.ticket_id,
+                    flag: item.flag || '-'
+                }));
+
                 const response = await fetch('/api/update-ticket', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(allData), // Send the updated data to the server
+                    body: JSON.stringify(payload),
                 });
 
                 if (!response.ok) {
@@ -1147,7 +1152,7 @@ function renderLabelsPieChart(data) {
         }
                 row.innerHTML = `
                     <td>
-                        <select class="flag-dropdown ${item.flag.toLowerCase().replace(/ /g, "")}" data-index="${index}" onchange="updateFlag(${index}, this.value)">
+                        <select class="flag-dropdown ${(item.flag || '-').toLowerCase().replace(/ /g, "")}" data-ticket-id="${item.ticket_id}" onchange="updateFlag('${item.ticket_id}', this.value, this)">
                             ${flagOptions.map(option => `
                                 <option value="${option}" ${option === item.flag ? "selected" : ""}>
                                     ${option}
@@ -1326,7 +1331,7 @@ async function renderTableMonthly(data, selectedMonth) {
         // Placeholder for AI summary cell
         row.innerHTML = `
             <td>
-                <select class="flag-dropdown ${item.flag ? item.flag.toLowerCase().replace(/ /g, "") : ''}" data-index="${index}" onchange="updateFlag(${index}, this.value)">
+                <select class="flag-dropdown ${(item.flag || '-').toLowerCase().replace(/ /g, "")}" data-ticket-id="${item.ticket_id}" onchange="updateFlag('${item.ticket_id}', this.value, this)">
                     ${flagOptions.map(option => `<option value="${option}" ${item.flag === option ? 'selected' : ''}>${option}</option>`).join('')}
                 </select>
             </td>
@@ -1461,16 +1466,18 @@ function filterIssueType() {
             }
         }
 
-        function updateFlag(index, newFlag) {
-            console.log(newFlag.toLowerCase().replace(/ /g, "")) // For debugging
-            allData[index].flag = newFlag;
+        function updateFlag(ticketId, newFlag, selectElement) {
+            const normalizedTicketId = String(ticketId || '').trim();
+            const item = allData.find(entry => String(entry.ticket_id || '').trim() === normalizedTicketId);
 
-            // Update only the specific row
-            const row = document.querySelector(`#tableBody tr:nth-child(${index + 1})`);
-            const flagCell = row.querySelector('select.flag-dropdown');
-            flagCell.className = `flag-dropdown ${newFlag.toLowerCase().replace(/ /g, "")}`;
-            flagCell.value = newFlag;
+            if (item) {
+                item.flag = newFlag;
+            }
 
+            if (selectElement) {
+                selectElement.className = `flag-dropdown ${newFlag.toLowerCase().replace(/ /g, "")}`;
+                selectElement.value = newFlag;
+            }
         }
         // Initialize
         fetchAndRenderData();

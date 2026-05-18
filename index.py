@@ -286,14 +286,39 @@ def get_ticket_details():
 @app.route('/api/update-ticket', methods=['POST'])
 def update_ticket_details():
     try:
-        # Get the updated data from the request
-        updated_data = request.get_json()
+        updates = request.get_json(silent=True)
+        if not isinstance(updates, list):
+            return jsonify({"error": "Expected a list of ticket updates"}), 400
 
-        # Save the updated data to the JSON file
-        # with open(JSON_FILE_PATH, 'w', encoding='utf-8') as file:
-        #     json.dump(updated_data, file, indent=4)
+        if not os.path.exists(JSON_FILE_PATH):
+            return jsonify({"error": "JSON file not found"}), 404
 
-        return jsonify({"message": "Ticket details updated successfully!"}), 200
+        with open(JSON_FILE_PATH, 'r', encoding='utf-8') as file:
+            ticket_details = json.load(file)
+
+        flag_updates = {}
+        for item in updates:
+            if not isinstance(item, dict):
+                continue
+            ticket_id = str(item.get('ticket_id', '')).strip()
+            if not ticket_id:
+                continue
+            flag_updates[ticket_id] = item.get('flag', '-')
+
+        updated_count = 0
+        for ticket in ticket_details:
+            ticket_id = str(ticket.get('ticket_id', '')).strip()
+            if ticket_id in flag_updates:
+                ticket['flag'] = flag_updates[ticket_id]
+                updated_count += 1
+
+        with open(JSON_FILE_PATH, 'w', encoding='utf-8') as file:
+            json.dump(ticket_details, file, indent=4, ensure_ascii=False)
+
+        return jsonify({
+            "message": "Ticket details updated successfully!",
+            "updated_count": updated_count
+        }), 200
 
     except Exception as e:
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500

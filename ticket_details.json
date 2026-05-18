@@ -4,7 +4,7 @@
         "ticket_id": "ERECSO-2",
         "summary": "Ghost Availability",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to ghost availability and all the aha tickets that are supposed to resolve the availability issues.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Ghost rolls , memory rolls\r\n * Ghost crash , kernel crash\r\n * Ghost serving 5xx to endusers but not heavily loaded.\u00a0\r\n * SSL handshake failure between Edge/TD0/TD1.",
+        "description": "This is the epic that will have all the ERE escalation related to ghost availability and all the aha tickets that are supposed to resolve the availability issues.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Ghost rolls , memory rolls\r\n * Ghost crash , kernel crash\r\n * Ghost serving 5xx to endusers but not heavily loaded. \r\n * SSL handshake failure between Edge/TD0/TD1.",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -43,7 +43,7 @@
         "ticket_id": "ERECSO-3",
         "summary": "Mapping Availability",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to mapping availability and all the aha tickets that are supposed to resolve the availability issues.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Overloading regions due to spiky traffic.\r\n * Platform has capacity but mapper is concentrating load on few regions.\r\n * Overloading regions due to Sureroute traffic , or some other uncontrolled traffic.\r\n * Wrong DNS record so serving wrong DNS response to endusers.\u00a0\r\n * Mapping configuration that is causing errors to be served to endusers",
+        "description": "This is the epic that will have all the ERE escalation related to mapping availability and all the aha tickets that are supposed to resolve the availability issues.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Overloading regions due to spiky traffic.\r\n * Platform has capacity but mapper is concentrating load on few regions.\r\n * Overloading regions due to Sureroute traffic , or some other uncontrolled traffic.\r\n * Wrong DNS record so serving wrong DNS response to endusers. \r\n * Mapping configuration that is causing errors to be served to endusers",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -82,7 +82,7 @@
         "ticket_id": "ERECSO-4",
         "summary": "Mapping Performance",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to mapping performance and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Issues related to pingpoint\u00a0\r\n * Issues where capacity is available but mapper is not using it efficiently.\r\n * Issues with mapping that causing bad ping scores , not related to capacity or actual loss on the network\r\n * Sub-optimal/degraded mapping performance due to outdated or manually introduced configurations of mapping components",
+        "description": "This is the epic that will have all the ERE escalation related to mapping performance and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Issues related to pingpoint \r\n * Issues where capacity is available but mapper is not using it efficiently.\r\n * Issues with mapping that causing bad ping scores , not related to capacity or actual loss on the network\r\n * Sub-optimal/degraded mapping performance due to outdated or manually introduced configurations of mapping components",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -121,7 +121,7 @@
         "ticket_id": "ERECSO-5",
         "summary": "Mapping Maps limitation and Issues",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to mapping maps performance and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * These are issues related to Edge/TD0/TD1 map missing regions.\r\n * Platform has capacity but regions are not part of maps",
+        "description": "This is the epic that will have all the ERE escalation related to mapping maps performance and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * These are issues related to Edge/TD0/TD1 map missing regions.\r\n * Platform has capacity but regions are not part of maps",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -160,7 +160,7 @@
         "ticket_id": "ERECSO-6",
         "summary": "Network Capacity Issues",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to network capacity issues and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Customer escalation due to capacity limitation.\r\n * Server overload due to lack of capacity\r\n * Inter-continental traffic with no ICN or less capacity on ICN",
+        "description": "This is the epic that will have all the ERE escalation related to network capacity issues and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Customer escalation due to capacity limitation.\r\n * Server overload due to lack of capacity\r\n * Inter-continental traffic with no ICN or less capacity on ICN",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -199,7 +199,7 @@
         "ticket_id": "ERECSO-7",
         "summary": "ARL/Platform Configuration Issues",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to arl/platform configuration.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Any issue that is limited to individual customer or arl and not all customers.\r\n * Performance/Availability issue because of configuration issue on customer.\r\n * Not following product best practices\r\n * Using wrong map for wrong traffic.\u00a0\r\n * Increase platform default limits (eg - request header size) , ESI file size limit for a customer etc",
+        "description": "This is the epic that will have all the ERE escalation related to arl/platform configuration.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Any issue that is limited to individual customer or arl and not all customers.\r\n * Performance/Availability issue because of configuration issue on customer.\r\n * Not following product best practices\r\n * Using wrong map for wrong traffic. \r\n * Increase platform default limits (eg - request header size) , ESI file size limit for a customer etc",
         "components": null,
         "labels": [
             "coreperf_arl_platform_config",
@@ -238,7 +238,7 @@
         "ticket_id": "ERECSO-8",
         "summary": "Customer/Platform Review",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to customer and platform review.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Event review/readiness for a customer\r\n * Best practices ask from a customer\r\n * Platform review during install checklisting",
+        "description": "This is the epic that will have all the ERE escalation related to customer and platform review.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Event review/readiness for a customer\r\n * Best practices ask from a customer\r\n * Platform review during install checklisting",
         "components": null,
         "labels": [
             "coreperf_customer_platform_review",
@@ -277,7 +277,7 @@
         "ticket_id": "ERECSO-10",
         "summary": "Third party/origin Issues\t",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to third party or origin. These are things outside Akamai's control.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Issues caused to customer due to origin\u00a0\r\n * Cert issues for customer for not following best practices\r\n * Issues that are outside control of Akamai.",
+        "description": "This is the epic that will have all the ERE escalation related to third party or origin. These are things outside Akamai's control.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Issues caused to customer due to origin \r\n * Cert issues for customer for not following best practices\r\n * Issues that are outside control of Akamai.",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -316,7 +316,7 @@
         "ticket_id": "ERECSO-11",
         "summary": "Visibility Issues",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation which are hard to debug due to lack of visibility.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Wrong logging of information in logs.\r\n * Issues that are hard to debug due to lack of proper logging.\u00a0\r\n * Load reporting issue or load reported in wrong map.",
+        "description": "This is the epic that will have all the ERE escalation which are hard to debug due to lack of visibility.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Wrong logging of information in logs.\r\n * Issues that are hard to debug due to lack of proper logging. \r\n * Load reporting issue or load reported in wrong map.",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -355,7 +355,7 @@
         "ticket_id": "ERECSO-12",
         "summary": "Wrong escalation",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation that were wrongly escalated to ERE.\r\n\r\nBelow is the kind of issues we will see in this epic -\u00a0\r\n * Issues escalated to ERE without involving Akatech.\r\n * Issues escalated to ERE not handled by ERE.",
+        "description": "This is the epic that will have all the ERE escalation that were wrongly escalated to ERE.\r\n\r\nBelow is the kind of issues we will see in this epic - \r\n * Issues escalated to ERE without involving Akatech.\r\n * Issues escalated to ERE not handled by ERE.",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -394,7 +394,7 @@
         "ticket_id": "ERECSO-13",
         "summary": "Visibility for origin traffic",
         "aha_link": "https://akamai.aha.io/features/COREREL-23",
-        "description": "Aha Ticket - https://akamai.aha.io/features/COREREL-23\r\n\r\nThe Akamai platform has no breakdown for the failed requests (requests with status code: 5xx\u2019s). It's required to be able to separate between failures that are happened on the platform (because of the platform issues) and failures which have arrived from the origin itself. 5xx visibility is also a WS6 ask [line 13 https://docs.google.com/spreadsheets/d/1kGZf4roU_6V9jpH_0D6ICG021FkebAof__UwcjjzFCI/edit#gid=2089291414|https://docs.google.com/spreadsheets/d/1kGZf4roU_6V9jpH_0D6ICG021FkebAof__UwcjjzFCI/edit#gid=2089291414]\r\n\r\n[\u00a0COREREL-22|https://akamai.aha.io/features/COREREL-22?reference-class=Feature] feature covers offering that visibility on the forward side along with solving for multi-origin/multi-CDN failover issues.\r\n\r\n\u00a0\r\n\r\nHowever last-mile visibility of Akamai caused errors, at the Edge, is also central to differentiating customer issues from Akamai ones. It's required to add these missing visibilities in order to allow us as platform to minimize the amount of failures which happens on the platform as a result of platform and improve the end user performance when fail back policies are entering to action.",
+        "description": "Aha Ticket - https://akamai.aha.io/features/COREREL-23\r\n\r\nThe Akamai platform has no breakdown for the failed requests (requests with status code: 5xx’s). It's required to be able to separate between failures that are happened on the platform (because of the platform issues) and failures which have arrived from the origin itself. 5xx visibility is also a WS6 ask [line 13 https://docs.google.com/spreadsheets/d/1kGZf4roU_6V9jpH_0D6ICG021FkebAof__UwcjjzFCI/edit#gid=2089291414|https://docs.google.com/spreadsheets/d/1kGZf4roU_6V9jpH_0D6ICG021FkebAof__UwcjjzFCI/edit#gid=2089291414]\r\n\r\n[ COREREL-22|https://akamai.aha.io/features/COREREL-22?reference-class=Feature] feature covers offering that visibility on the forward side along with solving for multi-origin/multi-CDN failover issues.\r\n\r\n \r\n\r\nHowever last-mile visibility of Akamai caused errors, at the Edge, is also central to differentiating customer issues from Akamai ones. It's required to add these missing visibilities in order to allow us as platform to minimize the amount of failures which happens on the platform as a result of platform and improve the end user performance when fail back policies are entering to action.",
         "components": null,
         "labels": [
             "CSO_Telemetry"
@@ -459,7 +459,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Shipped",
         "ticket_id": "ERECSO-14",
         "summary": "Cryptoserver Performance Issues",
         "aha_link": "https://akamai.aha.io/features/COREPERF-76",
@@ -470,7 +470,7 @@
         ],
         "request_type": "Unknown",
         "executive_summary": null,
-        "resolution_description": " This should be part of the Cryptoserver performance outcome (Li-Wei\u2019s group). ",
+        "resolution_description": " This should be part of the Cryptoserver performance outcome (Li-Wei’s group). ",
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
@@ -508,11 +508,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Future consideration",
         "ticket_id": "ERECSO-15",
         "summary": "Impact of KRP on customer Handshake Performance",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-228",
-        "description": "Aha Ticket - [https://akamai.aha.io/ideas/ideas/COREPERF-I-228]\r\n\r\n\u00a0\r\n\r\nA lot of customers on ESSL dont use persistent connections. If there are lot of keysigning requests on a slot , on ESSL KRP (Keysign Robustness Protection) will kick in and SSL handshake performance will degrade. \r\n\r\nWe need to find out how often KRP kicks in , which customers are impacted and what can we do to reduce the impact.",
+        "description": "Aha Ticket - [https://akamai.aha.io/ideas/ideas/COREPERF-I-228]\r\n\r\n \r\n\r\nA lot of customers on ESSL dont use persistent connections. If there are lot of keysigning requests on a slot , on ESSL KRP (Keysign Robustness Protection) will kick in and SSL handshake performance will degrade. \r\n\r\nWe need to find out how often KRP kicks in , which customers are impacted and what can we do to reduce the impact.",
         "components": null,
         "labels": [
             "CSO_Edge_Servers"
@@ -552,11 +552,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Shipped",
         "ticket_id": "ERECSO-16",
         "summary": "Improve In-Metro Mapping",
         "aha_link": "https://akamai.aha.io/features/COREPERF-55",
-        "description": "Aha Ticket - [https://akamai.aha.io/features/COREPERF-55]\u00a0 is just a POC - Shipped\r\n\r\nhttps://akamai.aha.io/features/COREPERF-55 is just a POC. ERECSO-16 is a platform problem. We haven't solved in-metro mapping on the platform.\r\n\r\nAha Ticket - [https://akamai.aha.io/features/COREPERF-119\u00a0|https://akamai.aha.io/features/COREPERF-119]\r\n\r\nThis is part of 18 month roadmap. It is prioritized. Mihai is finalizing the scope.\u00a0\r\n\r\n*Business Hypothesis:*\r\n\r\nWe currently map ~15-40% of traffic out metro. The range depends on ASN and Maprule combination. It is hard to get a metro view however if we use state boundaries as a coarse proxy this view can provide us some signal:\r\n\r\n[https://www.nocc.akamai.com/miniurl/?id=1f682]\r\n\r\nIf we can make improvements toward lowering this out of state/ out of metro mapping should result in customers connecting to closer edges. This will drive down edge RTT and improve throughput and transfer times.\r\n\r\n\u00a0\r\n\r\n{*}Acceptance Criteria{*}:\r\n * We will establish an auditable set of rules per continent for \"what is local\" eg. In the US all local name servers must be w/in 300 miles of the region.\r\n\r\n * We have a way to report on which names ervers are local to which regions so that we can audit completeness and audit in the future\r\n\r\n\u00a0\r\n\r\n*Additional info:*\r\n\r\nWhen we create Edge maps , we have 2 kinds of bonus local and non-local. As an example FL nameserver should be local to MLEs in MIA and non-local for MLEs in ATL.\r\n\r\nLocal bonus to maps would prefer local regions. This would help if for some reason a bad pingpoint is chosen and local/non-local region have same ping score. Local bonus also improves stability in mapping.\r\n\r\nThe locality of regions is broken today , specially in US. A COX nameserver in Arizona is marked local to all regions in US (Chicago , Florida) etc. Similarly a TWC namserver in FL is marked local to all regions in US.\r\n\r\n\u00a0\r\n\r\nThis may include enhancements to the model by which the existing \"locality\" relation is established or come up with a new \"proximity\" relation.\r\n\r\n\u00a0\r\n\r\nBelow are some examples where nameservers are marked local to all regions in US.\r\n\r\n\u00a0\r\n\r\nTWC in FL -[ [https://map.akamai.com/Products/Mapper/Tools/IpInfo/index.php?EdgeScapePro=on&RapScoresPre=on&IpAddr=75.114.90.72]|https://map.akamai.com/Products/Mapper/Tools/IpInfo/index.php?EdgeScapePro=on&RapScoresPre=on&IpAddr=75.114.90.72]\r\n\r\nCox in AZ - [https://map.akamai.com/Products/Mapper/Tools/IpInfo/index.php?EdgeScapePro=on&RapScoresPre=on&IpAddr=184.178.231.18]\r\n\r\nComcast in MA - [https://map.akamai.com/Products/Mapper/Tools/IpInfo/index.php?EdgeScapePro=on&RapScoresPre=on&IpAddr=69.252.230.199]\r\n\r\nWe would like the broken locality of nameservers to be fixed , where regions local to the nameserver are the only one's marked local. This would improve RTT significantly and it will also complement edge scoring , where edgescoring can pick best performing local regions rather than trying to find best performing regions from all across the country.\r\n\r\n\u00a0\r\n\r\nIn-state mapping in US for major maps: [https://www.nocc.akamai.com/miniurl/?id=20ebe]",
+        "description": "Aha Ticket - [https://akamai.aha.io/features/COREPERF-55]  is just a POC - Shipped\r\n\r\nhttps://akamai.aha.io/features/COREPERF-55 is just a POC. ERECSO-16 is a platform problem. We haven't solved in-metro mapping on the platform.\r\n\r\nAha Ticket - [https://akamai.aha.io/features/COREPERF-119 |https://akamai.aha.io/features/COREPERF-119]\r\n\r\nThis is part of 18 month roadmap. It is prioritized. Mihai is finalizing the scope. \r\n\r\n*Business Hypothesis:*\r\n\r\nWe currently map ~15-40% of traffic out metro. The range depends on ASN and Maprule combination. It is hard to get a metro view however if we use state boundaries as a coarse proxy this view can provide us some signal:\r\n\r\n[https://www.nocc.akamai.com/miniurl/?id=1f682]\r\n\r\nIf we can make improvements toward lowering this out of state/ out of metro mapping should result in customers connecting to closer edges. This will drive down edge RTT and improve throughput and transfer times.\r\n\r\n \r\n\r\n{*}Acceptance Criteria{*}:\r\n * We will establish an auditable set of rules per continent for \"what is local\" eg. In the US all local name servers must be w/in 300 miles of the region.\r\n\r\n * We have a way to report on which names ervers are local to which regions so that we can audit completeness and audit in the future\r\n\r\n \r\n\r\n*Additional info:*\r\n\r\nWhen we create Edge maps , we have 2 kinds of bonus local and non-local. As an example FL nameserver should be local to MLEs in MIA and non-local for MLEs in ATL.\r\n\r\nLocal bonus to maps would prefer local regions. This would help if for some reason a bad pingpoint is chosen and local/non-local region have same ping score. Local bonus also improves stability in mapping.\r\n\r\nThe locality of regions is broken today , specially in US. A COX nameserver in Arizona is marked local to all regions in US (Chicago , Florida) etc. Similarly a TWC namserver in FL is marked local to all regions in US.\r\n\r\n \r\n\r\nThis may include enhancements to the model by which the existing \"locality\" relation is established or come up with a new \"proximity\" relation.\r\n\r\n \r\n\r\nBelow are some examples where nameservers are marked local to all regions in US.\r\n\r\n \r\n\r\nTWC in FL -[ [https://map.akamai.com/Products/Mapper/Tools/IpInfo/index.php?EdgeScapePro=on&RapScoresPre=on&IpAddr=75.114.90.72]|https://map.akamai.com/Products/Mapper/Tools/IpInfo/index.php?EdgeScapePro=on&RapScoresPre=on&IpAddr=75.114.90.72]\r\n\r\nCox in AZ - [https://map.akamai.com/Products/Mapper/Tools/IpInfo/index.php?EdgeScapePro=on&RapScoresPre=on&IpAddr=184.178.231.18]\r\n\r\nComcast in MA - [https://map.akamai.com/Products/Mapper/Tools/IpInfo/index.php?EdgeScapePro=on&RapScoresPre=on&IpAddr=69.252.230.199]\r\n\r\nWe would like the broken locality of nameservers to be fixed , where regions local to the nameserver are the only one's marked local. This would improve RTT significantly and it will also complement edge scoring , where edgescoring can pick best performing local regions rather than trying to find best performing regions from all across the country.\r\n\r\n \r\n\r\nIn-state mapping in US for major maps: [https://www.nocc.akamai.com/miniurl/?id=20ebe]",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -616,11 +616,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Will not implement",
         "ticket_id": "ERECSO-17",
         "summary": "Metrocache as a replacement for TD0 maps",
         "aha_link": "https://akamai.aha.io/features/COREREL-15",
-        "description": "Aha - [https://akamai.aha.io/features/COREREL-15]\r\n\r\n\u00a0\r\n\r\nOur concept of a modernized distributed, fast caching and offloading model that reduces manual operational interventions and improves long-tail offload % for customers - moves out of experimental rollout phase (last one [\u00a0DEL-191|https://akamai.aha.io/features/DEL-191?reference-class=Feature] ) .. to its first phase of global adoption in limited availability.\r\n\r\n\u00a0\r\n\r\n*In scope:*\r\n # Functionality carry-over from traditional Tier-Distribution for maps in scope\r\n\r\n # Complete install base adoption of medium and small traffic [CacheH|https://collaborate.akamai.com/confluence/display/STEFF/Maps+critical+to+product+health#Mapscriticaltoproducthealth-CacheH] maps to reduce decay issues and reactive operational overhead, in-turn improving reliability significantly\r\n\r\n # Deprecation and folding in of PCH, will pick from scope and value of [\u00a0DEL-482|https://akamai.aha.io/features/DEL-482?reference-class=Feature]\r\n\r\n # Turn key enablement for all new customers\r\n\r\n # Performance and health monitoring tools\r\n\r\n # Functionality that sets the stage for consistent customer origin offload feature development\r\n\r\n # Clear guidelines for exceptions to MCH cachefill (e.g. where we will use cacheH maps)\r\n\r\n\u00a0\r\n\r\n*Out of scope for this phase*\r\n # Top 9 customer-conglomerates, these are assumed to be already performance and offload optimized by GSS and PRE involvement and customizations. Other than any exceptions called out by PRE team where significant performance and reliability benefit is expected from MCH beyond their existing setups.\r\n\r\n # Customers with no existing TD offload-tiering (SS, CW etc don't count)\r\n\r\n # Additional functionality than what\u2019s available on tier distribution today\r\n\r\n # Compensation for origin performance issues\r\n\r\n # Mandated performance gains everywhere\r\n\r\n # Origin offload goal being accomplished. Though it is expected to improve in some localities while not degrade anywhere.\r\n\r\n # Operationalizing to Edge/TD TAT. \r\n\r\n # Drastic Offload degradations will be alerted on, but time series offload needs tooling.\r\n\r\n\u00a0\r\n\r\n*Long-term goals(next phases):*\r\n # Complete install base adoption including Top 9 and customers on legacy products\r\n\r\n # Customers with no existing TD offload-tiering will enjoy a default TD through MCH\r\n\r\n # Deprecation of traditional and siloed tiers eg: TD0, PCH etc. from operations\r\n\r\n # Attainment of Customer offload goals in combination with other solutions\r\n\r\n # All tier country support into capacity plans like Edge and TD today, including deployment policies and cost modeling for future metros (cost-performance trade-offs)\r\n\r\n # Geo and product specific KPIs established and met(will impact MCH and non-MCH TD0).\r\n\r\n # Operational Mgmt of MCH established (SRMM config, metrocache, data management, etc.)\r\n\r\n\u00a0\r\n\r\n*Business Hypothesis*\r\n\r\n1. Improved and more consistent tier offload\r\n\r\n2. Reduced complexity and manual intervention for managing and configuring maps\r\n\r\n3. Improve platform load-sharing via a more distributed caching model at the edge - reduced load being focused a small number of large \"catch-all\" regions\r\n\r\n4. Improvements in long-tail catchebility with no negative impact on Product KPIs\r\n\r\n5. Ability to better plan strategic innovations out from this. \r\n\r\n6. Allow us to improve the quality of our cache H deployment and planning process\r\n\r\n7. Improved reliability and cost boundaries\r\n\r\n8 . Reduction of capacity over-provisioning risk",
+        "description": "Aha - [https://akamai.aha.io/features/COREREL-15]\r\n\r\n \r\n\r\nOur concept of a modernized distributed, fast caching and offloading model that reduces manual operational interventions and improves long-tail offload % for customers - moves out of experimental rollout phase (last one [ DEL-191|https://akamai.aha.io/features/DEL-191?reference-class=Feature] ) .. to its first phase of global adoption in limited availability.\r\n\r\n \r\n\r\n*In scope:*\r\n # Functionality carry-over from traditional Tier-Distribution for maps in scope\r\n\r\n # Complete install base adoption of medium and small traffic [CacheH|https://collaborate.akamai.com/confluence/display/STEFF/Maps+critical+to+product+health#Mapscriticaltoproducthealth-CacheH] maps to reduce decay issues and reactive operational overhead, in-turn improving reliability significantly\r\n\r\n # Deprecation and folding in of PCH, will pick from scope and value of [ DEL-482|https://akamai.aha.io/features/DEL-482?reference-class=Feature]\r\n\r\n # Turn key enablement for all new customers\r\n\r\n # Performance and health monitoring tools\r\n\r\n # Functionality that sets the stage for consistent customer origin offload feature development\r\n\r\n # Clear guidelines for exceptions to MCH cachefill (e.g. where we will use cacheH maps)\r\n\r\n \r\n\r\n*Out of scope for this phase*\r\n # Top 9 customer-conglomerates, these are assumed to be already performance and offload optimized by GSS and PRE involvement and customizations. Other than any exceptions called out by PRE team where significant performance and reliability benefit is expected from MCH beyond their existing setups.\r\n\r\n # Customers with no existing TD offload-tiering (SS, CW etc don't count)\r\n\r\n # Additional functionality than what’s available on tier distribution today\r\n\r\n # Compensation for origin performance issues\r\n\r\n # Mandated performance gains everywhere\r\n\r\n # Origin offload goal being accomplished. Though it is expected to improve in some localities while not degrade anywhere.\r\n\r\n # Operationalizing to Edge/TD TAT. \r\n\r\n # Drastic Offload degradations will be alerted on, but time series offload needs tooling.\r\n\r\n \r\n\r\n*Long-term goals(next phases):*\r\n # Complete install base adoption including Top 9 and customers on legacy products\r\n\r\n # Customers with no existing TD offload-tiering will enjoy a default TD through MCH\r\n\r\n # Deprecation of traditional and siloed tiers eg: TD0, PCH etc. from operations\r\n\r\n # Attainment of Customer offload goals in combination with other solutions\r\n\r\n # All tier country support into capacity plans like Edge and TD today, including deployment policies and cost modeling for future metros (cost-performance trade-offs)\r\n\r\n # Geo and product specific KPIs established and met(will impact MCH and non-MCH TD0).\r\n\r\n # Operational Mgmt of MCH established (SRMM config, metrocache, data management, etc.)\r\n\r\n \r\n\r\n*Business Hypothesis*\r\n\r\n1. Improved and more consistent tier offload\r\n\r\n2. Reduced complexity and manual intervention for managing and configuring maps\r\n\r\n3. Improve platform load-sharing via a more distributed caching model at the edge - reduced load being focused a small number of large \"catch-all\" regions\r\n\r\n4. Improvements in long-tail catchebility with no negative impact on Product KPIs\r\n\r\n5. Ability to better plan strategic innovations out from this. \r\n\r\n6. Allow us to improve the quality of our cache H deployment and planning process\r\n\r\n7. Improved reliability and cost boundaries\r\n\r\n8 . Reduction of capacity over-provisioning risk",
         "components": null,
         "labels": [
             "CSO_Edge_Networking"
@@ -670,7 +670,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Future consideration",
         "ticket_id": "ERECSO-18",
         "summary": "Coverage on Edge and TD/SS maps to avoid OOC and performance issues",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-229",
@@ -839,11 +839,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Shipped",
         "ticket_id": "ERECSO-19",
         "summary": "Investigate and Mitigate Overloading of regions by Mapper",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-38",
-        "description": "Aha - [https://akamai.aha.io/ideas/ideas/COREREL-I-38]\r\n\r\nThe ERE team get a number of escalation on mapper overloading regions and making regions serve traffic beyond the soft cap of the region. This causes ghost rolls and inmany cases results in 5xx being delivered to the regions.\r\n\r\nSome of the issues are highlighted -\r\n # Mapper overloading region or link during large events\r\n # Mapper overloading region due to spiky traffic.\r\n # Region overloaded because mapper wasnt fast enough to move traffic around non-loadbalanced load.\r\n # High flit manifest traffic overloading a region.\r\n # Multiple high flit traffic on the same region (mm2 , chc1) causing region overload.\r\n # Spiky sureroute traffic overloading a region and impacting other customers sharing the same region due.\r\n\r\n\u00a0\r\n\r\nERE today mitigates it by lowering the FOM mark of the region , but that is not a scalable solution.\r\n\r\nWe need to find a solution for all of the above problems and there wont be one solution that fixes all the problems , so i see this aha more as an epic rather than an individual ticket.",
+        "description": "Aha - [https://akamai.aha.io/ideas/ideas/COREREL-I-38]\r\n\r\nThe ERE team get a number of escalation on mapper overloading regions and making regions serve traffic beyond the soft cap of the region. This causes ghost rolls and inmany cases results in 5xx being delivered to the regions.\r\n\r\nSome of the issues are highlighted -\r\n # Mapper overloading region or link during large events\r\n # Mapper overloading region due to spiky traffic.\r\n # Region overloaded because mapper wasnt fast enough to move traffic around non-loadbalanced load.\r\n # High flit manifest traffic overloading a region.\r\n # Multiple high flit traffic on the same region (mm2 , chc1) causing region overload.\r\n # Spiky sureroute traffic overloading a region and impacting other customers sharing the same region due.\r\n\r\n \r\n\r\nERE today mitigates it by lowering the FOM mark of the region , but that is not a scalable solution.\r\n\r\nWe need to find a solution for all of the above problems and there wont be one solution that fixes all the problems , so i see this aha more as an epic rather than an individual ticket.",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -877,7 +877,7 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "Planned",
         "ticket_id": "ERECSO-20",
         "summary": "Improve Platform instability caused by Ghost Rolls and Self Suspensions",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-30",
@@ -926,11 +926,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Shipped",
         "ticket_id": "ERECSO-21",
         "summary": "Serverside Visibility into SSL Slowness",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-224",
-        "description": "[https://akamai.aha.io/ideas/ideas/COREPERF-I-224]\r\n\r\n*Issue:* We need to increase the visibility on the server side during SSL handshakes. There is a variable called 'mdpc' that is supposed to log one aspect of server-side slowness, i.e. metadata loading during SSL handshakes on SNI slots. But we have evidence to suggest that 'mdpc' logging has issues because we see *NO LOGGING* for our competitive tests in ESSL r-lines.\r\n\r\nAnd this variable has been completely disabled on Freeflow, so even if the logging happened accurately we would not see it in Freeflow, where *ALL* handshakes are SNI.\r\n\r\n ** \r\n\r\n*What we have seen*\r\n\r\nA definite correlation between ssl handshake time and metadata file size. When we reduced the metadata on ESSL from ~15K lines to ~7K lines the SSL handshake times *dropped by 20-25% at p50 and 20-40% at p95*.\r\n\r\nOn FF the metadata file size was reduced from ~15K lines to ~4K lines, and the SSL handshakes times dropped by *25-50% from p50 to p95*.\r\n\r\n\u00a0\r\n\r\nWe see correlation of ssh handshake times with the 'a' component of the slhds field in r-77, (i.e. Client Hello to Server Hello Done). Values of slhds-a are in the multiple 10s of milliseconds, some even 100+ ms. But, no logging of 'mdpc' in r-lines.\r\n\r\n\u00a0\r\n\r\n*ESSL Products:* Ion and DSA.\r\n\r\n*FF Products:* API, AMD",
+        "description": "[https://akamai.aha.io/ideas/ideas/COREPERF-I-224]\r\n\r\n*Issue:* We need to increase the visibility on the server side during SSL handshakes. There is a variable called 'mdpc' that is supposed to log one aspect of server-side slowness, i.e. metadata loading during SSL handshakes on SNI slots. But we have evidence to suggest that 'mdpc' logging has issues because we see *NO LOGGING* for our competitive tests in ESSL r-lines.\r\n\r\nAnd this variable has been completely disabled on Freeflow, so even if the logging happened accurately we would not see it in Freeflow, where *ALL* handshakes are SNI.\r\n\r\n ** \r\n\r\n*What we have seen*\r\n\r\nA definite correlation between ssl handshake time and metadata file size. When we reduced the metadata on ESSL from ~15K lines to ~7K lines the SSL handshake times *dropped by 20-25% at p50 and 20-40% at p95*.\r\n\r\nOn FF the metadata file size was reduced from ~15K lines to ~4K lines, and the SSL handshakes times dropped by *25-50% from p50 to p95*.\r\n\r\n \r\n\r\nWe see correlation of ssh handshake times with the 'a' component of the slhds field in r-77, (i.e. Client Hello to Server Hello Done). Values of slhds-a are in the multiple 10s of milliseconds, some even 100+ ms. But, no logging of 'mdpc' in r-lines.\r\n\r\n \r\n\r\n*ESSL Products:* Ion and DSA.\r\n\r\n*FF Products:* API, AMD",
         "components": null,
         "labels": [
             "CSO_Edge_Servers"
@@ -975,7 +975,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Future consideration",
         "ticket_id": "ERECSO-22",
         "summary": "Incorrect Load Reporting on Platform",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-230",
@@ -1029,11 +1029,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Future consideration",
         "ticket_id": "ERECSO-23",
         "summary": "Content Corruption Impacting Customers ",
         "aha_link": "https://akamai.aha.io/features/DEL-222",
-        "description": "We have seen several issues where content corruption impacts VPF and VSF for customers. This has impacted Disney in 2020 and Hulu in 2022.\u00a0\r\n\r\nAha - https://akamai.aha.io/features/DEL-222",
+        "description": "We have seen several issues where content corruption impacts VPF and VSF for customers. This has impacted Disney in 2020 and Hulu in 2022. \r\n\r\nAha - https://akamai.aha.io/features/DEL-222",
         "components": null,
         "labels": [
             "CSO_Edge_Servers"
@@ -1103,7 +1103,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-24",
         "summary": "Product Best Practices are not Followed",
         "aha_link": null,
@@ -1357,7 +1357,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-26",
         "summary": "Wrong Edge/TD0/TD1 map for Wrong traffic",
         "aha_link": null,
@@ -1406,7 +1406,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-27",
         "summary": "Increasing platform default limits",
         "aha_link": null,
@@ -1450,7 +1450,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-28",
         "summary": "Not following Knowledge Base (KB) article",
         "aha_link": null,
@@ -1559,11 +1559,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-29",
         "summary": "Issues limited to an individual customer or arl and not all customers",
         "aha_link": null,
-        "description": "These are issues related to individual customer or individual arl and does not impact all customers on the platform.\u00a0",
+        "description": "These are issues related to individual customer or individual arl and does not impact all customers on the platform. ",
         "components": null,
         "labels": [
             "CSO_Product"
@@ -1813,7 +1813,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-30",
         "summary": "Insufficient Information in the ERE Ticket",
         "aha_link": null,
@@ -1907,11 +1907,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Will not implement",
         "ticket_id": "ERECSO-31",
         "summary": "Audit ERE Escalations - Incorrect Ticket Routing, Insufficient info, KB usage gaps, Best Practices",
         "aha_link": "https://akamai.aha.io/ideas/ideas/TOIL-I-46",
-        "description": "Aha idea - [https://akamai.aha.io/ideas/ideas/TOIL-I-46]\r\n\r\nDec 8 2025 : Expanding the scope\u00a0\r\n * Tickets that are escalated to ERE incorrectly , but the escalation should be to some other team.\u00a0\r\n * Insufficient Information in the ERE Ticket (ERECSO-30)These are escalations made to ERE which did not meet the ticket quality (e.g: insufficient data points, lack of detailed investigation by the requestor)\r\n * Not following Knowledge Base (KB) article (ERECSO-28) These are all the tickets which are created because the KB article was not followed correctly , leading to individual customers being impacted. Or failing to properly carry out the diagnosis.\r\n * Product Best Practices are not Followed (ERECSO-24) These are all the escalations that ERE gets where product best practices are not followed.",
+        "description": "Aha idea - [https://akamai.aha.io/ideas/ideas/TOIL-I-46]\r\n\r\nDec 8 2025 : Expanding the scope \r\n * Tickets that are escalated to ERE incorrectly , but the escalation should be to some other team. \r\n * Insufficient Information in the ERE Ticket (ERECSO-30)These are escalations made to ERE which did not meet the ticket quality (e.g: insufficient data points, lack of detailed investigation by the requestor)\r\n * Not following Knowledge Base (KB) article (ERECSO-28) These are all the tickets which are created because the KB article was not followed correctly , leading to individual customers being impacted. Or failing to properly carry out the diagnosis.\r\n * Product Best Practices are not Followed (ERECSO-24) These are all the escalations that ERE gets where product best practices are not followed.",
         "components": null,
         "labels": [
             "CSO_Process"
@@ -2326,7 +2326,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-32",
         "summary": "Questions or Review of Platform Limits",
         "aha_link": null,
@@ -2370,7 +2370,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-33",
         "summary": "Issues discovered during Software Install Checklisting",
         "aha_link": null,
@@ -2499,7 +2499,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-34",
         "summary": "Baseline Push - Platform/Product Feature rollout",
         "aha_link": null,
@@ -2537,11 +2537,11 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "Planned",
         "ticket_id": "ERECSO-35",
         "summary": "Customer Event Review",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-15",
-        "description": "[https://akamai.aha.io/ideas/ideas/MD-I-15]\r\n\r\nThese are all the tickets created for event review of a customer config\r\n\r\n\u00a0\r\n\r\nI would like to split the themes for Web and Media event, though Media events requests were higher compared to Web ones.\r\n\r\nWeb Requests\r\n # Suggestion of Edge maps specifically when API-X recommended.\r\n # FOM Adjustments on top serving regions.\r\n\r\nMedia Requests\r\n # Suggestion of TD0 Maps - Though MCH as default TD0 covers most of the countries, there were requests to recommend a different TD0 map based on the event setup (such as non-MCH maps required, different maps for Manifest Vs Segment vs AD delivery) instead of general maps for TD0.\r\n # Capacity Review for TD maps with map-ops - Mainly for larger events such as SuperBowl, MML, IPL, etc., and new traffic launch for Max, D+, etc.. Capacity review with map-ops done regularly.\r\n # ADs delivery review - Review of Ad delivery setup and this requires custom solutions sometimes based on the setup and demand expected.\r\n # Tuning of Cascading timeout parameters - Still timeout parameters are getting included in Advanced Override section for various segment lengths.\r\n # Resiliency settings for FA and QR, Alternate maps to be used and other settings such as Hash range for FA and Bitrate settings for QR - Though SCM pairs and baseline settings available, maps are explicitly added and settings are tuned based on the event setup.",
+        "description": "[https://akamai.aha.io/ideas/ideas/MD-I-15]\r\n\r\nThese are all the tickets created for event review of a customer config\r\n\r\n \r\n\r\nI would like to split the themes for Web and Media event, though Media events requests were higher compared to Web ones.\r\n\r\nWeb Requests\r\n # Suggestion of Edge maps specifically when API-X recommended.\r\n # FOM Adjustments on top serving regions.\r\n\r\nMedia Requests\r\n # Suggestion of TD0 Maps - Though MCH as default TD0 covers most of the countries, there were requests to recommend a different TD0 map based on the event setup (such as non-MCH maps required, different maps for Manifest Vs Segment vs AD delivery) instead of general maps for TD0.\r\n # Capacity Review for TD maps with map-ops - Mainly for larger events such as SuperBowl, MML, IPL, etc., and new traffic launch for Max, D+, etc.. Capacity review with map-ops done regularly.\r\n # ADs delivery review - Review of Ad delivery setup and this requires custom solutions sometimes based on the setup and demand expected.\r\n # Tuning of Cascading timeout parameters - Still timeout parameters are getting included in Advanced Override section for various segment lengths.\r\n # Resiliency settings for FA and QR, Alternate maps to be used and other settings such as Hash range for FA and Bitrate settings for QR - Though SCM pairs and baseline settings available, maps are explicitly added and settings are tuned based on the event setup.",
         "components": null,
         "labels": [
             "CSO_Product"
@@ -2916,11 +2916,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "On Hold",
         "ticket_id": "ERECSO-38",
         "summary": "Anycast Origin Support for Sureroute",
         "aha_link": "https://akamai.aha.io/features/COREPERF-45",
-        "description": "Aha ticket: [https://akamai.aha.io/features/COREPERF-45]\r\n\r\n\u00a0\r\n\r\nThe current SR implementation does not support anycast origin by default. This challenge is currently overcome by creating a custom map that includes regions from all the locations where an anycast origin is advertised - [https://collaborate.akamai.com/confluence/display/MAPENG/SureRouteMapMaker+FAQ#SureRouteMapMakerFAQ-Q:DoesSureRoutework[well]withanycastorigins?]\r\n\r\nAkatec KB: [https://akamai.lightning.force.com/lightning/articles/Knowledge/Does-SureRoute-work-well-with-anycast-origins?language=en_US]",
+        "description": "Aha ticket: [https://akamai.aha.io/features/COREPERF-45]\r\n\r\n \r\n\r\nThe current SR implementation does not support anycast origin by default. This challenge is currently overcome by creating a custom map that includes regions from all the locations where an anycast origin is advertised - [https://collaborate.akamai.com/confluence/display/MAPENG/SureRouteMapMaker+FAQ#SureRouteMapMakerFAQ-Q:DoesSureRoutework[well]withanycastorigins?]\r\n\r\nAkatec KB: [https://akamai.lightning.force.com/lightning/articles/Knowledge/Does-SureRoute-work-well-with-anycast-origins?language=en_US]",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -2960,7 +2960,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-39",
         "summary": "Origin not compliant with RFC for HTTP/H2",
         "aha_link": null,
@@ -3004,11 +3004,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Future consideration",
         "ticket_id": "ERECSO-40",
         "summary": "FPJ Design Issues",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-42",
-        "description": "Aha! Idea - https://akamai.aha.io/ideas/ideas/COREREL-I-42\r\n\r\nGhost FPJ design has bunch of issues as listed below leading to either stale content , purge sequence errors or have incompatibility with other features.\r\n\r\n Below are the list of known issue raised for improvements of FPJ/Jetstream which can help address the issues and resolve different customer impacts caused.\r\n # https://track.akamai.com/jira/browse/GHOST-1012 related to slow purge history catch up.\r\n\r\n # [\u00a0PURGE-I-6|https://akamai.aha.io/ideas/ideas/PURGE-I-6?reference-class=Ideas::Idea] Improve Store entry sequence number restoration after ghost restart, which causes cache invalidation and increases origin hits.\r\n\r\n # https://track.akamai.com/jira/browse/GHOST-534 Avoid 5xx by Handling purge validation like SS parent in cacheh\r\n\r\n # https://track.akamai.com/jira/browse/WEBGESC-314 CacheTag and QR incompatibility.\r\n\r\n # Ghost is doing lazy evaluation of content tag purge, i.e. its not execute it immediately but keeps the purge instruction in the memory, and does the actual purge when the object is requested. Ghost also has a compaction mechanism for the tags, it trigger by time (every 8-10 hours), or when the tags memory size is above 16MB (Controlled by the config <config:fast-purge.content-tag.tags-mem-soft-limit default=16MB> ) Sometimes if the tags grow too quickly, Ghost does not succeed to do the compaction and after the compaction the tags db is still above the threshold. There is also hard limit, set to 32MB ( <config:fast-purge.content-tag.tags-mem-hard-limit default=32MB> \r\n\r\nSo if any machine can roll before the 8h limit and in case purge happens before the purge history catches up , Ghost may serve stale metadata also .\r\n\r\nSome of the optimizations are tracked under this big FPJ Enhancements Epic https://track.akamai.com/jira/browse/GHOST-532",
+        "description": "Aha! Idea - https://akamai.aha.io/ideas/ideas/COREREL-I-42\r\n\r\nGhost FPJ design has bunch of issues as listed below leading to either stale content , purge sequence errors or have incompatibility with other features.\r\n\r\n Below are the list of known issue raised for improvements of FPJ/Jetstream which can help address the issues and resolve different customer impacts caused.\r\n # https://track.akamai.com/jira/browse/GHOST-1012 related to slow purge history catch up.\r\n\r\n # [ PURGE-I-6|https://akamai.aha.io/ideas/ideas/PURGE-I-6?reference-class=Ideas::Idea] Improve Store entry sequence number restoration after ghost restart, which causes cache invalidation and increases origin hits.\r\n\r\n # https://track.akamai.com/jira/browse/GHOST-534 Avoid 5xx by Handling purge validation like SS parent in cacheh\r\n\r\n # https://track.akamai.com/jira/browse/WEBGESC-314 CacheTag and QR incompatibility.\r\n\r\n # Ghost is doing lazy evaluation of content tag purge, i.e. its not execute it immediately but keeps the purge instruction in the memory, and does the actual purge when the object is requested. Ghost also has a compaction mechanism for the tags, it trigger by time (every 8-10 hours), or when the tags memory size is above 16MB (Controlled by the config <config:fast-purge.content-tag.tags-mem-soft-limit default=16MB> ) Sometimes if the tags grow too quickly, Ghost does not succeed to do the compaction and after the compaction the tags db is still above the threshold. There is also hard limit, set to 32MB ( <config:fast-purge.content-tag.tags-mem-hard-limit default=32MB> \r\n\r\nSo if any machine can roll before the 8h limit and in case purge happens before the purge history catches up , Ghost may serve stale metadata also .\r\n\r\nSome of the optimizations are tracked under this big FPJ Enhancements Epic https://track.akamai.com/jira/browse/GHOST-532",
         "components": null,
         "labels": [
             "CSO_Edge_Servers"
@@ -3128,11 +3128,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-41",
         "summary": "H2 Write Timeout after 10s causing RESET packets to be sent to Clients",
         "aha_link": null,
-        "description": "update 5/22/2023:\r\n\r\n[~aporuri] is writing this document that will eventually propose a solution:\r\nhttps://collaborate.akamai.com/confluence/pages/viewpage.action?spaceKey=~aporuri&title=%28H2%29+Write+Timeouts+for+slow+clients\r\n\r\n\r\nProblem:\r\nWe have been seeing multiple escalations where customers see CLIENT_ABORT in logs and a reset packet from Akamai.\r\n\r\nThe logs show ghost transfer_time of 10s. Log analysis shows that this happens if ghost doesnt write 1KB to socket within 10s.\u00a0\r\n\r\nWe need to determine the root cause why it takes 10s , and also plan to increase this value to a larger number on the platform.",
+        "description": "update 5/22/2023:\r\n\r\n[~aporuri] is writing this document that will eventually propose a solution:\r\nhttps://collaborate.akamai.com/confluence/pages/viewpage.action?spaceKey=~aporuri&title=%28H2%29+Write+Timeouts+for+slow+clients\r\n\r\n\r\nProblem:\r\nWe have been seeing multiple escalations where customers see CLIENT_ABORT in logs and a reset packet from Akamai.\r\n\r\nThe logs show ghost transfer_time of 10s. Log analysis shows that this happens if ghost doesnt write 1KB to socket within 10s. \r\n\r\nWe need to determine the root cause why it takes 10s , and also plan to increase this value to a larger number on the platform.",
         "components": null,
         "labels": [
             "CSO_Edge_Servers"
@@ -3217,7 +3217,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-42",
         "summary": "Network capacity issues causing perf degradation",
         "aha_link": null,
@@ -3271,11 +3271,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-44",
         "summary": "Platform Availability and Performance",
         "aha_link": null,
-        "description": "This is the epic that will have all the ERE escalation related to platform availablity which are not ghost or mapper and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\n\u00a0",
+        "description": "This is the epic that will have all the ERE escalation related to platform availablity which are not ghost or mapper and all the aha tickets that are supposed to resolve the performance issues.\r\n\r\n ",
         "components": null,
         "labels": [
             "coreperf_feature",
@@ -3310,7 +3310,7 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-45",
         "summary": "KMI availability issues",
         "aha_link": null,
@@ -3357,11 +3357,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Under Review",
         "ticket_id": "ERECSO-46",
         "summary": "Mapping Pingpoint Issues",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-46",
-        "description": "[https://akamai.aha.io/ideas/ideas/MD-I-46]\r\n\r\nThese are all the mapping performance issues escalated to ERE where the root cause was bad pingpoint impacting mapping.\u00a0\r\n\r\nThe main patterns for issues due to bad pingpoint is :\r\n # \u00a0Low load ASNs (but critical to customers) may not have PP assigned.\r\n # . Few PP assigned may have higher latency/poor routing when compared to other PP (/IPv6 PP ) within the same ASN (such issues specific to Network/ISP setup is tracked under [https://track.akamai.com/jira/browse/ERECSO-63])\r\n # The approach for designating PP as poor today should be reviewed (could be made faster/optimal). Currently, PPs with 100% loss to all ecors are designated as poor. However, this has a disadvantage in that in-country regions may experience high percentage loss while regions further away (different geos/countries) may continue to have no network difficulties and therefore be picked, which impairs customer performance.\r\n # \u00a0A potential bug when few of manual PPs goes unpingable. Ideally mapper should use the others in the list but picks up randomly which has caused issue for the specific customer.\r\n # \u00a0Need faster recovery from bad pingpoint. Some bad pertain upto used 6-8 hours impacting customers.\r\n\r\n\u00a0\r\n\r\nChallenges :\u00a0\r\n\r\nNot much of UI/logs are available to debug the Pingpoint related issues than checking with scoring/CPD/CSS?MPD teams which slows the debugging/mitigation process.",
+        "description": "[https://akamai.aha.io/ideas/ideas/MD-I-46]\r\n\r\nThese are all the mapping performance issues escalated to ERE where the root cause was bad pingpoint impacting mapping. \r\n\r\nThe main patterns for issues due to bad pingpoint is :\r\n #  Low load ASNs (but critical to customers) may not have PP assigned.\r\n # . Few PP assigned may have higher latency/poor routing when compared to other PP (/IPv6 PP ) within the same ASN (such issues specific to Network/ISP setup is tracked under [https://track.akamai.com/jira/browse/ERECSO-63])\r\n # The approach for designating PP as poor today should be reviewed (could be made faster/optimal). Currently, PPs with 100% loss to all ecors are designated as poor. However, this has a disadvantage in that in-country regions may experience high percentage loss while regions further away (different geos/countries) may continue to have no network difficulties and therefore be picked, which impairs customer performance.\r\n #  A potential bug when few of manual PPs goes unpingable. Ideally mapper should use the others in the list but picks up randomly which has caused issue for the specific customer.\r\n #  Need faster recovery from bad pingpoint. Some bad pertain upto used 6-8 hours impacting customers.\r\n\r\n \r\n\r\nChallenges : \r\n\r\nNot much of UI/logs are available to debug the Pingpoint related issues than checking with scoring/CPD/CSS?MPD teams which slows the debugging/mitigation process.",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -3526,11 +3526,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-47",
         "summary": "Ghost Rolls Caused by Software Issues",
         "aha_link": null,
-        "description": "This Story is to track the ghost rolls (roll code 256/259) caused by software issues leading to customer impact/escalations.\u00a0",
+        "description": "This Story is to track the ghost rolls (roll code 256/259) caused by software issues leading to customer impact/escalations. ",
         "components": null,
         "labels": [
             "CSO_Edge_Servers"
@@ -3750,7 +3750,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-48",
         "summary": "Ghost Rolls Caused by Traffic leading to Memtotals/self suspensions",
         "aha_link": null,
@@ -3924,7 +3924,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Shipped",
         "ticket_id": "ERECSO-49",
         "summary": "SSL Handshake Failure Issues",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-27",
@@ -4003,7 +4003,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "In development",
         "ticket_id": "ERECSO-50",
         "summary": "Region overload caused due to large/spiky traffic on single/multiple regions",
         "aha_link": "https://akamai.aha.io/epics/COREPERF-E-26",
@@ -4412,7 +4412,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-52",
         "summary": "Mapper causing overloaded links",
         "aha_link": null,
@@ -4461,11 +4461,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-53",
         "summary": "Midgress region overload due to SR/SS traffic",
         "aha_link": null,
-        "description": "Tracking region overload caused due to SR/SS traffic spikes.\r\n\r\n\u00a0\r\n\r\nTop Themes -\u00a0\r\n1) When SR traffic co-exists with other edge/TD traffic, it can sometimes have unintended side effects. One of the major issue noticed is localized region overloads. As SR tries to optmize the origin path from edges for non-cacbeable content, certain last hop ecors/regions can take in exessive traffic. The reaction times to shift/effectively load balance SR traffic is not as aggressive as RA controlled traffic, resulting in extended periods of region instability.\u00a0\r\n\r\n2) Overloads on SS - This is more likely to happen with custom SS maps, where the map has degraded over time or the SS maps haven't been updated to keep up with changing customer traffic profile, resulting in concentration of traffic on a subset of regions. This often also leads to imbalance in SS traffic across machines in a single region, which is tracked seprately in ERECSO-67.\u00a0\r\n\r\n\u00a0\r\n\r\nChallenges -\u00a0\r\n1) No way to selectively suspend SR traffic from a region\u00a0\r\n2) Event configs that have SR enabled, can result in more traffic concentrated on fewer last-hop regions. The impact is likely worse for events that sees large concurrency and/or fluctuating end user demand. Ex: Authentication, profile fetches during start/resumption or periodic refreshes.\r\n\r\n\u00a0\r\n\r\nFor SR as a feature, last-hop load balancing could potentially be improved (specially when SS / ADC) by having some score quantization/ adjustments in place, so that difference of few ms could result in a larger set of candidate regions. Generally, both setups will have most of the regions with good connectivity to origin. Current setup tends to favor one region based on race stats, which gets overwhelmed with burst of requests under higher edge traffic conditions.\u00a0",
+        "description": "Tracking region overload caused due to SR/SS traffic spikes.\r\n\r\n \r\n\r\nTop Themes - \r\n1) When SR traffic co-exists with other edge/TD traffic, it can sometimes have unintended side effects. One of the major issue noticed is localized region overloads. As SR tries to optmize the origin path from edges for non-cacbeable content, certain last hop ecors/regions can take in exessive traffic. The reaction times to shift/effectively load balance SR traffic is not as aggressive as RA controlled traffic, resulting in extended periods of region instability. \r\n\r\n2) Overloads on SS - This is more likely to happen with custom SS maps, where the map has degraded over time or the SS maps haven't been updated to keep up with changing customer traffic profile, resulting in concentration of traffic on a subset of regions. This often also leads to imbalance in SS traffic across machines in a single region, which is tracked seprately in ERECSO-67. \r\n\r\n \r\n\r\nChallenges - \r\n1) No way to selectively suspend SR traffic from a region \r\n2) Event configs that have SR enabled, can result in more traffic concentrated on fewer last-hop regions. The impact is likely worse for events that sees large concurrency and/or fluctuating end user demand. Ex: Authentication, profile fetches during start/resumption or periodic refreshes.\r\n\r\n \r\n\r\nFor SR as a feature, last-hop load balancing could potentially be improved (specially when SS / ADC) by having some score quantization/ adjustments in place, so that difference of few ms could result in a larger set of candidate regions. Generally, both setups will have most of the regions with good connectivity to origin. Current setup tends to favor one region based on race stats, which gets overwhelmed with burst of requests under higher edge traffic conditions. ",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -4535,7 +4535,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-54",
         "summary": "Proactive Customer Load Test Reviews",
         "aha_link": null,
@@ -4587,7 +4587,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-55",
         "summary": "Region Overload caused due to Large MPG's",
         "aha_link": null,
@@ -4702,7 +4702,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Will not implement",
         "ticket_id": "ERECSO-56",
         "summary": "Change to Platform default limit - ESI ",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-252",
@@ -4776,7 +4776,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Will not implement",
         "ticket_id": "ERECSO-57",
         "summary": "Change to Platform default limit - Response Header Size ",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-253",
@@ -4840,7 +4840,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-58",
         "summary": "UMP Delays and Availability issues",
         "aha_link": null,
@@ -4882,11 +4882,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Planned",
         "ticket_id": "ERECSO-59",
         "summary": "Keep track of timeouts to the end customers on the delivery side, whether they are caused by network or regional issues, especially for web products. ",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-37",
-        "description": "Aha Ticket -\u00a0[https://akamai.aha.io/ideas/ideas/COREREL-I-37]\r\n\r\nDownstream 5xx could be provided to end users as a result of network issues or a delay in server response on the forward path. In order to provide the customer's end customers an opportunity to retrieve/browse the material, this can probably be resolved by adding more resilience to the product to get beyond some of the platform issues (network/server issues).\u00a0\r\n\r\nTrack delivery-side timeouts to the end customers that may be the result of network or geographic issues. For customers specifically on web-based products.\u00a0",
+        "description": "Aha Ticket - [https://akamai.aha.io/ideas/ideas/COREREL-I-37]\r\n\r\nDownstream 5xx could be provided to end users as a result of network issues or a delay in server response on the forward path. In order to provide the customer's end customers an opportunity to retrieve/browse the material, this can probably be resolved by adding more resilience to the product to get beyond some of the platform issues (network/server issues). \r\n\r\nTrack delivery-side timeouts to the end customers that may be the result of network or geographic issues. For customers specifically on web-based products. ",
         "components": null,
         "labels": [
             "CSO_Product"
@@ -4946,7 +4946,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-60",
         "summary": "Issues due to customer origin availability/performance/configuration",
         "aha_link": null,
@@ -5085,7 +5085,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-61",
         "summary": "Issues arising from loss of existing flit/port capacity ",
         "aha_link": null,
@@ -5149,11 +5149,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-62",
         "summary": "Maprule/Mapping systems configuration issues",
         "aha_link": null,
-        "description": "Tracks all mapping performance issues caused due to missing/incorrect/stale configurations related to maprules or supporting mapping systems such as NS,PP, etc..,\r\n\u00a0\r\nI categorize the themes as below:\r\n # Incorrect mapping choice leading to performance concerns due to below reasons majorly:\r\n ## Changes pushed in Mapping configurations such as Routers.xml, ECS changes doesn't go well, creating adverse impacts on the mapping.\r\n ## Networks team recommendations on Contract level changes in the allowlist and preference changes the region selection in terms of performance leading to issues.\r\n ## No validation on custom Manual changes over long run. Most of the times the scenario for which the custom changes put in place no longer exists (could be due to improvements done to fix them) and hence results in issues with changed traffic profile.\r\n # Intermittent Pingpoint issue in terms of bad PP selection, high loss and latency -\u00a0ERECSO-46\r\n # Generic feature safeties put in place on Mapping/RA components doesn't seem to be working fine w.r.t all the geos/ASNs.\r\n\r\n\u00a0\r\n\r\nChallenges:\r\n # No proactive communication to understand beforehand of the mapping configuration changes. This results in the delay in identifying the root cause and needs involvement of other teams.\r\n # It is needed to review the Manual changes put in place time to time by keeping any remainder else it results in adverse effect over time with changes in platform.",
+        "description": "Tracks all mapping performance issues caused due to missing/incorrect/stale configurations related to maprules or supporting mapping systems such as NS,PP, etc..,\r\n \r\nI categorize the themes as below:\r\n # Incorrect mapping choice leading to performance concerns due to below reasons majorly:\r\n ## Changes pushed in Mapping configurations such as Routers.xml, ECS changes doesn't go well, creating adverse impacts on the mapping.\r\n ## Networks team recommendations on Contract level changes in the allowlist and preference changes the region selection in terms of performance leading to issues.\r\n ## No validation on custom Manual changes over long run. Most of the times the scenario for which the custom changes put in place no longer exists (could be due to improvements done to fix them) and hence results in issues with changed traffic profile.\r\n # Intermittent Pingpoint issue in terms of bad PP selection, high loss and latency - ERECSO-46\r\n # Generic feature safeties put in place on Mapping/RA components doesn't seem to be working fine w.r.t all the geos/ASNs.\r\n\r\n \r\n\r\nChallenges:\r\n # No proactive communication to understand beforehand of the mapping configuration changes. This results in the delay in identifying the root cause and needs involvement of other teams.\r\n # It is needed to review the Manual changes put in place time to time by keeping any remainder else it results in adverse effect over time with changes in platform.",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -5283,11 +5283,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Future consideration",
         "ticket_id": "ERECSO-63",
         "summary": "ISP network/configuration issues",
         "aha_link": null,
-        "description": "This tracks issues caused due to third party provider network problems such as congestion, sub-optimal routing, IP and website blocking. Such issues are beyond Akamai's control and the resolution at best involves leveraging existing vendor relationships.\r\n\r\n\u00a0\r\n\r\nThe general patterns for ISP related issues are as below :\r\n\r\nEnduser- Edge\r\n # ISP cable cuts/ packet filtering / incorrect http traffic filtering.\r\n # Overriding TTLs impacting the mapping and overwhelming regions.\r\n # \u00a0Downstream congestion\r\n # International connectivity/peering issues\r\n\r\nForward tier issues : Edge-TD0/CW/Origin\r\n # ISP connectivity issues towards multiple endpoints on the Internet\r\n # ISP link flap\r\n # Datacenter outage (TD0-CW)\r\n # Cross network peering\u00a0 issues",
+        "description": "This tracks issues caused due to third party provider network problems such as congestion, sub-optimal routing, IP and website blocking. Such issues are beyond Akamai's control and the resolution at best involves leveraging existing vendor relationships.\r\n\r\n \r\n\r\nThe general patterns for ISP related issues are as below :\r\n\r\nEnduser- Edge\r\n # ISP cable cuts/ packet filtering / incorrect http traffic filtering.\r\n # Overriding TTLs impacting the mapping and overwhelming regions.\r\n #  Downstream congestion\r\n # International connectivity/peering issues\r\n\r\nForward tier issues : Edge-TD0/CW/Origin\r\n # ISP connectivity issues towards multiple endpoints on the Internet\r\n # ISP link flap\r\n # Datacenter outage (TD0-CW)\r\n # Cross network peering  issues",
         "components": null,
         "labels": [
             "CSO_Network"
@@ -5507,7 +5507,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-64",
         "summary": "Availability and performance issues due to Platform component - DNS",
         "aha_link": null,
@@ -5559,11 +5559,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-65",
         "summary": "Availability and performance issues due to WAF enabled traffic",
         "aha_link": null,
-        "description": "This tracks escalations as a result of certain customer's product features that adversely impacted the platform's performance and availability. This covers high flit resource consumption due to complex WAF rules, Manifest Manipulation etc\r\n\r\n\u00a0\r\n\r\nTop themes -\u00a0\r\n\r\n\r\n1) Attack traffic on a WAF enabled property leading to significant flit resource utilization in a geo/map, starving genuine traffic of useable capacity\r\n\r\n\r\n2) Enablement of certain WAF features, like ASE EVAL mode can drive up f2b significantly, leading to higher COGS and cannibalization of resources\u00a0\r\n\r\n\r\n3) WAF enabled traffic that's generally spiky in nature or originates from concentrated sources, can trigger region-wide self-suspensions of machines\u00a0\r\n\r\n\u00a0\r\n\r\nCurrent Challenges -\u00a0\r\n\r\n\r\n1) Attack response - Not all geos/network have sufficient headroom to absorb the attack. The quarantine maps are small and may not be an accurate way of handling customers' traffic with extended days of attack traffic given it also impacts genuine traffic. Need a standardized operational response to handle attack traffic.\u00a0\r\n\r\n\r\n2) Lack of visibility into flit cost per major security features - When customers enable WAF and associated security features, there's no good understanding of the baseline flit cost, making it harder to estimate the potential impact of onboarding such traffic. The side-effects are only noticed after the traffic shows up with a higher flit cost, resulting in a forced roll back. It is also difficult to ascertain what security features could potentially be having the worst impact.\u00a0",
+        "description": "This tracks escalations as a result of certain customer's product features that adversely impacted the platform's performance and availability. This covers high flit resource consumption due to complex WAF rules, Manifest Manipulation etc\r\n\r\n \r\n\r\nTop themes - \r\n\r\n\r\n1) Attack traffic on a WAF enabled property leading to significant flit resource utilization in a geo/map, starving genuine traffic of useable capacity\r\n\r\n\r\n2) Enablement of certain WAF features, like ASE EVAL mode can drive up f2b significantly, leading to higher COGS and cannibalization of resources \r\n\r\n\r\n3) WAF enabled traffic that's generally spiky in nature or originates from concentrated sources, can trigger region-wide self-suspensions of machines \r\n\r\n \r\n\r\nCurrent Challenges - \r\n\r\n\r\n1) Attack response - Not all geos/network have sufficient headroom to absorb the attack. The quarantine maps are small and may not be an accurate way of handling customers' traffic with extended days of attack traffic given it also impacts genuine traffic. Need a standardized operational response to handle attack traffic. \r\n\r\n\r\n2) Lack of visibility into flit cost per major security features - When customers enable WAF and associated security features, there's no good understanding of the baseline flit cost, making it harder to estimate the potential impact of onboarding such traffic. The side-effects are only noticed after the traffic shows up with a higher flit cost, resulting in a forced roll back. It is also difficult to ascertain what security features could potentially be having the worst impact. ",
         "components": null,
         "labels": [
             "CSO_Platform_Security"
@@ -5628,11 +5628,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Planned",
         "ticket_id": "ERECSO-66",
         "summary": "Improve Implementation of Forward Robustness protection (FRP)",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-48",
-        "description": "[https://akamai.aha.io/ideas/ideas/COREREL-I-48] \r\n\r\nGhost is prevented from rolling when there are too many forward requests by FRP, or Forward Robustness Protection. Ghost will refuse any requests for a cpcode if it generates more than 12k (or another figure depending on the hardware defined in baseline).\r\nThis has an effect on all clients behind a cpcode even though it helps to increase ghost resilience.\r\n\r\nGhost has to be resilient, but we need to do it without impacting real customers.\u00a0",
+        "description": "[https://akamai.aha.io/ideas/ideas/COREREL-I-48] \r\n\r\nGhost is prevented from rolling when there are too many forward requests by FRP, or Forward Robustness Protection. Ghost will refuse any requests for a cpcode if it generates more than 12k (or another figure depending on the hardware defined in baseline).\r\nThis has an effect on all clients behind a cpcode even though it helps to increase ghost resilience.\r\n\r\nGhost has to be resilient, but we need to do it without impacting real customers. ",
         "components": null,
         "labels": [
             "CSO_Edge_Servers"
@@ -5666,7 +5666,7 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "Under Review",
         "ticket_id": "ERECSO-67",
         "summary": "Single customer issues related to FSS",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-20",
@@ -5770,7 +5770,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Shipped",
         "ticket_id": "ERECSO-68",
         "summary": "Single customer issues related to Fail-action / Quick Retry",
         "aha_link": "https://akamai.aha.io/features/COREREL-19",
@@ -5844,11 +5844,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Need More Information",
         "ticket_id": "ERECSO-69",
         "summary": "Single customer issues related to incorrect load reporting of multi CDN hostnames",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-19",
-        "description": "[https://akamai.aha.io/ideas/ideas/MD-I-19]\r\n\r\nHostnames that are load balanced among multiple CDNs or using GTM will need to include additional load reporting tags in the property to correctly report the incoming load on serial/map. This sometimes is missed either due to lack of awareness or an Akamai hostname switching to multiCDN in the future.\r\n\r\nThere are few variants of the tag. Either hard coding or not using the host header will also impact correct reporting of load at the Edge, eventually causing load balancing issues.\r\n\r\nThis is to explore the feasibility of a workaround or adding this tag automatically for customers that have multiCDN enabled hostnames.\r\n\r\ntags suggested - <reporting:maprule> or\u00a0 <reporting:maprule-host>\r\n\r\nExpanding the Scope of ERECSO-69\r\n\r\nIncorrect Load Reporting on Platform (ERECSO-22)\u00a0\r\n\r\nAha -\u00a0[https://akamai.aha.io/ideas/ideas/COREPERF-I-230]\r\n\r\nThere are number of scenarios where enduser traffic are not reported on the platform. This happens on any of the below scenarios.\r\n # Customer sends traffic on multiCDN hostname and when ghost resolves the hostname it may not resolve to Akamai.\r\n\r\n # ZAM (Zone access mapping) is enabled on edge hostname\r\n\r\n # Sureroute load is reported on RA map.\r\n\r\nWe need to get the reporting issue fixed so that mapper can loadbalance and move traffic around. Currently all this traffic is unassigned load that mapper cannot move.\r\n\r\nAlso we need to design a fix that can be done outside of customer arl.data.",
+        "description": "[https://akamai.aha.io/ideas/ideas/MD-I-19]\r\n\r\nHostnames that are load balanced among multiple CDNs or using GTM will need to include additional load reporting tags in the property to correctly report the incoming load on serial/map. This sometimes is missed either due to lack of awareness or an Akamai hostname switching to multiCDN in the future.\r\n\r\nThere are few variants of the tag. Either hard coding or not using the host header will also impact correct reporting of load at the Edge, eventually causing load balancing issues.\r\n\r\nThis is to explore the feasibility of a workaround or adding this tag automatically for customers that have multiCDN enabled hostnames.\r\n\r\ntags suggested - <reporting:maprule> or  <reporting:maprule-host>\r\n\r\nExpanding the Scope of ERECSO-69\r\n\r\nIncorrect Load Reporting on Platform (ERECSO-22) \r\n\r\nAha - [https://akamai.aha.io/ideas/ideas/COREPERF-I-230]\r\n\r\nThere are number of scenarios where enduser traffic are not reported on the platform. This happens on any of the below scenarios.\r\n # Customer sends traffic on multiCDN hostname and when ghost resolves the hostname it may not resolve to Akamai.\r\n\r\n # ZAM (Zone access mapping) is enabled on edge hostname\r\n\r\n # Sureroute load is reported on RA map.\r\n\r\nWe need to get the reporting issue fixed so that mapper can loadbalance and move traffic around. Currently all this traffic is unassigned load that mapper cannot move.\r\n\r\nAlso we need to design a fix that can be done outside of customer arl.data.",
         "components": null,
         "labels": [
             "CSO_Product",
@@ -5944,11 +5944,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-70",
         "summary": "CSO SLO Review",
         "aha_link": null,
-        "description": "h1. Scope\r\n\r\nThe program's scope encompasses internal assessment and triage activities, leading to the creation of a consolidated list of top priorities for a number of teams, most prominently the Product (Eng) team. These priorities will be informed by cases, specifically escalations and issues related to Delivery products. A significant emphasis is placed on identifying the root problems within the case review process.\u00a0\r\n\r\nThis involves mapping multiple problems to individual problem/solution pairs, delving into a detailed level of depth. The end result is a succinct set of actionable problem statements, without prescribing any specific solutions.\r\n\r\nWe are also expanding the scope of the CSO program to include SLOs, the scope of this part of the program will be specific to identifying SLO gaps exposed by the customer escalations reviewed by the program, and listing the work required (called \u201cthemes\u201d) to close the SLO gaps\r\n # SLO Review (CSO Monthly SLO Review)\r\n ## SLO gap analysis\r\n ## Identification and resolution of themes\r\n # CSO SLO Regular Process Reports",
+        "description": "h1. Scope\r\n\r\nThe program's scope encompasses internal assessment and triage activities, leading to the creation of a consolidated list of top priorities for a number of teams, most prominently the Product (Eng) team. These priorities will be informed by cases, specifically escalations and issues related to Delivery products. A significant emphasis is placed on identifying the root problems within the case review process. \r\n\r\nThis involves mapping multiple problems to individual problem/solution pairs, delving into a detailed level of depth. The end result is a succinct set of actionable problem statements, without prescribing any specific solutions.\r\n\r\nWe are also expanding the scope of the CSO program to include SLOs, the scope of this part of the program will be specific to identifying SLO gaps exposed by the customer escalations reviewed by the program, and listing the work required (called “themes”) to close the SLO gaps\r\n # SLO Review (CSO Monthly SLO Review)\r\n ## SLO gap analysis\r\n ## Identification and resolution of themes\r\n # CSO SLO Regular Process Reports",
         "components": null,
         "labels": [],
         "request_type": "New Feature ",
@@ -5986,11 +5986,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Planned",
         "ticket_id": "ERECSO-71",
         "summary": "Ghost Rolls Due to Memtotals",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-51",
-        "description": "Aha - [https://akamai.aha.io/ideas/ideas/COREREL-I-51]\r\n\r\nWe have lot of memtotals happening on FF and API core Regions due to multiple issues.\r\n\r\nWe know these rolls impact performance and reliability of end user traffic. Recently, few escalations like ERE-1896 \u00a0are few examples where customer is facing issues due to Ghost rolls.\r\n\r\nWe have ERECSO-48 ticket which tracks customer escalations related to Ghost rolls.\r\n\r\nWe want to use this ticket to include *both customer escalations and internal escalations for memtotal rolls.*\u00a0\r\n\r\nHere is the brief documentation on recent memtotal rolls on APIX regions and its comparison with FF\r\n\r\n[https://collaborate.akamai.com/confluence/pages/viewpage.action?pageId=897988382]\u00a0\r\n\r\n\u00a0",
+        "description": "Aha - [https://akamai.aha.io/ideas/ideas/COREREL-I-51]\r\n\r\nWe have lot of memtotals happening on FF and API core Regions due to multiple issues.\r\n\r\nWe know these rolls impact performance and reliability of end user traffic. Recently, few escalations like ERE-1896  are few examples where customer is facing issues due to Ghost rolls.\r\n\r\nWe have ERECSO-48 ticket which tracks customer escalations related to Ghost rolls.\r\n\r\nWe want to use this ticket to include *both customer escalations and internal escalations for memtotal rolls.* \r\n\r\nHere is the brief documentation on recent memtotal rolls on APIX regions and its comparison with FF\r\n\r\n[https://collaborate.akamai.com/confluence/pages/viewpage.action?pageId=897988382] \r\n\r\n ",
         "components": null,
         "labels": [],
         "request_type": "New Feature ",
@@ -6158,7 +6158,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-72",
         "summary": "Issues due to connectivity problems (loss/latency) on the Akamai backbone (IEN/ICN)",
         "aha_link": null,
@@ -6237,11 +6237,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Planned",
         "ticket_id": "ERECSO-73",
         "summary": "Improving handling of SSAI related manifest traffic for AMD",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-30",
-        "description": "Aha ticket: https://akamai.aha.io/ideas/ideas/MD-I-30\r\n\r\nProblem statement:\r\n\r\nCurrent Mitigations:\r\n\r\nExpectations:\u00a0\r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:\r\n\r\n\u00a0",
+        "description": "Aha ticket: https://akamai.aha.io/ideas/ideas/MD-I-30\r\n\r\nProblem statement:\r\n\r\nCurrent Mitigations:\r\n\r\nExpectations: \r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:\r\n\r\n ",
         "components": null,
         "labels": [
             "CSO_Product"
@@ -6341,11 +6341,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-74",
         "summary": "Property manager updates and changes.",
         "aha_link": null,
-        "description": "Tracking ERE tickets where root cause and fixes are aligned on PM changes\r\n\r\nNotes on Linked cases.\r\n||Ticket\u00a0||PM change rationale||\r\n|ERECSO-76|QR + preserve stale responses intermittently saved error response in cache. We should disallow combination setting like this.\u00a0|",
+        "description": "Tracking ERE tickets where root cause and fixes are aligned on PM changes\r\n\r\nNotes on Linked cases.\r\n||Ticket ||PM change rationale||\r\n|ERECSO-76|QR + preserve stale responses intermittently saved error response in cache. We should disallow combination setting like this. |",
         "components": null,
         "labels": [],
         "request_type": "New Feature ",
@@ -6377,11 +6377,11 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-75",
         "summary": "Delivery impact by limited max-reconnect value",
         "aha_link": null,
-        "description": "The ERE team receives a number of escalation related to limited max-reconnect values in the AMD template. Current AMD delivery template limit max-reconnect to 1 (MDP-3465):\r\n{code:xml}\r\n$ head -121 delivery_amd_best_practices_v4.xml | tail\r\n    <cache:enforce-single-refresh>on</cache:enforce-single-refresh>\r\n    <cache:set-timestamp-on-error-response-storeentry>on</cache:set-timestamp-on-error-response-storeentry>\r\n    <network:icp.llmap.rollback-peer-selection>on</network:icp.llmap.rollback-peer-selection>\r\n\r\n    <!-- Set max-reforwards and max-reconnects to 1. -->\r\n    <forward:availability>\r\n      <max-reforwards>1</max-reforwards>\r\n      <max-reconnects>1</max-reconnects>\r\n    </forward:availability>\r\n{code}\r\n\u00a0\r\n\r\nCurrent values caused repeated customer escalation because they impact delivery when max-reconnects values are exhausted by:\r\n * Netstorage origin with more than 2 replica\r\n * ERR_PURGE_SEQ_OUT_OF_DATE errors on properties with Netstorage origin\r\n\r\nPast efforts to improve this values via property manager template in GSSSET-2084 and CONTROL-1025 were rejected due to lack of prioritisation and resource contraint.\r\n\r\nGSS has to implement advance metadata to workaround these customer reports, but they are not a scalable solution. We need a product management review of these values to match customer use-cases.",
+        "description": "The ERE team receives a number of escalation related to limited max-reconnect values in the AMD template. Current AMD delivery template limit max-reconnect to 1 (MDP-3465):\r\n{code:xml}\r\n$ head -121 delivery_amd_best_practices_v4.xml | tail\r\n    <cache:enforce-single-refresh>on</cache:enforce-single-refresh>\r\n    <cache:set-timestamp-on-error-response-storeentry>on</cache:set-timestamp-on-error-response-storeentry>\r\n    <network:icp.llmap.rollback-peer-selection>on</network:icp.llmap.rollback-peer-selection>\r\n\r\n    <!-- Set max-reforwards and max-reconnects to 1. -->\r\n    <forward:availability>\r\n      <max-reforwards>1</max-reforwards>\r\n      <max-reconnects>1</max-reconnects>\r\n    </forward:availability>\r\n{code}\r\n \r\n\r\nCurrent values caused repeated customer escalation because they impact delivery when max-reconnects values are exhausted by:\r\n * Netstorage origin with more than 2 replica\r\n * ERR_PURGE_SEQ_OUT_OF_DATE errors on properties with Netstorage origin\r\n\r\nPast efforts to improve this values via property manager template in GSSSET-2084 and CONTROL-1025 were rejected due to lack of prioritisation and resource contraint.\r\n\r\nGSS has to implement advance metadata to workaround these customer reports, but they are not a scalable solution. We need a product management review of these values to match customer use-cases.",
         "components": null,
         "labels": [],
         "request_type": "New Feature ",
@@ -6429,11 +6429,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Future consideration",
         "ticket_id": "ERECSO-76",
         "summary": "QR and preserve stale combination saved error response in cache ",
         "aha_link": null,
-        "description": "\u00a0\r\n||Ticket\u00a0||PM change rationale||\r\n|ERE-2109|QR + preserve stale responses intermittently saved error response in cache. We should disallow combination setting like this.\u00a0|\r\n\r\n*Issue description :*\r\nCustomer reported that they see increase in edge 504 response from 2024-04-22 20:00 UTC. Investigation revealed that initially, 504 response is generated by edge due to ERR_PURGE_SEQ_OUT_OF_DATE. When this occurs, ghost responds to subsequent requests with 504 without making any forward requests\r\n\r\n*Root cause:*\r\nDue to preserve stale metadata setting ghost generated 504 on PURGE errors were saved in memory.\r\n\r\n*Workaround:*\u00a0 preserve stale metadata setting adjusted to not  save 504s\r\n\r\nPM cache error Behavior with stale response = On + QR Combo can intermittently save ghost generated ERRORs in memory.\r\n\r\n!Screenshot 2024-05-06 at 12.28.10.jpg|width=1020,height=240! \r\n!Screenshot 2024-05-06 at 12.28.41.jpg|width=1005,height=143!",
+        "description": " \r\n||Ticket ||PM change rationale||\r\n|ERE-2109|QR + preserve stale responses intermittently saved error response in cache. We should disallow combination setting like this. |\r\n\r\n*Issue description :*\r\nCustomer reported that they see increase in edge 504 response from 2024-04-22 20:00 UTC. Investigation revealed that initially, 504 response is generated by edge due to ERR_PURGE_SEQ_OUT_OF_DATE. When this occurs, ghost responds to subsequent requests with 504 without making any forward requests\r\n\r\n*Root cause:*\r\nDue to preserve stale metadata setting ghost generated 504 on PURGE errors were saved in memory.\r\n\r\n*Workaround:*  preserve stale metadata setting adjusted to not  save 504s\r\n\r\nPM cache error Behavior with stale response = On + QR Combo can intermittently save ghost generated ERRORs in memory.\r\n\r\n!Screenshot 2024-05-06 at 12.28.10.jpg|width=1020,height=240! \r\n!Screenshot 2024-05-06 at 12.28.41.jpg|width=1005,height=143!",
         "components": null,
         "labels": [],
         "request_type": "New Feature ",
@@ -6471,7 +6471,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-77",
         "summary": "Flit intensive traffic impacted by low performance X6 hardware",
         "aha_link": null,
@@ -6518,7 +6518,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-78",
         "summary": "Network Capacity Issues",
         "aha_link": null,
@@ -6612,7 +6612,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-79",
         "summary": "Network Capacity Issues - Country: IN",
         "aha_link": null,
@@ -6684,7 +6684,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-80",
         "summary": "Network Capacity Issues - Country: ZA",
         "aha_link": null,
@@ -6726,7 +6726,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-81",
         "summary": "Network Capacity Issues - Country: US",
         "aha_link": null,
@@ -6803,7 +6803,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-82",
         "summary": "Network Capacity Issues - Country: CN",
         "aha_link": null,
@@ -6870,7 +6870,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-83",
         "summary": "Network Capacity Issues - Middle East",
         "aha_link": null,
@@ -6917,7 +6917,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-84",
         "summary": "Network Capacity Issues - Country: ID",
         "aha_link": null,
@@ -6964,7 +6964,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-85",
         "summary": "Networking issues due to bad Akamai-controlled configuration or issues with switches/routers",
         "aha_link": null,
@@ -7011,7 +7011,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-86",
         "summary": "Network Capacity Issues - Country: VN",
         "aha_link": null,
@@ -7053,11 +7053,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-87",
         "summary": "Non site-shield regions reaching origin",
         "aha_link": null,
-        "description": "Problem statement: Issues where we are seeing non-siteshield regions going forward to origin when a siteshield configuration is used.\r\n\r\nCurrent Mitigations:\r\n # ERE-2084 - None, the issue occurs when customer changes cacheability of content causing mix of behaviours in Ghost. It was decided in the Delivery WG that fixing Ghost behaviour here would required fundamental changes. Right now, the approach is to see why does the customer often change the cacheability of the content leading to the issue - the intent is to see if Ghost's behaviour should be addressed or if another solution for the customer's usecase of using SS+SR can be explored.\r\n\r\nExpectations:\u00a0\r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:\r\n # Shanghai Bybit Technology - ERE-2084\r\n\r\n\u00a0",
+        "description": "Problem statement: Issues where we are seeing non-siteshield regions going forward to origin when a siteshield configuration is used.\r\n\r\nCurrent Mitigations:\r\n # ERE-2084 - None, the issue occurs when customer changes cacheability of content causing mix of behaviours in Ghost. It was decided in the Delivery WG that fixing Ghost behaviour here would required fundamental changes. Right now, the approach is to see why does the customer often change the cacheability of the content leading to the issue - the intent is to see if Ghost's behaviour should be addressed or if another solution for the customer's usecase of using SS+SR can be explored.\r\n\r\nExpectations: \r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:\r\n # Shanghai Bybit Technology - ERE-2084\r\n\r\n ",
         "components": null,
         "labels": [],
         "request_type": "New Feature ",
@@ -7095,7 +7095,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-88",
         "summary": "Delivery issues impacted by ipcache DNS",
         "aha_link": null,
@@ -7466,7 +7466,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-92",
         "summary": "Network Capacity Issues - Country: DE",
         "aha_link": null,
@@ -7591,7 +7591,7 @@
         "ticket_id": "ERECSO-94",
         "summary": "Tripd down Escalations ",
         "aha_link": null,
-        "description": "MAPRE has addressed multiple tripd escalations since transitioning this work at the beginning of Q3/24. \u00a0It was determined in many cases NOCC didn't properly follow the procedure when these alerts fired. \u00a0This particular situation was addressed with a collaborative effort from MAPRE and NOCC to address any misunderstandings in the process being followed. \u00a0Ultimately, alert optimization appears to be the longer term solution with the firing of these alerts being decreased substantially. \u00a0",
+        "description": "MAPRE has addressed multiple tripd escalations since transitioning this work at the beginning of Q3/24.  It was determined in many cases NOCC didn't properly follow the procedure when these alerts fired.  This particular situation was addressed with a collaborative effort from MAPRE and NOCC to address any misunderstandings in the process being followed.  Ultimately, alert optimization appears to be the longer term solution with the firing of these alerts being decreased substantially.  ",
         "components": null,
         "labels": [
             "tripd"
@@ -7811,7 +7811,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-96",
         "summary": "Network Capacity Issues - Country: GB",
         "aha_link": null,
@@ -7853,11 +7853,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-97",
         "summary": "Jira abandonment and non-answer",
         "aha_link": null,
-        "description": "There are significant number of Jiras abandoned or ignored with pending questions. Some of them are in \"more information needed state\" but reporters have no more stake or interest in the escalation. Associated akatec cases are also closed.\r\n\r\nMore critical ones are pending questions for value confirmation of requested bug fixes\u2014verification from requesting party is critical for justification of debugging efforts and engineering time.\r\n\r\nThese Jiras require review and responses from requesting team to close the loop.",
+        "description": "There are significant number of Jiras abandoned or ignored with pending questions. Some of them are in \"more information needed state\" but reporters have no more stake or interest in the escalation. Associated akatec cases are also closed.\r\n\r\nMore critical ones are pending questions for value confirmation of requested bug fixes—verification from requesting party is critical for justification of debugging efforts and engineering time.\r\n\r\nThese Jiras require review and responses from requesting team to close the loop.",
         "components": null,
         "labels": [],
         "request_type": "New Feature ",
@@ -8123,7 +8123,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-100",
         "summary": "Performance Issues due to incompetent hardware for certain traffic profiles",
         "aha_link": null,
@@ -8219,7 +8219,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-102",
         "summary": "Product Feature rollout",
         "aha_link": null,
@@ -8293,7 +8293,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-103",
         "summary": "Platform Feature rollout",
         "aha_link": null,
@@ -8477,11 +8477,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "In development",
         "ticket_id": "ERECSO-104",
         "summary": "Persisting in-region load balancing issues due to traffic spikes post SNId rollout",
         "aha_link": "https://akamai.aha.io/epics/MAPPER-E-74",
-        "description": "Related Aha -\u00a0\r\n\r\n[https://akamai.aha.io/epics/MAPPER-E-74]\u00a0\r\n\r\n[https://akamai.aha.io/epics/COREPERF-E-26]\u00a0\r\n\r\n\r\nThese are issues that track in-region load balancing issues that continue to persist post rollout of SNId on FF/ESSL. These tickets indicate potential shortcomings with the SNId feature.\r\n\r\n\u00a0\r\n\r\nTop Themes -\u00a0\r\n1) Traffic originating from cloud agents often end up using a less diverse set of NS, resulting in larger MPGs, translating to larger workload spikes. The requests from such clients are often for web/api traffic that are usually flit intensive compared to general end user traffic. Concentrated requests and high f2b traffic isn't often handled well across all regions.\u00a0\r\n\r\n2) Synchornized traffic from certain client devices (such as STBs) result in severe overload unless the hostname is already prespread. Few customers have a time based rollout/update, that causes multiple clients across ASN/geo to make a request simultaneously. While the end users maybe spread across multiple edge regions, the sudden burst of traffic often overwhelms the initial set of machines, eventually spilling over to rest of the machines in the region.\u00a0\r\n\r\n\u00a0\r\n\r\nChallenges -\u00a0\r\n\r\n1) SNId doesn't seem to address overloads when a large amount of traffic shows up. This seems to be limited by how much dnsp has a history of traffic on the serial. If the region could maintain a historic state of load on specific serials, it might be able to proactively maintain a higher min-spread for longer periods (similar to DOM), instead of deciding to quickly dial down the spread when load drops or moves elsewhere.\u00a0\r\n\r\n2) While there have been improvements at lower percentiles, some customers expect consistent perf/stability at p99. The current measures don't seem adequate enough to guarantee this.\u00a0\r\n\r\n3) While some cloud demand is manually broken up using topology.xml (ex: AWS) to better manage the MPG load, this reactive measure isn't a scalable approach. There needs to be a more proactive, automated way to identify newer agents and try to break them up or limit the NS grouping, to reduce the changes of larger flit traffic spikes due to large MPGs.\u00a0\r\n\r\n\u00a0",
+        "description": "Related Aha - \r\n\r\n[https://akamai.aha.io/epics/MAPPER-E-74] \r\n\r\n[https://akamai.aha.io/epics/COREPERF-E-26] \r\n\r\n\r\nThese are issues that track in-region load balancing issues that continue to persist post rollout of SNId on FF/ESSL. These tickets indicate potential shortcomings with the SNId feature.\r\n\r\n \r\n\r\nTop Themes - \r\n1) Traffic originating from cloud agents often end up using a less diverse set of NS, resulting in larger MPGs, translating to larger workload spikes. The requests from such clients are often for web/api traffic that are usually flit intensive compared to general end user traffic. Concentrated requests and high f2b traffic isn't often handled well across all regions. \r\n\r\n2) Synchornized traffic from certain client devices (such as STBs) result in severe overload unless the hostname is already prespread. Few customers have a time based rollout/update, that causes multiple clients across ASN/geo to make a request simultaneously. While the end users maybe spread across multiple edge regions, the sudden burst of traffic often overwhelms the initial set of machines, eventually spilling over to rest of the machines in the region. \r\n\r\n \r\n\r\nChallenges - \r\n\r\n1) SNId doesn't seem to address overloads when a large amount of traffic shows up. This seems to be limited by how much dnsp has a history of traffic on the serial. If the region could maintain a historic state of load on specific serials, it might be able to proactively maintain a higher min-spread for longer periods (similar to DOM), instead of deciding to quickly dial down the spread when load drops or moves elsewhere. \r\n\r\n2) While there have been improvements at lower percentiles, some customers expect consistent perf/stability at p99. The current measures don't seem adequate enough to guarantee this. \r\n\r\n3) While some cloud demand is manually broken up using topology.xml (ex: AWS) to better manage the MPG load, this reactive measure isn't a scalable approach. There needs to be a more proactive, automated way to identify newer agents and try to break them up or limit the NS grouping, to reduce the changes of larger flit traffic spikes due to large MPGs. \r\n\r\n ",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -8721,11 +8721,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "In development",
         "ticket_id": "ERECSO-105",
         "summary": "HTTP3 underperforms versus competitors and, at times, Akamai's own HTTP2.",
         "aha_link": "https://akamai.aha.io/epics/COREPERF-E-21",
-        "description": "Aha ticket:\u00a0\r\n # [https://akamai.aha.io/epics/COREPERF-E-21]\u00a0\r\n # [https://track.akamai.com/jira/browse/ETGP-1903]\u00a0\r\n # [https://akamai.aha.io/features/MD-24]\u00a0\r\n\r\nProblem statement:\r\n\r\nCurrent Mitigations:\r\n\r\nExpectations:\u00a0\r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:",
+        "description": "Aha ticket: \r\n # [https://akamai.aha.io/epics/COREPERF-E-21] \r\n # [https://track.akamai.com/jira/browse/ETGP-1903] \r\n # [https://akamai.aha.io/features/MD-24] \r\n\r\nProblem statement:\r\n\r\nCurrent Mitigations:\r\n\r\nExpectations: \r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:",
         "components": null,
         "labels": [],
         "request_type": "New Feature ",
@@ -8768,7 +8768,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-106",
         "summary": "Performance issues due to sub-optimal PCONN usage",
         "aha_link": null,
@@ -8806,7 +8806,7 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-107",
         "summary": "Performance issues due to sub-optimal PCONN usage - g2g",
         "aha_link": null,
@@ -8844,7 +8844,7 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-108",
         "summary": "Performance issues due to sub-optimal PCONN usage - g2o",
         "aha_link": null,
@@ -8888,7 +8888,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-109",
         "summary": "Product functionality or feature issues",
         "aha_link": null,
@@ -8926,7 +8926,7 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-110",
         "summary": "AMD - QR issues :Default percent-to-monitor setting resulting in incomplete cached objects",
         "aha_link": null,
@@ -8978,11 +8978,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-111",
         "summary": "Origin requests from non-supernet IPs with OIPACL setup resulting in Intermittent failures",
         "aha_link": null,
-        "description": "OIPACL ERR_NON_SUPERNET_IP Issues\r\n\r\nWe have few recent customer escalations with config OIPACL Enabled and ghost which is not part of supernet allowlist is reaching directly to origin causing ERR_NON_SUPERNET_IP Errors. Note this issue is intermittent. We want to track all the issues related to OIPACL Non Supernet IP Errors Issues in this story.\u00a0\r\n\r\nPriority Order for Ghost Tickets:\r\n\r\nP1 -\u00a0https://track.akamai.com/jira/browse/GHOST-5885\r\n\r\nP2 - https://track.akamai.com/jira/browse/GHOST-5878\r\n\r\nP3 - https://track.akamai.com/jira/browse/GHOST-5039\r\n\r\n*OIPACL Customer Escalations:*\r\n * [https://track.akamai.com/jira/browse/ERE-2587]\r\n * [https://track.akamai.com/jira/browse/DPEREQ-299]\r\n\r\n*Ghost Tickets:*\r\n # https://track.akamai.com/jira/browse/GHOST-5828 EDGE -> MCH (TD/PCH) -> OIPACL -> ORIGIN - Edge has no current SR map data from CCI and unable to resolve for either MCH tier nor OIPACL tier and attempts to go directly to origin\r\n # https://track.akamai.com/jira/browse/GHOST-5885 EDGE -> MCH (TD/PCH) -> OIPACL -> ORIGIN. - Edge has no current SR map data from CCI and unable to resolve for either MCH tier nor OIPACL tier and attempts to go directly to origin\r\n # https://track.akamai.com/jira/browse/GHOST-5878 EDGE -> EDGE_ICP -> MCH -> SIACL -> ORIGIN . Issue with Edge_ICP ghost which might use wrong map id and forward to non-siacl mch tier\r\n\r\n*Ghost Reporting Bug:*\r\n * https://track.akamai.com/jira/browse/GHOST-5039 - This is a reporting bug which can wait\r\n\r\n*GCI Customer Escalations:*\r\n * [https://track.akamai.com/jira/browse/ERE-2644]\u00a0\r\n\r\nHere are the stats of OIPACL and Non Supernet IP Errors though number of errors is less but when this issue happens for a single customer its throwing lot of these errors causing 503 Errors.\r\n|*Product*|*Service*|*OIPACLHits g2c hits*|*All Hits g2c*|*% of oipacl hits*|*Total Number of Non Supernet hits(g2g)*|\r\n|Object Delivery|W|13750560|2257353505|0.6091451768|0|\r\n|Ion|W|286850717|5585981504|5.135189166|0|\r\n|Download Delivery|W|309999701|41407746570|0.7486514642|1|\r\n|Adaptive Media Delivery|W|643745464|30777643702|2.091600872|10298|\r\n|Dynamic Site Accelerator|W|5300466000|30563025672|17.34273974|221|\r\n|API Acceleration|W|6445266521|7921479569|81.36442775|0|\r\n|Total|W|13000078963|118513230522|10.96930605|10520|\r\n\r\n\u00a0\r\n|*Product*|*Service*|*OIPACLHits*|*All Hits*|*% of oipacl hits*|*Total Number of Non Supernet hits(g2g)*|\r\n|Adaptive Media Delivery|S|9381|18863454|0.04973108318|0|\r\n|Object Delivery|S|16293316|647427297|2.516624813|0|\r\n|Dynamic Site Accelerator|S|204507624|14272818025|1.432846854|0|\r\n|API Acceleration|S|418323639|579718952|72.15973146|0|\r\n|Ion|S|753844663|40412405635|1.865379334|53|\r\n|Download Delivery|S|4018495002|8514841918|47.19400596|4|\r\n|Total|S|5411473625|64446075281|8.396901753|57|\r\n\r\n\u00a0\r\n\r\n\u00a0",
+        "description": "OIPACL ERR_NON_SUPERNET_IP Issues\r\n\r\nWe have few recent customer escalations with config OIPACL Enabled and ghost which is not part of supernet allowlist is reaching directly to origin causing ERR_NON_SUPERNET_IP Errors. Note this issue is intermittent. We want to track all the issues related to OIPACL Non Supernet IP Errors Issues in this story. \r\n\r\nPriority Order for Ghost Tickets:\r\n\r\nP1 - https://track.akamai.com/jira/browse/GHOST-5885\r\n\r\nP2 - https://track.akamai.com/jira/browse/GHOST-5878\r\n\r\nP3 - https://track.akamai.com/jira/browse/GHOST-5039\r\n\r\n*OIPACL Customer Escalations:*\r\n * [https://track.akamai.com/jira/browse/ERE-2587]\r\n * [https://track.akamai.com/jira/browse/DPEREQ-299]\r\n\r\n*Ghost Tickets:*\r\n # https://track.akamai.com/jira/browse/GHOST-5828 EDGE -> MCH (TD/PCH) -> OIPACL -> ORIGIN - Edge has no current SR map data from CCI and unable to resolve for either MCH tier nor OIPACL tier and attempts to go directly to origin\r\n # https://track.akamai.com/jira/browse/GHOST-5885 EDGE -> MCH (TD/PCH) -> OIPACL -> ORIGIN. - Edge has no current SR map data from CCI and unable to resolve for either MCH tier nor OIPACL tier and attempts to go directly to origin\r\n # https://track.akamai.com/jira/browse/GHOST-5878 EDGE -> EDGE_ICP -> MCH -> SIACL -> ORIGIN . Issue with Edge_ICP ghost which might use wrong map id and forward to non-siacl mch tier\r\n\r\n*Ghost Reporting Bug:*\r\n * https://track.akamai.com/jira/browse/GHOST-5039 - This is a reporting bug which can wait\r\n\r\n*GCI Customer Escalations:*\r\n * [https://track.akamai.com/jira/browse/ERE-2644] \r\n\r\nHere are the stats of OIPACL and Non Supernet IP Errors though number of errors is less but when this issue happens for a single customer its throwing lot of these errors causing 503 Errors.\r\n|*Product*|*Service*|*OIPACLHits g2c hits*|*All Hits g2c*|*% of oipacl hits*|*Total Number of Non Supernet hits(g2g)*|\r\n|Object Delivery|W|13750560|2257353505|0.6091451768|0|\r\n|Ion|W|286850717|5585981504|5.135189166|0|\r\n|Download Delivery|W|309999701|41407746570|0.7486514642|1|\r\n|Adaptive Media Delivery|W|643745464|30777643702|2.091600872|10298|\r\n|Dynamic Site Accelerator|W|5300466000|30563025672|17.34273974|221|\r\n|API Acceleration|W|6445266521|7921479569|81.36442775|0|\r\n|Total|W|13000078963|118513230522|10.96930605|10520|\r\n\r\n \r\n|*Product*|*Service*|*OIPACLHits*|*All Hits*|*% of oipacl hits*|*Total Number of Non Supernet hits(g2g)*|\r\n|Adaptive Media Delivery|S|9381|18863454|0.04973108318|0|\r\n|Object Delivery|S|16293316|647427297|2.516624813|0|\r\n|Dynamic Site Accelerator|S|204507624|14272818025|1.432846854|0|\r\n|API Acceleration|S|418323639|579718952|72.15973146|0|\r\n|Ion|S|753844663|40412405635|1.865379334|53|\r\n|Download Delivery|S|4018495002|8514841918|47.19400596|4|\r\n|Total|S|5411473625|64446075281|8.396901753|57|\r\n\r\n \r\n\r\n ",
         "components": null,
         "labels": [
             "CSO_Product"
@@ -9057,7 +9057,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Cancelled",
         "ticket_id": "ERECSO-112",
         "summary": "Load reporting issues due to serial/slot misassociation in the SNId config file",
         "aha_link": null,
@@ -9093,7 +9093,7 @@
         "issue_links": []
     },
     {
-        "flag": "-",
+        "flag": "On Hold",
         "ticket_id": "ERECSO-113",
         "summary": "MSL: customer mis-configuration",
         "aha_link": null,
@@ -9165,7 +9165,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-114",
         "summary": "Region overload and load misreporting due to SNId configuration issue",
         "aha_link": null,
@@ -9242,7 +9242,7 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-115",
         "summary": "AMD/DD Resiliency Issues",
         "aha_link": null,
@@ -9286,11 +9286,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-116",
         "summary": "AMD/DD: QR inefficiencies on ICP path",
         "aha_link": null,
-        "description": "Tracks customer performance issues when QR was ineffective due to primary and alternate paths following the same parent hierarchy. \r\n\r\n*Problem statement:*\r\n\r\nIn general, the forward path for a cache-miss request looks like this: Edge -> TD0/MCH -> CW/Origin. When there's slowness on TD0/MCH parent, QR tries the alternate path: Edge -> TD0_ALT -> CW/Origin, which addresses any potential slowness seen on the primary TD0/MCH path. \r\n\r\nHowever, when the edge request is forwarded to an Edge ICP peer, the forward list for the Edge Ghost is:\u00a0*Edge -> Edge_ICP -> TD0/MCH -> CW/Origin.*\u00a0\r\n\r\nWhen it's an edge ICP hit and there's backend switch/peer Ghost slowness, Edge will try the next parent in the forward list, which is TD0/MCH. This still ensures we try at least two unique paths.\u00a0\r\n\r\nHowever, when there's an edge ICP miss/refresh involved, ICP naturally takes the first fwd parent - TD/MCH. If this is slow, the alternate path is tried, which skips ICP, but ends up trying the next parent in the forward list, which also happens to be the same TD0/MCH path. Thus, both requests end up converging at the same forward path, while the actual TD0_ALT path is never attempted. \r\n\r\n\u00a0\r\n\r\nA potential workaround involves disabling edge ICP, but that has its own implications on COGS and edge offload. If the primary request slowness is seen by an ICP peer, there needs to be a mechanism for QR to try the actual alternate path rather than the subsequent parent in the forward list. \r\n\r\n\u00a0\r\n\r\n\u00a0\r\n\r\n\u00a0",
+        "description": "Tracks customer performance issues when QR was ineffective due to primary and alternate paths following the same parent hierarchy. \r\n\r\n*Problem statement:*\r\n\r\nIn general, the forward path for a cache-miss request looks like this: Edge -> TD0/MCH -> CW/Origin. When there's slowness on TD0/MCH parent, QR tries the alternate path: Edge -> TD0_ALT -> CW/Origin, which addresses any potential slowness seen on the primary TD0/MCH path. \r\n\r\nHowever, when the edge request is forwarded to an Edge ICP peer, the forward list for the Edge Ghost is: *Edge -> Edge_ICP -> TD0/MCH -> CW/Origin.* \r\n\r\nWhen it's an edge ICP hit and there's backend switch/peer Ghost slowness, Edge will try the next parent in the forward list, which is TD0/MCH. This still ensures we try at least two unique paths. \r\n\r\nHowever, when there's an edge ICP miss/refresh involved, ICP naturally takes the first fwd parent - TD/MCH. If this is slow, the alternate path is tried, which skips ICP, but ends up trying the next parent in the forward list, which also happens to be the same TD0/MCH path. Thus, both requests end up converging at the same forward path, while the actual TD0_ALT path is never attempted. \r\n\r\n \r\n\r\nA potential workaround involves disabling edge ICP, but that has its own implications on COGS and edge offload. If the primary request slowness is seen by an ICP peer, there needs to be a mechanism for QR to try the actual alternate path rather than the subsequent parent in the forward list. \r\n\r\n \r\n\r\n \r\n\r\n ",
         "components": null,
         "labels": [
             "CSO_Product"
@@ -9330,11 +9330,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Will not implement",
         "ticket_id": "ERECSO-117",
         "summary": "AMD/DD: QR inefficiencies due to SCM mapping",
         "aha_link": "https://akamai.aha.io/ideas/ideas/DEL-I-128",
-        "description": "Related tickets:\u00a0\r\n\r\n[DEL-I-128|https://akamai.aha.io/ideas/ideas/DEL-I-128]\r\n\r\nMAPPINGENG-60 / MAPPINGENG-123\r\n\r\n[*CR\u00a04484696*|https://bugzilla.akamai.com/show_bug.cgi?id=4484696]\r\n\r\n\u00a0\r\n\r\nTracks customer performance escalations where QR was ineffective due to the choice of regions on alternate path with SCM mapping.\r\n\r\n\u00a0\r\n\r\n*Problem Statement:*\r\n\r\n1) Prior to MCH as the default TD0, a fair degree of disjointedness was ensured on the primary and alternate QR/FA paths. SCM mapping (ex: ch2p and ch2f) would be aware of the primary region handed out for an edge region and would choose an alternate parent region from the same allowlist, but a distinct ecor (or region). With MCH though, the traditional SCM mapping is no longer honored. There are no primary mappoints to consider to construct an effective disjoint alternate path. The allowlist of failover map can contain regions which are also part of MCH backend. Since the primary MCH and alternate path decisions are made independently (ex: primary: mch-ff-lo, alt: ch2f) certain requests that get hashed to a particular MCH backend region could also serve as the failover path region. There's no strict 'no-overlap' check as one would expect with traditional SCM TD rendering QR/FA ineffective in such cases.\r\n\r\n\u00a0\r\n\r\n2) SCM failover mapping in general isn't performant enough. The failover mappoints can often be mapped to farther locations, which can probably address some extreme primary path slowness, but might not necessarily be comparable to general primary path perf.\u00a0\u00a0\r\n\r\nSometimes, the primary and failover requests end up on the same region (even with traditional SCM pair such as ch2p/ch2f), resulting in no resiliency gain. There might be knobs ([https://collaborate.akamai.com/confluence/display/MAPENG/Failover+Mapping#FailoverMapping-GlobalRAloadbalancingoptions]) to strictly enforce this, but doesn't seem to be in place for most maprules.",
+        "description": "Related tickets: \r\n\r\n[DEL-I-128|https://akamai.aha.io/ideas/ideas/DEL-I-128]\r\n\r\nMAPPINGENG-60 / MAPPINGENG-123\r\n\r\n[*CR 4484696*|https://bugzilla.akamai.com/show_bug.cgi?id=4484696]\r\n\r\n \r\n\r\nTracks customer performance escalations where QR was ineffective due to the choice of regions on alternate path with SCM mapping.\r\n\r\n \r\n\r\n*Problem Statement:*\r\n\r\n1) Prior to MCH as the default TD0, a fair degree of disjointedness was ensured on the primary and alternate QR/FA paths. SCM mapping (ex: ch2p and ch2f) would be aware of the primary region handed out for an edge region and would choose an alternate parent region from the same allowlist, but a distinct ecor (or region). With MCH though, the traditional SCM mapping is no longer honored. There are no primary mappoints to consider to construct an effective disjoint alternate path. The allowlist of failover map can contain regions which are also part of MCH backend. Since the primary MCH and alternate path decisions are made independently (ex: primary: mch-ff-lo, alt: ch2f) certain requests that get hashed to a particular MCH backend region could also serve as the failover path region. There's no strict 'no-overlap' check as one would expect with traditional SCM TD rendering QR/FA ineffective in such cases.\r\n\r\n \r\n\r\n2) SCM failover mapping in general isn't performant enough. The failover mappoints can often be mapped to farther locations, which can probably address some extreme primary path slowness, but might not necessarily be comparable to general primary path perf.  \r\n\r\nSometimes, the primary and failover requests end up on the same region (even with traditional SCM pair such as ch2p/ch2f), resulting in no resiliency gain. There might be knobs ([https://collaborate.akamai.com/confluence/display/MAPENG/Failover+Mapping#FailoverMapping-GlobalRAloadbalancingoptions]) to strictly enforce this, but doesn't seem to be in place for most maprules.",
         "components": null,
         "labels": [
             "CSO_Product",
@@ -9390,11 +9390,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Not Filed",
         "ticket_id": "ERECSO-118",
         "summary": "Availability and performance issues due to attack against customer domains",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MAPPER-I-40",
-        "description": "[https://akamai.aha.io/ideas/ideas/MAPPER-I-40]\r\n\r\n[https://akamai.aha.io/features/MAPPER-53]\r\n\r\nMore than 15 ERE cases. but underneath multiple customer impact including \r\nThis tracks escalations due to platform instability (Ghost Rolls, self-suspensions) triggered by localized or large scale attack against other customer properties. While the customers' properties may or may not be protected against the attack due to their WAF policies/security features, it often tends to have unintended side effects such as machines hitting their memory limit or experiencing seg faults resulting in significant percentage of Ghosts rolling.\r\n\r\nDepending on the nature of the attack, a swarm of requests against a customer property can hold up significant amount of resources (CPU, sockets) resulting in machines going down under load bringing the overall usable capacity down significantly.\u00a0\r\n\r\nCurrently, there aren't many options to workaround this problem other than blocking certain offending bot IPs and waiting for the attack to subside while absorbing most of the impact.\u00a0\r\n\r\n\u00a0\r\n\r\nOn ESSL, one option is to move the customer hostname to a quarantine map. This has operational overhead and involves coordination with IAT to move properties on to a different map with limited capacity. While this can reasonably shield rest of the platform, may not be a feasible solution for larger customers and without significantly impacting them.\u00a0\r\n\r\nOther options include limiting the spread of such traffic via internal dnsp spreadlimiter controls.\u00a0\r\n\r\nThere's active work on the CRP side which could potentially address some of the shortcomings by proactively blocking anomalous requests for certain customers. But the effectiveness is yet to be tested in prod.\u00a0\r\n\r\nAlso, There have been multiple instances where amplification of retries leads larger % of suspensions and rolls on the network when origins are down or have issues due to OHD not being default or sheer cascading timeout without adaptive mechanism.",
+        "description": "[https://akamai.aha.io/ideas/ideas/MAPPER-I-40]\r\n\r\n[https://akamai.aha.io/features/MAPPER-53]\r\n\r\nMore than 15 ERE cases. but underneath multiple customer impact including \r\nThis tracks escalations due to platform instability (Ghost Rolls, self-suspensions) triggered by localized or large scale attack against other customer properties. While the customers' properties may or may not be protected against the attack due to their WAF policies/security features, it often tends to have unintended side effects such as machines hitting their memory limit or experiencing seg faults resulting in significant percentage of Ghosts rolling.\r\n\r\nDepending on the nature of the attack, a swarm of requests against a customer property can hold up significant amount of resources (CPU, sockets) resulting in machines going down under load bringing the overall usable capacity down significantly. \r\n\r\nCurrently, there aren't many options to workaround this problem other than blocking certain offending bot IPs and waiting for the attack to subside while absorbing most of the impact. \r\n\r\n \r\n\r\nOn ESSL, one option is to move the customer hostname to a quarantine map. This has operational overhead and involves coordination with IAT to move properties on to a different map with limited capacity. While this can reasonably shield rest of the platform, may not be a feasible solution for larger customers and without significantly impacting them. \r\n\r\nOther options include limiting the spread of such traffic via internal dnsp spreadlimiter controls. \r\n\r\nThere's active work on the CRP side which could potentially address some of the shortcomings by proactively blocking anomalous requests for certain customers. But the effectiveness is yet to be tested in prod. \r\n\r\nAlso, There have been multiple instances where amplification of retries leads larger % of suspensions and rolls on the network when origins are down or have issues due to OHD not being default or sheer cascading timeout without adaptive mechanism.",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -9509,11 +9509,11 @@
         ]
     },
     {
-        "flag": "-",
+        "flag": "Being discussed",
         "ticket_id": "ERECSO-119",
         "summary": "End users are mapped to machines suspended for installation.",
         "aha_link": null,
-        "description": "Context: When machines are temporarily offline for installation (sflag 512 is enabled throughout the process) they are still receiving traffic from various clients associated with different hostnames, causing disruptions for end users.\r\n\r\n\u00a0\r\n\r\nWe have data from the past where we saw end users getting mapped to suspended machines especially during installs. Per DNSP design this is expected: \u00a0[https://collaborate.akamai.com/confluence/spaces/EPRE/pages/914160010/End+users+mapped+to+machines+suspended+for+installation].\r\n\r\nMapping ticket from the past:\u00a0https://track.akamai.com/jira/browse/MAPPINGENG-4739 (Was assigned to Ryan M, needs a new owner)\r\n\r\nAsk: While DNSP has its rationale, this issue is genuinely impacting customers. There's no real benefit to routing real end-user traffic to suspended or unstable machines. Happens with every release so the rate of occurrence is indeed high. How can we improve situation during installs?",
+        "description": "Context: When machines are temporarily offline for installation (sflag 512 is enabled throughout the process) they are still receiving traffic from various clients associated with different hostnames, causing disruptions for end users.\r\n\r\n \r\n\r\nWe have data from the past where we saw end users getting mapped to suspended machines especially during installs. Per DNSP design this is expected:  [https://collaborate.akamai.com/confluence/spaces/EPRE/pages/914160010/End+users+mapped+to+machines+suspended+for+installation].\r\n\r\nMapping ticket from the past: https://track.akamai.com/jira/browse/MAPPINGENG-4739 (Was assigned to Ryan M, needs a new owner)\r\n\r\nAsk: While DNSP has its rationale, this issue is genuinely impacting customers. There's no real benefit to routing real end-user traffic to suspended or unstable machines. Happens with every release so the rate of occurrence is indeed high. How can we improve situation during installs?",
         "components": null,
         "labels": [
             "CSO_Mapper"
@@ -9602,7 +9602,7 @@
         "ticket_id": "ERECSO-120",
         "summary": "End users are mapped to machines suspended for installation.",
         "aha_link": null,
-        "description": "Context: When machines are temporarily offline for installation (sflag 512 is enabled throughout the process) they are still receiving traffic from various clients associated with different hostnames, causing disruptions for end users.\r\n\r\n\u00a0\r\n\r\nWe have data from the past where we saw end users getting mapped to suspended machines especially during installs. Per DNSP design this is expected: \u00a0[https://collaborate.akamai.com/confluence/spaces/EPRE/pages/914160010/End+users+mapped+to+machines+suspended+for+installation].\r\n\r\nMapping ticket from the past:\u00a0[https://track.akamai.com/jira/browse/MAPPINGENG-4739]\u00a0(Was assigned to Ryan M, needs a new owner)\r\n\r\nAsk: While DNSP has its rationale, this issue is genuinely impacting customers. There's no real benefit to routing real end-user traffic to suspended or unstable machines. Happens with every release so the rate of occurrence is indeed high. How can we improve situation during installs?\r\nh3.",
+        "description": "Context: When machines are temporarily offline for installation (sflag 512 is enabled throughout the process) they are still receiving traffic from various clients associated with different hostnames, causing disruptions for end users.\r\n\r\n \r\n\r\nWe have data from the past where we saw end users getting mapped to suspended machines especially during installs. Per DNSP design this is expected:  [https://collaborate.akamai.com/confluence/spaces/EPRE/pages/914160010/End+users+mapped+to+machines+suspended+for+installation].\r\n\r\nMapping ticket from the past: [https://track.akamai.com/jira/browse/MAPPINGENG-4739] (Was assigned to Ryan M, needs a new owner)\r\n\r\nAsk: While DNSP has its rationale, this issue is genuinely impacting customers. There's no real benefit to routing real end-user traffic to suspended or unstable machines. Happens with every release so the rate of occurrence is indeed high. How can we improve situation during installs?\r\nh3.",
         "components": "GStabilty",
         "labels": [
             "GStability",
@@ -9642,7 +9642,7 @@
         "ticket_id": "ERECSO-121",
         "summary": "Forward Region Issues causing spike in ERR_READ_ERROR|fwdStateFree",
         "aha_link": null,
-        "description": "*Issue*\r\n\r\nMultiple Customers are experiencing ERR_READ_ERROR|fwdStateFree errors and Recently there was an [SI-00023285] effecting multiple customers. Edge servers fail to forward requests due to complete forward path exhaustion, resulting in 503 errors delivered to end users without any forward attempt.\r\n\r\nThe Region health detects mid-tier regions as bad and origin IPACL has no fallback mechanism even with Acceptance criteria enabled. Actually, the Edge normally uses two tier to go forward: SIACL (primary) and SIACL-ALT (backup). SIACL tries to provide two forward paths, but both get removed because the ghost marks those regions as bad while SIACL-ALT provides one forward path, but it has strict acceptance criteria, so Ghost is not allowed to use it. With no valid forward paths left, Ghost does not trigger any forward request at all, which leads to the ERR_READ_ERROR|fwdStateFree.\r\n{code:java}\r\n1763539266.340|7fb551434880|\u00a0 \u00a0 7fbb424f3210| 7b413a4|129| 8|U| 6875| guide::FwdList::reorderFwdListSrRHD(): Total Entries: 3, sr entries to bad region: 2, origin entry:0, fallback entry:0{code}\r\nHere is the % of errors for ERR_READ_ERROR|fwdStateFree across service/Network and products\r\n\r\n*Network/Service:*\r\n|*Service*|*Avg*|*P95*|*P99*|*Max*|\r\n|W|0.0091%|0.0569%|0.1172%|0.2857%|\r\n|S|0.0021%|0.0081%|0.0225%|0.3643%|\r\n\r\n\u00a0\r\n\r\n*Delivery Type + Service:*\r\n|*Delivery*|*Service*|*Avg*|*P95*|*P99*|*Max*|\r\n|{color:#de350b}*api*{color}|{color:#de350b}*W*{color}|{color:#de350b}*0.0387%*{color}|{color:#de350b}*0.1103%*{color}|{color:#de350b}*0.1746%*{color}|{color:#de350b}*0.2857%*{color}|\r\n|dsa|S|0.0023%|0.0097%|0.0179%|0.0460%|\r\n|*{color:#de350b}ion{color}*|*{color:#de350b}S{color}*|*{color:#de350b}0.0020%{color}*|*{color:#de350b}0.0041%{color}*|*{color:#de350b}0.0235%{color}*|*{color:#de350b}0.3643%{color}*|\r\n|ion|W|0.0018%|0.0083%|0.0189%|0.0463%|\r\n|api|S|0.0040%|0.0173%|0.0645%|0.1292%|\r\n\r\n\u00a0\r\n\r\nLast 30 days error hits for *ERR_READ_ERROR|fwdStateFree*\r\n\r\n!image-2025-12-12-16-12-09-962.png|width=957,height=354!\r\n\r\n*ERR_READ_ERROR* *Errors By Service/Network*\r\n\r\n*!image-2025-12-12-16-12-52-597.png|width=957,height=354!*\r\n\r\n\u00a0\r\n\r\n*ERR_READ_ERROR* *Errors By Product*\r\n\r\n!image-2025-12-12-16-13-19-870.png|width=966,height=357!\r\n\r\n*Customer Escalations Via ERE Tickets*\r\n * Multiple Customer Escalations are created and observed most of these issues would get resolved with [https://track.akamai.com/jira/browse/DPEREQ-355]\u00a0\r\n * But, adding 503 to the list won't solve the issue. As, issue was related to forward regions going bad.\u00a0\r\n * 10 out of 12 linked Issues has OIPACL Enabled.\r\n\r\n\u00a0\r\n\r\n*Short Term Mitigation*\r\n\r\nFor most of the customers who are experiencing this issue it was advised to use RA only mode by adding this snippet to their Advanced Behaviour\r\n\r\n\u00a0\r\n{code:java}\r\n<assign:variable>\r\n<name>AKA_PM_OIPACL_RA_ONLY</name>\r\n<value>1</value>\r\n<hidden>on</hidden>\r\n</assign:variable>\r\n{code}\r\n\u00a0\r\n\r\n*Long Term Mitigation*\r\n # Introduce an error code for scenario where SR2 regions are marked as bad, and provide support for that in acceptance criteria tag.\r\n # Evaluate other failure scenarios in SR2/RA that currently do not have an error code but deserve one, and introduce error codes for them as well and support them as acceptance criteria\r\n\r\n{*}Tickets{*}:\r\n\r\n{*}Ghost Ticket{*}: [https://track.akamai.com/jira/browse/GHOST-7069]\r\n\r\n{*}Metadata Ticket{*}: [https://track.akamai.com/jira/browse/DPEREQ-399]\r\n\r\n\u00a0\r\n\r\n\u00a0\r\n\r\n\u00a0",
+        "description": "*Issue*\r\n\r\nMultiple Customers are experiencing ERR_READ_ERROR|fwdStateFree errors and Recently there was an [SI-00023285] effecting multiple customers. Edge servers fail to forward requests due to complete forward path exhaustion, resulting in 503 errors delivered to end users without any forward attempt.\r\n\r\nThe Region health detects mid-tier regions as bad and origin IPACL has no fallback mechanism even with Acceptance criteria enabled. Actually, the Edge normally uses two tier to go forward: SIACL (primary) and SIACL-ALT (backup). SIACL tries to provide two forward paths, but both get removed because the ghost marks those regions as bad while SIACL-ALT provides one forward path, but it has strict acceptance criteria, so Ghost is not allowed to use it. With no valid forward paths left, Ghost does not trigger any forward request at all, which leads to the ERR_READ_ERROR|fwdStateFree.\r\n{code:java}\r\n1763539266.340|7fb551434880|    7fbb424f3210| 7b413a4|129| 8|U| 6875| guide::FwdList::reorderFwdListSrRHD(): Total Entries: 3, sr entries to bad region: 2, origin entry:0, fallback entry:0{code}\r\nHere is the % of errors for ERR_READ_ERROR|fwdStateFree across service/Network and products\r\n\r\n*Network/Service:*\r\n|*Service*|*Avg*|*P95*|*P99*|*Max*|\r\n|W|0.0091%|0.0569%|0.1172%|0.2857%|\r\n|S|0.0021%|0.0081%|0.0225%|0.3643%|\r\n\r\n \r\n\r\n*Delivery Type + Service:*\r\n|*Delivery*|*Service*|*Avg*|*P95*|*P99*|*Max*|\r\n|{color:#de350b}*api*{color}|{color:#de350b}*W*{color}|{color:#de350b}*0.0387%*{color}|{color:#de350b}*0.1103%*{color}|{color:#de350b}*0.1746%*{color}|{color:#de350b}*0.2857%*{color}|\r\n|dsa|S|0.0023%|0.0097%|0.0179%|0.0460%|\r\n|*{color:#de350b}ion{color}*|*{color:#de350b}S{color}*|*{color:#de350b}0.0020%{color}*|*{color:#de350b}0.0041%{color}*|*{color:#de350b}0.0235%{color}*|*{color:#de350b}0.3643%{color}*|\r\n|ion|W|0.0018%|0.0083%|0.0189%|0.0463%|\r\n|api|S|0.0040%|0.0173%|0.0645%|0.1292%|\r\n\r\n \r\n\r\nLast 30 days error hits for *ERR_READ_ERROR|fwdStateFree*\r\n\r\n!image-2025-12-12-16-12-09-962.png|width=957,height=354!\r\n\r\n*ERR_READ_ERROR* *Errors By Service/Network*\r\n\r\n*!image-2025-12-12-16-12-52-597.png|width=957,height=354!*\r\n\r\n \r\n\r\n*ERR_READ_ERROR* *Errors By Product*\r\n\r\n!image-2025-12-12-16-13-19-870.png|width=966,height=357!\r\n\r\n*Customer Escalations Via ERE Tickets*\r\n * Multiple Customer Escalations are created and observed most of these issues would get resolved with [https://track.akamai.com/jira/browse/DPEREQ-355] \r\n * But, adding 503 to the list won't solve the issue. As, issue was related to forward regions going bad. \r\n * 10 out of 12 linked Issues has OIPACL Enabled.\r\n\r\n \r\n\r\n*Short Term Mitigation*\r\n\r\nFor most of the customers who are experiencing this issue it was advised to use RA only mode by adding this snippet to their Advanced Behaviour\r\n\r\n \r\n{code:java}\r\n<assign:variable>\r\n<name>AKA_PM_OIPACL_RA_ONLY</name>\r\n<value>1</value>\r\n<hidden>on</hidden>\r\n</assign:variable>\r\n{code}\r\n \r\n\r\n*Long Term Mitigation*\r\n # Introduce an error code for scenario where SR2 regions are marked as bad, and provide support for that in acceptance criteria tag.\r\n # Evaluate other failure scenarios in SR2/RA that currently do not have an error code but deserve one, and introduce error codes for them as well and support them as acceptance criteria\r\n\r\n{*}Tickets{*}:\r\n\r\n{*}Ghost Ticket{*}: [https://track.akamai.com/jira/browse/GHOST-7069]\r\n\r\n{*}Metadata Ticket{*}: [https://track.akamai.com/jira/browse/DPEREQ-399]\r\n\r\n \r\n\r\n \r\n\r\n ",
         "components": null,
         "labels": [],
         "request_type": "Unknown",
@@ -9754,7 +9754,7 @@
         "ticket_id": "ERECSO-122",
         "summary": "FF/ESSL unexpected release related issues ",
         "aha_link": null,
-        "description": "The ticket tracks unexpected issues caused during releases/installs and PP issues\r\n # example issues as a result of premature unsuspension (SI-00022936)\r\n-\r\nSI-00023337-A spike of invalid request errors affected several customer end-users \u00a0\r\nThe Dec 5 2025 incident where machines came into service with too little of the necessary metadata, the question is \"which channels are necessary\". SREINC-1172\r\n\r\nWe believe that we need to look at the edgeservers and come up with a list of channels where the metadata must be received in order for customers not to experience flow problems, vs channels where the subscribers might never receive the data and that is still okay.\r\n\r\nWe will want something where we can publish a list of either channels-to-include or channels-to-exclude that may, from time to time and hopefully noticed in the SQA Shared environment during pre-release testing, require an update.\r\n\r\nScope of channels is not only ghost-subscribed (arl.data) but also keyagent-subscribed (certificates) and both (STG secrets).\r\n # post_script used to restart ghost after installation missing webghost suspension check and many such..\r\n\r\nFor example impacted due to #1. 49 customers..\r\n|ccount Name|Support Level|Tier|Country|Industry|Financial Segment|\r\n|AEON Financial Service Co.,Ltd|Premium_3.0|Strategic|Japan|Financial Services|\u00a0|\r\n|AEON Smart Technology Co., Ltd.|Indirect_Customer|Large Enterprise|Japan|Business Services|\u00a0|\r\n|Aflac Life Insurance Japan Ltd.|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|Agoda Company Pte Ltd|Premium_3.0|Strategic|Singapore|Commerce|\u00a0|\r\n|ALL NIPPON AIRWAYS CO., LTD|Premium_3.0|Strategic|Japan|Commerce|Commerce|\r\n|BNPP Group ARF Procurement|Premium_3.0_EnhancedSLA|Strategic Whales|France|Financial Services|\u00a0|\r\n|Cygames Inc|Premium_3.0|Strategic|Japan|Games|\u00a0|\r\n|DMM FinTech Co.,Ltd.|Indirect_Customer|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|Fidelity Investments|Premium_3.0|Strategic Whales|USA|Financial Services|Enterprise|\r\n|Fukuoka Financial Group, Inc.|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|GLORY LTD.|Standard_EnhancedSLA|\u00a0|Japan|Manufacturing|\u00a0|\r\n|IBM Bluemix|Premium_3.0|Strategic Whales|USA|Manufacturing|\u00a0|\r\n|ITOCHU Techno-solutions Corporation|NetAlliance_Standard|New Customer - SMB|Japan|Software and SaaS|Commerce|\r\n|LAC Co., Ltd.|NetAlliance_Standard|SMB|Japan|Software and SaaS|\u00a0|\r\n|LIXIL Corporation|Premium_3.0|Strategic|Japan|Manufacturing|\u00a0|\r\n|MDPI AG|Standard_EnhancedSLA|\u00a0|Switzerland|Public Sector|\u00a0|\r\n|Mitsubishi UFJ Financial Group, Inc|Premium_3.0|Strategic|Japan|Financial Services|Enterprise|\r\n|Mizuho Research & Technologies, Ltd.|Advanced|Large Enterprise|Japan|Business Services|\u00a0|\r\n|Net Dreamers Co., Ltd.|Plus_EnhancedSLA|Enterprise|Japan|Telecom, ISP and MNO|\u00a0|\r\n|Neweb Technologies.Co.,Ltd.|Indirect_Customer|SMB|Taiwan|Software and SaaS|\u00a0|\r\n|NTT DATA Corporation (CAFIS-ITS)|Advanced|New Customer - SMB|Japan|Financial Services|\u00a0|\r\n|NTT DATA Corporation (CAFIS-RTP)|Advanced|SMB|Japan|Software and SaaS|\u00a0|\r\n|NTT DATA Corporation (CAFIS)|Advanced|Enterprise|Japan|Financial Services|\u00a0|\r\n|NTT DOCOMO BUSINESS, Inc.|NetAlliance_Standard|SMB|Japan|Telecom, ISP and MNO|High Tech|\r\n|Odds Park Corp.|Indirect_Customer|Large Enterprise|Japan|Business Services|\u00a0|\r\n|Open House Co., Ltd|Indirect_Customer|SMB|Japan|Engineering and Construction|\u00a0|\r\n|Oracle America. Incorporated|Premium_3.0_EnhancedSLA|Strategic Whales|USA|Software and SaaS|\u00a0|\r\n|Premier Anti-Aging Co.,Ltd|Standard_EnhancedSLA|SMB|Japan|Commerce|\u00a0|\r\n|Rakuten Group, Inc. Network Development & Operation Department|Premium_3.0|Strategic Whales|Japan|Media|Commerce|\r\n|Rakuten Group, Inc.(Rakuten Bank.Ltd)|Premium_3.0|Strategic Whales|Japan|Financial Services|\u00a0|\r\n|Rakuten Group, Inc.(Rakuten Securities, Inc)|Advanced|Strategic Whales|Japan|Financial Services|\u00a0|\r\n|Recruit Co.,Ltd.|Premium_3.0|Strategic|Japan|Business Services|\u00a0|\r\n|Resona Holdings, Inc.|Premium_3.0|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|Satofull Co., Ltd.|Indirect_Customer|Large Enterprise|Japan|Media|\u00a0|\r\n|SB Technology (for Local Government Security Cloud)|Standard_EnhancedSLA|Enterprise|Japan|Public Sector|\u00a0|\r\n|SBI Sumishin Net Bank, Ltd. (via BM)|Premium_3.0|\u00a0|Japan|Financial Services|\u00a0|\r\n|SCSK Corporation(Sumitomo Corporation)|Plus_EnhancedSLA|Enterprise|Japan|Software and SaaS|\u00a0|\r\n|Sumitomo Mitsui Banking Corporation Japan|Premium_3.0|Strategic|Japan|Financial Services|\u00a0|\r\n|Sumitomo Mitsui Trust Bank, Limited|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|T&I Innovation Center Co., Ltd.|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|Tapestry, Inc|Premium_3.0|Strategic|USA|Commerce|Commerce|\r\n|The Asahi Shimbun Company|Standard_EnhancedSLA|Large Enterprise|Japan|Media|M&E|\r\n|The Bank of Yokohama,Ltd.|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|The Yamagata Bank, Limited|Indirect_Customer|New Customer - SMB|Japan|Financial Services|\u00a0|\r\n|TOHO Cinemas Ltd.|Indirect_Customer|New Customer - SMB|Japan|Media|\u00a0|\r\n|TOYOTA Connected Corporation|Premium_3.0|Strategic|Japan|Manufacturing|\u00a0|\r\n|West Japan Railway Company|Plus_EnhancedSLA|Large Enterprise|Japan|Business Services|Enterprise|\r\n|XING INC.|Plus|Enterprise|Japan|Commerce|\u00a0|\r\n|Yayoi Co., Ltd.|Advanced|Large Enterprise|Japan|Software and SaaS|\u00a0|",
+        "description": "The ticket tracks unexpected issues caused during releases/installs and PP issues\r\n # example issues as a result of premature unsuspension (SI-00022936)\r\n-\r\nSI-00023337-A spike of invalid request errors affected several customer end-users  \r\nThe Dec 5 2025 incident where machines came into service with too little of the necessary metadata, the question is \"which channels are necessary\". SREINC-1172\r\n\r\nWe believe that we need to look at the edgeservers and come up with a list of channels where the metadata must be received in order for customers not to experience flow problems, vs channels where the subscribers might never receive the data and that is still okay.\r\n\r\nWe will want something where we can publish a list of either channels-to-include or channels-to-exclude that may, from time to time and hopefully noticed in the SQA Shared environment during pre-release testing, require an update.\r\n\r\nScope of channels is not only ghost-subscribed (arl.data) but also keyagent-subscribed (certificates) and both (STG secrets).\r\n # post_script used to restart ghost after installation missing webghost suspension check and many such..\r\n\r\nFor example impacted due to #1. 49 customers..\r\n|ccount Name|Support Level|Tier|Country|Industry|Financial Segment|\r\n|AEON Financial Service Co.,Ltd|Premium_3.0|Strategic|Japan|Financial Services| |\r\n|AEON Smart Technology Co., Ltd.|Indirect_Customer|Large Enterprise|Japan|Business Services| |\r\n|Aflac Life Insurance Japan Ltd.|Advanced|Large Enterprise|Japan|Financial Services| |\r\n|Agoda Company Pte Ltd|Premium_3.0|Strategic|Singapore|Commerce| |\r\n|ALL NIPPON AIRWAYS CO., LTD|Premium_3.0|Strategic|Japan|Commerce|Commerce|\r\n|BNPP Group ARF Procurement|Premium_3.0_EnhancedSLA|Strategic Whales|France|Financial Services| |\r\n|Cygames Inc|Premium_3.0|Strategic|Japan|Games| |\r\n|DMM FinTech Co.,Ltd.|Indirect_Customer|Large Enterprise|Japan|Financial Services| |\r\n|Fidelity Investments|Premium_3.0|Strategic Whales|USA|Financial Services|Enterprise|\r\n|Fukuoka Financial Group, Inc.|Advanced|Large Enterprise|Japan|Financial Services| |\r\n|GLORY LTD.|Standard_EnhancedSLA| |Japan|Manufacturing| |\r\n|IBM Bluemix|Premium_3.0|Strategic Whales|USA|Manufacturing| |\r\n|ITOCHU Techno-solutions Corporation|NetAlliance_Standard|New Customer - SMB|Japan|Software and SaaS|Commerce|\r\n|LAC Co., Ltd.|NetAlliance_Standard|SMB|Japan|Software and SaaS| |\r\n|LIXIL Corporation|Premium_3.0|Strategic|Japan|Manufacturing| |\r\n|MDPI AG|Standard_EnhancedSLA| |Switzerland|Public Sector| |\r\n|Mitsubishi UFJ Financial Group, Inc|Premium_3.0|Strategic|Japan|Financial Services|Enterprise|\r\n|Mizuho Research & Technologies, Ltd.|Advanced|Large Enterprise|Japan|Business Services| |\r\n|Net Dreamers Co., Ltd.|Plus_EnhancedSLA|Enterprise|Japan|Telecom, ISP and MNO| |\r\n|Neweb Technologies.Co.,Ltd.|Indirect_Customer|SMB|Taiwan|Software and SaaS| |\r\n|NTT DATA Corporation (CAFIS-ITS)|Advanced|New Customer - SMB|Japan|Financial Services| |\r\n|NTT DATA Corporation (CAFIS-RTP)|Advanced|SMB|Japan|Software and SaaS| |\r\n|NTT DATA Corporation (CAFIS)|Advanced|Enterprise|Japan|Financial Services| |\r\n|NTT DOCOMO BUSINESS, Inc.|NetAlliance_Standard|SMB|Japan|Telecom, ISP and MNO|High Tech|\r\n|Odds Park Corp.|Indirect_Customer|Large Enterprise|Japan|Business Services| |\r\n|Open House Co., Ltd|Indirect_Customer|SMB|Japan|Engineering and Construction| |\r\n|Oracle America. Incorporated|Premium_3.0_EnhancedSLA|Strategic Whales|USA|Software and SaaS| |\r\n|Premier Anti-Aging Co.,Ltd|Standard_EnhancedSLA|SMB|Japan|Commerce| |\r\n|Rakuten Group, Inc. Network Development & Operation Department|Premium_3.0|Strategic Whales|Japan|Media|Commerce|\r\n|Rakuten Group, Inc.(Rakuten Bank.Ltd)|Premium_3.0|Strategic Whales|Japan|Financial Services| |\r\n|Rakuten Group, Inc.(Rakuten Securities, Inc)|Advanced|Strategic Whales|Japan|Financial Services| |\r\n|Recruit Co.,Ltd.|Premium_3.0|Strategic|Japan|Business Services| |\r\n|Resona Holdings, Inc.|Premium_3.0|Large Enterprise|Japan|Financial Services| |\r\n|Satofull Co., Ltd.|Indirect_Customer|Large Enterprise|Japan|Media| |\r\n|SB Technology (for Local Government Security Cloud)|Standard_EnhancedSLA|Enterprise|Japan|Public Sector| |\r\n|SBI Sumishin Net Bank, Ltd. (via BM)|Premium_3.0| |Japan|Financial Services| |\r\n|SCSK Corporation(Sumitomo Corporation)|Plus_EnhancedSLA|Enterprise|Japan|Software and SaaS| |\r\n|Sumitomo Mitsui Banking Corporation Japan|Premium_3.0|Strategic|Japan|Financial Services| |\r\n|Sumitomo Mitsui Trust Bank, Limited|Advanced|Large Enterprise|Japan|Financial Services| |\r\n|T&I Innovation Center Co., Ltd.|Advanced|Large Enterprise|Japan|Financial Services| |\r\n|Tapestry, Inc|Premium_3.0|Strategic|USA|Commerce|Commerce|\r\n|The Asahi Shimbun Company|Standard_EnhancedSLA|Large Enterprise|Japan|Media|M&E|\r\n|The Bank of Yokohama,Ltd.|Advanced|Large Enterprise|Japan|Financial Services| |\r\n|The Yamagata Bank, Limited|Indirect_Customer|New Customer - SMB|Japan|Financial Services| |\r\n|TOHO Cinemas Ltd.|Indirect_Customer|New Customer - SMB|Japan|Media| |\r\n|TOYOTA Connected Corporation|Premium_3.0|Strategic|Japan|Manufacturing| |\r\n|West Japan Railway Company|Plus_EnhancedSLA|Large Enterprise|Japan|Business Services|Enterprise|\r\n|XING INC.|Plus|Enterprise|Japan|Commerce| |\r\n|Yayoi Co., Ltd.|Advanced|Large Enterprise|Japan|Software and SaaS| |",
         "components": null,
         "labels": [
             "CSO_Edge_Servers"
