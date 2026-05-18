@@ -382,13 +382,21 @@
     </div>
     </div>
 </div>
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: auto;">
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: auto;">
+    <div>
     <div class="section-label">Top Issues By Cause</div>
     <div class="summary-table-wrap dashboard-container" style="padding: 16px; max-width: 620px;">
         <h3 id="issuesByCauseChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Top Issues by Cause</h3>
         <canvas id="issuesByCauseChart" height="450" width="1100"></canvas>
     </div>
+    </div>
+    <div> <div class="section-label">Product Breakdown</div>
+    <div class="summary-table-wrap dashboard-container" style="padding: 16px; max-width: 820px; width: 100%;">
+        <h3 id="productBreakdownChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Count of Product Breakdown</h3>
+        <canvas id="productBreakdownChart" height="360" width="1100"></canvas>
+    </div></div>
 </div>
+
     <div class="section-header-row">
         <div class="section-label" style="margin-bottom:0;">Ticket Details</div>
         <button id="exportTicketTableBtn" class="export-btn" type="button">Export to Google Sheet</button>
@@ -439,6 +447,7 @@
         let aiInitiativesRows = [];
         let toilActivityRows = [];
         let productTypeChartInstance = null;
+        let productBreakdownChartInstance = null;
         let escalatingGroupsChartInstance = null;
         let issuesByCauseChartInstance = null;
         const monthColumnIds = ['monthCol1', 'monthCol2', 'monthCol3'];
@@ -473,6 +482,22 @@
             if (serviceIncident !== null && serviceIncident !== undefined && String(serviceIncident).trim() !== '') return 'Yes';
             if (priority === 'high' || priority === 'critical') return 'Yes';
             return 'No';
+        }
+
+        function getProductBreakdownCategory(productType) {
+            const value = String(productType || '').toLowerCase().trim();
+
+            if (value.includes('api') && value.includes('acceleration')) return 'API-X';
+            if (value.includes('provision')) return 'Provisioning Services';
+            if (value.includes('internal')) return 'ERE-Internal-Use';
+            if (value === 'amd' || value === 'dd' || value === 'od' || value === 'ere-amd' || value === 'ere-dd' || value === 'ere-od') {
+                return 'Media Delivery - AMD/DD/OD';
+            }
+            if (value === 'ion' || value === 'dsa' || value === 'ere-ion' || value === 'ere-dsa') {
+                return 'App Perf - ION/DSA';
+            }
+
+            return 'Others';
         }
 
         function parseDate(value) {
@@ -1064,6 +1089,101 @@
             });
         }
 
+        function countProductBreakdownByMonth(ticketList, monthIndex, year) {
+            const buckets = {
+                'Media Delivery - AMD/DD/OD': 0,
+                'ERE-Internal-Use': 0,
+                'Others': 0,
+                'API-X': 0,
+                'Provisioning Services': 0,
+                'App Perf - ION/DSA': 0
+            };
+
+            ticketList.forEach(ticket => {
+                const createdDate = parseDate(ticket.created);
+                if (!createdDate) return;
+                if (createdDate.getMonth() !== monthIndex || createdDate.getFullYear() !== year) return;
+
+                const category = getProductBreakdownCategory(ticket.product_type || ticket.request_type || '');
+                buckets[category] = (buckets[category] || 0) + 1;
+            });
+
+            return buckets;
+        }
+
+        function renderProductBreakdownChart() {
+            const { monthIndex, year } = getActiveMonthYear();
+            const monthLabel = `${monthNames[monthIndex]} ${year}`;
+            document.getElementById('productBreakdownChartTitle').textContent = `Count of Product Breakdown - ${monthLabel}`;
+
+            const counts = countProductBreakdownByMonth(allSustenanceTickets, monthIndex, year);
+            const labels = [
+                'Media Delivery - AMD/DD/OD',
+                'ERE-Internal-Use',
+                'Others',
+                'API-X',
+                'Provisioning Services',
+                'App Perf - ION/DSA'
+            ];
+            const data = labels.map(label => counts[label] || 0);
+
+            const ctx = document.getElementById('productBreakdownChart');
+            if (!ctx) return;
+
+            if (productBreakdownChartInstance) {
+                productBreakdownChartInstance.destroy();
+            }
+
+            productBreakdownChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [
+                        {
+                            label: 'Count',
+                            data,
+                            backgroundColor: '#4285f4',
+                            borderRadius: 3,
+                            maxBarThickness: 48
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { stepSize: 1 }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45,
+                                callback: function(value, index) {
+                                    const label = this.getLabelForValue(index);
+                                    return label.length > 18 ? `${label.slice(0, 18)}...` : label;
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        datalabels: {
+                            color: '#ffffff',
+                            anchor: 'end',
+                            align: 'start',
+                            font: {
+                                weight: 'bold'
+                            },
+                            formatter: (value) => value
+                        },
+                        tooltip: { enabled: true }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+
         function renderReliabilityTable() {
             const { monthIndex, year } = getActiveMonthYear();
             const monthHeader = `${monthNames[monthIndex]} ${String(year).slice(-2)} Status`;
@@ -1348,9 +1468,7 @@
             tbody.innerHTML = ticketList.map(t => {
                 const devTickets = getDevTicketKeys(t).join(', ');
                 const erecsoTickets = getErecsoTicketKeys(t).join(', ');
-                const labels = Array.isArray(t.labels)
-                    ? t.labels.join(', ')
-                    : String(t.labels || '');
+                const productBreakdown = getProductBreakdownCategory(t.product_type || t.request_type || '');
                 const timeSpentSeconds = getTicketTimeSpentSeconds(t);
                 const timeSpentHours = timeSpentSeconds ? (timeSpentSeconds / 3600) : 0;
                 const fteValue = timeSpentHours ? (timeSpentHours / 40) : 0;
@@ -1377,7 +1495,7 @@
                     <td>${t.components || t.component || ''}</td>
                     <td>${erecsoTickets}</td>
                     <td>${devTickets}</td>
-                    <td>${labels}</td>
+                    <td>${productBreakdown}</td>
                 </tr>`;
             }).join('');
         }
@@ -1402,6 +1520,7 @@
             renderProductTypeChart();
             renderEscalatingGroupsChart();
             renderIssuesByCauseChart();
+            renderProductBreakdownChart();
             renderTableRows(filteredTickets);
         }
 

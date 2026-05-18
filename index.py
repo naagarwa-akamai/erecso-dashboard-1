@@ -64,6 +64,23 @@ def format_export_date_only(value):
     return parsed.strftime('%Y-%m-%d')
 
 
+def get_product_breakdown_category(product_type):
+    value = str(product_type or '').strip().lower()
+
+    if 'api' in value and 'acceleration' in value:
+        return 'API-X'
+    if 'provision' in value:
+        return 'Provisioning Services'
+    if 'internal' in value:
+        return 'ERE-Internal-Use'
+    if value in {'amd', 'dd', 'od', 'ere-amd', 'ere-dd', 'ere-od'}:
+        return 'Media Delivery - AMD/DD/OD'
+    if value in {'ion', 'dsa', 'ere-ion', 'ere-dsa'}:
+        return 'App Perf - ION/DSA'
+
+    return 'Others'
+
+
 def ensure_sheet_tab(service, spreadsheet_id, sheet_title):
     metadata = service.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
     sheets = metadata.get('sheets', [])
@@ -164,6 +181,7 @@ def get_exportable_sustenance_tickets(selected_month=None):
         incident_priority = str(ticket.get('priority', '')).strip().lower() in {'high', 'critical'}
         service_incident = ticket.get('service_incident')
         incident_flag = 'Yes' if (service_incident not in (None, '', '-', False) or incident_priority) else 'No'
+        product_type = ticket.get('product_type', '')
 
         exported_rows.append({
             'Issue Key': ticket.get('ticket_id', ''),
@@ -171,7 +189,7 @@ def get_exportable_sustenance_tickets(selected_month=None):
             'Priority': ticket.get('priority', ''),
             'Created Date': created_dt.strftime('%Y-%m-%d'),
             'Incident/High Priority ?': incident_flag,
-            'Product Type': ticket.get('product_type', ''),
+            'Product Type': product_type,
             'Account Name': ticket.get('account_name') or ticket.get('account') or ticket.get('customer') or ticket.get('customer_name') or '',
             'Summary': ticket.get('summary', ''),
             'Issue summary post review': ticket.get('executive_summary') or ticket.get('resolution_description') or ticket.get('longterm_mitigation') or ticket.get('root_cause') or '',
@@ -186,7 +204,7 @@ def get_exportable_sustenance_tickets(selected_month=None):
             'Component': ticket.get('components') or ticket.get('component') or '',
             'ERECSO': ticket.get('flag', ''),
             'DEV TICKETS': ', '.join(dev_ticket_keys),
-            'Product Breakdown': ', '.join(ticket.get('labels', [])) if isinstance(ticket.get('labels'), list) else str(ticket.get('labels', '') or '')
+            'Product Breakdown': get_product_breakdown_category(product_type or ticket.get('request_type', ''))
         })
 
     return exported_rows
