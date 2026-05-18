@@ -411,14 +411,29 @@
         <h3 id="productBreakdownChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Count of Product Breakdown</h3>
         <canvas id="productBreakdownChart" height="360" width="1100"></canvas>
     </div></div>
-    <div>
-    <div class="section-label">Top Issues By Cause</div>
-    <div class="summary-table-wrap dashboard-container" style="padding: 10px; max-width: 620px;">
-        <h3 id="issuesByCauseChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Top Issues by Cause</h3>
-        <canvas id="issuesByCauseChart" height="450" width="1100"></canvas>
-    </div>
-    </div>
+   
     
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; width: 100%; height: auto;">
+    <div><div class="section-label">Work Category Distribution</div>
+    <div class="summary-table-wrap dashboard-container" style="padding: 16px; max-width: 620px; width: 100%;">
+        <h3 id="workCategoryChartTitle" style="margin:0 0 14px;font-size:14px;color:#172b4d;">Ticket Work Category Distribution</h3>
+        <div style="display:flex; gap:24px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+            <div style="flex:0 0 360px; max-width:420px; width:100%; margin:auto;">
+                <canvas id="workCategoryChart" height="450" width="1100"></canvas>
+            </div>
+            <div id="workCategoryOverview" style="flex:1 1 420px; font-size:13px; color:#172b4d;"></div>
+        </div>
+    </div>
+    </div>
+    <div> 
+    <div class="section-label">Top Issues By Cause</div>
+    <div class="summary-table-wrap dashboard-container" style="padding: 10px; max-width: 480px;">
+        <h3 id="issuesByCauseChartTitle" style="margin:0 0 12px;font-size:14px;color:#172b4d;">Top Issues by Cause</h3>
+        <canvas id="issuesByCauseChart" height="300" width="700"></canvas>
+    </div>
+    </div>
 </div>
 
     <div class="section-header-row">
@@ -472,6 +487,7 @@
         let toilActivityRows = [];
         let productTypeChartInstance = null;
         let productBreakdownChartInstance = null;
+        let workCategoryChartInstance = null;
         let escalatingGroupsChartInstance = null;
         let issuesByCauseChartInstance = null;
         const monthColumnIds = ['monthCol1', 'monthCol2', 'monthCol3'];
@@ -1259,6 +1275,112 @@
             });
         }
 
+        function getWorkCategoryValue(ticket) {
+            const rawValue = ticket.workcategory ?? ticket.work_category ?? ticket['Work Category'];
+            const normalized = String(rawValue || '').trim();
+            return normalized && normalized !== '-' ? normalized : 'Unknown';
+        }
+
+        function countWorkCategoriesByMonth(ticketList, monthIndex, year) {
+            const counts = {};
+
+            ticketList.forEach(ticket => {
+                const createdDate = parseDate(ticket.created);
+                if (!createdDate) return;
+                if (createdDate.getMonth() !== monthIndex || createdDate.getFullYear() !== year) return;
+
+                const category = getWorkCategoryValue(ticket);
+                counts[category] = (counts[category] || 0) + 1;
+            });
+
+            return counts;
+        }
+
+        function renderWorkCategoryChart() {
+            const { monthIndex, year } = getActiveMonthYear();
+            const monthLabel = `${monthNames[monthIndex]} ${year}`;
+            const titleElement = document.getElementById('workCategoryChartTitle');
+            const overviewElement = document.getElementById('workCategoryOverview');
+
+            if (titleElement) {
+                titleElement.textContent = `${monthLabel} Ticket Work Category Distribution by Volume`;
+            }
+
+            const counts = countWorkCategoriesByMonth(allSustenanceTickets, monthIndex, year);
+            const ordered = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+            const labels = ordered.map(([label]) => label);
+            const values = ordered.map(([, value]) => value);
+            const total = values.reduce((sum, value) => sum + value, 0);
+
+            if (overviewElement) {
+                if (!ordered.length) {
+                    overviewElement.innerHTML = '<div style="color:#5e6c84;">No work category data available for this month.</div>';
+                } else {
+                    overviewElement.innerHTML = ordered.map(([label, value]) => {
+                        const percentage = total ? ((value / total) * 100).toFixed(1) : '0.0';
+                        return `
+                            <div style="display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid #e8edf3; padding:8px 0;">
+                                <span style="font-weight:600;">${label}</span>
+                                <span style="white-space:nowrap; color:#4f5b6b;">${value} (${percentage}%)</span>
+                            </div>
+                        `;
+                    }).join('');
+                }
+            }
+
+            const ctx = document.getElementById('workCategoryChart');
+            if (!ctx) return;
+
+            if (workCategoryChartInstance) {
+                workCategoryChartInstance.destroy();
+            }
+
+            const chartLabels = labels.length ? labels : ['No data'];
+            const chartValues = values.length ? values : [1];
+            const colors = [
+                '#b276a5', '#f1ca56', '#ffff54', '#4881ea', '#d25855', '#72a255',
+                '#2a9d8f', '#f4a261', '#457b9d', '#9d4edd', '#8ecae6', '#ef476f'
+            ];
+
+            workCategoryChartInstance = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        data: chartValues,
+                        backgroundColor: chartLabels.map((_, index) => colors[index % colors.length]),
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'left',
+                            labels: {
+                                boxWidth: 12,
+                                font: { size: 12 }
+                            }
+                        },
+                        datalabels: {
+                            color: '#1f2d3d',
+                            font: {
+                                size: 11,
+                                weight: '600'
+                            },
+                            formatter: (value) => {
+                                if (!values.length) return '';
+                                const percentage = total ? ((value / total) * 100).toFixed(1) : '0.0';
+                                return `${percentage}%`;
+                            }
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+
         function renderReliabilityTable() {
             const { monthIndex, year } = getActiveMonthYear();
             const monthHeader = `${monthNames[monthIndex]} ${String(year).slice(-2)} Status`;
@@ -1603,6 +1725,7 @@
             renderEscalatingGroupsChart();
             renderIssuesByCauseChart();
             renderProductBreakdownChart();
+            renderWorkCategoryChart();
             renderTableRows(filteredTickets);
         }
 
