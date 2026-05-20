@@ -189,6 +189,28 @@
             flex-wrap: wrap;
         }
 
+        .range-filter-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .range-filter-controls label {
+            font-size: 12px;
+            color: #172b4d;
+            font-weight: 600;
+        }
+
+        .range-filter-controls input[type="date"] {
+            padding: 6px 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 12px;
+            color: #172b4d;
+            background: #fff;
+        }
+
         .export-btn {
             padding: 7px 14px;
             border-radius: 4px;
@@ -445,6 +467,37 @@
     </h3>
 </div>
 
+    <div class="section-header-row">
+        <div class="section-label" style="margin-bottom:0;">ERE Escalation Tickets</div>
+        <div class="range-filter-controls">
+            <label for="ereEscalationFromDate">From</label>
+            <input id="ereEscalationFromDate" type="date">
+            <label for="ereEscalationToDate">To</label>
+            <input id="ereEscalationToDate" type="date">
+            <button id="applyEreEscalationFilterBtn" class="export-btn" type="button">Apply Date Range</button>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <table id="ereEscalationTable">
+            <thead>
+                <tr>
+                    <th>Issue Key</th>
+                    <th>Created Date</th>
+                    <th>Status</th>
+                    <th>Request Type</th>
+                    <th>Assignee</th>
+                    <th>Summary</th>
+                </tr>
+            </thead>
+            <tbody id="ereEscalationTableBody">
+                <tr>
+                    <td colspan="6" class="empty-state">Loading ERE escalation tickets...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br/><br/><br/>
     <div class="section-header-row">
         <div class="section-label" style="margin-bottom:0;">Ticket Details</div>
         <button id="exportTicketTableBtn" class="export-btn" type="button">Export to Google Sheet</button>
@@ -1713,6 +1766,65 @@
             }).join('');
         }
 
+        function renderEreEscalationRows(ticketList) {
+            const tbody = document.getElementById('ereEscalationTableBody');
+            if (!tbody) return;
+
+            if (!Array.isArray(ticketList) || ticketList.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="empty-state">No ERE escalation tickets found for the selected date range.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = ticketList.map(ticket => {
+                const issueKey = String(ticket.ticket_id || '').trim();
+                const issueUrl = String(ticket.issue_url || `https://track.akamai.com/jira/browse/${issueKey}`);
+
+                return `<tr>
+                    <td>${issueKey ? `<a href="${issueUrl}" target="_blank" rel="noopener noreferrer">${displayCell(issueKey)}</a>` : '-'}</td>
+                    <td>${displayCell(ticket.created)}</td>
+                    <td>${displayCell(ticket.status)}</td>
+                    <td>${displayCell(ticket.request_type)}</td>
+                    <td>${displayCell(ticket.assignee)}</td>
+                    <td>${displayCell(ticket.summary)}</td>
+                </tr>`;
+            }).join('');
+        }
+
+        async function loadEreEscalationTickets() {
+            const fromDate = document.getElementById('ereEscalationFromDate')?.value || '';
+            const toDate = document.getElementById('ereEscalationToDate')?.value || '';
+            const tbody = document.getElementById('ereEscalationTableBody');
+
+            if (!fromDate || !toDate) {
+                if (!tbody) return;
+                tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Date range is not selected.</td></tr>`;
+                return;
+            }
+
+            const params = new URLSearchParams();
+
+            if (fromDate) params.set('from_date', fromDate);
+            if (toDate) params.set('to_date', toDate);
+
+            const endpoint = params.toString()
+                ? `/api/ere-escalation-tickets?${params.toString()}`
+                : '/api/ere-escalation-tickets';
+
+            try {
+                const response = await fetch(endpoint);
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Failed to load ERE escalation tickets');
+                }
+
+                renderEreEscalationRows(result);
+            } catch (error) {
+                if (!tbody) return;
+                tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Error loading ERE escalation tickets: ${error.message}</td></tr>`;
+            }
+        }
+
         function applyMonthFilter() {
             const selectedMonth = document.getElementById('monthFilter').value;
             let filteredTickets = allSustenanceTickets;
@@ -1804,15 +1916,22 @@
 
                 allSustenanceTickets = filteredTickets;
                 applyMonthFilter();
+                await loadEreEscalationTickets();
             } catch (e) {
                 document.getElementById('sustenanceTableBody').innerHTML =
                     `<tr><td colspan="21" class="empty-state">Error loading data: ${e.message}</td></tr>`;
+
+                const escalationBody = document.getElementById('ereEscalationTableBody');
+                if (escalationBody) {
+                    escalationBody.innerHTML = `<tr><td colspan="6" class="empty-state">Error loading ERE escalation tickets: ${e.message}</td></tr>`;
+                }
             }
         }
 
         document.getElementById('monthFilter').addEventListener('change', applyMonthFilter);
         document.getElementById('refreshDataBtn').addEventListener('click', refreshMonthlyData);
         document.getElementById('exportTicketTableBtn').addEventListener('click', exportTicketTableToGoogleSheet);
+        document.getElementById('applyEreEscalationFilterBtn').addEventListener('click', loadEreEscalationTickets);
         updateRefreshTimestamp(localStorage.getItem('ereSustenanceLastRefreshed'));
         loadData();
     </script>

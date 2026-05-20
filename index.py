@@ -32,6 +32,10 @@ GSHEETS_SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 GSHEETS_DEFAULT_TAB = 'ERE AI Agent Registry'
 GSHEETS_TOIL_TAB = 'Toil Activity Tracker'
 GSHEETS_EXPORT_TAB = 'ERE Sustenance Export'
+EXCLUDED_ERE_REQUEST_TYPES = {
+    'ere-delivery-portal',
+    'ere-msl-portal(temp)'
+}
 DEV_TICKET_PREFIXES = [
     'ORS-', 'CPSSRE-', 'MAPPINGENG-', 'SRMM-', 'DPEXREQ-',
     'EWDEVESC-', 'GDPM-', 'DXRE-', 'DBATTERY-', 'SECESC-','GREL-'
@@ -81,6 +85,16 @@ def get_product_breakdown_category(product_type):
         return 'App Perf - ION/DSA'
 
     return 'Others'
+
+
+def get_ticket_key_sort_value(ticket_key):
+    key_text = str(ticket_key or '').strip().upper()
+    project_key, separator, key_suffix = key_text.partition('-')
+
+    if separator and key_suffix.isdigit():
+        return (project_key, int(key_suffix), key_text)
+
+    return (project_key, float('inf'), key_text)
 
 
 def ensure_sheet_tab(service, spreadsheet_id, sheet_title):
@@ -349,6 +363,73 @@ def get_ere_sustenance_sreinc_ticket_details():
             sreinc_ticket_details = json.load(file)
 
         return jsonify(sreinc_ticket_details), 200
+
+    except Exception as e:
+        return jsonify({"error": f"An error occurred: {str(e)}"}), 500
+
+
+@app.route('/api/ere-escalation-tickets', methods=['GET'])
+def get_ere_escalation_tickets():
+    try:
+        if not os.path.exists(ERESUSTENANCE_JSON_FILE_PATH):
+            return jsonify({"error": "Sustenance JSON file not found"}), 404
+
+        from_date_text = str(request.args.get('from_date', '') or '').strip()
+        to_date_text = str(request.args.get('to_date', '') or '').strip()
+
+        from_date = None
+        to_date = None
+
+        if from_date_text:
+            try:
+                from_date = datetime.strptime(from_date_text, '%Y-%m-%d').date()
+            except ValueError:
+                return jsonify({"error": "Invalid from_date. Use YYYY-MM-DD format."}), 400
+
+        if to_date_text:
+            try:
+                to_date = datetime.strptime(to_date_text, '%Y-%m-%d').date()
+            except ValueError:
+                return jsonify({"error": "Invalid to_date. Use YYYY-MM-DD format."}), 400
+
+        if from_date and to_date and from_date > to_date:
+            return jsonify({"error": "from_date cannot be greater than to_date."}), 400
+
+        with open(ERESUSTENANCE_JSON_FILE_PATH, 'r', encoding='utf-8') as file:
+            sustenance_ticket_details = json.load(file)
+
+        filtered_tickets = []
+        for ticket in sustenance_ticket_details:
+            ticket_id = str(ticket.get('ticket_id', '') or '').strip().upper()
+            if not ticket_id.startswith('ERE-'):
+                continue
+
+            request_type = str(ticket.get('request_type', '') or '').strip().lower()
+            if request_type in EXCLUDED_ERE_REQUEST_TYPES:
+                continue
+
+            created_dt = parse_datetime_value(ticket.get('created'))
+            if not created_dt:
+                continue
+
+            created_date = created_dt.date()
+            if from_date and created_date < from_date:
+                continue
+            if to_date and created_date > to_date:
+                continue
+
+            filtered_tickets.append({
+                'ticket_id': ticket.get('ticket_id', ''),
+                'created': created_dt.strftime('%Y-%m-%d'),
+                'status': ticket.get('status', ''),
+                'request_type': ticket.get('request_type', ''),
+                'summary': ticket.get('summary', ''),
+                'assignee': ticket.get('assignee', ''),
+                'issue_url': f"https://track.akamai.com/jira/browse/{ticket.get('ticket_id', '')}"
+            })
+
+        filtered_tickets.sort(key=lambda item: get_ticket_key_sort_value(item.get('ticket_id')))
+        return jsonify(filtered_tickets), 200
 
     except Exception as e:
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500
