@@ -1,0 +1,974 @@
+[
+    {
+        "ticket_id": "ERE-3110",
+        "AI_summary": "Investigation on 503 spike for a live event. Overload of a Cloud Interconnect region due to attack on TikTok resulted in self-selfsuspension of multiple machines in the region."
+    },
+    {
+        "ticket_id": "ERE-3111",
+        "AI_summary": "- ERR_FWD_SSL_HANDSHAKE from MCH server. 1: Suboptimal latching of the requests so the fwd requests to MCH are high in number from the edge for flash crowds."
+    },
+    {
+        "ticket_id": "ERE-3112",
+        "AI_summary": "F-CS-10721058 - ChinaCDN Users Mostly Getting Mapped Outside of China. product EOL - capacity is no longer expanding , there are some increases in flit heavy traffic at ca2 level which further causes ca traffic to be more ooc."
+    },
+    {
+        "ticket_id": "ERE-3113",
+        "AI_summary": "Spike in Flits on MR 15220 caused ghost rolls and suspend flags for multiple regions in Latam. series of attacks - both to tiktok and vavle over holiday weeks has caused performance issues at large."
+    },
+    {
+        "ticket_id": "ERE-3114",
+        "AI_summary": "Increase timeout request for network:http2.connection-write-timeout. There was an ERE Jira opened(ERE-2776) for the same issue and that was closed as customer mentioned they were not going to pursue increasing connection-write-timeout."
+    },
+    {
+        "ticket_id": "ERE-3115",
+        "AI_summary": "SOPPESSL RTT degradation using new ASGARD system. NOCC Ticket: At 7:00 PM UTC alert [SOPP ESSL throughput degradation using new ASGARD system|https://alerts.akamai.com/adms/detail.jsp?definition_id=24195] fired."
+    },
+    {
+        "ticket_id": "ERE-3116",
+        "AI_summary": "Slow performance for ICP requests. Increased timeouts seen only on ICP requests, likely due to a ghost bug."
+    },
+    {
+        "ticket_id": "ERE-3117",
+        "AI_summary": "High count of ERR_SSL_HANDSHAKE leading to 503s for Sony Interactive. Concentration of traffic and aggressive retries causes overloads to the region at SS layer."
+    },
+    {
+        "ticket_id": "ERE-3118",
+        "AI_summary": "Greenseer alerts for week of 2025-12-29. 2025-12-29: * ESSL Region 50103 saw 32 midgress_hits anomalies at 2:05 PM UTC * ESSL Install Group 1 saw 23 midgress_hits_ig anomalies at 5:10 PM UTC * ESSL Install Group 7 saw 21 midgress_hits_ig anomalies at 5:10 PM UTC * ESSL Install Group 10 saw 24 midgress_hits_ig anomalies at 5:10 PM UTC * ESSL..."
+    },
+    {
+        "ticket_id": "ERE-3119",
+        "AI_summary": "Attack on Mass Mutual (cpcode 348222) on 12/31/2025 17:00-17:30 UTC. The attack caused some global suspensions spike between 17:00-17:30 UTC, the number of self-suspensions on A map likely caused some CFBing to occur."
+    },
+    {
+        "ticket_id": "ERE-3120",
+        "AI_summary": "Alert - High Freeflow Ghost Rolls (1.0%)"
+    },
+    {
+        "ticket_id": "ERE-3121",
+        "AI_summary": "Schema Generation. Schema Generation for 22.4.1"
+    },
+    {
+        "ticket_id": "ERE-3122",
+        "AI_summary": "HTTP/3 logs impossibly huge ~140 TB in the r70-q-b billing field SI-00023390"
+    },
+    {
+        "ticket_id": "ERE-3123",
+        "AI_summary": "Platform/Product default MPE trigger behavior in DSA. As identified in ERE-3111, the platform/product default MPE behavior is unknown."
+    },
+    {
+        "ticket_id": "ERE-3124",
+        "AI_summary": "China mobile users mapping to HK routinely. China mapping to HK poor performance."
+    },
+    {
+        "ticket_id": "ERE-3125",
+        "AI_summary": "Greenseer alerts for week of 2026-01-05. 2026-01-05: * High FreeFlow Ghost Rolls at 2:45 AM UTC 2026-01-06: * High FreeFlow Ghost Rolls at 10:36 AM UTC 2026-01-07: * ESSL Region 50309 saw 34 ssl_hits anomalies at 12:48 AM UTC * FreeFlow install group 2 saw 21 midgress_hits_ig anomalies at 9:19 AM UTC * FreeFlow install group 7 saw 21 midgress_hits_ig..."
+    },
+    {
+        "ticket_id": "ERE-3126",
+        "AI_summary": "Request for custom edge map which excludes HK and Macau. Need to meet Taiwan government compliance."
+    },
+    {
+        "ticket_id": "ERE-3127",
+        "AI_summary": "Brotli compressed incomplete object on forward side. Issue : Akamai received an HTTP 200 response from the origin but timed out after approximately 122 seconds with the error message ERR_READ_TIMEOUT | before_resp_body{}}}."
+    },
+    {
+        "ticket_id": "ERE-3128",
+        "AI_summary": "Region overloaded issues during Super Bowl for NBC. Ask for review of config in lieu of superbowl prep to overcome noisy neighbor issue .The analysis done by BOCC showed Tiktok (2 of which already spread) and Roblox domains to be highest hit contributors ."
+    },
+    {
+        "ticket_id": "ERE-3129",
+        "AI_summary": "F-CS-10780325 - High Metadata Application Time Seen From One Region. Rogue Ghost release v22.4.0."
+    },
+    {
+        "ticket_id": "ERE-3130",
+        "AI_summary": "Midgress showing a high Turnaround time while contacting the SS parent. Impacted regions (r47448 r47393)."
+    },
+    {
+        "ticket_id": "ERE-3131",
+        "AI_summary": "ESSL release checklisting - ESSL 18438 22.4.0. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3132",
+        "AI_summary": "Large number of machine for 22.4.0 ESSL phase one timed out on mdt-agent update"
+    },
+    {
+        "ticket_id": "ERE-3133",
+        "AI_summary": "white-hat Risk of impact from contract migration for Tiktok. Investigate the why the VCD request are failing and low offload is observed"
+    },
+    {
+        "ticket_id": "ERE-3134",
+        "AI_summary": "India SiteShield flit capacity concern due to recent customer traffic pattern changes. DNSP Leader in SiteShield region r35329 (TATA-DELp, India) became CPU and memory bound due to overload from two concurrent traffic pattern changes: (1) demand spike from Flipkart rukminim2.flixcart.com (HTTP/2, maprule 1327) on India Culver SiteShield map (mr:11857); (2) Jio FOTA ESSL traffic offload shift (CP 586523) since Jan..."
+    },
+    {
+        "ticket_id": "ERE-3135",
+        "AI_summary": "navigation TTFB (as opposed to other variations of TTFB) and standard LCP metrics, which saw an average deficit in Akamai performance (i.e. slower) in the UK and AUS of ~5% and ~15% in the US, when compared to Cloudflare."
+    },
+    {
+        "ticket_id": "ERE-3136",
+        "AI_summary": "F-CS-10787620 - Mobile Content Cached Under Desktop CID. Account: IE ONLINE MEDIA SERVICES PRIVATE LIMITED Hostname: indianexpress.com Configuration: indianexpress.com v501 The configuration has logic to extract the is_mobile attribute from the EDC output."
+    },
+    {
+        "ticket_id": "ERE-3137",
+        "AI_summary": "fail-action2 forward request ignores lma.origin-edge off flag. During a live event in December, this account experienced an issue on the origin server and conducted an investigation."
+    },
+    {
+        "ticket_id": "ERE-3138",
+        "AI_summary": "RET and XFER time are causing high flit purely because of the change made by applying API security. RET+XFER Increase after enabling APISEC on ajdacent domain."
+    },
+    {
+        "ticket_id": "ERE-3139",
+        "AI_summary": "ESSL release checklisting - ESSL 18438.1 22.4.0.1. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3140",
+        "AI_summary": "Greenseer alerts for week of 2026-01-12. 2026-01-12: * ESSL Install Group 4 saw 23 edge_hits_ig anomalies at 10:41 PM UTC * ESSL Install Group 2 saw 21 edge_hits_ig anomalies at 10:41 PM UTC 2026-01-13: * FreeFlow Install Group 3 saw 21 orig_hits_ig anomalies at 6:05 PM UTC * FreeFlow Install Group 2 saw 24 orig_hits_ig anomalies at 6:05 PM UTC..."
+    },
+    {
+        "ticket_id": "ERE-3141",
+        "AI_summary": "FreeFlow Self-Suspension Alert: Continent Threshold Exceeded. FreeFlow Self-Suspension Alert: Continent Threshold Exceeded \u2022 AS: 5.07% (Count: 2164/42674) | Limit: 4.0% \u2022 EU: 4.91% (Count: 2018/41086) | Limit: 4.0% \u2022 SA: 4.41% (Count: 376/8530) | Limit: 4.0% \u2022 OC: 4.87% (Count: 324/6655) | Limit: 4.0% \u2022 NA: 4.27% (Count: 1483/34700) | Limit: 4.0% cc: ~jthompso ~vswamina ~jhook"
+    },
+    {
+        "ticket_id": "ERE-3142",
+        "AI_summary": "trafic shift to JP ESN region. Staging region 53126 taking all ESN ESSL traffic."
+    },
+    {
+        "ticket_id": "ERE-3143",
+        "AI_summary": "22nd Jan 2026 - For few matches of WPL, where we saw the region overload issue, customer has confirmed that there was a issue/bug at their end. Ads, segments are not expected, only child manifest calls are expected."
+    },
+    {
+        "ticket_id": "ERE-3144",
+        "AI_summary": "- modify ACAO rule not working after XML opt is enabled https://docs.google.com/document/d/14jxj-8sHTNz3wSn2eVQMc6mWHUcT_tbg/edit#heading=h.nbhahd8xpd10. Linkedin: modify ACAO rule not working after XML opt is enabled."
+    },
+    {
+        "ticket_id": "ERE-3145",
+        "AI_summary": "Citi seeing poor performance from London when using Brave region in Germany to reach parent and origin via London. Citi's customer 'Equals' has reported performance problems when requesting from AWS EC2 London which occur when the requests go through the Brave region in Germany from our research."
+    },
+    {
+        "ticket_id": "ERE-3146",
+        "AI_summary": "F-CS-10816794 - FirstByteTimeout For PUT Is Being Retried"
+    },
+    {
+        "ticket_id": "ERE-3147",
+        "AI_summary": "Flits overload by horse racing event traffic affects multiple customer\u2019s connectivity in mr1327. Japan Racing and Net Dreamers have flit intensive API like traffic but use DSA product and map."
+    },
+    {
+        "ticket_id": "ERE-3148",
+        "AI_summary": "INV-Purge logged but Ghost served stale. _emphasized text_Hello Stale content served after Purge by CPcode (Invalidate) with Content-length *608726* - CPcode : ION - semiconductor.samsung.com (1249823) - URL : - Purge : 1/11 *23:43:58* UTC - Stale content confirmed : 1/13 06:22:27 UTC Purge was submitted at: SCT : https://sct-aps.akamai.com/sct/purgelogs/7c505b/ - Fast gate logs - Fast Gate Server IP: 23.33.116.83..."
+    },
+    {
+        "ticket_id": "ERE-3149",
+        "AI_summary": "- 256 segfaults causing financial transactions to fail"
+    },
+    {
+        "ticket_id": "ERE-3150",
+        "AI_summary": "I do see that the original request is served from negative cache and a fail-action is triggered, but the fail-action requests are \u201clatched\u201d to the original negatively cached response and I see the the fail-action metadata includes no-store. Recommended adjust no-store in fail-action metadata to allow the edge to forward and process fail-action requests."
+    },
+    {
+        "ticket_id": "ERE-3151",
+        "AI_summary": "Increase in latency affecting customer's data pull since 15 Jan SI-00023427. Suboptimal mapping due to rouge PP."
+    },
+    {
+        "ticket_id": "ERE-3152",
+        "AI_summary": "Site shield parent rolled due to excessive test traffic. Account: NIKE, Inc."
+    },
+    {
+        "ticket_id": "ERE-3153",
+        "AI_summary": "29-Jan Issue: Increased latency to end user. Resolution Summary: Phase 2 incident activities 1."
+    },
+    {
+        "ticket_id": "ERE-3154",
+        "AI_summary": "CBS removed Akamai from the CDN rotation during their coverage of the NFL playoffs on Saturday 1/17/26 after a moderate spike in edge 504 errors. After review it looks as though failover to the customer's configured backup origin is working with relative success but 200 responses are not being returned to the edge causing negatively cached 504 responses to be..."
+    },
+    {
+        "ticket_id": "ERE-3155",
+        "AI_summary": "B-V-6AQ2J8P F-CS-10827625 Ghost rolls on r52910. Software bug."
+    },
+    {
+        "ticket_id": "ERE-3156",
+        "AI_summary": "We're having a problem with some tags in failover metadata when multiple failover behaviors are matched and last match win is expected. Issue is that the pm behavior doesn't generate path tag when option modify incoming path = no and it doesn't generate preserve-query-string tag when option include incoming qs = no Thus, when a request activated the behavior with..."
+    },
+    {
+        "ticket_id": "ERE-3157",
+        "AI_summary": "cloud wrapper migration question. Hi team, I have a cloud wrapper migration accross accounts question."
+    },
+    {
+        "ticket_id": "ERE-3158",
+        "AI_summary": "Greenseer alerts for week of 2026-01-19. 2026-01-19: * ESSL Install Group 2 saw 24 orig_hits_ig anomalies at 4:04 AM UTC * ESSL Install Group 1 saw 25 orig_hits_ig anomalies at 4:05 AM UTC * ESSL Install Group 4 saw 27 orig_hits_ig anomalies at 4:05 AM UTC * ESSL Install Group 2 saw 28 orig_hits_ig anomalies at 4:05 AM UTC *..."
+    },
+    {
+        "ticket_id": "ERE-3159",
+        "AI_summary": "Baseline Push. Baseline Push for the week of 1/26/2026"
+    },
+    {
+        "ticket_id": "ERE-3160",
+        "AI_summary": "Customer reported a throughput drop intermittently, which correlates with a 5-second connect timeout to their health requests. At this point, we don't have their traffic, and we continue to get reports of a connect timeout."
+    },
+    {
+        "ticket_id": "ERE-3161",
+        "AI_summary": "EIPB Reachability issues reported from multiple locations in England (London, Manchester, Cambridge). 79% of errors attributed to Network Loss detected via ThousandEyes and confirmed by end-users towards Akamai International B.V."
+    },
+    {
+        "ticket_id": "ERE-3162",
+        "AI_summary": "Look to see if there is any obvious perf improvements that could help general performance. Dior Config review for - SI-00023426."
+    },
+    {
+        "ticket_id": "ERE-3163",
+        "AI_summary": "ESSL release checklisting - ESSL 18557-22.4.1. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3164",
+        "AI_summary": "- OOC mapping in OIPACL regions. MSFT: OIPACL OOC mapping."
+    },
+    {
+        "ticket_id": "ERE-3165",
+        "AI_summary": "Ghost rolls on FF network due to TikTok origin outage. Recurrence of GHOST-5983."
+    },
+    {
+        "ticket_id": "ERE-3166",
+        "AI_summary": "Greenseer alerts for week of 2026-01-26. 2026-01-26: * No alerts 2026-01-27: * High FreeFlow Ghost rolls at 1:03 PM UTC * High FreeFlow Ghost rolls at 1:30 PM UTC * High FreeFlow Ghost rolls at 4:15 PM UTC * High FreeFlow Ghost rolls at 4:41 PM UTC 2026-01-28: * ESSL region 44547 saw 40 orig_hits anomalies at 11:41 AM UTC..."
+    },
+    {
+        "ticket_id": "ERE-3167",
+        "AI_summary": "F-CS-10856549 - First Byte Timeouts From One Edge Parent - 23.199.233.206"
+    },
+    {
+        "ticket_id": "ERE-3168",
+        "AI_summary": "If adding CI to the configuration caused an increase in that error, then it is likely metadata related to CI that may have caused it. We are not familiar with the product and cannot provide advisory on metadata changes."
+    },
+    {
+        "ticket_id": "ERE-3169",
+        "AI_summary": "Defect on property manager. Continuation of https://track.akamai.com/jira/browse/PRTLDEVOPS-84647 IAT/PS team have identified a possible defect where Property Manager Includes fail to honor failover origin configuration when the include is invoked within a main PM config."
+    },
+    {
+        "ticket_id": "ERE-3170",
+        "AI_summary": "Mobiile Rider: Incorrect forward hostname"
+    },
+    {
+        "ticket_id": "ERE-3171",
+        "AI_summary": "It is confirmed that while 50 TB is the current system-enforced limit per Web Optimized CW configuration, higher capacity (up to 150 TB in a single configuration) can be considered only as an exception, subject to validation of a strictly web-only use case. The limit exists to prevent misuse of Web CW capacity for media traffic."
+    },
+    {
+        "ticket_id": "ERE-3172",
+        "AI_summary": "Summary ---------------------------- 1. Review of SSAI setup being done and working with map-ops to scale the chc1 (TD0) map - GSPMAPSTRA-5199 , Slot per-spread to 24 request in progress - MAPPINGENG-8172 2."
+    },
+    {
+        "ticket_id": "ERE-3173",
+        "AI_summary": "The video is not playing on Safari, it works on Chrome and Firefox. The staging version has TTL of 365 days enabled."
+    },
+    {
+        "ticket_id": "ERE-3174",
+        "AI_summary": "F-CS-10784350: Shared certificate fails SSL handshake for localhost request"
+    },
+    {
+        "ticket_id": "ERE-3175",
+        "AI_summary": "Out-of-country mapping on W.i6w40, W.i6w41, and W.i6w42 for the Reliance JIO provider is causing an increase in 5xx errors at the delivery. major increase in traffic combined with install causing deviations of oocm, first leg of request sometimes had issues but retry logic helped reducing error rate to be fairly low."
+    },
+    {
+        "ticket_id": "ERE-3176",
+        "AI_summary": "Cloud Interconnect slow DNS for Charles Schwab. The first request is expected to behave this way since the LL map entry will not initially be available in the ghost cache."
+    },
+    {
+        "ticket_id": "ERE-3177",
+        "AI_summary": "OpenSSL 167772454: EOF error details. Ref:"
+    },
+    {
+        "ticket_id": "ERE-3178",
+        "AI_summary": "Spiky traffic load caused self-suspension on parents and midgress SSL errors. Midgress SSL handshake failures due to spike."
+    },
+    {
+        "ticket_id": "ERE-3179",
+        "AI_summary": "F-CS-10801057: Need assistance determining why fail-action is being triggered. Customer: Fidelity Investments (Premium_3.0) Property: } (}) Hostname: snap-news.mds.fidelity.com Cloudlet Policy: EIMD_prod2_ALB Load Balancer ID: snap_news_mds Logs: } Property is seeing an issue where it looks like fail-action is being triggered when there are no failed forward requests."
+    },
+    {
+        "ticket_id": "ERE-3180",
+        "AI_summary": "- Expedia consuming majority of ChinaCDN ESSL flits. Expedia has the highest flit traffic on any account in ESSL China."
+    },
+    {
+        "ticket_id": "ERE-3181",
+        "AI_summary": "Event Traffic seem to be highly concentrated causing overloads across highly serving a few machines/regions. One of such regions is r48991."
+    },
+    {
+        "ticket_id": "ERE-3182",
+        "AI_summary": "- Errors & Stalled threads with regions reaching 100% Flit"
+    },
+    {
+        "ticket_id": "ERE-3183",
+        "AI_summary": "- If-none-match requests to forward server when the object is not in cache. Account : HT Digital Streams Ltd Cpcode: 1739400 Hostname: www.livehindustan.com For a customer reported slowness issue, we noticed that lot of requests were going forward to parent servers or origin for the cacheable requests."
+    },
+    {
+        "ticket_id": "ERE-3184",
+        "AI_summary": "It seems related to EW-22544, where some EdgeKV tests were failing randomly with 400 bad request on the Subrequest. As discussed with Jesny, it needs to be taken up via EWDEVESC Jira project."
+    },
+    {
+        "ticket_id": "ERE-3185",
+        "AI_summary": "The oddity here is that, despite failover being triggered, edge servers are still making ICP peer requests, which is not expected per standard metadata logic. We should try disabling ICP globally (not tied to tier match) to ensure that peer queries do not interfere with failover logic."
+    },
+    {
+        "ticket_id": "ERE-3186",
+        "AI_summary": "- Region overloaded during NFL game. NBC: Region overloaded during NFL game, Jan 18."
+    },
+    {
+        "ticket_id": "ERE-3187",
+        "AI_summary": "Greenseer alerts for week of 2026-02-02. 2026-02-02: * FreeFlow install group 10 saw 24 orig_hits_ig anomalies at 9:03 AM UTC * Anomaly spike for ESSL SSL slot 9616 at 6:14 PM UTC 2026-02-03: * No alerts 2026-02-04: * FreeFlow region 44572 saw 49 edge_hits anomalies at 11:02 AM UTC 2026-02-05: * Anomaly spike for ESSL SSL slot 121907 (TikTok) at..."
+    },
+    {
+        "ticket_id": "ERE-3188",
+        "AI_summary": "- SRO failed between MCH and CW causing 503s. AMZ: 503 because SR assignment failed between MCH and CW."
+    },
+    {
+        "ticket_id": "ERE-3189",
+        "AI_summary": "China Azure v21 container mapped out of China. OOCM due to lack of capacity."
+    },
+    {
+        "ticket_id": "ERE-3190",
+        "AI_summary": "WBD ERE Review for March Madness Live 2026. Event review."
+    },
+    {
+        "ticket_id": "ERE-3191",
+        "AI_summary": "Delivery Policy deletion was failing at the EHN_POLICY_REMOVE step because customers had already deleted the associated Edge Hostnames. When the workflow attempted to detach the policy, HAPI returned 404 \u2013 ehn-not-found, which was treated as a fatal error."
+    },
+    {
+        "ticket_id": "ERE-3192",
+        "AI_summary": "- POC requests missing outgoing header I can see the tag discussed here https://track.akamai.com/jira/browse/GHOSTWEB-657 is only available in IM pearl file, so the engineering tag approval is of no consequence here, Here the issue was addressed in metadata by adding the headers whose values are derived from EDC to the incoming request. Recommended to add the header \"Used-Edc-to-determine-Accept-Video: 1\" to..."
+    },
+    {
+        "ticket_id": "ERE-3193",
+        "AI_summary": "OOC Edge using same network path on Primary TD and Backup TD map. Transient network issue in the international link b/w SIN and IN."
+    },
+    {
+        "ticket_id": "ERE-3194",
+        "AI_summary": "ESSL release checklisting - ESSL 18671-22.4.2. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3195",
+        "AI_summary": "Ghost doesn't respect read or client timeouts. Incorrect origin server-type match for api-prod2.dbattery.akamai.com."
+    },
+    {
+        "ticket_id": "ERE-3196",
+        "AI_summary": "Latency spikes observed in WPL event for Jio Hotstar on Feb 3rd on MCDN workflow. Tiktok's spillover spiky traffic from NP."
+    },
+    {
+        "ticket_id": "ERE-3197",
+        "AI_summary": "- ERR_ACCESS_DENIED|sbsd_challenge with Content protector due to brotli compression. Account: Moet Hennessy Hostname: www.dior.com PM Config: Dior_prod v574 Security Config: Dior v.315 We were seeing a blank page for , logs showed a 429 response with error ERR_ACCESS_DENIED|sbsd_challenge."
+    },
+    {
+        "ticket_id": "ERE-3198",
+        "AI_summary": "icp delay queries information. ==== Original context ======= Utkalika Sahani \u2022 Savan good morning one help needed so we wanted to see where the icp delays are coming i used icp debug to check the delays, i can see the delay in 2nd f-line which is picp step, but why the delay is in first f-line some help is needed..."
+    },
+    {
+        "ticket_id": "ERE-3199",
+        "AI_summary": "PhonePe: Review increase in flits. Change in aggregation of Rate limitng policies increase the flit consumption and impact the Request pre processing (RET/TAT) signficantly."
+    },
+    {
+        "ticket_id": "ERE-3200",
+        "AI_summary": "The rate limiting is not working as expected. As per the log lines and the metadata trace, it seems like the behavior is being triggered, but when the RATELIMIT_IN_THRESHOLD is set to 17s, it does not take any impact and the throttling started just after the 5/6sec, which seems to be a default value as mentioned here https://collaborate.akamai.com/confluence/spaces/DPPE/pages/375816789/Max+Pacing+Rate+-+PM+Design It seems..."
+    },
+    {
+        "ticket_id": "ERE-3201",
+        "AI_summary": "High flits caused intermittent timeout to end users. Tiktok traffic on 2047 , along side a bit of Coupang , cause brief overload."
+    },
+    {
+        "ticket_id": "ERE-3202",
+        "AI_summary": "Not able to add hostnames on the DPM. The failure is occurring in the EHN_POLICY_ADD step due to HAPI rejecting the EHNID registration request with error code EHNID_BAD_INPUT_0006."
+    },
+    {
+        "ticket_id": "ERE-3203",
+        "AI_summary": "Increase in miss rate and TAT midgress. Mapping change causing TAT spike."
+    },
+    {
+        "ticket_id": "ERE-3204",
+        "AI_summary": "The Delivery Policy Assignment Default_SNI_map (267) for Digipolis Antwerpen was stuck in a Failed state due to an error at the EHN_POLICY_REMOVE step. The workflow attempted to remove the policy from a deleted Edge Hostname (ID 6095907), resulting in a 404 from HAPI, which was treated as a hard failure instead of an idempotent success."
+    },
+    {
+        "ticket_id": "ERE-3205",
+        "AI_summary": "It was originally discussed to move Tesla host to CA map (p8 media map) to free up p10 ca2 traffic. However business choice where it stands is to leave this for now, since its a software release the expectation is that it will reduce in the near term - though was brought up there will be subsequent events."
+    },
+    {
+        "ticket_id": "ERE-3206",
+        "AI_summary": "Value confirmation for GHOST-6267. Value confirmation once a fix is released"
+    },
+    {
+        "ticket_id": "ERE-3207",
+        "AI_summary": "Frequent spikes on bifrost-api.hotstar.com during ICC T20 WC causing delivery impact. Spiky traffic on API workflow hitting SS layer on large event causing overload."
+    },
+    {
+        "ticket_id": "ERE-3208",
+        "AI_summary": "- Breadcrumbs missing \"c=o\" not reflecting origin/forwarding. We are seeing Breadcrumbs (bc) values that do not include the expected origin hop indicator (c=o), even though the request did go to origin."
+    },
+    {
+        "ticket_id": "ERE-3209",
+        "AI_summary": "Greenseer alerts for week of 2026-02-09. 2026-02-09: * High FreeFlow Ghost Suspensions at 10:47 AM UTC * High FreeFlow Ghost Suspensions at 11:31 AM UTC * High ESSL Ghost Suspensions at 12:01 PM UTC * High ESSL Ghost Suspensions at 12:18 PM UTC * High ESSL Ghost Suspensions at 12:40 PM UTC * High ESSL Ghost Suspensions at 12:43 PM..."
+    },
+    {
+        "ticket_id": "ERE-3210",
+        "AI_summary": "The migration is moved to 25th March 2026. Contract Type Switch Migrations - Media Products."
+    },
+    {
+        "ticket_id": "ERE-3211",
+        "AI_summary": "16th Feb CW POC requests to Origin. There are two requests from CW to Origin, one request from CW Hop1 to Origin and another request from CW Hop2 to Origin due to which, there is more traffic delivered due to the duplicated requests."
+    },
+    {
+        "ticket_id": "ERE-3212",
+        "AI_summary": "Greenseer alerts for week of 2026-02-16. 2026-02-16: * Anomaly spike for ESSL SSL slot 9616 at 6:11 PM UTC 2026-02-17: * FreeFlow Install Group 2 saw 21 midgress_hits_ig anomalies at 7:00 AM UTC * FreeFlow Install Group 10 saw 22 midgress_hits_ig anomalies at 7:00 AM UTC * FreeFlow Install Group 8 saw 21 midgress_hits_ig anomalies at 7:01 AM UTC *..."
+    },
+    {
+        "ticket_id": "ERE-3213",
+        "AI_summary": "- Check if pre-spread is needed. Brandlive: Customer traffic causing spikes in flits."
+    },
+    {
+        "ticket_id": "ERE-3214",
+        "AI_summary": "OOC mapping from AU. OOC mapping from AU to US and APAC."
+    },
+    {
+        "ticket_id": "ERE-3215",
+        "AI_summary": "Suspension on Large Region (52250) in Frankfurt Germany. Switch issue for BUM based traffic that on vendor that is used by LR switches."
+    },
+    {
+        "ticket_id": "ERE-3216",
+        "AI_summary": "ESSL release checklisting - ESSL 18701-22.4.3. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3217",
+        "AI_summary": "F-CS-10933019 - Slow Handshake Caused by Suspendflag 2048. Paramount and Verizon causing instabilities for JPMC."
+    },
+    {
+        "ticket_id": "ERE-3218",
+        "AI_summary": "F-CS-10958106-iCloud pvt relay - Increased 504s for gb-gmt"
+    },
+    {
+        "ticket_id": "ERE-3219",
+        "AI_summary": "Increase in Pristine Latency during T20 World Cup for JioStar. Demand Spikes in SSAI config leads to sharp flit load increase in chc1 maprule causing region overloads."
+    },
+    {
+        "ticket_id": "ERE-3220",
+        "AI_summary": "Greenseer alerts for week of 2026-02-23. 2026-02-23: * FreeFlow Install Group 1 saw 25 orig_hits_ig anomalies at 7:47 AM UTC * FreeFlow Install Group 2 saw 25 orig_hits_ig anomalies at 7:48 AM UTC * FreeFlow Region 43107 saw 32 ssl_hits anomalies at 1:54 AM 2026-02-24: * ESSL Region 45657 saw 31 orig_hits anomalies at 7:22 PM UTC 2026-02-25: * ESSL..."
+    },
+    {
+        "ticket_id": "ERE-3221",
+        "AI_summary": "VIP routing traffic to suspended machines in region 49661. No issues seen from platform side , but customer faced ssl_timeouts on their VIP slot ."
+    },
+    {
+        "ticket_id": "ERE-3222",
+        "AI_summary": "Recurring Availability drops with Ghost rolls for VIP slot. Hey Folks, Customer saw traffic drops TCP connect fails multiple times in the last week."
+    },
+    {
+        "ticket_id": "ERE-3223",
+        "AI_summary": "Ghost release breaking chunked encoding?. *Background:* CREACT-4211 EE-00023514: *Investigation:* I am able to consistently reproduce the issue when spoofing to Edge having: potentially problematic ghost version being: SWLABEL=software-FF-18700.0.0 compared to: SWLABEL=software-FF-18670.0.0 *Problem Statement:* Client sends PUT requests with Transfer-Encoding: chunked including trailing headers in the end."
+    },
+    {
+        "ticket_id": "ERE-3224",
+        "AI_summary": "the configuration process was completed at 17:31 IST. Based on my understanding, there were likely multiple processes queued on the MROM side (tower), which resulted in the extended waiting period we observed."
+    },
+    {
+        "ticket_id": "ERE-3225",
+        "AI_summary": "Comcast: Unexpected Akamai pragma headers sent to clients. Customer reported Edge sendin Pragma headers when not requested."
+    },
+    {
+        "ticket_id": "ERE-3226",
+        "AI_summary": "Sudden flit drop causing intermittent timeout to end users. Short lived flit spikes from multiple Cpcodes - TikTok,Coupang,TWC."
+    },
+    {
+        "ticket_id": "ERE-3227",
+        "AI_summary": "Forward Errors with Multiple ECORs in India. Airtel is serving internet traffic from India towards European destination through Dubai and London router via different subsea cable including EIG, SWM4, IMEWE etc."
+    },
+    {
+        "ticket_id": "ERE-3228",
+        "AI_summary": "Greenseer alerts for week of 2026-03-02. 2026-03-02: * Anomaly spike for ESSL SSL slot 101087 at 8:33 PM UTC * Anomaly spike for ESSL SSL slot 101087 at 8:58 PM UTC 2026-03-03: * Anomaly spike for ESSL SSL slot 101087 at 9:48 AM UTC 2026-03-04: * No alerts 2026-03-05: * FreeFlow Install Group 8 saw 21 midgress_hits_ig anomalies at 8:38..."
+    },
+    {
+        "ticket_id": "ERE-3229",
+        "AI_summary": "High CPU resource consumption Region 51513. Warner: High CPU resource consumption Region 51513."
+    },
+    {
+        "ticket_id": "ERE-3230",
+        "AI_summary": "5xx Spikes on Delivery Segments, TD \u2013 OS Timeouts and Negative Caching on FA. * Recurring 5xx spikes on delivery segments observed on 1st March (Hindi / ROL), primarily correlated with OS timeouts and subsequent negative caching behavior impacting both primary and FA legs."
+    },
+    {
+        "ticket_id": "ERE-3231",
+        "AI_summary": "Spike in Flits on Region 51474 on Edge Map 1418 (Not SiteShield). event cause flit based issue on single region, also customer wanted confirmation on change."
+    },
+    {
+        "ticket_id": "ERE-3232",
+        "AI_summary": "Schema Generation. Schema Generation for 22.4.5"
+    },
+    {
+        "ticket_id": "ERE-3233",
+        "AI_summary": "Baseline Push for the week of 3/8/2026. Baseline Triage: *Week of 3/9* Vidya to edit/push Baseline Change 5922: Ghost 22.4.5 pre-release rollback tags(Phase I 3/18, need diff & schema - John) Baseline Change 5917: Allow WAF for h3-29 on Freeflow Baseline Change 5919: Enable visibility for PQC on FF Baseline Change 5920: WebSockets inspection - fix rate-limit values NCOP Baseline..."
+    },
+    {
+        "ticket_id": "ERE-3234",
+        "AI_summary": "- Fandago showing errors in Tvs 11th March Fandango living room TV devices (Vizio, Samsung, LG, Hisense, PS5, Xbox One) experienced intermittent DASH playback stalls and network errors. The player logged failed byte-range requests with ERR_POC_FWD_NOT_206|validatePocRangeResponse, causing visible playback interruptions \u2014 approximately 500 errors across ~20k sessions in a 5-hour window."
+    },
+    {
+        "ticket_id": "ERE-3235",
+        "AI_summary": "The customer reported getting a download with a different MD5sum compared to the file at the origin. We were able to reproduce the issue with different MD5sums returned from different edges."
+    },
+    {
+        "ticket_id": "ERE-3236",
+        "AI_summary": "ERR_FIRST_BYTE_TIMEOUT on Cloud wrapper API between March 5th 03:50 ~ 05:20 UTC. ERR_FIRST_BYTE_TIMEOUT on Cloud wrapper API."
+    },
+    {
+        "ticket_id": "ERE-3237",
+        "AI_summary": "Recurring 503 - SSL Handshake Timeouts on Bifrost Workflow During IND vs ENG (Semi Final 2). Spiky event demand of flit intensive traffic causing flit overloads in the machines leading to suspensions."
+    },
+    {
+        "ticket_id": "ERE-3238",
+        "AI_summary": "Greenseer alerts for week of 2026-03-09. 2026-03-09: * No alerts 2026-03-10: * No alerts 2026-03-11: * High FreeFlow Ghost rolls at 4:15 PM UTC * FreeFlow Install Group 7 saw 21 midgress_hits_ig anomalies at 5:12 PM UTC 2026-03-12: * No alerts 2026-03-13: * FreeFlow Install Group 9 saw 22 orig_hits_ig anomalies at 4:22 AM UTC * FreeFlow Install Group 10..."
+    },
+    {
+        "ticket_id": "ERE-3239",
+        "AI_summary": "ESSL release checklisting - ESSL 18707-22.4.4. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3240",
+        "AI_summary": "- 286.x.x.x reference ID without info in logs - possible CRP issue. The customer has a client who started receiving 503 errors on the hostname https://api.schwabapi.com The client shared reference IDs; these start with an error code 286, here is a list they shared last week: ^referenceids.csv According to the documentation, 286.x.x.x refers to an error related to Client Robustness..."
+    },
+    {
+        "ticket_id": "ERE-3241",
+        "AI_summary": "Transient OCSP verification error with ERR_OCSP_STAT_MALFORMEDREQUEST from external responder. Malformed error was a responder reply to the OCSP request that was passed through."
+    },
+    {
+        "ticket_id": "ERE-3242",
+        "AI_summary": "While investigating it seems like this issue is primarily from a single NS upload property for Canal+ - canalpdlod.f.c.postfile.akamai.com . This was working fine until few days ago."
+    },
+    {
+        "ticket_id": "ERE-3243",
+        "AI_summary": "Investigation request for regional traffic spike and preventive actions. Spiky demand of TD IPACL map, e;ch42 caused region overloads leading to performance concerns for the customer."
+    },
+    {
+        "ticket_id": "ERE-3244",
+        "AI_summary": "Disney Streaming Services - Ghost Stale metadata causing VPF spikes. configuration - vod-akc-eu-east-1.media.dssott.com Cpcode - 1325740 *Problem statement* DSS customer and IAT had rolled out a configuration change for their solution but the changes resulted in an increase in VSFs."
+    },
+    {
+        "ticket_id": "ERE-3245",
+        "AI_summary": "observed 500+ essl machines report low swap space alerts. NOCC report 500+ essl machines report alert \"Low Swap Space\", in the last 24 hours."
+    },
+    {
+        "ticket_id": "ERE-3246",
+        "AI_summary": "Issue: Meesho's ION config reported latency spikes and SSL timeout errors during March 8, 13:38 UTC which coincides with high traffic T20 WC event in India. Mar 26 ------------------- Summary: Investigating each of the regions' pointed out by Akatech as problematic, identified different issues being the cause including Transient connectivity issue, Meesho's flit load overloading the machines."
+    },
+    {
+        "ticket_id": "ERE-3247",
+        "AI_summary": "F-CS-11062418-OOC mapping reported by Bell Canada. Bad pingpoint had loss across regions impacting mapping."
+    },
+    {
+        "ticket_id": "ERE-3248",
+        "AI_summary": "Greenseer alerts for week of 2026-03-16. 2026-03-16: * No alerts 2026-03-17: * No alerts 2026-03-18: * FreeFlow Install Group 4 saw 23 midgress_hits_ig anomalies at 3:10 PM UTC * FreeFlow Install Group 7 saw 21 midgress_hits_ig anomalies at 3:10 PM UTC 2026-03-19: * ESSL Install Group 1 saw 22 midgress_hits_ig anomalies at 12:20 AM UTC * ESSL Install Group 2..."
+    },
+    {
+        "ticket_id": "ERE-3250",
+        "AI_summary": "TESTING: Wrong byte range retry on purge sequence out of date error causing corrupted content. The customer reported an MD5 mismatch for a recently uploaded file, which apparently happened before, too."
+    },
+    {
+        "ticket_id": "ERE-3251",
+        "AI_summary": "Tiktok slow handshakes in AS on 03/11/2026. RA output check failed - SI-00023558."
+    },
+    {
+        "ticket_id": "ERE-3252",
+        "AI_summary": "Customer reported that they noticed increased latency in the IAD region daily around 1 UTC. We reviewed the logs, and we noticed intermittent spikes in slow requests mainly from r53419."
+    },
+    {
+        "ticket_id": "ERE-3253",
+        "AI_summary": "So the retries on 504 are as expected due to the change deployed as a part of DPEREQ-355 and the ghost does not have a way to selectively apply fallback using acceptance-criteria based on the source of the 5xx status code. We never expect a Ghost to be entirely offline, if we receive a 504 from upstream (whether origin or..."
+    },
+    {
+        "ticket_id": "ERE-3254",
+        "AI_summary": "SSL handshake error rate spiked over 2 hours for ESSL IG7 special regions"
+    },
+    {
+        "ticket_id": "ERE-3255",
+        "AI_summary": "SI-00023589 SSLHandshakeException: Received fatal alert: illegal_parameter during TLS handshake"
+    },
+    {
+        "ticket_id": "ERE-3256",
+        "AI_summary": "High roll spike on phase 1 of 22.4.5 release, it affects both FF and ESSL: https://shadow.akamai.com/cgi-bin/ghostRolls.pl?rollid=5&network=essl&ghost=MGHostC64&version=22.4.5-51e9265cfe2631265cad412ef3305ae8&start=2026-03-19%2004%3A43%3A44&end=2026-03-19%2016%3A43%3A44&filterid=&traceid=2235753 Backtrace shows null pointer passed #0 0x00007f885e2969fc in pthread_kill () from /lib/x86_64-linux-gnu/libc.so.6 #1 0x00007f885e242476 in raise () from /lib/x86_64-linux-gnu/libc.so.6 #2 0x0000000001f32d2c in death_sigaction (sig=11, sigInfo=<optimized out>, sigContext=<optimized out>) at /workspace/mghost-client-side/src/tools.cpp:1447 #3 <signal handler called> #4 0x00007f482fe52900 in ?? () #5 0x000000000250e052 in colib::RefCountObject::releaseRef (this=<optimized..."
+    },
+    {
+        "ticket_id": "ERE-3257",
+        "AI_summary": "ESSL release checklisting - ESSL 18709-22.4.5. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3258",
+        "AI_summary": "Zomato impacted due to hotstar API traffic spikes and preventive actions. High flit load on the region caused the latency spikes but with the logs available, not sure of the cpcode/config with spiky flit load."
+    },
+    {
+        "ticket_id": "ERE-3259",
+        "AI_summary": "Greenseer alerts for week of 2026-03-23. 2026-03-23: * High FreeFlow Ghost rolls at 2:17 AM UTC * High FreeFlow Ghost rolls at 2:26 AM UTC * High FreeFlow Ghost rolls at 1:18 PM UTC * High FreeFlow Ghost rolls at 3:18 PM UTC * High FreeFlow Ghost rolls at 3:24 PM UTC * High FreeFlow Ghost rolls at 2:51 PM..."
+    },
+    {
+        "ticket_id": "ERE-3260",
+        "AI_summary": "High RET for EW SR with low latency in EW stats - Ghost seems to be stalling before forwarding SR. High RET on EW Subrequest http call."
+    },
+    {
+        "ticket_id": "ERE-3261",
+        "AI_summary": "GRN is missing the request id when the request is triggering error:url-too-large. Reported in the SECESC-30762 when the url is larger than the max allowed length we are aborting the request with url-too-large error, in this case the GRN is missing the request id"
+    },
+    {
+        "ticket_id": "ERE-3262",
+        "AI_summary": "DNS resolutions failing randomly"
+    },
+    {
+        "ticket_id": "ERE-3263",
+        "AI_summary": "FOM tuning guidelines ahead of IPL. Preparation for IPL tournament based on the issues observed in T20 WC."
+    },
+    {
+        "ticket_id": "ERE-3264",
+        "AI_summary": "The migration project involved moving EIPB (Edge IP Binding) configurations for Sharp Corporation from a source contract to a destination contract within the same account. The migration was successfully executed on April 15, 2026, as scheduled."
+    },
+    {
+        "ticket_id": "ERE-3265",
+        "AI_summary": "Intermittent 504s and 503s spike mainly from RJIL Edge regions. AANP backbone (NLD) congestion issue."
+    },
+    {
+        "ticket_id": "ERE-3266",
+        "AI_summary": "JioHotstar - IPL Event Review - Media and Web. ERE review for upcoming IPL tournament in India."
+    },
+    {
+        "ticket_id": "ERE-3267",
+        "AI_summary": "ESSL release checklisting - ESSL 18709.1-22.4.5.1. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3268",
+        "AI_summary": "8-Apr-26 Issue : 5xx on MT flow for Samsung TV plus Summary : Moving the top hostname to w40 helped with reduction in the errors seen . So now we are working towards splitting the EMT traffic (leg 2) to other hostname so as to be able to leverage API shards to spread MPD load coming from AWS Route 53..."
+    },
+    {
+        "ticket_id": "ERE-3269",
+        "AI_summary": "r48921 overload causing timeouts - spinoff ERE-3226"
+    },
+    {
+        "ticket_id": "ERE-3270",
+        "AI_summary": "Greenseer alerts for week of 2026-03-30. 2026-03-30: * High FreeFlow Ghost rolls at 2:24 AM UTC * High FreeFlow Ghost rolls at 3:04 AM UTC * High FreeFlow Ghost rolls at 3:38 AM UTC * FreeFlow Install Group 10 saw 21 midgress_hits_ig anomalies at 5:46 AM UTC * FreeFlow Region 50309 saw 37 ssl_hits anomalies at 9:41 AM UTC *..."
+    },
+    {
+        "ticket_id": "ERE-3271",
+        "AI_summary": "High FreeFlow Ghost Rolls (as per Greenseer alerts). Look into high Free Flow Ghost rolls"
+    },
+    {
+        "ticket_id": "ERE-3272",
+        "AI_summary": "503 due to FRP denied from r48175. Customer reported intermittent 503 errors from March 6th."
+    },
+    {
+        "ticket_id": "ERE-3273",
+        "AI_summary": "Jio Hotstar - Lanuch of \"Micro Dramas\" - Config and Map review. ERE review for the config/maps before the launch of new type of series in JioHotstar app."
+    },
+    {
+        "ticket_id": "ERE-3274",
+        "AI_summary": "Ghost Rolls websocket::Connection::handle_events(). We saw the following SEGV roll increased on ESSL 22.4.5.1 : |return function symbol source --------------------------------------------------------------------------------------------------------------------------------- 0x0000000002193290 0x0000000002193270 websocket::Buffer::isReady(websocket::OpType) const 0x0000000002d85df2 0x0000000002d85dc0 colib::util::Backtracer::reentrant_backtrace(void**, int) 0x000000000477eb9b 0x000000000477e2e0 util::Stacktrace::dump(unsigned long, char const*, std::ostream&, u..."
+    },
+    {
+        "ticket_id": "ERE-3275",
+        "AI_summary": "ERR_ACCESS_DENIED|vr-m error seen in customer traffic causing DoS. VR denials occurred on SG CW due to a flit load spike in TikTok cpcodes."
+    },
+    {
+        "ticket_id": "ERE-3276",
+        "AI_summary": "16/Apr This ticket was created to review traffic distribution on mercury.coupang.com, and verify the effectiveness of current sharding setup. - two reporting issues were observed for this setup."
+    },
+    {
+        "ticket_id": "ERE-3277",
+        "AI_summary": "SSL_CONNECT_TIMEOUT causing buffering for Disney. TikTok's \"unexpected\" traffic and missing SSL connect timeout values in Disney's property."
+    },
+    {
+        "ticket_id": "ERE-3278",
+        "AI_summary": "MROM ID: 8472 As per the audit trail, the status is waiting in the job step \"MROM_PUBLISH_STATUS\" with the message \"03 Apr 2026, 11:09 AM Footprint with object id: 4355, Mrom ID: 8472 activation is in-progress\" UMP - https://ump.akamai.com/app/channels/ghostdir.quotas.data/tarballs/ MROM - https://mrom.akam.ai/app/v1/footprintConfig/8472 State - ACCEPTED in MROM Splunk logs for trace id \"a872228707844c78\" : https://portalsplunk.akamai.com/en-US/app/search/search?earliest=1775174400&latest=1775260800&q=search%20%22a872228707844c78%22&display.page.search.mode=smart&dispatch.sample_ratio=1 No errors seen in the..."
+    },
+    {
+        "ticket_id": "ERE-3279",
+        "AI_summary": "Frequent spikes seen on \"apix.hotstar.com\" during IPL 2026. Event spikes of Hotstar self-inflicting its own other configs."
+    },
+    {
+        "ticket_id": "ERE-3280",
+        "AI_summary": "Greenseer alerts for week of 2026-04-06. 2026-04-06: * High FreeFlow Ghost rolls at 3:00 PM UTC 2026-04-07: * No alerts 2026-04-08: * High FreeFlow Ghost rolls at 5:28 AM UTC * High FreeFlow Ghost rolls at 5:59 AM UTC * High FreeFlow Ghost rolls at 6:05 AM UTC * High FreeFlow Ghost rolls at 6:11 AM UTC * High FreeFlow..."
+    },
+    {
+        "ticket_id": "ERE-3281",
+        "AI_summary": "During the migration of assets from the Fox Entertainment account to the Fox DTC account, the migration of a specific Cloud Wrapper (CW) configuration (FoxDTC) failed using the automated migration tool. The failure was caused by a system limitation that prevents the partial migration of CW configurations from a single source contract."
+    },
+    {
+        "ticket_id": "ERE-3282",
+        "AI_summary": "Customer reported high origin response time since Mar 31st 17 UTC, which can be seen in portal reports. Reviewing logs, we identified OOC mapping for Frankfurt edge regions on the OIPACL API-a6068.akasrg.akamai.com map."
+    },
+    {
+        "ticket_id": "ERE-3283",
+        "AI_summary": "FRP effectiveness during March 29 hitload spike on Apple cpcode 847793. Apple had an influx of traffic on 3.29 ~1:00 utc ask was to see if FRP helped our td0 - results show it did not and only applied to the origin."
+    },
+    {
+        "ticket_id": "ERE-3284",
+        "AI_summary": "WDR ERR_NO_FWD_HOSTS fwdStartFail for MultiCDN CW. *Background:* Customer reported spike of VPF (VideoPlyabackFailures) due to inability to fetch particular ranges from third party CDN overt MultiCDN CW including retries."
+    },
+    {
+        "ticket_id": "ERE-3285",
+        "AI_summary": "ESSL release checklisting - ESSL 18851-22.5.0. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3286",
+        "AI_summary": "Baseline Push. Baseline Push for the week of 4/13/2026"
+    },
+    {
+        "ticket_id": "ERE-3287",
+        "AI_summary": "ERR_FWD_SSL_HANDSHAKE | unable_to_set_supported_groups\" errors at the Edge (r40486). Account Name : Fidelity Investments CPCODE : 1705081 digital.fidelity.com Etherpad: NOCC : #B-W-1D4CPJ7 Issue Summary: MCO was alerted to a spike in HTTP 503 for the CPCODE : 1705081 (digital.fidelity.com) at around 03:05 UTC (04/11/26)."
+    },
+    {
+        "ticket_id": "ERE-3288",
+        "AI_summary": "Incorrect unzipped Content served to end-user with no Content-type header 21st April The customer observed this string abcd1234efgh5678 whenever they see the corrupted content, while analyzing the logs, we understood that it is not a random strong, it was a ghost internal upload buffer. 29th April upon further investigation, we found that the working requests has only one IP while..."
+    },
+    {
+        "ticket_id": "ERE-3294",
+        "AI_summary": "F-CS-11054139-ESI parse tree cache-hit is resulting in unexpected/wrong content when using Edge Side Includes(ESI). Issue - ESI parse tree cache-hit is resulting in unexpected content caching when using Edge Side Includes(ESI)."
+    },
+    {
+        "ticket_id": "ERE-3295",
+        "AI_summary": "Greenseer alerts for week of 2026-04-13. 2026-04-13: * High FreeFlow Ghost rolls at 3:29 PM UTC * High FreeFlow Ghost rolls at 5:06 PM UTC * FreeFlow Install Group 4 saw 21 midgress_hits_ig anomalies at 7:38 PM UTC * FreeFlow Install Group 2 saw 21 orig_hits_ig anomalies at 9:03 PM UTC * FreeFlow Install Group 1 saw 25 orig_hits_ig anomalies..."
+    },
+    {
+        "ticket_id": "ERE-3296",
+        "AI_summary": "503 spikes for bolt-cp1.phonepe.com - Websocket review"
+    },
+    {
+        "ticket_id": "ERE-3297",
+        "AI_summary": "g2g handshake error rate spiked on 22.5.0 release. During the special regions deployment after ESSL phase V, NOCC noticed the special regions of IG7 has ssl handshake error rate over 15% for a long time (3/17 21:00 - 3/18 04:00 UTC)"
+    },
+    {
+        "ticket_id": "ERE-3298",
+        "AI_summary": "During the ESSL 22.5.0 phase 1 and phase 2 checklisting, we observed large increase in g2g handshake error rate. g2g handshake error rate spiked on 22.5.0 release"
+    },
+    {
+        "ticket_id": "ERE-3299",
+        "AI_summary": "Staging ghost stopped saving DDC logs. Customer: Canon Europa N.V."
+    },
+    {
+        "ticket_id": "ERE-3300",
+        "AI_summary": "X-Cache showing TCP_HIT when request is not served from cache. Hi Team, Hostname: www.newsuat.com.au PM configuration: www.newsuat.com.au_simplified v143 URL: https://www.newsuat.com.au/services/personalisation/recommendations etherpad: Metadata for caching + EdgeWorker for the above URL added in etherpad line: 578 On same server intermitent request shows TCP_HIT where md5 hash is different though request goes forward to EW and then to origin."
+    },
+    {
+        "ticket_id": "ERE-3301",
+        "AI_summary": "5xx Spikes and failover errors from ch970(r40321). No motif issue that occurred on the 12th showed an issue with tiktok, beyond that no major motif."
+    },
+    {
+        "ticket_id": "ERE-3302",
+        "AI_summary": "Ticket was raised to understand setting the read timeout lower than first-byte timeout, Consulted the team that originally established these cascading timeout values. As per the following breakdown details, it is perfectly acceptable for the FB timeout to be set higher than the Read timeout."
+    },
+    {
+        "ticket_id": "ERE-3303",
+        "AI_summary": "ESSL Ghost Roll Spike on 2026-04-19. There was a roll spike around 16:50 UTC on 2026-04-19 due to a DDOS attack."
+    },
+    {
+        "ticket_id": "ERE-3304",
+        "AI_summary": "Media setup review for Mediacorp - World Cup 2026. Proactive event setup review \u2014 no incident root cause applicable."
+    },
+    {
+        "ticket_id": "ERE-3305",
+        "AI_summary": "Timeouts from MCH Regions Causing Performance Degradation. MCH region 46563 experienced persistent flit overload primarily driven by elevated flit consumption from Verizon's WAF policy change (pisces.cdn.fios.tv added April 9th), causing frequent region suspensions."
+    },
+    {
+        "ticket_id": "ERE-3306",
+        "AI_summary": "Wrong byte range cached for POC Entry resulting in incomplete range delivery. *Investigation:* Customer reported incomplete ranges delivered to end users for cache-hit."
+    },
+    {
+        "ticket_id": "ERE-3307",
+        "AI_summary": "Optimize spiky traffic on r50258. Optimize maprule load on r50258."
+    },
+    {
+        "ticket_id": "ERE-3308",
+        "AI_summary": "Greenseer alerts for week of 2026-04-20. 2026-04-20: * Anomaly spike for ESSL SSL slot 15342 (Akamai Internal) at 10:38 UTC * Anomaly spike for ESSL SSL slot 15342 (Akamai Internal) at 10:48 UTC * Anomaly spike for ESSL SSL slot 15342 (Akamai Internal) at 11:34 UTC * Anomaly spike for ESSL SSL slot 15342 (Akamai Internal) at 12:09 UTC *..."
+    },
+    {
+        "ticket_id": "ERE-3309",
+        "AI_summary": "There is a metadata template for forward path modification, when a request is re-forwarded (e.g., after an error or redirect), the path already contains the CP Code from the previous modification. The template runs again and prepends the CP Code a second time, resulting in /275596/275596/..."
+    },
+    {
+        "ticket_id": "ERE-3310",
+        "AI_summary": "I see it is not resolving direct to the SNI map, I tried without directly using e73s and it worked fine. The container map e73 should suffice."
+    },
+    {
+        "ticket_id": "ERE-3311",
+        "AI_summary": "Investigation of increased midgress traffic since April 2026. *Issue Summary:* Since April 2026, there has been a significant increase in midgress traffic (bytes) for CP 479242 (apps.samsungcloudcdn.com), despite no changes to the configuration and stable ingress request volume."
+    },
+    {
+        "ticket_id": "ERE-3312",
+        "AI_summary": "c2g mtls broken, suspecting ghost 22.5.0"
+    },
+    {
+        "ticket_id": "ERE-3313",
+        "AI_summary": "Increased SSL connection time during 21st April Match. Customer traffic increased since ~28th March and correlates with the increase in SSL times seen for the cpcode."
+    },
+    {
+        "ticket_id": "ERE-3314",
+        "AI_summary": "Schema Generation. Schema Generation for 22.5.2"
+    },
+    {
+        "ticket_id": "ERE-3315",
+        "AI_summary": "OOC in sdweb.ib.mizuhobank.co.jp. Pingpoint IPs part of IBM network filters out ICMP pings from Akamai servers, so JP regions seen consistent heavy loss leading to OOC regions to get placed in front of the scorelist."
+    },
+    {
+        "ticket_id": "ERE-3316",
+        "AI_summary": "OpenSSL failures r44980, suspecting v22.5.0. Customer Name : Red Bull Media House GmbH Setup has two properties with Cloudinary , increase in 5xx and timeouts were reported."
+    },
+    {
+        "ticket_id": "ERE-3317",
+        "AI_summary": "Greenseer alerts for week of 2026-04-27. 2026-04-27: * No alerts 2026-04-28: * High FreeFlow Ghost rolls at 11:28 UTC * High FreeFlow Ghost rolls at 11:47 UTC * High FreeFlow Ghost rolls at 15:27 UTC 2026-04-29: * FreeFlow Region 49603 saw 32 midgress_hits anomalies at 23:31 UTC * FreeFlow Region 49603 saw 32 edge_hits anomalies 23:35 UTC 2026-04-30: * FreeFlow..."
+    },
+    {
+        "ticket_id": "ERE-3318",
+        "AI_summary": "- Intermittent connection timeouts reported by customer for EIPB hostnames from Apirl 27th. Account: Citigroup Global Markets Inc Hostname: tts.apib2b.citi.com Customer is reporting intermittent connection timeouts for the tts.apib2b.citi.com since 27th April."
+    },
+    {
+        "ticket_id": "ERE-3319",
+        "AI_summary": "GRN is missing the request id when the request is triggering error:url-too-large (clone for auto-triage test). Test ticket"
+    },
+    {
+        "ticket_id": "ERE-3320",
+        "AI_summary": "ESSL release checklisting - ESSL 18851.1-22.5.0.1. ERE checklisting investigation Ghost version: 22.5.0.1-8a6cb9ae"
+    },
+    {
+        "ticket_id": "ERE-3321",
+        "AI_summary": "ESSL release checklisting - ESSL 18851.1-22.5.0.1. check-listing activity for an impending release."
+    },
+    {
+        "ticket_id": "ERE-3322",
+        "AI_summary": "We could see failure in midgress while contacting the region \"52221 - FABRIC-AMS23l\", resulting in drop in incoming traffic. Midgress failure resulting in traffic drop."
+    },
+    {
+        "ticket_id": "ERE-3323",
+        "AI_summary": "Packet analysis review request between brave and edge server. *Issue summary:* Netmarble has experienced recurring intermittent timeout errors across several API domains using EIPB."
+    },
+    {
+        "ticket_id": "ERE-3324",
+        "AI_summary": "Riot Games: 400 from Origin + MPE causing cache poisoning. Test URL: Product: DD => US West URL: Config: Issue: Customer was informed of a bug in their bug-bounty program of a possible DoS attach The way it works is that customer uses a program called Turbo Intruder which can simulate requests at many requests/sec, but the request header size..."
+    },
+    {
+        "ticket_id": "ERE-3325",
+        "AI_summary": "BBC | Bitrate drop and performance impact due to Liberty API traffic. Liberty Set-top boxes EPG traffic."
+    },
+    {
+        "ticket_id": "ERE-3326",
+        "AI_summary": "RCA for persistent Client Aborts seen for Tiktok WS connections. Tiktok is using Websockets (WS) connections for their delivery product ION - webcast-frontier16-normal-alisg.tiktokv.com and cpcode: 1877422 and they are seeing persistent client aborts ~84%."
+    },
+    {
+        "ticket_id": "ERE-3327",
+        "AI_summary": "Greenseer alerts for week of 2026-05-04. 2026-05-04: * No alerts 2026-05-05: * Anomaly spike for ESSL SSL slot 15275 (*.weather.microsoft.com) at 12:54 UTC * Anomaly spike for ESSL SSL slot 15275 (*.weather.microsoft.com) at 02:14 UTC * Anomaly spike for ESSL SSL slot 15275 (*.weather.microsoft.com) at 03:57 UTC * Anomaly spike for ESSL SSL slot 15275 (*.weather.microsoft.com) at 07:30 UTC *..."
+    },
+    {
+        "ticket_id": "ERE-3328",
+        "AI_summary": "Verizon experienced performance degradation for Disney Streaming due to traffic spikes on the hostname pisces.cdn.fios.tv. To resolve this, the EIPB Edge serial was migrated from 1955 to 2047, which stabilized load assignment and optimized traffic distribution."
+    },
+    {
+        "ticket_id": "ERE-3329",
+        "AI_summary": "To unblock a new customer onboarding for Verizon Wireless, the Edge IP Binding (EIPB) hostname limit was manually increased from 20 to 40 following Product Manager approval. F-CS-11300443 - Please help to increase EIPB hostname limit to 40."
+    },
+    {
+        "ticket_id": "ERE-3331",
+        "AI_summary": "Yes it is an expected behavior, in the best possible way Mapper tries to return the regions in Korea, in some cases where the end user is sending requests from non-Korea regions, then it depends. As per the scope of Geo Delivery, our aim is to not deny any requests, even if the requests with strict opt-in policy are served..."
+    },
+    {
+        "ticket_id": "ERE-3332",
+        "AI_summary": "- ERW regions flit overloaded. NBA is reporting several instances high rates of connection timeouts towards their *.nba.com domains, particularly on ERW regions."
+    },
+    {
+        "ticket_id": "ERE-3333",
+        "AI_summary": "Duplicate nonce value in CSP header. Account: Cathay Pacific (15R-Q7YD) Property: www-t0.ete.cathaycargo.com/en-us/home.html Etherpad: https://etherpad.akam.ai/p/F-CS-11265790 URL: https://www-t0.ete.cathaycargo.com/en-us/home.html Snippet of response below: can see duplicate nonce value ('nonce-201e121fbd999f1d86c29d2e5a176950' 'nonce-201e121fbd999f1d86c29d2e5a176950') in CSP header Command to reproduce: ** it is required to add x-ws-request-id: test header to bypass ACL."
+    },
+    {
+        "ticket_id": "ERE-3334",
+        "AI_summary": "ESSL release checklisting - ESSL 18853-22.5.1.1. ERE checklisting investigation Ghost version: UTC time ||Phase||Start Time||End Time|| |Phase I|Thu May 07 20:00:00 UTC 2026|Fri May 08 04:30:00 UTC 2026| |Phase II|Fri May 08 18:30:00 2026 |Sat May 09 03:30:00 2026| |Phase III|Mon May 11 23:00:00 2026|Tue May 12 08:30:00 2026| |Phase IV| Tue May 12 20:30:00 2026|Wed May 13 12:00:00 2026|..."
+    },
+    {
+        "ticket_id": "ERE-3335",
+        "AI_summary": "Cont. ERE-3147 - Interim solutions are still required."
+    },
+    {
+        "ticket_id": "ERE-3336",
+        "AI_summary": "The initial parent request is routed directly to the failover map. *Issue summary:* Mediacorp is running the tests on the test environment under controlled network."
+    },
+    {
+        "ticket_id": "ERE-3337",
+        "AI_summary": "ERR_NON_SUPERNET_IP from FF parent to Origin using OIPACL. Hello The customer reported error on traffic: api.zomato.com Based on our analysis user seeing error since our system routed traffic to out side of ACL Region (ERR_NON_SUPERNET_IP ) Mostly from region 39641 ( we see some requests on other regions as well ) Line#323 Impact was significant with 14% of hits DoS'ed..."
+    },
+    {
+        "ticket_id": "ERE-3338",
+        "AI_summary": "Greenseer alerts for week of 2026-05-11. 2026-05-11: * High FreeFlow Ghost rolls at 14:31 UTC * High FreeFlow Ghost rolls at 14:48 UTC * Anomaly spike for ESSL SSL slot 12627 (support.content.office.net) at 21:19 UTC * Anomaly spike for ESSL SSL slot 12627 (support.content.office.net) at 23:44 UTC 2026-05-12: * Anomaly spike for ESSL SSL slot 15342 (core_rsa2k_L3_server) at 13:21 UTC..."
+    },
+    {
+        "ticket_id": "ERE-3339",
+        "AI_summary": "Disney Traffic Impact Due to MCH Timeouts and Flit Spikes. MCH regions are getting overwhelmed by TikTok midgress traffic This resulted in errors for Disney Streaming live channels (CP codes 1257566, 1759486)."
+    },
+    {
+        "ticket_id": "ERE-3340",
+        "AI_summary": "OHD was not enabled before in v152, but as per the log line if I am checking correctly, can see OHD is enabled so seems related, even the count i see is 5 times for ERR_NO_GOOD_FWD_IP. After that there is an increase in 0xx error, so maybe OHD function marked it bad it seems."
+    },
+    {
+        "ticket_id": "ERE-3341",
+        "AI_summary": "FIPS 140-3 in Ghost 22.5.1.1 requires EMS, impacting non-compliant customers. Two customers - IBM MaaS and ADP have reported issues that have required disabling of FIPS to prevent dos."
+    },
+    {
+        "ticket_id": "ERE-3342",
+        "AI_summary": "Increased TCP Connections to Origin Servers. Issue summary: Starting at approximately 2026-05-09 14:00 UTC, Zomato has observed a sharp change in Akamai's edge-to-origin TCP/TLS connection behavior on our property api.zomato.com."
+    },
+    {
+        "ticket_id": "ERE-3343",
+        "AI_summary": "Customer observed failures for the property - \"oboqbr-eipb-prod-be.khp.cloud.dmdsdp.com\" starting 13 May 2026 ~10:30 CET, with STB requests are not reaching to Akamai - looks EIPB is terminating the requests. and the terminations correlate mainly to these Akamai EIPB Anycast IPs: 2600:1480:1000:19d:: (IPv6) 2600:1480:2000:19d:: (IPv6) 104.94.220.194 (IPv4) 104.94.221.194 (IPv4)."
+    },
+    {
+        "ticket_id": "ERE-3344",
+        "AI_summary": "Increased transfer time of CMAPI(api1 map, mr15211). Customer Coupang Corp."
+    },
+    {
+        "ticket_id": "ERE-3345",
+        "AI_summary": "Edge went fwd to incorrect parent regions and got ERR_NON_SUPERNET_IP. Hello The customer reported error on traffic: api.zomato.com Based on our analysis user seeing error since our system routed traffic to out side of ACL Region (ERR_NON_SUPERNET_IP )."
+    },
+    {
+        "ticket_id": "ERE-3346",
+        "AI_summary": "F-CS-11335934 - Midgress Handshake Errors On Edge 23.215.60.61. Account Name : POLICYBAZAAR INSURANCE BROKERS PRIVATE LIMITED CPCODE : 833875 payment.policybazaar.com Etherpad: NOCC : #B-W-1GLD9TR Midgress SSL errors from one edge server (3.215.60.61) starting at 15:00 GMT on 2026-05-13."
+    },
+    {
+        "ticket_id": "ERE-3347",
+        "AI_summary": "- Breadcrumbs not logging \"c=o\" in forward requests to origin. Choice Hotels International, Inc."
+    },
+    {
+        "ticket_id": "ERE-3348",
+        "AI_summary": "- midgress latency due to overloaded region. Ashburn last hop SR regions are already flit bound and has flit spikes from multiple cpcodes which impacts JPMC SR (via SS map) delivery."
+    },
+    {
+        "ticket_id": "ERE-3349",
+        "AI_summary": "mtls G2O happening on requests to netstorage. Hi Team, *Property:* verify.bnz.co.nz (v95) and other versions like version 99 tested with moving around the rule and also tried with \"Require client authentication: OFF\" as well."
+    },
+    {
+        "ticket_id": "ERE-3350",
+        "AI_summary": "1/0 byte CL getting cached and served downstream for \"ERR_READ_TIMEOUT|before_resp_body\" with 200 OK to the origin. Blank page was served intermittently to the end users."
+    },
+    {
+        "ticket_id": "ERE-3351",
+        "AI_summary": "BBC - Buffering on ULL when using CTE. *From:* Krishnappa, Dilip Kumar <dilipkuk@akamai.com> *Date:* Saturday, 16 May 2026 at 06:34 *To:* Moghal, Mohammad <mmoghal@akamai.com>; Kumar, Savan <savkumar@akamai.com>; Dean, Jon <jdean@akamai.com>; Jagarlamudi, Midhun <mjagarla@akamai.com>; Lebouc, Patrick <plebouc@akamai.com> *Cc:* Shaik, Imtiazuddin <ishaik@akamai.com> *Subject:* Re: BBC - Buffering on ULL when using CTE @Kumar, Savan can you please open a ERE ticket with..."
+    },
+    {
+        "ticket_id": "ERE-3352",
+        "AI_summary": "Request to apply pre-spreading from DNSP-Dev. SBS IAT is preparing the upcoming FIFA world cup in June."
+    },
+    {
+        "ticket_id": "ERE-3353",
+        "AI_summary": "Request to apply pre-spreading from DNSP-Dev. SBS IAT is preparing the upcoming FIFA world cup in June."
+    },
+    {
+        "ticket_id": "ERE-3354",
+        "AI_summary": "Greenseer alerts for week of 2026-05-18. 2026-05-18: * High Ghost self suspensions detected on ESSL at 8:53 UTC * High Ghost self suspensions detected on FreeFlow at 13:26 UTC * High Ghost suspensions detected on ESSL at 19:19 UTC * High Ghost suspensions detected on ESSL at 20:01 UTC * High Ghost suspensions detected on ESSL at 20:21 UTC *..."
+    },
+    {
+        "ticket_id": "ERE-3355",
+        "AI_summary": "High response times during peak hours for TWC. Customer has been tracking the response time for their API calls on api.weather.com and seeing P99 reaching 5 seconds during peak hours."
+    },
+    {
+        "ticket_id": "ERE-3356",
+        "AI_summary": "- Expedia reported 503s --> rule:'rule_conc_lat20_byreq' deny_pct:100.0%. Expedia reported that requests originating from Tencent IPs hitting Edge IPs have seen an uptick in HTTP 503s."
+    },
+    {
+        "ticket_id": "ERE-3357",
+        "AI_summary": "ERR_READ_TIMEOUT happens when request goes to ICP with gzip serving. Tractor Supply Company is having an issue with latency of 120s for www.tractorsupply.com So far we noticed that the issue happens when it got site failover and when the failover request goes to ICP with gzip."
+    },
+    {
+        "ticket_id": "ERE-3358",
+        "AI_summary": "Account: PT Bank Mandiri (PERSERO) Tbk Domain: mobile.ak.omni.bankmandiri.co.id CPCODE: 1558149 and 1558150 Property: mobile.ak.omni.bankmandiri.co.id.optimized v25 Issue: Customer reported high Edge Turnaround Time in TrafficPeak monitoring during 2026/5/15 19:17\u201319:32 JKT. We found that the high Edge Turnaround Time appears to stem from midgress connection failures with the error ERR_CONNECT_FAIL|linux between regions 38879 and 51946."
+    },
+    {
+        "ticket_id": "ERE-3359",
+        "AI_summary": "HTTP Header Injection (SSRF) scan failure for client ITRI. Account: Industrial Technology Research Institute Host: ops.kcg.gov.tw Issue: Customer conducted a recent security vulnerability notification for '150307 HTTP Header Injection' and it failed their test."
+    }
+]

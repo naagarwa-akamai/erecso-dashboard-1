@@ -483,23 +483,25 @@
             <thead>
                 <tr>
                     <th>Issue Key</th>
+                    <th>Linked/Predicted ERECSO</th>
                     <th>Created Date</th>
                     <th>Status</th>
                     <th>Request Type</th>
                     <th>Assignee</th>
                     <th>Summary</th>
+                    <th>AI Summary</th>
                 </tr>
             </thead>
             <tbody id="ereEscalationTableBody">
                 <tr>
-                    <td colspan="6" class="empty-state">Loading ERE escalation tickets...</td>
+                    <td colspan="8" class="empty-state">Loading ERE escalation tickets...</td>
                 </tr>
             </tbody>
         </table>
     </div>
 <br/><br/><br/>
     <div class="section-header-row">
-        <div class="section-label" style="margin-bottom:0;">Ticket Details</div>
+        <div class="section-label" style="margin-bottom:0;">All Ticket Details (This Month)</div>
         <button id="exportTicketTableBtn" class="export-btn" type="button">Export to Google Sheet</button>
     </div>
 
@@ -1771,21 +1773,53 @@
             if (!tbody) return;
 
             if (!Array.isArray(ticketList) || ticketList.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="6" class="empty-state">No ERE escalation tickets found for the selected date range.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="8" class="empty-state">No ERE escalation tickets found for the selected date range.</td></tr>`;
                 return;
             }
 
             tbody.innerHTML = ticketList.map(ticket => {
                 const issueKey = String(ticket.ticket_id || '').trim();
                 const issueUrl = String(ticket.issue_url || `https://track.akamai.com/jira/browse/${issueKey}`);
+                const matchedErecsoKey = String(ticket.matched_erecso_ticket_id || '').trim();
+                const matchedErecsoUrl = String(ticket.matched_erecso_ticket_url || `https://track.akamai.com/jira/browse/${matchedErecsoKey}`);
+                const matchedType = String(ticket.matched_erecso_match_type || '').trim();
+                const matchedConfidence = String(ticket.matched_erecso_confidence || '').trim();
+                const matchedScore = ticket.matched_erecso_score;
+                const predictedCandidates = Array.isArray(ticket.matched_erecso_candidates)
+                    ? ticket.matched_erecso_candidates
+                    : [];
+
+                let matchedCell = '-';
+                if (matchedErecsoKey) {
+                    const labelPrefix = matchedType === 'linked' ? 'Linked' : 'Predicted';
+                    const scoreLabel = typeof matchedScore === 'number' ? ` | score ${(matchedScore * 100).toFixed(1)}%` : '';
+                    const confidenceLabel = matchedConfidence ? ` (${matchedConfidence}${scoreLabel})` : '';
+                    matchedCell = `<a href="${matchedErecsoUrl}" target="_blank" rel="noopener noreferrer">${displayCell(matchedErecsoKey)}</a><div style="font-size:11px;color:#5e6c84;">${labelPrefix}${confidenceLabel}</div>`;
+
+                    if (matchedType === 'predicted' && predictedCandidates.length > 1) {
+                        const alternatives = predictedCandidates.slice(1).map(candidate => {
+                            const candidateKey = String(candidate.ticket_id || '').trim();
+                            const candidateUrl = `https://track.akamai.com/jira/browse/${candidateKey}`;
+                            const candidateScore = typeof candidate.score === 'number'
+                                ? ` ${(candidate.score * 100).toFixed(1)}%`
+                                : '';
+                            const candidateConfidence = candidate.confidence ? ` ${candidate.confidence}` : '';
+                            return `<div style="font-size:11px;color:#5e6c84;">Alt: <a href="${candidateUrl}" target="_blank" rel="noopener noreferrer">${displayCell(candidateKey)}</a> (${candidateConfidence}${candidateScore})</div>`;
+                        }).join('');
+
+                        matchedCell += alternatives;
+                    }
+                }
 
                 return `<tr>
                     <td>${issueKey ? `<a href="${issueUrl}" target="_blank" rel="noopener noreferrer">${displayCell(issueKey)}</a>` : '-'}</td>
+                    <td>${matchedCell}</td>
                     <td>${displayCell(ticket.created)}</td>
                     <td>${displayCell(ticket.status)}</td>
                     <td>${displayCell(ticket.request_type)}</td>
                     <td>${displayCell(ticket.assignee)}</td>
                     <td>${displayCell(ticket.summary)}</td>
+                    <td>${displayCell(ticket.ai_summary)}</td>
                 </tr>`;
             }).join('');
         }
@@ -1797,7 +1831,7 @@
 
             if (!fromDate || !toDate) {
                 if (!tbody) return;
-                tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Date range is not selected.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="8" class="empty-state">Date range is not selected.</td></tr>`;
                 return;
             }
 
@@ -1821,7 +1855,7 @@
                 renderEreEscalationRows(result);
             } catch (error) {
                 if (!tbody) return;
-                tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Error loading ERE escalation tickets: ${error.message}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="8" class="empty-state">Error loading ERE escalation tickets: ${error.message}</td></tr>`;
             }
         }
 
@@ -1923,7 +1957,7 @@
 
                 const escalationBody = document.getElementById('ereEscalationTableBody');
                 if (escalationBody) {
-                    escalationBody.innerHTML = `<tr><td colspan="6" class="empty-state">Error loading ERE escalation tickets: ${e.message}</td></tr>`;
+                    escalationBody.innerHTML = `<tr><td colspan="8" class="empty-state">Error loading ERE escalation tickets: ${e.message}</td></tr>`;
                 }
             }
         }
