@@ -23,6 +23,7 @@ CORS(app)  # Enable CORS for all routes
 # Define the path to the CSV file
 JSON_FILE_PATH = './ticket_details.json'
 AI_SUMMARY_FILE_PATH = './ticket_id_ai_summary.json'
+ERESUSTENANCE_AI_SUMMARY_FILE_PATH = './ere_sustenance_ticket_ai_summary.json'
 GURU_TICKETS=[]
 
 LINKED_TICKET_DICT_FILE = './linked_tickets_dict.json'
@@ -246,6 +247,45 @@ def build_idf_index(tickets):
         idf_index[token] = math.log((doc_count + 1) / (freq + 1)) + 1.0
 
     return idf_index
+
+
+def load_ere_sustenance_ai_summary_map():
+    if not os.path.exists(ERESUSTENANCE_AI_SUMMARY_FILE_PATH):
+        return {}
+
+    try:
+        with open(ERESUSTENANCE_AI_SUMMARY_FILE_PATH, 'r', encoding='utf-8') as file:
+            raw_data = json.load(file)
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+    summary_map = {}
+
+    if isinstance(raw_data, list):
+        for entry in raw_data:
+            if not isinstance(entry, dict):
+                continue
+            ticket_id = str(entry.get('ticket_id', '') or '').strip().upper()
+            if not ticket_id:
+                continue
+            summary_text = entry.get('ai_summary')
+            if summary_text in (None, '', '-'):  # Backward compatibility with existing file field name
+                summary_text = entry.get('AI_summary')
+            summary_map[ticket_id] = str(summary_text or '').strip()
+    elif isinstance(raw_data, dict):
+        for key, value in raw_data.items():
+            ticket_id = str(key or '').strip().upper()
+            if not ticket_id:
+                continue
+            if isinstance(value, dict):
+                summary_text = value.get('ai_summary')
+                if summary_text in (None, '', '-'):
+                    summary_text = value.get('AI_summary')
+            else:
+                summary_text = value
+            summary_map[ticket_id] = str(summary_text or '').strip()
+
+    return summary_map
 
 
 def score_ticket_similarity(ere_ticket, erecso_candidate, idf_index=None):
@@ -753,6 +793,18 @@ def update_ticket_details():
 
     except Exception as e:
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500
+
+@app.route('/api/ere-sustenance-ticket-ai-summaries', methods=['GET'])
+def get_ere_sustenance_ticket_ai_summaries():
+    try:
+        if not os.path.exists(ERESUSTENANCE_AI_SUMMARY_FILE_PATH):
+            return jsonify({"error": "ERE sustenance AI summary JSON file not found"}), 404
+
+        summary_map = load_ere_sustenance_ai_summary_map()
+        return jsonify(summary_map), 200
+
+    except Exception as e:
+        return jsonify({"error": f"An error occurred: {str(e)}"}), 500
 # --------------------------------------------------------------------------------------------------------
 
 @app.route('/api/ere-sustenance-tickets', methods=['GET'])
@@ -792,6 +844,8 @@ def get_ere_escalation_tickets():
             return jsonify({"error": "Sustenance JSON file not found"}), 404
         if not os.path.exists(JSON_FILE_PATH):
             return jsonify({"error": "ERECSO JSON file not found"}), 404
+
+        ai_summary_map = load_ere_sustenance_ai_summary_map()
 
         from_date_text = str(request.args.get('from_date', '') or '').strip()
         to_date_text = str(request.args.get('to_date', '') or '').strip()
@@ -878,7 +932,7 @@ def get_ere_escalation_tickets():
                 'status': ticket.get('status', ''),
                 'request_type': ticket.get('request_type', ''),
                 'summary': ticket.get('summary', ''),
-                'ai_summary': build_short_ai_summary(ticket),
+                'ai_summary': ai_summary_map.get(ticket_id, ''),
                 'assignee': ticket.get('assignee', ''),
                 'issue_url': f"https://track.akamai.com/jira/browse/{ticket.get('ticket_id', '')}",
                 'matched_erecso_ticket_id': matched_ticket_key,
