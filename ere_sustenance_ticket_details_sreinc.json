@@ -1,6 +1,51 @@
 [
     {
         "flag": "-",
+        "ticket_id": "SREINC-1340",
+        "summary": "SI 00023773 - Zomato has observed a sharp change in Akamai's edge-to-origin TCP/TLS connection behavior",
+        "aha_link": null,
+        "description": "* Make a copy of the [Blank Template|https://docs.google.com/document/d/1ByIzS2wiCjGnKejmdazQtr05iboHyAUJUPZ4f15keys?usp=drive_fs] and move it into the [folder|https://drive.google.com/drive/folders/1axEogwoQr5ZEkA-Fz_tsm1Fp9d8EBxsj] under the specific year/month.\r\n\r\n * \r\n ** Rename the file, naming convention to match the Epic.\r\n ** Add link to \"Documentation Link\" field in Epic.\r\n ** Make sure to complete Template Document \"Mandatory\" sections\r\n * If additional action items are identified during the review the sub-task assignee needs to work with the teams to create the remaining action item tickets and/or link the tickets to the SI Epic.\u00a0\r\n\r\nPresenter's role:\r\n * Leads completion of the PMR document. Instructions and PMR document blank template can be found at the PMR ticket:\r\n * Walks the audience through the document during the PMR session\r\n\r\nWhat is a PMR?\r\n\r\nIt is blameless review to discuss the written record of an incident, its impact, the actions taken to mitigate or resolve it, the root cause(s), and the follow-up actions to prevent the incident from recurring.\r\n\r\nThis is a typical agenda:\r\n * Incident discussion. Presenter will provide context by walking audience through the incident document (15mins)\r\n * Action Items. List, assign ownership and set estimated due date to defined action items (10mins)\r\n * Questions and final comments (5mins)",
+        "components": null,
+        "labels": [
+            "si-incident"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Declined",
+        "assignee": "Sandeep Jain",
+        "worklog": 0,
+        "issue_type": "Epic",
+        "status": "Cancelled",
+        "creator": "Krishna Punnaveetil Jayarajan",
+        "reporter": "Roberto Ramirez",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "High",
+        "workcategory": "Unknown",
+        "created": "2026-05-21T14:11:51.590+0000",
+        "key": "SREINC-1340",
+        "timespent": null,
+        "service_incident": "https://incidents.akam.ai/incident/2XSOMCLRXUR6",
+        "salesforce_case": null,
+        "resolution_date": "2026-05-26T16:52:28.776+0000",
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Cloners",
+                "direction": "outward",
+                "key": "SREINC-1333"
+            }
+        ],
+        "account_name": null
+    },
+    {
+        "flag": "-",
         "ticket_id": "SREINC-1264",
         "summary": "SI 00023625 - SAMSUNG Electronics TVplus services is experiencing 504 errors up to 2% of overall requests",
         "aha_link": null,
