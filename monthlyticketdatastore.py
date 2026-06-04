@@ -234,7 +234,7 @@ def fetch_and_store_sreinc_service_incidents(output_file="./ere_sustenance_ticke
 if __name__ == "__main__":
     fetch_and_store_sreinc_service_incidents()
 
-    ticket_number = 3110
+    ticket_number = 2900
     ticket_details = []
 
     while ticket_number <= 3400:  # Adjust the range as needed

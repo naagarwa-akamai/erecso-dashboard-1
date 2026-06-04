@@ -891,14 +891,14 @@ def get_ere_escalation_tickets():
             if request_type in EXCLUDED_ERE_REQUEST_TYPES:
                 continue
 
-            created_dt = parse_datetime_value(ticket.get('created'))
-            if not created_dt:
+            resolution_dt = parse_datetime_value(ticket.get('resolution_date'))
+            if not resolution_dt:
                 continue
 
-            created_date = created_dt.date()
-            if from_date and created_date < from_date:
+            resolution_date = resolution_dt.date()
+            if from_date and resolution_date < from_date:
                 continue
-            if to_date and created_date > to_date:
+            if to_date and resolution_date > to_date:
                 continue
 
             linked_erecso_key = ''
@@ -928,7 +928,8 @@ def get_ere_escalation_tickets():
 
             filtered_tickets.append({
                 'ticket_id': ticket.get('ticket_id', ''),
-                'created': created_dt.strftime('%Y-%m-%d'),
+                'created': format_export_date_only(ticket.get('created')),
+                'resolution_date': resolution_dt.strftime('%Y-%m-%d'),
                 'status': ticket.get('status', ''),
                 'request_type': ticket.get('request_type', ''),
                 'summary': ticket.get('summary', ''),

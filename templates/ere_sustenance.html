@@ -484,7 +484,7 @@
                 <tr>
                     <th>Issue Key</th>
                     <th>Linked/Predicted ERECSO</th>
-                    <th>Created Date</th>
+                    <th>Resolution Date</th>
                     <th>Status</th>
                     <th>Request Type</th>
                     <th>Assignee</th>
@@ -1814,7 +1814,7 @@
                 return `<tr>
                     <td>${issueKey ? `<a href="${issueUrl}" target="_blank" rel="noopener noreferrer">${displayCell(issueKey)}</a>` : '-'}</td>
                     <td>${matchedCell}</td>
-                    <td>${displayCell(ticket.created)}</td>
+                    <td>${displayCell(ticket.resolution_date)}</td>
                     <td>${displayCell(ticket.status)}</td>
                     <td>${displayCell(ticket.request_type)}</td>
                     <td>${displayCell(ticket.assignee)}</td>
