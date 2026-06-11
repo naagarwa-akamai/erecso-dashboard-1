@@ -498,7 +498,7 @@
         ]
     },
     {
-        "flag": "Shipped",
+        "flag": "-",
         "ticket_id": "ERECSO-14",
         "summary": "Cryptoserver Performance Issues",
         "aha_link": "https://akamai.aha.io/features/COREPERF-76",
@@ -547,7 +547,7 @@
         ]
     },
     {
-        "flag": "Future consideration",
+        "flag": "-",
         "ticket_id": "ERECSO-15",
         "summary": "Impact of KRP on customer Handshake Performance",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-228",
@@ -591,7 +591,7 @@
         ]
     },
     {
-        "flag": "Shipped",
+        "flag": "-",
         "ticket_id": "ERECSO-16",
         "summary": "Improve In-Metro Mapping",
         "aha_link": "https://akamai.aha.io/features/COREPERF-55",
@@ -655,7 +655,7 @@
         ]
     },
     {
-        "flag": "Will not implement",
+        "flag": "-",
         "ticket_id": "ERECSO-17",
         "summary": "Metrocache as a replacement for TD0 maps",
         "aha_link": "https://akamai.aha.io/features/COREREL-15",
@@ -709,7 +709,7 @@
         ]
     },
     {
-        "flag": "Future consideration",
+        "flag": "-",
         "ticket_id": "ERECSO-18",
         "summary": "Coverage on Edge and TD/SS maps to avoid OOC and performance issues",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-229",
@@ -878,7 +878,7 @@
         ]
     },
     {
-        "flag": "Shipped",
+        "flag": "-",
         "ticket_id": "ERECSO-19",
         "summary": "Investigate and Mitigate Overloading of regions by Mapper",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-38",
@@ -916,7 +916,7 @@
         "issue_links": []
     },
     {
-        "flag": "Planned",
+        "flag": "-",
         "ticket_id": "ERECSO-20",
         "summary": "Improve Platform instability caused by Ghost Rolls and Self Suspensions",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-30",
@@ -965,7 +965,7 @@
         ]
     },
     {
-        "flag": "Shipped",
+        "flag": "-",
         "ticket_id": "ERECSO-21",
         "summary": "Serverside Visibility into SSL Slowness",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-224",
@@ -1014,7 +1014,7 @@
         ]
     },
     {
-        "flag": "Future consideration",
+        "flag": "-",
         "ticket_id": "ERECSO-22",
         "summary": "Incorrect Load Reporting on Platform",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-230",
@@ -1068,7 +1068,7 @@
         ]
     },
     {
-        "flag": "Future consideration",
+        "flag": "-",
         "ticket_id": "ERECSO-23",
         "summary": "Content Corruption Impacting Customers ",
         "aha_link": "https://akamai.aha.io/features/DEL-222",
@@ -1142,7 +1142,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-24",
         "summary": "Product Best Practices are not Followed",
         "aha_link": null,
@@ -1396,7 +1396,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-26",
         "summary": "Wrong Edge/TD0/TD1 map for Wrong traffic",
         "aha_link": null,
@@ -1445,7 +1445,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-27",
         "summary": "Increasing platform default limits",
         "aha_link": null,
@@ -1489,7 +1489,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-28",
         "summary": "Not following Knowledge Base (KB) article",
         "aha_link": null,
@@ -1598,7 +1598,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-29",
         "summary": "Issues limited to an individual customer or arl and not all customers",
         "aha_link": null,
@@ -1852,7 +1852,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-30",
         "summary": "Insufficient Information in the ERE Ticket",
         "aha_link": null,
@@ -1946,7 +1946,7 @@
         ]
     },
     {
-        "flag": "Will not implement",
+        "flag": "-",
         "ticket_id": "ERECSO-31",
         "summary": "Audit ERE Escalations - Incorrect Ticket Routing, Insufficient info, KB usage gaps, Best Practices",
         "aha_link": "https://akamai.aha.io/ideas/ideas/TOIL-I-46",
@@ -2041,6 +2041,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-3168"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3349"
             },
             {
                 "type": "Dependent",
@@ -2365,7 +2370,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-32",
         "summary": "Questions or Review of Platform Limits",
         "aha_link": null,
@@ -2409,7 +2414,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-33",
         "summary": "Issues discovered during Software Install Checklisting",
         "aha_link": null,
@@ -2538,7 +2543,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-34",
         "summary": "Baseline Push - Platform/Product Feature rollout",
         "aha_link": null,
@@ -2576,7 +2581,7 @@
         "issue_links": []
     },
     {
-        "flag": "Planned",
+        "flag": "-",
         "ticket_id": "ERECSO-35",
         "summary": "Customer Event Review",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-15",
@@ -2955,7 +2960,7 @@
         ]
     },
     {
-        "flag": "On Hold",
+        "flag": "-",
         "ticket_id": "ERECSO-38",
         "summary": "Anycast Origin Support for Sureroute",
         "aha_link": "https://akamai.aha.io/features/COREPERF-45",
@@ -2999,7 +3004,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-39",
         "summary": "Origin not compliant with RFC for HTTP/H2",
         "aha_link": null,
@@ -3043,7 +3048,7 @@
         ]
     },
     {
-        "flag": "Future consideration",
+        "flag": "-",
         "ticket_id": "ERECSO-40",
         "summary": "FPJ Design Issues",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-42",
@@ -3167,7 +3172,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-41",
         "summary": "H2 Write Timeout after 10s causing RESET packets to be sent to Clients",
         "aha_link": null,
@@ -3256,7 +3261,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-42",
         "summary": "Network capacity issues causing perf degradation",
         "aha_link": null,
@@ -3310,7 +3315,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-44",
         "summary": "Platform Availability and Performance",
         "aha_link": null,
@@ -3349,7 +3354,7 @@
         "issue_links": []
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-45",
         "summary": "KMI availability issues",
         "aha_link": null,
@@ -3396,7 +3401,7 @@
         ]
     },
     {
-        "flag": "Under Review",
+        "flag": "-",
         "ticket_id": "ERECSO-46",
         "summary": "Mapping Pingpoint Issues",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-46",
@@ -3565,7 +3570,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-47",
         "summary": "Ghost Rolls Caused by Software Issues",
         "aha_link": null,
@@ -3789,7 +3794,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-48",
         "summary": "Ghost Rolls Caused by Traffic leading to Memtotals/self suspensions",
         "aha_link": null,
@@ -3963,7 +3968,7 @@
         ]
     },
     {
-        "flag": "Shipped",
+        "flag": "-",
         "ticket_id": "ERECSO-49",
         "summary": "SSL Handshake Failure Issues",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-27",
@@ -4042,7 +4047,7 @@
         ]
     },
     {
-        "flag": "In development",
+        "flag": "-",
         "ticket_id": "ERECSO-50",
         "summary": "Region overload caused due to large/spiky traffic on single/multiple regions",
         "aha_link": "https://akamai.aha.io/epics/COREPERF-E-26",
@@ -4187,6 +4192,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-2498"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3332"
             },
             {
                 "type": "Dependent",
@@ -4381,6 +4391,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3369"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-666"
             },
             {
@@ -4451,7 +4466,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-52",
         "summary": "Mapper causing overloaded links",
         "aha_link": null,
@@ -4500,7 +4515,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-53",
         "summary": "Midgress region overload due to SR/SS traffic",
         "aha_link": null,
@@ -4554,12 +4569,32 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3207"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3360"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2122"
             },
             {
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-2152"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3339"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3348"
             },
             {
                 "type": "Dependent",
@@ -4574,7 +4609,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-54",
         "summary": "Proactive Customer Load Test Reviews",
         "aha_link": null,
@@ -4626,7 +4661,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-55",
         "summary": "Region Overload caused due to Large MPG's",
         "aha_link": null,
@@ -4741,7 +4776,7 @@
         ]
     },
     {
-        "flag": "Will not implement",
+        "flag": "-",
         "ticket_id": "ERECSO-56",
         "summary": "Change to Platform default limit - ESI ",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-252",
@@ -4815,7 +4850,7 @@
         ]
     },
     {
-        "flag": "Will not implement",
+        "flag": "-",
         "ticket_id": "ERECSO-57",
         "summary": "Change to Platform default limit - Response Header Size ",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREPERF-I-253",
@@ -4879,7 +4914,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-58",
         "summary": "UMP Delays and Availability issues",
         "aha_link": null,
@@ -4921,7 +4956,7 @@
         ]
     },
     {
-        "flag": "Planned",
+        "flag": "-",
         "ticket_id": "ERECSO-59",
         "summary": "Keep track of timeouts to the end customers on the delivery side, whether they are caused by network or regional issues, especially for web products. ",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-37",
@@ -4985,7 +5020,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-60",
         "summary": "Issues due to customer origin availability/performance/configuration",
         "aha_link": null,
@@ -5064,6 +5099,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3342"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1034"
             },
             {
@@ -5124,7 +5164,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-61",
         "summary": "Issues arising from loss of existing flit/port capacity ",
         "aha_link": null,
@@ -5188,7 +5228,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-62",
         "summary": "Maprule/Mapping systems configuration issues",
         "aha_link": null,
@@ -5322,7 +5362,7 @@
         ]
     },
     {
-        "flag": "Future consideration",
+        "flag": "-",
         "ticket_id": "ERECSO-63",
         "summary": "ISP network/configuration issues",
         "aha_link": null,
@@ -5521,6 +5561,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3343"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1651"
             },
             {
@@ -5546,7 +5591,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-64",
         "summary": "Availability and performance issues due to Platform component - DNS",
         "aha_link": null,
@@ -5598,7 +5643,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-65",
         "summary": "Availability and performance issues due to WAF enabled traffic",
         "aha_link": null,
@@ -5667,7 +5712,7 @@
         ]
     },
     {
-        "flag": "Planned",
+        "flag": "-",
         "ticket_id": "ERECSO-66",
         "summary": "Improve Implementation of Forward Robustness protection (FRP)",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-48",
@@ -5705,7 +5750,7 @@
         "issue_links": []
     },
     {
-        "flag": "Under Review",
+        "flag": "-",
         "ticket_id": "ERECSO-67",
         "summary": "Single customer issues related to FSS",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-20",
@@ -5809,7 +5854,7 @@
         ]
     },
     {
-        "flag": "Shipped",
+        "flag": "-",
         "ticket_id": "ERECSO-68",
         "summary": "Single customer issues related to Fail-action / Quick Retry",
         "aha_link": "https://akamai.aha.io/features/COREREL-19",
@@ -5883,7 +5928,7 @@
         ]
     },
     {
-        "flag": "Need More Information",
+        "flag": "-",
         "ticket_id": "ERECSO-69",
         "summary": "Single customer issues related to incorrect load reporting of multi CDN hostnames",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-19",
@@ -5973,6 +6018,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3369"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1833"
             },
             {
@@ -5983,7 +6033,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-70",
         "summary": "CSO SLO Review",
         "aha_link": null,
@@ -6025,7 +6075,7 @@
         ]
     },
     {
-        "flag": "Planned",
+        "flag": "-",
         "ticket_id": "ERECSO-71",
         "summary": "Ghost Rolls Due to Memtotals",
         "aha_link": "https://akamai.aha.io/ideas/ideas/COREREL-I-51",
@@ -6197,7 +6247,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-72",
         "summary": "Issues due to connectivity problems (loss/latency) on the Akamai backbone (IEN/ICN)",
         "aha_link": null,
@@ -6276,11 +6326,11 @@
         ]
     },
     {
-        "flag": "Planned",
+        "flag": "-",
         "ticket_id": "ERECSO-73",
         "summary": "Improving handling of SSAI related manifest traffic for AMD",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MD-I-30",
-        "description": "Aha ticket: https://akamai.aha.io/ideas/ideas/MD-I-30\r\n\r\nProblem statement:\r\n\r\nCurrent Mitigations:\r\n\r\nExpectations:\u00a0\r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:\r\n\r\n\u00a0",
+        "description": "Aha ticket: [https://akamai.aha.io/ideas/ideas/MD-I-30]\r\n\r\n[https://akamai.aha.io/ideas/ideas/MD-I-117]\u00a0\r\n\r\nProblem statement:\r\n\r\nCurrent Mitigations:\r\n\r\nExpectations:\u00a0\r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:\r\n\r\n\u00a0",
         "components": null,
         "labels": [
             "CSO_Product"
@@ -6380,7 +6430,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-74",
         "summary": "Property manager updates and changes.",
         "aha_link": null,
@@ -6416,7 +6466,7 @@
         "issue_links": []
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-75",
         "summary": "Delivery impact by limited max-reconnect value",
         "aha_link": null,
@@ -6468,7 +6518,7 @@
         ]
     },
     {
-        "flag": "Future consideration",
+        "flag": "-",
         "ticket_id": "ERECSO-76",
         "summary": "QR and preserve stale combination saved error response in cache ",
         "aha_link": null,
@@ -6510,7 +6560,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-77",
         "summary": "Flit intensive traffic impacted by low performance X6 hardware",
         "aha_link": null,
@@ -6557,7 +6607,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-78",
         "summary": "Network Capacity Issues",
         "aha_link": null,
@@ -6651,7 +6701,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-79",
         "summary": "Network Capacity Issues - Country: IN",
         "aha_link": null,
@@ -6723,7 +6773,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-80",
         "summary": "Network Capacity Issues - Country: ZA",
         "aha_link": null,
@@ -6765,7 +6815,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-81",
         "summary": "Network Capacity Issues - Country: US",
         "aha_link": null,
@@ -6842,7 +6892,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-82",
         "summary": "Network Capacity Issues - Country: CN",
         "aha_link": null,
@@ -6909,7 +6959,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-83",
         "summary": "Network Capacity Issues - Middle East",
         "aha_link": null,
@@ -6956,7 +7006,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-84",
         "summary": "Network Capacity Issues - Country: ID",
         "aha_link": null,
@@ -7003,7 +7053,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-85",
         "summary": "Networking issues due to bad Akamai-controlled configuration or issues with switches/routers",
         "aha_link": null,
@@ -7050,7 +7100,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-86",
         "summary": "Network Capacity Issues - Country: VN",
         "aha_link": null,
@@ -7092,7 +7142,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-87",
         "summary": "Non site-shield regions reaching origin",
         "aha_link": null,
@@ -7134,7 +7184,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-88",
         "summary": "Delivery issues impacted by ipcache DNS",
         "aha_link": null,
@@ -7228,11 +7278,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -7245,7 +7295,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:51.746+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7287,11 +7337,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -7304,7 +7354,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:09.256+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7396,11 +7446,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -7413,7 +7463,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:32:00.722+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7505,7 +7555,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-92",
         "summary": "Network Capacity Issues - Country: DE",
         "aha_link": null,
@@ -7562,11 +7612,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -7579,7 +7629,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:20.924+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7641,11 +7691,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Cesar Arias [X]",
         "reporter": "Cesar Arias [X]",
         "customer_impact": "",
@@ -7658,7 +7708,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-03T21:02:44.360+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7781,11 +7831,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Cesar Arias [X]",
         "reporter": "Cesar Arias [X]",
         "customer_impact": "",
@@ -7798,7 +7848,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-03T21:02:26.102+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7850,7 +7900,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-96",
         "summary": "Network Capacity Issues - Country: GB",
         "aha_link": null,
@@ -7892,7 +7942,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-97",
         "summary": "Jira abandonment and non-answer",
         "aha_link": null,
@@ -8009,11 +8059,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -8026,7 +8076,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:30.246+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -8073,11 +8123,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -8090,7 +8140,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:32:19.255+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -8162,7 +8212,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-100",
         "summary": "Performance Issues due to incompetent hardware for certain traffic profiles",
         "aha_link": null,
@@ -8229,11 +8279,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -8246,7 +8296,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:42.597+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -8258,7 +8308,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-102",
         "summary": "Product Feature rollout",
         "aha_link": null,
@@ -8322,6 +8372,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3340"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2509"
             },
             {
@@ -8332,7 +8387,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-103",
         "summary": "Platform Feature rollout",
         "aha_link": null,
@@ -8516,7 +8571,7 @@
         ]
     },
     {
-        "flag": "In development",
+        "flag": "-",
         "ticket_id": "ERECSO-104",
         "summary": "Persisting in-region load balancing issues due to traffic spikes post SNId rollout",
         "aha_link": "https://akamai.aha.io/epics/MAPPER-E-74",
@@ -8552,11 +8607,6 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
-            {
-                "type": "Dependent",
-                "direction": "outward",
-                "key": "ERE-3207"
-            },
             {
                 "type": "Dependent",
                 "direction": "outward",
@@ -8720,6 +8770,21 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3344"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3364"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3367"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2703"
             },
             {
@@ -8743,6 +8808,11 @@
                 "key": "ERE-3160"
             },
             {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3358"
+            },
+            {
                 "type": "Relates",
                 "direction": "inward",
                 "key": "ERE-2848"
@@ -8755,7 +8825,7 @@
         ]
     },
     {
-        "flag": "In development",
+        "flag": "-",
         "ticket_id": "ERECSO-105",
         "summary": "HTTP3 underperforms versus competitors and, at times, Akamai's own HTTP2.",
         "aha_link": "https://akamai.aha.io/epics/COREPERF-E-21",
@@ -8802,7 +8872,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-106",
         "summary": "Performance issues due to sub-optimal PCONN usage",
         "aha_link": null,
@@ -8840,7 +8910,7 @@
         "issue_links": []
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-107",
         "summary": "Performance issues due to sub-optimal PCONN usage - g2g",
         "aha_link": null,
@@ -8878,7 +8948,7 @@
         "issue_links": []
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-108",
         "summary": "Performance issues due to sub-optimal PCONN usage - g2o",
         "aha_link": null,
@@ -8922,7 +8992,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-109",
         "summary": "Product functionality or feature issues",
         "aha_link": null,
@@ -8960,7 +9030,7 @@
         "issue_links": []
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-110",
         "summary": "AMD - QR issues :Default percent-to-monitor setting resulting in incomplete cached objects",
         "aha_link": null,
@@ -9012,7 +9082,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-111",
         "summary": "Origin requests from non-supernet IPs with OIPACL setup resulting in Intermittent failures",
         "aha_link": null,
@@ -9091,7 +9161,7 @@
         ]
     },
     {
-        "flag": "Cancelled",
+        "flag": "-",
         "ticket_id": "ERECSO-112",
         "summary": "Load reporting issues due to serial/slot misassociation in the SNId config file",
         "aha_link": null,
@@ -9127,7 +9197,7 @@
         "issue_links": []
     },
     {
-        "flag": "On Hold",
+        "flag": "-",
         "ticket_id": "ERECSO-113",
         "summary": "MSL: customer mis-configuration",
         "aha_link": null,
@@ -9140,11 +9210,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Cesar Arias [X]",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -9157,7 +9227,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:32:09.660+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -9199,7 +9269,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-114",
         "summary": "Region overload and load misreporting due to SNId configuration issue",
         "aha_link": null,
@@ -9276,7 +9346,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-115",
         "summary": "AMD/DD Resiliency Issues",
         "aha_link": null,
@@ -9320,7 +9390,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-116",
         "summary": "AMD/DD: QR inefficiencies on ICP path",
         "aha_link": null,
@@ -9364,7 +9434,7 @@
         ]
     },
     {
-        "flag": "Will not implement",
+        "flag": "-",
         "ticket_id": "ERECSO-117",
         "summary": "AMD/DD: QR inefficiencies due to SCM mapping",
         "aha_link": "https://akamai.aha.io/ideas/ideas/DEL-I-128",
@@ -9424,7 +9494,7 @@
         ]
     },
     {
-        "flag": "Not Filed",
+        "flag": "-",
         "ticket_id": "ERECSO-118",
         "summary": "Availability and performance issues due to attack against customer domains",
         "aha_link": "https://akamai.aha.io/ideas/ideas/MAPPER-I-40",
@@ -9543,7 +9613,7 @@
         ]
     },
     {
-        "flag": "Being discussed",
+        "flag": "-",
         "ticket_id": "ERECSO-119",
         "summary": "End users are mapped to machines suspended for installation.",
         "aha_link": null,
@@ -9918,6 +9988,575 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-3279"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-124",
+        "summary": "Raise record limit for EdgeDNS zone",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to make configuration changes to increase the record limit for EdgeDNS customer.\r\n\r\nPHeNS acting as the gatekeeper so that the customers are de-incentivized from going beyond the limit, which serves to protect the platform.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Tingshan Huang",
+        "reporter": "Tingshan Huang",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-04T18:41:07.350+0000",
+        "key": "ERECSO-124",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13257"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-125",
+        "summary": "Raise Shield limit for Shield NS53 customer",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to make configuration changes to increase the max number of shields that a customer can create.\r\n\r\nPHeNS acting as the gatekeeper so that the customers are de-incentivized from going beyond the limit, which serves to protect the platform.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T15:32:55.782+0000",
+        "key": "ERECSO-125",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13255"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-126",
+        "summary": "Add or modify TXT records in platform zones for cert renewals",
+        "aha_link": null,
+        "description": "Escalations as a result of other teams needing to renew certs and therefore having to add or change TXT records in platform zones, which are owned by PHeNS and can only be changed by PHeNS",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T15:40:54.792+0000",
+        "key": "ERECSO-126",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13454"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13272"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-127",
+        "summary": "Modify property limits for GTM domains",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to make configuration changes on GTM domains to change the number of properties that can be created in the domain. \r\n\r\nPHeNS acting as the gatekeeper so that the customers are de-incentivized from going beyond the limit, which serves to protect the platform.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T15:43:58.964+0000",
+        "key": "ERECSO-127",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13339"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13274"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13340"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13346"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-128",
+        "summary": "Enable end-user mapping on GTM domains",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to enable end-user mapping on GTM domains. \r\n\r\nPHeNS acting as the gatekeeper so that the customers are de-incentivized from enabling it themselves (or enabling EUM by default), which serves to protect the platform resources.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T15:52:03.390+0000",
+        "key": "ERECSO-128",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13278"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13377"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13510"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13379"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13431"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-129",
+        "summary": "Modify DNSSEC algorithm and parameters for Edge DNS zones ",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to modify the DNSSEC algorithm on a sign-and-serve enabled Edge DNS zone.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T16:03:28.223+0000",
+        "key": "ERECSO-129",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13341"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13293"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13295"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-130",
+        "summary": "Modify Edge DNS delegation set for contract",
+        "aha_link": null,
+        "description": "Escalations as a result of customers wanting to change the delegation set assigned to their contract, which only PHeNS can do.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T18:52:47.469+0000",
+        "key": "ERECSO-130",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13362"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13298"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13468"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13474"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13365"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-131",
+        "summary": "Modify Edge DNS zone limit per contract",
+        "aha_link": null,
+        "description": "Escalations as a result of customers wanting to create more zones than the default zone limit per contract, which only PHeNS can do.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T18:58:29.821+0000",
+        "key": "ERECSO-131",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13322"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13375"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-132",
+        "summary": "Assign ADC-compatible servermonitors per GTM domain",
+        "aha_link": null,
+        "description": "Sometimes ADC customers are also GTM customers, and they would like the GTM liveness test traffic (against their own datacenters) to go over their ADC links. Only PHeNS can assign those special servermonitors, which is manual.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T19:03:03.524+0000",
+        "key": "ERECSO-132",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-12626"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13329"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-11431"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-133",
+        "summary": "Adding/removing Akamai regions as datacenters to GTM domains",
+        "aha_link": null,
+        "description": "Akamai physical regions can only be added/removed to/from a GTM domain by PHeNS. ",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T19:13:21.352+0000",
+        "key": "ERECSO-133",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13382"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-134",
+        "summary": "Modify end-user mapping (EUM) allowlist for swans",
+        "aha_link": null,
+        "description": "Every time we have a new ECS partner (a DNS resolver), we need to add their egress address ranges to the swans allowlist, which is a manual process.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T19:59:27.480+0000",
+        "key": "ERECSO-134",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13292"
             }
         ]
     }

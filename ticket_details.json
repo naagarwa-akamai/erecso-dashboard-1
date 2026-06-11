@@ -4196,6 +4196,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3332"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-3335"
             },
             {
@@ -4386,6 +4391,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3369"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-666"
             },
             {
@@ -4555,6 +4565,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-1288"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3207"
             },
             {
                 "type": "Dependent",
@@ -6003,6 +6018,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3369"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1833"
             },
             {
@@ -7258,11 +7278,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -7275,7 +7295,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:51.746+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7317,11 +7337,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -7334,7 +7354,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:09.256+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7426,11 +7446,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -7443,7 +7463,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:32:00.722+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -7592,11 +7612,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -7609,7 +7629,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:20.924+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -8039,11 +8059,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -8056,7 +8076,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:30.246+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -8103,11 +8123,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -8120,7 +8140,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:32:19.255+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -8259,11 +8279,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -8276,7 +8296,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:31:42.597+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -8587,11 +8607,6 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
-            {
-                "type": "Dependent",
-                "direction": "outward",
-                "key": "ERE-3207"
-            },
             {
                 "type": "Dependent",
                 "direction": "outward",
@@ -9195,11 +9210,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Cesar Arias [X]",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Angela Wang",
         "reporter": "Angela Wang",
         "customer_impact": "",
@@ -9212,7 +9227,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-08T19:32:09.660+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -9973,6 +9988,575 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-3279"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-124",
+        "summary": "Raise record limit for EdgeDNS zone",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to make configuration changes to increase the record limit for EdgeDNS customer.\r\n\r\nPHeNS acting as the gatekeeper so that the customers are de-incentivized from going beyond the limit, which serves to protect the platform.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Tingshan Huang",
+        "reporter": "Tingshan Huang",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-04T18:41:07.350+0000",
+        "key": "ERECSO-124",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13257"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-125",
+        "summary": "Raise Shield limit for Shield NS53 customer",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to make configuration changes to increase the max number of shields that a customer can create.\r\n\r\nPHeNS acting as the gatekeeper so that the customers are de-incentivized from going beyond the limit, which serves to protect the platform.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T15:32:55.782+0000",
+        "key": "ERECSO-125",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13255"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-126",
+        "summary": "Add or modify TXT records in platform zones for cert renewals",
+        "aha_link": null,
+        "description": "Escalations as a result of other teams needing to renew certs and therefore having to add or change TXT records in platform zones, which are owned by PHeNS and can only be changed by PHeNS",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T15:40:54.792+0000",
+        "key": "ERECSO-126",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13454"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13272"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-127",
+        "summary": "Modify property limits for GTM domains",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to make configuration changes on GTM domains to change the number of properties that can be created in the domain. \r\n\r\nPHeNS acting as the gatekeeper so that the customers are de-incentivized from going beyond the limit, which serves to protect the platform.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T15:43:58.964+0000",
+        "key": "ERECSO-127",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13339"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13274"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13340"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13346"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-128",
+        "summary": "Enable end-user mapping on GTM domains",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to enable end-user mapping on GTM domains. \r\n\r\nPHeNS acting as the gatekeeper so that the customers are de-incentivized from enabling it themselves (or enabling EUM by default), which serves to protect the platform resources.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T15:52:03.390+0000",
+        "key": "ERECSO-128",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13278"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13377"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13510"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13379"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13431"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-129",
+        "summary": "Modify DNSSEC algorithm and parameters for Edge DNS zones ",
+        "aha_link": null,
+        "description": "Escalations as a result of PHeNS need to modify the DNSSEC algorithm on a sign-and-serve enabled Edge DNS zone.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T16:03:28.223+0000",
+        "key": "ERECSO-129",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13341"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13293"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13295"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-130",
+        "summary": "Modify Edge DNS delegation set for contract",
+        "aha_link": null,
+        "description": "Escalations as a result of customers wanting to change the delegation set assigned to their contract, which only PHeNS can do.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T18:52:47.469+0000",
+        "key": "ERECSO-130",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13362"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13298"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13468"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13474"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13365"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-131",
+        "summary": "Modify Edge DNS zone limit per contract",
+        "aha_link": null,
+        "description": "Escalations as a result of customers wanting to create more zones than the default zone limit per contract, which only PHeNS can do.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T18:58:29.821+0000",
+        "key": "ERECSO-131",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13322"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13375"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-132",
+        "summary": "Assign ADC-compatible servermonitors per GTM domain",
+        "aha_link": null,
+        "description": "Sometimes ADC customers are also GTM customers, and they would like the GTM liveness test traffic (against their own datacenters) to go over their ADC links. Only PHeNS can assign those special servermonitors, which is manual.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T19:03:03.524+0000",
+        "key": "ERECSO-132",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-12626"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13329"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-11431"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-133",
+        "summary": "Adding/removing Akamai regions as datacenters to GTM domains",
+        "aha_link": null,
+        "description": "Akamai physical regions can only be added/removed to/from a GTM domain by PHeNS. ",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T19:13:21.352+0000",
+        "key": "ERECSO-133",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13382"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-134",
+        "summary": "Modify end-user mapping (EUM) allowlist for swans",
+        "aha_link": null,
+        "description": "Every time we have a new ECS partner (a DNS resolver), we need to add their egress address ranges to the swans allowlist, which is a manual process.",
+        "components": null,
+        "labels": [
+            "CSO_PHeNS"
+        ],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Task",
+        "status": "Open",
+        "creator": "Eymen Kurdoglu",
+        "reporter": "Eymen Kurdoglu",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-06-08T19:59:27.480+0000",
+        "key": "ERECSO-134",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Root Cause",
+                "direction": "outward",
+                "key": "PHENS-13292"
             }
         ]
     }

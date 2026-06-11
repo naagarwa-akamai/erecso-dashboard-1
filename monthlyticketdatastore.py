@@ -237,7 +237,7 @@ if __name__ == "__main__":
     ticket_number = 2900
     ticket_details = []
 
-    while ticket_number <= 3400:  # Adjust the range as needed
+    while ticket_number <= 3450:  # Adjust the range as needed
         ticket_id = f"ERE-{ticket_number}"
         print(f"Fetching details for ticket: {ticket_id}")
 
