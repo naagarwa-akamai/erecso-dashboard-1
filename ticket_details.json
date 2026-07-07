@@ -1411,11 +1411,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Complete",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Story",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Devashish Thakur [X]",
         "reporter": "Devashish Thakur [X]",
         "customer_impact": "",
@@ -1428,7 +1428,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-10T19:47:48.073+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -2050,6 +2050,16 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3356"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3422"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1086"
             },
             {
@@ -2140,6 +2150,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3395"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1099"
             },
             {
@@ -2166,6 +2181,16 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-3170"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3414"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3421"
             },
             {
                 "type": "Dependent",
@@ -2451,6 +2476,11 @@
         "longterm_mitigation": null,
         "issue_links": [
             {
+                "type": "Automation Link",
+                "direction": "inward",
+                "key": "ERE-3379"
+            },
+            {
                 "type": "Dependent",
                 "direction": "outward",
                 "key": "ERE-2869"
@@ -2646,6 +2676,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-2546"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3400"
             },
             {
                 "type": "Dependent",
@@ -3311,6 +3346,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-3189"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3377"
             }
         ]
     },
@@ -3530,6 +3570,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3391"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-1416"
             },
             {
@@ -3606,6 +3651,16 @@
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
+            {
+                "type": "Automation Link",
+                "direction": "inward",
+                "key": "ERE-3404"
+            },
+            {
+                "type": "Automation Link",
+                "direction": "inward",
+                "key": "ERE-3386"
+            },
             {
                 "type": "Dependent",
                 "direction": "inward",
@@ -5789,6 +5844,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3442"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2589"
             },
             {
@@ -5840,6 +5900,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-2728"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3388"
             },
             {
                 "type": "Relates",
@@ -6333,7 +6398,8 @@
         "description": "Aha ticket: [https://akamai.aha.io/ideas/ideas/MD-I-30]\r\n\r\n[https://akamai.aha.io/ideas/ideas/MD-I-117]\u00a0\r\n\r\nProblem statement:\r\n\r\nCurrent Mitigations:\r\n\r\nExpectations:\u00a0\r\n\r\nIncidents:\r\n\r\nCustomers that reported issue:\r\n\r\n\u00a0",
         "components": null,
         "labels": [
-            "CSO_Product"
+            "CSO_Product",
+            "pmr-impact-high"
         ],
         "request_type": "New Feature ",
         "executive_summary": null,
@@ -6622,11 +6688,11 @@
         "root_cause": null,
         "toil_percent": "0",
         "workaround": "Yes",
-        "resolved_status": "Unresolved",
+        "resolved_status": "Duplicate",
         "assignee": "Unassigned",
         "worklog": 0,
         "issue_type": "Sub-task",
-        "status": "Open",
+        "status": "Closed",
         "creator": "Sandeep Jain",
         "reporter": "Sandeep Jain",
         "customer_impact": "",
@@ -6639,7 +6705,7 @@
         "timespent": null,
         "service_incident": null,
         "salesforce_case": null,
-        "resolution_date": null,
+        "resolution_date": "2026-06-12T06:54:03.497+0000",
         "mitigation_plan": null,
         "longterm_mitigation": null,
         "issue_links": [
@@ -8424,6 +8490,26 @@
         "longterm_mitigation": null,
         "issue_links": [
             {
+                "type": "Automation Link",
+                "direction": "inward",
+                "key": "ERE-3312"
+            },
+            {
+                "type": "Automation Link",
+                "direction": "inward",
+                "key": "ERE-3373"
+            },
+            {
+                "type": "Automation Link",
+                "direction": "inward",
+                "key": "ERE-3346"
+            },
+            {
+                "type": "Automation Link",
+                "direction": "inward",
+                "key": "ERE-3341"
+            },
+            {
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "EREPROD-3656"
@@ -8536,12 +8622,12 @@
             {
                 "type": "Relates",
                 "direction": "outward",
-                "key": "ERE-3036"
+                "key": "ERE-3223"
             },
             {
                 "type": "Relates",
                 "direction": "outward",
-                "key": "ERE-3223"
+                "key": "ERE-3036"
             },
             {
                 "type": "Relates",
@@ -8670,6 +8756,11 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3356"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2528"
             },
             {
@@ -8785,6 +8876,26 @@
             {
                 "type": "Dependent",
                 "direction": "inward",
+                "key": "ERE-3390"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3395"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3410"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "ERE-3415"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
                 "key": "ERE-2703"
             },
             {
@@ -8875,8 +8986,8 @@
         "flag": "-",
         "ticket_id": "ERECSO-106",
         "summary": "Performance issues due to sub-optimal PCONN usage",
-        "aha_link": null,
-        "description": "This tracks customer escalations whose performance might be impacted due to low or less than ideal usage of pconn between g2g and g2o. This might particular be relevant in competitive test cases and perf eval scenarios where the traffic volume is low, resulting in a low effective pconn usage for their traffic.\r\n\r\nOther cases could include origin not maintaining pconn long enough, or features like SR/MCH that might result in lower g2g pconn due to the system design constraints.",
+        "aha_link": "https://akamai.aha.io/initiatives/ESPL-S-14",
+        "description": "This tracks customer escalations whose performance might be impacted due to low or less than ideal usage of pconn between g2g and g2o. This might particular be relevant in competitive test cases and perf eval scenarios where the traffic volume is low, resulting in a low effective pconn usage for their traffic.\r\n\r\nOther cases could include origin not maintaining pconn long enough, or features like SR/MCH that might result in lower g2g pconn due to the system design constraints.\r\n\r\n\u00a0\r\n\r\nAha: [https://akamai.aha.io/initiatives/ESPL-S-14]\u00a0",
         "components": null,
         "labels": [
             "CSO_Ghost"
@@ -9146,12 +9257,12 @@
             {
                 "type": "Dependent",
                 "direction": "outward",
-                "key": "GHOST-5878"
+                "key": "GHOST-5885"
             },
             {
                 "type": "Dependent",
                 "direction": "outward",
-                "key": "GHOST-5885"
+                "key": "GHOST-5878"
             },
             {
                 "type": "Dependent",
@@ -9275,7 +9386,9 @@
         "aha_link": null,
         "description": "The platform wide rollout of SNId has introduced newer themes of problems. For SNId to work, the configuration file control.snid.snitoserial.{essl|freeflow} should have the right serial/slot associated with the hostname. Currently, the hostname discovery process relies on parsing ddc logs at certain intervals and associating existing production hostnames with appropriate serial/slot. The prod config push itself is either weekly or on-demand at a lower frequency.\r\n\r\nBelow are the themes of issues noticed so far - \r\n1) New onboarding of large traffic hostnames requires a prior config push that includes placeholder hostnames. This could also include migration of hostnames from VIP to SNI. In such cases, the hostnames would likely have a stale association, resulting in load on an incorrect serial. \r\nToday, only new traffic onboarding the involves ERE consultation are proactively addressed by this method; the rest wouldn't realize until after the initial traffic has already been onboarded\r\n\r\n2) Load reporting issues due to incorrect serial association in the SNId config -\r\nThis could happen either due to wildcard matches for certain hostnames or relying on slot number instead of the actual serials on FF. This problem also occurs when slots change or a newer iteration of the SNId config incorrectly overrides the previous entry. \r\n\r\n3) Manual overrides/temporary change in hostname serial (ex: prespread for events or ERE suggestion) - \r\nFor certain traffic profiles that are deemed too spiky for SNId alone to be effective, prespread or a non-default serial is sometimes suggested. While the serials can be updated fairly quickly in portal, the current SNId config update process has a multi-day delay and results in temporary incorrect reporting of load on a serial. This also creates toil for the teams as the changes need to communicated and coordinated among multiple teams. \r\n\r\nSNId team is working on a more agile, automated mechanism to address some of the challenges highlighted above. Until then, this ticket tracks toil introduced due to such which should help prioritize the work. \r\n\r\n",
         "components": null,
-        "labels": [],
+        "labels": [
+            "CSO_Mapper"
+        ],
         "request_type": "New Feature ",
         "executive_summary": null,
         "resolution_description": "The update frequency to control.snid.snitoserial.* configs has significantly increased from once a week to several times a day. There have been no noticeable customer escalations regarding mismatched hostname-serial associations since then. Closing this after monitoring this for an extended period. ",
@@ -9485,6 +9598,11 @@
                 "type": "Dependent",
                 "direction": "inward",
                 "key": "ERE-2558"
+            },
+            {
+                "type": "Linked Issue",
+                "direction": "inward",
+                "key": "MAPPINGENG-123"
             },
             {
                 "type": "Relates",
@@ -9856,7 +9974,7 @@
     {
         "flag": "-",
         "ticket_id": "ERECSO-122",
-        "summary": "FF/ESSL unexpected release related issues ",
+        "summary": "FF/ESSL unexpected release install related issues ",
         "aha_link": null,
         "description": "The ticket tracks unexpected issues caused during releases/installs and PP issues\r\n # example issues as a result of premature unsuspension (SI-00022936)\r\n-\r\nSI-00023337-A spike of invalid request errors affected several customer end-users \u00a0\r\nThe Dec 5 2025 incident where machines came into service with too little of the necessary metadata, the question is \"which channels are necessary\". SREINC-1172\r\n\r\nWe believe that we need to look at the edgeservers and come up with a list of channels where the metadata must be received in order for customers not to experience flow problems, vs channels where the subscribers might never receive the data and that is still okay.\r\n\r\nWe will want something where we can publish a list of either channels-to-include or channels-to-exclude that may, from time to time and hopefully noticed in the SQA Shared environment during pre-release testing, require an update.\r\n\r\nScope of channels is not only ghost-subscribed (arl.data) but also keyagent-subscribed (certificates) and both (STG secrets).\r\n # post_script used to restart ghost after installation missing webghost suspension check and many such..\r\n\r\nFor example impacted due to #1. 49 customers..\r\n|ccount Name|Support Level|Tier|Country|Industry|Financial Segment|\r\n|AEON Financial Service Co.,Ltd|Premium_3.0|Strategic|Japan|Financial Services|\u00a0|\r\n|AEON Smart Technology Co., Ltd.|Indirect_Customer|Large Enterprise|Japan|Business Services|\u00a0|\r\n|Aflac Life Insurance Japan Ltd.|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|Agoda Company Pte Ltd|Premium_3.0|Strategic|Singapore|Commerce|\u00a0|\r\n|ALL NIPPON AIRWAYS CO., LTD|Premium_3.0|Strategic|Japan|Commerce|Commerce|\r\n|BNPP Group ARF Procurement|Premium_3.0_EnhancedSLA|Strategic Whales|France|Financial Services|\u00a0|\r\n|Cygames Inc|Premium_3.0|Strategic|Japan|Games|\u00a0|\r\n|DMM FinTech Co.,Ltd.|Indirect_Customer|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|Fidelity Investments|Premium_3.0|Strategic Whales|USA|Financial Services|Enterprise|\r\n|Fukuoka Financial Group, Inc.|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|GLORY LTD.|Standard_EnhancedSLA|\u00a0|Japan|Manufacturing|\u00a0|\r\n|IBM Bluemix|Premium_3.0|Strategic Whales|USA|Manufacturing|\u00a0|\r\n|ITOCHU Techno-solutions Corporation|NetAlliance_Standard|New Customer - SMB|Japan|Software and SaaS|Commerce|\r\n|LAC Co., Ltd.|NetAlliance_Standard|SMB|Japan|Software and SaaS|\u00a0|\r\n|LIXIL Corporation|Premium_3.0|Strategic|Japan|Manufacturing|\u00a0|\r\n|MDPI AG|Standard_EnhancedSLA|\u00a0|Switzerland|Public Sector|\u00a0|\r\n|Mitsubishi UFJ Financial Group, Inc|Premium_3.0|Strategic|Japan|Financial Services|Enterprise|\r\n|Mizuho Research & Technologies, Ltd.|Advanced|Large Enterprise|Japan|Business Services|\u00a0|\r\n|Net Dreamers Co., Ltd.|Plus_EnhancedSLA|Enterprise|Japan|Telecom, ISP and MNO|\u00a0|\r\n|Neweb Technologies.Co.,Ltd.|Indirect_Customer|SMB|Taiwan|Software and SaaS|\u00a0|\r\n|NTT DATA Corporation (CAFIS-ITS)|Advanced|New Customer - SMB|Japan|Financial Services|\u00a0|\r\n|NTT DATA Corporation (CAFIS-RTP)|Advanced|SMB|Japan|Software and SaaS|\u00a0|\r\n|NTT DATA Corporation (CAFIS)|Advanced|Enterprise|Japan|Financial Services|\u00a0|\r\n|NTT DOCOMO BUSINESS, Inc.|NetAlliance_Standard|SMB|Japan|Telecom, ISP and MNO|High Tech|\r\n|Odds Park Corp.|Indirect_Customer|Large Enterprise|Japan|Business Services|\u00a0|\r\n|Open House Co., Ltd|Indirect_Customer|SMB|Japan|Engineering and Construction|\u00a0|\r\n|Oracle America. Incorporated|Premium_3.0_EnhancedSLA|Strategic Whales|USA|Software and SaaS|\u00a0|\r\n|Premier Anti-Aging Co.,Ltd|Standard_EnhancedSLA|SMB|Japan|Commerce|\u00a0|\r\n|Rakuten Group, Inc. Network Development & Operation Department|Premium_3.0|Strategic Whales|Japan|Media|Commerce|\r\n|Rakuten Group, Inc.(Rakuten Bank.Ltd)|Premium_3.0|Strategic Whales|Japan|Financial Services|\u00a0|\r\n|Rakuten Group, Inc.(Rakuten Securities, Inc)|Advanced|Strategic Whales|Japan|Financial Services|\u00a0|\r\n|Recruit Co.,Ltd.|Premium_3.0|Strategic|Japan|Business Services|\u00a0|\r\n|Resona Holdings, Inc.|Premium_3.0|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|Satofull Co., Ltd.|Indirect_Customer|Large Enterprise|Japan|Media|\u00a0|\r\n|SB Technology (for Local Government Security Cloud)|Standard_EnhancedSLA|Enterprise|Japan|Public Sector|\u00a0|\r\n|SBI Sumishin Net Bank, Ltd. (via BM)|Premium_3.0|\u00a0|Japan|Financial Services|\u00a0|\r\n|SCSK Corporation(Sumitomo Corporation)|Plus_EnhancedSLA|Enterprise|Japan|Software and SaaS|\u00a0|\r\n|Sumitomo Mitsui Banking Corporation Japan|Premium_3.0|Strategic|Japan|Financial Services|\u00a0|\r\n|Sumitomo Mitsui Trust Bank, Limited|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|T&I Innovation Center Co., Ltd.|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|Tapestry, Inc|Premium_3.0|Strategic|USA|Commerce|Commerce|\r\n|The Asahi Shimbun Company|Standard_EnhancedSLA|Large Enterprise|Japan|Media|M&E|\r\n|The Bank of Yokohama,Ltd.|Advanced|Large Enterprise|Japan|Financial Services|\u00a0|\r\n|The Yamagata Bank, Limited|Indirect_Customer|New Customer - SMB|Japan|Financial Services|\u00a0|\r\n|TOHO Cinemas Ltd.|Indirect_Customer|New Customer - SMB|Japan|Media|\u00a0|\r\n|TOYOTA Connected Corporation|Premium_3.0|Strategic|Japan|Manufacturing|\u00a0|\r\n|West Japan Railway Company|Plus_EnhancedSLA|Large Enterprise|Japan|Business Services|Enterprise|\r\n|XING INC.|Plus|Enterprise|Japan|Commerce|\u00a0|\r\n|Yayoi Co., Ltd.|Advanced|Large Enterprise|Japan|Software and SaaS|\u00a0|",
         "components": null,
@@ -10409,6 +10527,11 @@
             {
                 "type": "Root Cause",
                 "direction": "outward",
+                "key": "PHENS-13597"
+            },
+            {
+                "type": "Root Cause",
+                "direction": "outward",
                 "key": "PHENS-13322"
             },
             {
@@ -10557,6 +10680,199 @@
                 "type": "Root Cause",
                 "direction": "outward",
                 "key": "PHENS-13292"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-135",
+        "summary": "CPS customer misconfiguration",
+        "aha_link": null,
+        "description": "CPS SRE often gets escalations tied to customer misconfigurations.\r\n * {*}Target Platform Improvements{*}:\r\n ## {*}Pre-Flight DNS/CAA Validation{*}: Implement automated pre-flight checks in the CPS engine prior to order finalization to detect customer nameserver malfunctioning ({{{}SERVFAIL{}}}) and fail fast with customer-visible alerts.\r\n ## {*}ACME Transaction Auto-Recovery{*}: Automate transaction self-healing in the engine to auto-reset retries or prune expired transactions in the database.",
+        "components": null,
+        "labels": [],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Story",
+        "status": "Open",
+        "creator": "Nathan Murphree",
+        "reporter": "Nathan Murphree",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-07-07T01:38:42.051+0000",
+        "key": "ERECSO-135",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4947"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4948"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4950"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-136",
+        "summary": "CPS customer workflow remediation",
+        "aha_link": null,
+        "description": "CPS has to manually remediate customer workflows\r\n * {*}Target Platform Improvements{*}:\r\n ## {*}CA State Reconciliation Loop{*}: Develop an automated synchronization process or webhook in the CPS engine to periodically reconcile the local database ({{{}digicert_order_status{}}}) against external CA APIs (like DigiCert), removing manual SRE database updates.",
+        "components": null,
+        "labels": [],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Story",
+        "status": "Open",
+        "creator": "Nathan Murphree",
+        "reporter": "Nathan Murphree",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-07-07T01:46:07.222+0000",
+        "key": "ERECSO-136",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4952"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4957"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-137",
+        "summary": "CPS product best practices are not followed",
+        "aha_link": null,
+        "description": "{*}Target Platform Improvements{*}:\r\n # {*}Deployment Verification Test Cases{*}: Implement automated post-install smoke tests in the CI/CD pipeline to verify active cryptographic/JWS request-signing capabilities immediately after upgrading library dependencies like OpenSSL.\r\n # {*}Default Log4j Configuration Update{*}: Reconfigure\u00a0{{log4j2.xml}}\u00a0to increase the maximum rollover backup index (e.g., from 7 to 30) or transition to size-and-time-based rolling, preserving necessary debugging logs",
+        "components": null,
+        "labels": [],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Story",
+        "status": "Open",
+        "creator": "Nathan Murphree",
+        "reporter": "Nathan Murphree",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-07-07T01:50:02.765+0000",
+        "key": "ERECSO-137",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4929"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4958"
+            }
+        ]
+    },
+    {
+        "flag": "-",
+        "ticket_id": "ERECSO-138",
+        "summary": "CPS visibility issues",
+        "aha_link": null,
+        "description": "* {*}Target Platform Improvements{*}:\r\n ## {*}Default Telemetry Integration{*}: Standardize core CCM DOM metric panels in default Grafana templates to avoid ad-hoc metric panel creation.\r\n ## {*}Dashboard Configuration Automation{*}: Use Infrastructure as Code (IaC) to manage Grafana dashboards, automatically auditing and purging deprecated Prometheus/PromQL endpoints (like retired rate-limit metrics).",
+        "components": null,
+        "labels": [],
+        "request_type": "New Feature ",
+        "executive_summary": null,
+        "resolution_description": null,
+        "root_cause": null,
+        "toil_percent": "0",
+        "workaround": "Yes",
+        "resolved_status": "Unresolved",
+        "assignee": "Unassigned",
+        "worklog": 0,
+        "issue_type": "Story",
+        "status": "Open",
+        "creator": "Nathan Murphree",
+        "reporter": "Nathan Murphree",
+        "customer_impact": "",
+        "requesting_team": "Unknown",
+        "product_type": "Unknown",
+        "priority": "Undetermined",
+        "workcategory": "Unknown",
+        "created": "2026-07-07T05:28:57.742+0000",
+        "key": "ERECSO-138",
+        "timespent": null,
+        "service_incident": null,
+        "salesforce_case": null,
+        "resolution_date": null,
+        "mitigation_plan": null,
+        "longterm_mitigation": null,
+        "issue_links": [
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4931"
+            },
+            {
+                "type": "Dependent",
+                "direction": "inward",
+                "key": "CPSSRE-4954"
             }
         ]
     }
