@@ -1,254 +1,345 @@
 [
   {
-  "ticket_id": "ERECSO-104",
-  "month": "4",
-  "outcome": "Problem: Reactive SNId logic fails during synchronized spikes (STBs/IPL) and cloud agents create massive, concentrated workloads (MPGs) that overwhelm regions before the platform can spread the load.\nAction: Engineering to implement 'Historic Load States' and MPG-ID-based Ghost MPG scoring to ensure regional diversity; Leadership to fund the transition from manual topology.xml overrides to automated cloud-agent grouping.\nExpected Outcome: Guaranteed p99 stability and elimination of self-inflicted outages during high-concurrency events.",
-  "progressive_work": "Gap Addressed: Fixes the 'memory-less' nature of SNId that causes it to dial down spreading too quickly when load momentarily dips.\nOutcome: An automated, scalable way to 'break up' cloud-originating MPGs and prevent flit-intensive traffic from overwhelming edge regions.\nMissing: A proactive 'pre-warm' or 'lock-spread' feature for scheduled event windows and enhanced logical isolation for shared parent maps.",
-  "patterns_trends": "Flit vs. Bits: Shift from volume to density; high-frequency API requests (ERE-3268, ERE-3279) are now primary regional stressors.\nBlast Radius: Major events (IPL) are causing 'self-infliction' (ERE-3279), where one spike (e.g., SSAI manifests) destabilizes unrelated configs on the same parent map.\nCloud Concentration: Traffic from cloud providers (AWS Route 53) increasingly results in less diverse Name Server (NS) sets, creating 'Mega-MPGs' that require architectural dispersion."
-},
-{
-  "ticket_id": "ERECSO-104",
-  "month": "3",
-  "outcome": "Problem: Reactive SNId logic fails to manage synchronized 'Mega-MPGs' from cloud agents and STB bursts, causing regional overloads and SSL timeouts.\nAction: Engineering to implement 'Historic Load States' and MPG-ID-based Ghost scoring to ensure regional diversity; Leadership to automate cloud-agent grouping to replace manual topology.xml overrides.\nExpected Outcome: Guaranteed p99 stability and the elimination of self-inflicted outages during Tier-1 events like the T20 World Cup.",
-  "progressive_work": "Gap Addressed: Fixes the 'memory-less' nature of SNId that prematurely dials down spreading during momentary load dips.\nOutcome: Automated NS group breaking for flit-intensive API traffic and identification of internal serial misreporting between DNSP and EHNIDs.\nMissing: A proactive 'lock-spread' or 'pre-warm' trigger for scheduled event windows to prevent initial burst failures.",
-  "patterns_trends": "Flit-Density Shift: Failures are moving from volume to request-density (flits), where short-lived spikes from TikTok/Coupang crash regions faster than video streams.\nNoisy Neighbor: Increasing collateral impact where SSAI manifest spikes (chc1) destabilize pristine traffic latency (ERE-3219).\nEvolution: Moving from reactive regional FOM capping to an architecture that natively assumes peak load as the default state for high-concurrency events."
-},
-{
-  "ticket_id": "ERECSO-29",
-  "month": "5",
-  "outcome": "Problem: Customer-side Sureroute routing loopbacks inject internal test headers, causing Ghost to leak an internal upload buffer string to public clients.\nAction: Engineering to build loopback detection into the Ghost core engine to terminate test-header loops; Leadership to mandate property sanitizers against testing-header exposure.\nExpected Outcome: Elimination of internal platform string exposure and immediate safety termination of client-driven routing deadlocks.",
-  "progressive_work": "Gap_Addressed: Isolates non-platform, individual customer deployment anomalies from global systemic software platform regressions.\nOutcome: Successful mitigation of Netmarble's content corruption through customer-side header tuning and diagnostic verification.\nMissing: Automated heuristic log scanners for internal buffer signatures and validation checks against structural Sureroute loops.",
-  "patterns_trends": "Sureroute Loop Risk: Increasing trend of client applications echoing test headers back to Akamai, inducing unexpected processing responses.\nMasked Vulnerabilities: Evolution of complex routing errors presenting visual symptoms that closely mimic critical core memory software failures.\nInvestigation Resource Asymmetry: Trend of single-customer configuration edge cases demanding heavy, multi-week forensic labor due to a lack of automated edge loopback signaling."
-},
-{
-  "ticket_id": "ERECSO-50",
-  "month": "5",
-  "outcome": "Problem: Uncached event surges (JRA horse racing) drive severe regional flit overloads, triggering Ghost self-suspensions that break critical payment APIs (AEON Financial) sharing local infrastructure.\nAction: Engineering to build cross-tenant flit sensors for automated multi-map load spreading; Leadership to enforce strict dependencies preventing the premature removal of protective FOM configurations.\nExpected Outcome: Complete protection of mission-critical financial transactions from event-driven noisy-neighbor traffic spikes.",
-  "progressive_work": "Gap_Addressed: Bridges the failure to insulate premium transactional infrastructure from un-cacheable, high-frequency request spikes generated on adjacent maps.\nOutcome: Re-stabilization of Japan edge regions and AEON payment pathways via emergency restoration of manual FOM rules.\nMissing: Automated cross-map anomaly mapping and proactive telemetry overlays to detect cross-product resource friction.",
-  "patterns_trends": "Workaround Regression: Recurring pattern of localized outages re-emerging after temporary engineering guardrails are systematically dismantled.\nFunctional Divergence: Clear trend where non-cacheable, volatile web events dictate the p99 availability profiles of mission-critical stateful connections.\nSafeguard Deadlocks: Evolution of platform issues where node self-suspension logic protects the server environment but heavily penalizes global customer SLAs."
-},
-{
-  "ticket_id": "ERECSO-88",
-  "month": "5",
-  "outcome": "Problem: Ghost ipcache logic drops valid CNAME chains during dual-stack checks by flagging valid records with a status of IP_NEG_CACHED_HALF.\nAction: Engineering to validate code fix GHOST-3866 against asynchronous cache changes; Leadership to mandate targeted metadata overrides in unpatched canary environments.\nExpected Outcome: Continuous forward CNAME chain resolution and total elimination of dual-stack internal routing deadlocks.",
-  "progressive_work": "Gap_Addressed: Eradicates the logic failure where transient half-cached negative IP states broke full structural CNAME parsing within Ghost.\nOutcome: Successful rollout of a structural code update in GHOST-3866 to parse valid CNAME responses unconditionally.\nMissing: Low-latency asynchronous state evaluation inside the ipcache component and built-in metadata dual-stack rule checking.",
-  "patterns_trends": "Feature Conflict Trends: Rising trend where modern IPv4/IPv6 dual-stack preference tracking destabilizes legacy core DNS cache handlers.\nInvestigation Lifecycles: Evolution of hidden infrastructural bugs requiring years of tracking and deep labor footprints (1w 2d+) due to cross-component dependencies.\nPatch-Driven Stability: Persistent operational pattern of applying restrictive structural overrides to bypass ongoing systemic code execution gaps."
-},
-{
-  "ticket_id": "ERECSO-122",
-  "month": "5",
-  "outcome": "Problem: Edge servers are brought online prematurely during software upgrades prior to syncing mandatory channels, resulting in TLS failures (illegal_parameter) for over 49 strategic banking clients.\nAction: Engineering to implement a Channel Validation Sync Gate in post-script installers; Leadership to mandate a published Mandatory Channel Sync Matrix across all pre-release testing cycles.\nExpected Outcome: Elimination of metadata-starved node startups and total protection of sensitive financial transactional paths during release cycles.",
-  "progressive_work": "Gap_Addressed: Resolves the deployment pipeline oversight where nodes enter production without critical certificates, STG secrets, or tracking channels.\nOutcome: Structural identification of critical metadata dependencies and successful isolation of the TLS illegal_parameter exception in ERE-3255.\nMissing: Dynamic pre-release simulation modeling for keyagent updates and built-in webghost suspension logic validation within installation cleanup scripts.",
-  "patterns_trends": "Targeted Blast Radius: Persistent pattern of cryptographic state failures disproportionately crippling highly sensitive Japanese banking and premium financial platforms.\nScripting Logic Decay: Growing trend where edge maintenance actions introduce severe service delivery blocks due to a lack of synchronous component validation checks.\nEvolution of Failure: Shift in platform constraints away from physical processing capacity toward cryptographic dependency synchronization during active network deployments."
-},
-{
-  "ticket_id": "ERECSO-118",
-  "month": "5",
-  "outcome": "Problem: Large-scale DDoS attacks against target domains exhaust machine resources, triggering a 1.0% Freeflow Ghost roll spike and cascading retry loops.\nAction: Engineering to mandate default OHD and finalize CRP blocking logic; Leadership to automate the MAPPER-53 quarantine framework.\nExpected Outcome: Absolute containment of attack footprints and elimination of collateral multi-tenant machine crashes.",
-  "progressive_work": "Gap_Addressed: Overcomes the lack of built-in platform safeguards against shared resource starvation caused by localized request swarms.\nOutcome: Structural mapping of over 15 multi-customer attack incidents to develop automated insulation features.\nMissing: Automated, real-time Quarantine-as-a-Service workflows and dynamic client-side connection throttling based on origin health metrics.",
-  "patterns_trends": "Hardware Saturation: Escalating trend of malicious request volumes inducing physical machine anomalies like segmentation faults and memory limit breaches.\nSelf-Inflicted Amplification: Persistent pattern of cascading timeouts generating destructive retry spirals that trigger cluster-wide node self-suspensions.\nManual Deficit: Evolution of attack vectors rendering legacy, reactive workarounds (individual IP blocks) obsolete due to sheer scale and speed."
-},
-{
-  "ticket_id": "ERECSO-104",
-  "month": "5",
-  "outcome": "Problem: Reactive SNId mapping logic deadlocks under synchronized STB bursts and WAF-induced processing overhead, triggering midgress and edge failures.\nAction: Engineering to implement Historic Load State tracking and MPG ID-based scoring; Leadership to mandate randomized polling client policies and automate cloud agent groupings.\nExpected Outcome: Elimination of cascading connection timeouts and guaranteed p99 performance for high-concurrency Tier-1 live streams.",
-  "progressive_work": "Gap_Addressed: Eliminates the memory-less spreading restrictions of the SNId deployment that cause premature load concentration.\nOutcome: Isolation and mitigation of WrestleMania and Liberty API surges via regional maprule adjustments and custom WAF bypasses.\nMissing: Scheduled pre-warm lock-spread controls and cross-department validation for last-minute WAF rollouts prior to major broadcasts.",
-  "patterns_trends": "Security-Traffic Concurrence: Evolution of regional failures driven by the compounding weight of high flit volume hitting un-optimized WAF logic.\nSynchronized Footprints: Persistent trend of un-jittered STB applications triggering instantaneous regional collapses instead of distributed demand.\nTier Contagion: Shift in blast radius from edge-only constraints to internal midgress fabric dropouts due to downstream mapping resource exhaustion."
-},
-{
-  "ticket_id": "ERECSO-31",
-  "month": "5",
-  "outcome": "Problem: Preventable configuration mistakes and resource-intensive protocol reviews (WebSockets) clog the ERE pipeline due to inadequate initial triage.\nAction: Engineering to build pre-escalation linting tools for hostname syntax and traffic validation; Leadership to enforce strict 'Definition of Ready' gates and support team feedback loops.\nExpected Outcome: Substantial reduction in ERE engineering toil and faster resolution tracks for legitimate platform infrastructure anomalies.",
-  "progressive_work": "Gap_Addressed: Identifies and tracks systemic support breakdowns in KB compliance, ticket quality, and basic routing validation.\nOutcome: Successful auditing and resolution of long-standing PhonePe WebSocket issues and Mobile Rider hostname misconfigurations.\nMissing: Automated JIRA intercept scripts for data enforcement and proactive UI-driven configuration guardrails.",
-  "patterns_trends": "Human Error Cascade: Clear trend where minor misconfigurations masquerade as severe platform bugs, consuming disproportionate ERE labor.\nProtocol Triage Decay: Increasing trend of support layers passing complex stateful protocol reviews (WebSockets) directly to engineering without basic perimeter profiling.\nLifecycle Stagnation: Evolution of simple issues staying active for months due to low initial quality, highlighting the high hidden cost of unvalidated escalations."
-},
-{
-  "ticket_id": "ERECSO-104",
-  "month": "2",
-  "outcome": "Problem: Reactive SNId logic fails during synchronized bursts (STBs/IPL) and cloud agent spikes, causing regional overloads and SSL timeouts.\nAction: Engineering to implement 'Historic Load States' and MPG-ID-based Ghost scoring to ensure regional diversity; Leadership to automate cloud-agent grouping and enforce pre-spread policies.\nExpected Outcome: Guaranteed p99 stability and the elimination of collateral 'noisy neighbor' outages during Tier-1 events.",
-  "progressive_work": "Gap Addressed: Fixes the 'memory-less' nature of SNId that prematurely reduces spreading during momentary load dips.\nOutcome: Automated NS group breaking for flit-intensive API traffic and improved regional load state retention.\nMissing: A proactive 'pre-warm' trigger for scheduled event windows and enforced migration of flit-heavy customers to API-X maps.",
-  "patterns_trends": "Flit-Density Shift: Failures are moving from volume to request-density (flits), where short-lived spikes from TikTok/Roblox crash regions faster than high-bandwidth streams.\nSystemic Contagion: Increasing trend of 'Noisy Neighbors' (Paramount/Verizon) causing instabilities for unrelated critical customers (JPMC).\nEvolution: Moving from reactive regional FOM capping to an architecture that natively assumes peak load as the default state for high-concurrency events."
-},
-{
-  "ticket_id": "ERECSO-104",
-  "month": "1",
-  "outcome": "Problem: Reactive SNId logic fails during synchronized bursts (STBs/Gaming) and concentrated cloud agent spikes, causing regional overloads and SSL failures.\nAction: Engineering to implement 'Historic Load States' and MPG-ID-based Ghost scoring to ensure regional diversity; Leadership to automate cloud-agent grouping and enforce product alignment (API-X for flit-heavy loads).\nExpected Outcome: Guaranteed p99 stability and the elimination of collateral 'noisy neighbor' outages during Tier-1 events.",
-  "progressive_work": "Gap Addressed: Fixes the 'memory-less' nature of SNId that prematurely reduces spreading during momentary load dips.\nOutcome: Automated NS group breaking for flit-intensive API traffic and improved regional load state retention.\nMissing: A proactive 'pre-warm' trigger for scheduled event windows and enforced migration of flit-heavy customers to API-X maps.",
-  "patterns_trends": "Flit-Density Shift: Failures are moving from volume to request-density (flits), where short-lived spikes from betting/gaming crash regions faster than high-bandwidth streams.\nSystemic Contagion: Increasing trend of 'Noisy Neighbors' (Horse Racing) causing instabilities for unrelated critical customers (AEON) on shared maps.\nEvolution: Moving from reactive manual pre-spreading to an architecture that natively assumes peak load as the default state for high-concurrency events."
-},
-{
-  "ticket_id": "ERECSO-118",
-  "month": "4",
-  "outcome": "Problem: Attacks on specific domains (e.g., Walmart CP1450274) cause Ghost Rolls and regional resource exhaustion, impacting shared infrastructure.\nAction: Engineering to finalize CRP proactive blocking and implement adaptive retry logic; Leadership to automate the 'Quarantine Map' transition process.\nExpected Outcome: Automated isolation of attack-related request swarms and elimination of collateral regional instability.",
-  "progressive_work": "Gap_Addressed: Addresses the lack of platform-level protection against the resource-heavy side effects of localized attacks.\nOutcome: Identification of CRP as a proactive solution and the use of internal DNSP spreadlimiters to contain impact.\nMissing: Fully automated quarantine workflows and default OHD enforcement to stop retry amplification.",
-  "patterns_trends": "Systemic Fragility: Shift toward attacks causing hardware-level resource exhaustion (memory/CPU) and software segfaults.\nRetry Feedback Loops: Persistent pattern of cascading timeouts and retry surges accelerating regional collapse when origins are down.\nEvolution: Moving from reactive IP blocking to a requirement for autonomous, resource-aware platform shielding (CRP)."
-},
-{
-  "ticket_id": "ERECSO-118",
-  "outcome": "Problem: Attacks like Mass Mutual cause regional Ghost Rolls and resource exhaustion. \nAction: Deploy CRP proactive blocking and automate OHD.\n Expected Outcome: Logical isolation of attack traffic and prevention of regional cascading failures.",
-  "month": "1",
-  "progressive_work": "Gap Addressed: Lack of automated shielding between shared customers. \nOutcome: Resource-aware request limiting via CRP. \nMissing: Automated quarantine triggers and adaptive retry logic for down origins.",
-  "patterns_trends": "Systemic Fragility: Attacks impacting physical machine health (segfaults). \nRetry Spiral: Origin timeouts amplifying surges due to lack of OHD. \nEvolution: Moving from manual coordination to automated, CRP-led defense."
-},
-{
-  "ticket_id": "ERECSO-35",
-  "month": "3",
-  "outcome": "Problem: Manual, high-touch reviews for IPL-scale events like JioHotstar (ERE-3266) are unscalable and dependent on manual overrides.\nAction: Engineering to productize specialized TD0 profiles and native Cascading Timeout controls; Leadership to automate Map-Ops capacity reviews.\nExpected Outcome: Template-driven event readiness with guaranteed regional capacity and zero manual override dependency.",
-  "progressive_work": "Gap Addressed: Corrects the disconnect between standard platform settings and specific Media workflow requirements (Manifest vs Segment).\nOutcome: Standardized baseline for FA/QR settings and validated TD map structure for IPL 2026.\nMissing: Automated capacity sync with Map-Ops and a UI-based readiness auditor for Ad delivery setups.",
-  "patterns_trends": "Functional Specialization: Shift from general TD0 maps to distinct, isolated map rules for Manifest vs. Ad delivery.\nProcess Evolution: Movement from 'incident response' to 'pre-tournament auditing' as a standard service requirement.\nTrend: Increasing reliance on 'Advanced Overrides' for timeouts highlights a need to move these features into the core Product UI."
-},
-{
-  "ticket_id": "ERECSO-35",
-  "month": "2",
-  "outcome": "Problem: Manual scaling of SSAI (chc1) and slot pre-spreading for high-concurrency events like IPL and March Madness is unscalable and creates week-long bottlenecks.\nAction: Engineering to automate protocol-downgrade workflows and productize native Cascading Timeout controls; Leadership to automate the Map-Ops capacity review handshake.\nExpected Outcome: Zero-touch event readiness with guaranteed regional headroom and elimination of manual 'Advanced Override' dependencies.",
-  "progressive_work": "Gap Addressed: Corrects the lack of standardized hybrid Edge/TD workflows for SSAI and Manifest delivery.\nOutcome: Validated TD map structures (chc1) and confirmed capacity for peak hour demands for WBD and JHS.\nMissing: Automated 'Slot Pre-spread' triggers for event starts and a real-time dashboard for independent region health investigations.",
-  "patterns_trends": "Hybrid Evolution: Growing shift toward complex ESSL Edge + FF TD protocol-downgrade setups for Media events.\nScaling Friction: Persistence of manual coordination for map rule scaling (GSPMAPSTRA) and slot spreading (MAPPINGENG).\nTrend: Moving from reactive configuration checking to a requirement for dynamic, schedule-aware map scaling for global Tier-1 events."
-},
-
-{
-  "ticket_id": "ERECSO-33",
-  "outcome": "Problem: New software install is triggering Ghost Rolls in the Websocket module (isReady segfault). \nAction: Engineering to fix the websocket handle_events race condition; Leadership to halt rollout. \nExpected Outcome: Zero-roll rate for Websocket traffic and stabilized production software.",
-  "month": "4",
-  "progressive_work": "Gap Addressed: Detection of post-install software regressions through manual checklisting. \nOutcome: Identification of a critical websocket inspector bug. \nMissing: Automated canary rollback mechanisms for high roll rates.",
-  "patterns_trends": "Trend Reversal: Re-emergence of high-impact rolls after a long period of stabilization. \nThreading Evolution: Shift toward complex colib-mthread context start errors. \nFeature Risk: Monitoring/Inspection code is now a leading cause of service instability."
-},
-{
-  "ticket_id": "ERECSO-35",
-  "month": "4",
-  "outcome": "Problem: Manual, manual-override-heavy event reviews for the World Cup and Jio Hotstar launches are unscalable and risk human error.\nAction: Engineering to natively productize cascading timeouts and functional map isolation (Manifest vs Segment); Leadership to automate the CSO/Map-Ops capacity review handshake.\nExpected Outcome: Template-driven event readiness that guarantees regional capacity and eliminates the need for Advanced Overrides.",
-  "progressive_work": "Gap Addressed: Corrects the lack of standardized mapping profiles for high-stakes Media/Web events.\nOutcome: Validated edge map recommendations (dscw80) and optimal streaming configurations (ch970) for Mediacorp.\nMissing: Automated map-ops capacity syncing and a UI-based tool for independent Ad Delivery review and bitrate tuning.",
-  "patterns_trends": "Functional Specialization: Growing demand for separate hostnames and maprules for manifest vs segment delivery to ensure isolation.\nContent Evolution: High-frequency 'Micro Dramas' (ERE-3273) require a shift toward API-X style mapping rigor for AMD products.\nEvolution: Moving from reactive performance fixing to a standard 'Pre-Launch Readiness' requirement for all Tier-1 global events."
-},
-{
-  "ticket_id": "ERECSO-33",
-  "month": "3",
-  "outcome": "Problem: Ghost version 22.4.5 Phase 1 rollout is causing a high roll spike due to a null pointer crash in MemObject destructors.\nAction: Engineering to patch MemObject::ActiveInfo destructor logic; Leadership to halt 22.4.5 rollout and rollback Phase 1 regions.\nExpected Outcome: Restoration of platform stability and elimination of destructor-driven segmentation faults.",
-  "progressive_work": "Gap_Addressed: Provides a manual safety audit for software installs that bypasses automated lab testing.\nOutcome: Successful identification of a core memory management bug in the 22.4.5 release branch.\nMissing: Automated backtrace-to-rollback triggers and formalized Phase 1 roll-rate guardrails.",
-  "patterns_trends": "Memory Management Regression: Shift toward software crashes occurring during object deallocation/destruction phases.\nLibrary-Level Flaws: Evolution of bugs within the 'colib' common libraries affecting both FF and ESSL networks simultaneously.\nStability Trend: Reversal of 2025's stabilization with new high-impact regressions emerging in early 2026 release cycles."
-},
-{
-  "ticket_id": "ERECSO-73",
-  "month": "3",
-  "outcome": "Problem: Shared maprules for SSAI manifests and Pristine video (ERE-3219) cause 'Noisy Neighbor' latency spikes during major sports events.\nAction: Engineering to implement Functional Map Isolation as a default; Leadership to standardize specialized TD0 tiering for manifest-heavy workflows.\nExpected Outcome: Guaranteed p99 latency for pristine content and elimination of self-inflicted regional overloads.",
-  "progressive_work": "Gap_Addressed: Addresses the performance degradation caused by manifest flit-spikes on shared AMD maprules.\nOutcome: Successful mitigation of JioStar latency by migrating pristine traffic to zch3; establishing a blueprint for functional separation.\nMissing: Automated maprule isolation triggers and proactive pre-spreading for known SSAI flash-crowd windows.",
-  "patterns_trends": "Resource Contention Shift: Transition from bandwidth-based bottlenecks to request-density (flit) bottlenecks on shared infrastructure.\nSelf-Infliction Pattern: Increasing trend of high-frequency SSAI requests destabilizing core video delivery on the same parent map.\nEvolution: Moving from a 'single-map' delivery model to a multi-tiered architecture that isolates manifest, segment, and ad delivery streams."
-},
-{
-  "ticket_id": "ERECSO-78",
-  "month": "2",
-  "outcome": "Problem: Shared ChinaCDN capacity (ca2 maprule) is being exhausted by large software updates (Tesla), forcing luxury brands (Dior) into Out-of-Country Mapping (OOCM).\nAction: Engineering to implement map-level workload isolation for media vs. web traffic; Leadership to mandate proactive traffic migration for high-bandwidth hostnames.\nExpected Outcome: Restoration of in-country mapping stability and elimination of 'Noisy Neighbor' performance degradation in China.",
-  "progressive_work": "Gap_Addressed: Addresses the lack of workload-based functional segmentation within China's regional capacity domains.\nOutcome: Successful monitoring and identification of Tesla's update spikes as the primary driver for Dior's OOCM.\nMissing: Automated scheduled-based mapping and real-time utilization-driven hostname shunting tools.",
-  "patterns_trends": "Noisy Neighbor Evolution: Growing trend of bandwidth-heavy software updates destabilizing latency-sensitive web delivery in China.\nOperational Bottlenecks: Evolution of issues where technical mitigation (moving hostnames) is delayed by business-side reluctance.\nWorkload Mismatch: A recurring pattern showing that mixed-profile mapping (Web + Media) on the same maprule is unsustainable in capacity-strained regions."
-},
-{
-  "ticket_id": "ERECSO-50",
-  "month": "2",
-  "outcome": "Problem: Regional overloads occur when flit utilization hits 100%, causing stalled threads and 5xx errors (ERE-3182).\nAction: Engineering to implement Flit-Aware Load Balancing and RPS-based scoring; Leadership to automate in-region spreading logic.\nExpected Outcome: Elimination of manual FOM adjustments and guaranteed stability for high-frequency API workflows.",
-  "progressive_work": "Gap_Addressed: Addresses the misalignment between bandwidth-based mapping and flit-based regional stressors.\nOutcome: Tracking of high-flit API traffic overloads to inform the COREPERF-E-26 architectural enhancements.\nMissing: Automated regional weight adjustments and proactive pre-warming triggers for detected flit inclines.",
-  "patterns_trends": "Flit Saturation Trend: Increasing pattern of regional failure driven by request density rather than total traffic volume.\nThread Exhaustion: Evolution of issues toward internal Ghost resource stalls caused by high-concurrency 'flash crowds'.\nAutomation Imperative: Pattern of manual worklogs (3h+) for short-lived spikes proving the need for real-time, automated mapping pivots."
-},
-{
-  "ticket_id": "ERECSO-46",
-  "month": "2",
-  "outcome": "Problem: Flawed 'Poor Pingpoint' logic and rogue PPs cause AU traffic to map to US/APAC, resulting in high latency and OOCM (ERE-3214).\nAction: Engineering to implement geography-aware PP health checks and fix random-selection bugs; Leadership to provide ERE with direct diagnostic UI access.\nExpected Outcome: Elimination of stale-telemetry-driven OOCM and a reduction in bad PP impact duration from 8 hours to minutes.",
-  "progressive_work": "Gap_Addressed: Addresses the lack of visibility into Mapper scoring and the diagnostic dependency on external teams (CPD/CSS).\nOutcome: Successful manual reassignment of PPs to fix Australian OOCM incidents.\nMissing: Automated real-time logs for PP health and proactive assignment logic for critical low-load ASNs.",
-  "patterns_trends": "In-Country Sensitivity: Trend where PPs appear healthy to distant geos while failing locally, causing the Mapper to favor OOCM.\nTelemetry Lag: Evolution of network issues lasting 6-8 hours due to the platform's slow recovery logic for bad pingpoints.\nDiagnostic Toil: Persistent pattern of ERE needing to escalate to MPD teams for basic mapping-logic confirmation."
-},
-{
-  "ticket_id": "ERECSO-55",
-  "month": "2",
-  "outcome": "Problem: Concentrated MPGs from cloud providers (AWS/GCP) defeat Fractional Assignment, causing regional overloads for Hotstar and Brandlive.\nAction: Engineering to expand Fractional Assignment regional limits and automate cloud-agent MPG splitting; Leadership to standardize OIPACL and pre-spread serials for event-driven API traffic.\nExpected Outcome: Automated dispersion of 'Mega-MPGs' and guaranteed p99 stability during high-concurrency surges.",
-  "progressive_work": "Gap_Addressed: Addresses the 3-region limit in Fractional Assignment and the reactive nature of topology.xml overrides.\nOutcome: Successful mitigation of T20 WC spikes for Hotstar through FOM and traffic splitting across SS/OIPACL layers.\nMissing: Automated identification of new cloud agents and tuning of uFMP fallback safeties for extreme demand scenarios.",
-  "patterns_trends": "Cloud Funneling: Increasing trend of concentrated cloud agents creating workload spikes that bypass standard end-user distribution logic.\nFlit Volatility: Evolution of regional failures driven by fluctuating request rates rather than total bandwidth volume.\nStructural Shift: Moving from reactive regional capping (FOM) to an architectural requirement for OIPACL-based isolation for Tier-1 API customers."
-},
-{
-  "ticket_id": "ERECSO-42",
-  "month": "2",
-  "outcome": "Problem: Lack of in-country capacity forces Out-of-Country Mapping (OOCM) for Jio and China Azure, leading to 5xx errors and latency.\nAction: Engineering to implement 'Strict-Country' mapping and automated install-blackouts; Leadership to fund 30% headroom expansion in saturated markets.\nExpected Outcome: Elimination of international traffic spills and guaranteed geographic delivery integrity for domestic customers.",
-  "progressive_work": "Gap_Addressed: Addresses the failure to maintain domestic mapping affinity during concurrent traffic surges and hardware maintenance.\nOutcome: Identification of 'Blackout Dates' as a primary mitigation strategy for Reliance Jio (ERE-3175).\nMissing: Automated capacity pre-warming and real-time OOCM performance-penalty modeling.",
-  "patterns_trends": "Self-Inflicted OOCM: Trend where maintenance activities during peak hours are the tipping point for geographic rerouting.\nMarket Saturation: Evolution toward whole-country capacity exhaustion in India and China rather than isolated regional outages.\nInvisible Failures: Increasing reliance on retry logic to mitigate OOCM-driven 5xx errors, leading to higher overall platform resource consumption."
-},
-{
-  "ticket_id": "ERECSO-31",
-  "month": "2",
-  "outcome": "Problem: Significant ERE bandwidth is wasted on misrouted EdgeWorkers bugs and preventable DNS-override incidents.\nAction: Engineering to build an automated triage validator; Leadership to enforce strict 'Definition of Ready' criteria for all ERE escalations.\nExpected Outcome: Restoration of ERE focus on high-complexity platform engineering and a 25% reduction in administrative toil.",
-  "progressive_work": "Gap_Addressed: Identifies failures in diagnostic quality and correct component routing (e.g., EWDEVESC vs ERE).\nOutcome: Successful documentation of 'Toil' drivers like NBC region overloads and Brazil DNS incidents.\nMissing: Automated cross-project ticket migration and proactive customer best-practice enforcement tools.",
-  "patterns_trends": "Component Friction: Evolution of product-specific bugs (EW) being incorrectly funneled through ERE, causing routing bottlenecks.\nExternal-to-Internal Trend: Increasing trend of ERE investigating 'performance drops' caused by customer-side configuration violations (DNS/TTL).\nToil Density: Pattern showing that misrouted tickets require high engineering effort (1d+) just to disprove ERE ownership."
-},
-{
-  "ticket_id": "ERECSO-121",
-  "month": "3",
-  "outcome": "Problem: Logical deadlock between Region Health and Acceptance Criteria causes complete forward path exhaustion (fwdStateFree) for OIPACL customers.\nAction: Engineering to finalize GHOST-7069 and introduce error codes for bad SR2 regions; Leadership to mandate RA-Only fallback for high-traffic API customers.\nExpected Outcome: Elimination of 503 errors caused by forward-tier health fluctuations and guaranteed last-resort pathing.",
-  "progressive_work": "Gap_Addressed: Bridges the failure of Ghost to trigger forward requests when primary paths are 'bad' and backup paths are 'untrusted'.\nOutcome: Successful ESSL Ghost release rollout in Feb/March providing the structural fix.\nMissing: Automated detection of other silent SR2 failure scenarios and native UI controls for Acceptance Criteria flexibility.",
-  "patterns_trends": "API Vulnerability: Trend showing high-concurrency API traffic is most susceptible to fwdStateFree deadlocks.\nSecurity-Availability Conflict: Strong correlation (83%) between Origin IPACL usage and forward-path exhaustion incidents.\nEvolution: Shifting from reactive regional suspensions to an architectural requirement for flexible acceptance criteria during mid-tier outages."
-},
-{
-  "ticket_id": "ERECSO-31",
-  "month": "3",
-  "outcome": "Problem: ERE bandwidth is being wasted on incorrect routing and 'Not a Bug' escalations like ERE-3241.\nAction: Engineering to implement a mandatory pre-escalation diagnostic checklist; Leadership to enforce quality metrics for escalating teams.\nExpected Outcome: A 30% reduction in ERE toil and a focus shift toward critical platform engineering.",
-  "progressive_work": "Gap_Addressed: Identifies failures in KB adherence (ERECSO-28) and lack of detailed investigation (ERECSO-30).\nOutcome: Documentation of specific toil-drivers like external OCSP responder failures.\nMissing: Automated KB-suggestion bot and an enforced 'Definition of Ready' for all ERE-bound tickets.",
-  "patterns_trends": "Pass-Through Culture: Increasing trend of escalating third-party vendor errors to ERE without initial validation.\nDiagnostic Decay: Growing worklogs on 'Not a Bug' outcomes indicate that triage quality is not keeping pace with platform complexity.\nEvolution: Moving from simple missing data to complex 'structural validity' questions that should be handled at the support tier."
-},
-{
-  "ticket_id": "ERECSO-46",
-  "outcome": "Problem: Structural flaws in 'Bad Pingpoint' detection cause prolonged Out-of-Country (OOC) mapping, as seen in ERE-3247 where Bell Canada was impacted for a full 24-hour CPD cycle. \nAction: Engineering must move away from the '100% global loss' threshold to a regional-loss model and develop a bypass for CPD cycle dependencies. Leadership to fund a dedicated Pingpoint Visibility UI. \nExpected Outcome: Reduction of mapping recovery time from 24 hours to <1 hour and guaranteed p99 performance for low-load, critical ASNs.",
-  "month": "3",
-  "progressive_work": "Gap Addressed: Eliminates the 'Visibility Blackout' for CSO by documenting the lack of logs/UI for scoring; addresses the logic bug where the mapper randomly picks unpingable manual PPs. \nOutcome: Implementation of faster recovery paths and more optimal PP designations.\nMissing: A real-time Mapper Debugger for front-line teams and a mechanism to identify IPv6-specific latency disparities within the same ASN.",
-  "patterns_trends": "Recovery Lag Trend: Mapping remains 'stuck' on bad data due to fixed CPD cycles, indicating a lack of dynamic architectural responsiveness. \nLocalized Blindness: A trend where 'in-country' regions are bypassed for distant geos because the PP is still pingable globally, sacrificing performance for reachability. \nLogic Evolution: Moving from manual PP list management (which currently suffers from random-pick bugs) to a requirement for automated, health-aware PP rotation."
-},
-{
-  "ticket_id": "ERECSO-55",
-  "outcome": "Problem: Large Map Processing Groups (MPGs) from cloud providers (AWS/GCP) and specific ASNs (Korea/Vietnam) overwhelm regions because Fractional Assignment is limited to 3 regions, as seen in ERE-3229 where Airbnb traffic caused CPU spikes for Warner.\nAction: Engineering must evolve Fractional Assignment to support >3 regions and implement MPG-ID-based scoring to diversify regional placement. Leadership to fund automated, proactive cloud-agent grouping to replace reactive topology.xml maintenance. Expected Outcome: Elimination of 'Noisy Neighbor' regional collapses and guaranteed p99 stability for flit-intensive API traffic.",
-  "month": "3",
-  "progressive_work": "Gap Addressed: Corrects the failure of uFMP safeties and Fractional Assignment during massive, concentrated demand surges. \nOutcome: Identification of the structural limits of the current 3-region mapping cap.\nMissing: A real-time MPG density-aware monitoring system and automated triggers for SNI-map migration when traffic patterns shift from general to pre-warming/load-test profiles.",
-  "patterns_trends": "Cloud-Origin Dominance: A shift toward fewer but larger MPGs originating from AWS/GCP that do not behave like traditional distributed end-user traffic.\nResource Contagion: A trend where 'pre-warming' or high-frequency F2B traffic from one customer (Airbnb) causes physical CPU exhaustion for unrelated tenants (Warner) in the same region. Process Decay: The move from reactive FOM adjustments to a critical need for an architecture that natively assumes high MPG density as a baseline rather than an anomaly."
-},
+    "ticket_id": "ERECSO-104",
+    "month": "4",
+    "outcome": "Problem: Reactive SNId logic fails during synchronized spikes (STBs/IPL) and cloud agents create massive, concentrated workloads (MPGs) that overwhelm regions before the platform can spread the load.\nAction: Engineering to implement 'Historic Load States' and MPG-ID-based Ghost MPG scoring to ensure regional diversity; Leadership to fund the transition from manual topology.xml overrides to automated cloud-agent grouping.\nExpected Outcome: Guaranteed p99 stability and elimination of self-inflicted outages during high-concurrency events.",
+    "progressive_work": "Gap Addressed: Fixes the 'memory-less' nature of SNId that causes it to dial down spreading too quickly when load momentarily dips.\nOutcome: An automated, scalable way to 'break up' cloud-originating MPGs and prevent flit-intensive traffic from overwhelming edge regions.\nMissing: A proactive 'pre-warm' or 'lock-spread' feature for scheduled event windows and enhanced logical isolation for shared parent maps.",
+    "patterns_trends": "Flit vs. Bits: Shift from volume to density; high-frequency API requests (ERE-3268, ERE-3279) are now primary regional stressors.\nBlast Radius: Major events (IPL) are causing 'self-infliction' (ERE-3279), where one spike (e.g., SSAI manifests) destabilizes unrelated configs on the same parent map.\nCloud Concentration: Traffic from cloud providers (AWS Route 53) increasingly results in less diverse Name Server (NS) sets, creating 'Mega-MPGs' that require architectural dispersion."
+  },
   {
-  "ticket_id": "ERECSO-103",
-  "month": "4",
-  "outcome": "Problem: Regressions in recent Ghost features caused duplicated origin requests in Cloud Wrapper and incorrect 'If-none-match' forwarding.\nAction: Engineering to resolve GHOST-7550 multi-hop logic; Leadership to enforce stricter canary testing for global tag rollouts.\nExpected Outcome: Restoration of origin shielding and elimination of duplicated traffic/bandwidth waste.",
-  "progressive_work": "Gap Addressed: Tracks and mitigates regressions caused by new platform tags like 'contact-multi-protocol-next-hop-on-failure'.\nOutcome: Successful mitigation of CW origin leakage by disabling faulty sureroute tags in Advanced Overrides.\nMissing: Automated regression suites for multi-hop Ghost scenarios and a centralized 'Global Kill-Switch' for new features.",
-  "patterns_trends": "Resiliency Conflict: New failover tags are causing 'Double-Forwarding' to origins, indicating conflicts with legacy sureroute logic.\nSide-Effect Bugs: Trend of core HTTP validation (If-none-match) being destabilized by unrelated platform optimizations.\nEvolution: Moving from automated stability to a heavy reliance on manual 'Feature-OFF' overrides to stabilize production."
-},{
-  "ticket_id": "ERECSO-103",
-  "month": "2",
-  "outcome": "Problem: Platform feature rollouts are triggering core TLS regressions (ERR_FWD_SSL_HANDSHAKE), as seen in ERE-2770, causing widespread origin connectivity failures.\nAction: Engineering to implement automated 'Handshake-Canary' testing for the TLS stack; Leadership to enforce a 'Slow-Bake' rollout policy for all forward-connectivity tags.\nExpected Outcome: Elimination of feature-driven SSL failures and a hardened global checklisting process.",
-  "progressive_work": "Gap Addressed: Corrects the failure of current checklisting to catch edge-case SSL regressions in the forward path.\nOutcome: Successful long-term fix for the May 12th SSL regression and improved tracking of feature-driven failures.\nMissing: Automated real-time rollback triggers and better origin-side simulation in pre-production environments.",
-  "patterns_trends": "Forward Path Vulnerability: Shift in regressions moving from the client-facing side to the origin-facing TLS handshake.\nComplexity Trend: TLS regressions require significantly higher worklog hours (1w+) to resolve compared to simple logic bugs.\nEvolution: Moving from manual checklisting to a requirement for data-driven, automated feature validation at every stage of the rollout."
-},
- {
-  "ticket_id": "ERECSO-103",
-  "month": "1",
-  "outcome": "Problem: Unstable releases (Ghost v22.4.0) and feature rollouts (ES-LT) are causing high metadata latency and ICP authentication failures.\nAction: Engineering to implement metadata-latency guardrails in the CI/CD pipeline; Leadership to mandate canary-region soak periods for all core Ghost updates.\nExpected Outcome: Elimination of rogue releases and restoration of seamless peer-to-peer cache authentication.",
-  "progressive_work": "Gap_Addressed: Tracks production regressions caused by central software updates and feature flags.\nOutcome: Successful mitigation of metadata spikes through manual hardware suspension and release rollbacks.\nMissing: Automated G2G-Auth health checks and lab-based metadata stress testing.",
-  "patterns_trends": "Security-Feature Conflict: Trend where performance-oriented features (ES-LT) destabilize existing security protocols (ICP Auth).\nProcessing Overhead: Evolution of platform issues toward metadata-processing bottlenecks rather than simple software crashes.\nManual Mitigation Reliance: Persistent pattern of manual hardware suspension as the primary workaround for faulty software versions."
-},
-{
-  "ticket_id": "ERECSO-63",
-  "month": "4",
-  "outcome": "Problem: Third-party ISP backbone congestion (e.g., RJIL NLD in ERE-3265) causes intermittent 503/504 spikes that bypass internal Akamai monitoring.\nAction: Engineering to develop congestion-aware forward routing to automate public TD bypasses; Leadership to establish real-time telemetry handshakes with major ISP partners.\nExpected Outcome: Automated isolation of ISP network failures and a drastic reduction in manual traffic-shifting worklogs.",
-  "progressive_work": "Gap_Addressed: Addresses the lack of automated failover logic for external backbone/peering instabilities.\nOutcome: Successful manual mitigation of RJIL congestion by shifting AANP regions to public TD maps (ch2).\nMissing: Predictive network-health modeling and real-time integration with ISP backbone telemetry for automated mapping pivots.",
-  "patterns_trends": "Backbone-Centric Failures: Trend shifting from Edge-to-User issues to internal ISP backbone (NLD) congestion as a primary 5xx driver.\nStrategic Rerouting: Evolution toward using public TD maps as a standard 'bypass' for private ISP network failures.\nIntermittency: Pattern of short-lived, recurring spikes that demand automated, granular performance-based triggers rather than manual intervention."
-},
-{
-  "ticket_id": "ERECSO-63",
-  "month": "3",
-  "outcome": "Problem: Third-party ISP backbone failures (Airtel subsea cable flaps) and transient connectivity issues cause massive Forward-tier disruptions and SSL timeouts.\nAction: Engineering to implement Path-Aware Forward Selection for geographic bypass; Leadership to mandate proactive ISP telemetry integration.\nExpected Outcome: Automated recovery from ISP link failures and elimination of service disruption during external subsea cable repairs.",
-  "progressive_work": "Gap_Addressed: Addresses the visibility gap regarding external ISP backbone health and PoP isolation.\nOutcome: Successful manual isolation of impacted Airtel links and implementation of 'Deny-All' policies for BHARENT/GPX.\nMissing: Automated PoP cost-out logic and real-time integration of external ISP health signals into the Mapper.",
-  "patterns_trends": "Backbone Fragility: Recurring disruptions tied to specific subsea cable chokepoints (Dubai/London/Singapore) for India-to-Europe traffic.\nConcurrency Correlation: Transient ISP issues are increasingly triggered by high-traffic events (T20 WC) combined with ongoing network repairs.\nEvolution: Transitioning from manual link suspension (ERE-3227) to a requirement for a platform that natively manages ISP-driven flit overloads."
-},
-{
-  "ticket_id": "ERECSO-73",
-  "month": "4",
-  "outcome": "Problem: High-density SSAI manifest traffic (flit-intensive) from cloud origins overwhelms single-hostname AMD regions, causing 5xx errors (ERE-3268).\nAction: Engineering to implement Hostname Sharding and API-X Shard support for AMD; Leadership to standardize and approve API shard utilization for SSAI workflows.\nExpected Outcome: Elimination of regional CPU/flit exhaustion and guaranteed connection stability for multi-leg cloud-media flows.",
-  "progressive_work": "Gap_Addressed: Addresses the resource-handling limitations of AMD when subjected to API-style request density from SSAI flows.\nOutcome: Successful reduction of errors for Samsung TV Plus by moving Leg 2 traffic to specialized w40 maps.\nMissing: Automated detection/migration of cloud-to-cloud surges and formalized PM approval for standard API shard access on AMD properties.",
-  "patterns_trends": "Flit-Dominance: Shift in regional stressors from bandwidth volume to high-frequency manifest request density.\nCloud Grouping: Increasing trend of concentrated traffic from AWS Route 53 creating massive, localized workloads (MPGs).\nArchitecture Evolution: Moving from single-hostname legacy setups to mandatory sharding for complex, multi-leg SSAI/MT media workflows."
-},
-{
-  "ticket_id": "ERECSO-47",
-  "month": "4",
-  "outcome": "Problem: Persistent Ghost software regressions (Roll Codes 256/259) are causing availability drops for critical VIP slots.\nAction: Engineering to perform a deep-dive into exception-handling logic for VIP paths; Leadership to mandate stricter release gates for core Ghost updates.\nExpected Outcome: Elimination of recurring software-driven crashes and restoration of 100% availability for VIP customer slots.",
-  "progressive_work": "Gap_Addressed: Addresses the lack of specialized tracking for software-driven crashes that impact high-priority traffic profiles.\nOutcome: Successful long-term resolution of ERE-3222 and identification of software-level triggers for DSA product rolls.\nMissing: Automated real-time crash-dump correlation and predictive monitoring for 'pre-roll' memory/socket exhaustion.",
-  "patterns_trends": "VIP Vulnerability: Trend of specialized traffic slots being disproportionately affected by core Ghost software instabilities.\nDiagnosis Lag: Evolution of software bugs toward complex, intermittent patterns that require months of worklog hours (Feb to April) to resolve.\nSpecific Signal Fatigue: Recurring patterns of 256/259 roll codes indicating a systemic failure in the current Ghost signal-handling architecture."
-}
+    "ticket_id": "ERECSO-104",
+    "month": "3",
+    "outcome": "Problem: Reactive SNId logic fails to manage synchronized 'Mega-MPGs' from cloud agents and STB bursts, causing regional overloads and SSL timeouts.\nAction: Engineering to implement 'Historic Load States' and MPG-ID-based Ghost scoring to ensure regional diversity; Leadership to automate cloud-agent grouping to replace manual topology.xml overrides.\nExpected Outcome: Guaranteed p99 stability and the elimination of self-inflicted outages during Tier-1 events like the T20 World Cup.",
+    "progressive_work": "Gap Addressed: Fixes the 'memory-less' nature of SNId that prematurely dials down spreading during momentary load dips.\nOutcome: Automated NS group breaking for flit-intensive API traffic and identification of internal serial misreporting between DNSP and EHNIDs.\nMissing: A proactive 'lock-spread' or 'pre-warm' trigger for scheduled event windows to prevent initial burst failures.",
+    "patterns_trends": "Flit-Density Shift: Failures are moving from volume to request-density (flits), where short-lived spikes from TikTok/Coupang crash regions faster than video streams.\nNoisy Neighbor: Increasing collateral impact where SSAI manifest spikes (chc1) destabilize pristine traffic latency (ERE-3219).\nEvolution: Moving from reactive regional FOM capping to an architecture that natively assumes peak load as the default state for high-concurrency events."
+  },
+  {
+    "ticket_id": "ERECSO-29",
+    "month": "5",
+    "outcome": "Problem: Customer-side Sureroute routing loopbacks inject internal test headers, causing Ghost to leak an internal upload buffer string to public clients.\nAction: Engineering to build loopback detection into the Ghost core engine to terminate test-header loops; Leadership to mandate property sanitizers against testing-header exposure.\nExpected Outcome: Elimination of internal platform string exposure and immediate safety termination of client-driven routing deadlocks.",
+    "progressive_work": "Gap_Addressed: Isolates non-platform, individual customer deployment anomalies from global systemic software platform regressions.\nOutcome: Successful mitigation of Netmarble's content corruption through customer-side header tuning and diagnostic verification.\nMissing: Automated heuristic log scanners for internal buffer signatures and validation checks against structural Sureroute loops.",
+    "patterns_trends": "Sureroute Loop Risk: Increasing trend of client applications echoing test headers back to Akamai, inducing unexpected processing responses.\nMasked Vulnerabilities: Evolution of complex routing errors presenting visual symptoms that closely mimic critical core memory software failures.\nInvestigation Resource Asymmetry: Trend of single-customer configuration edge cases demanding heavy, multi-week forensic labor due to a lack of automated edge loopback signaling."
+  },
+  {
+    "ticket_id": "ERECSO-50",
+    "month": "5",
+    "outcome": "Problem: Uncached event surges (JRA horse racing) drive severe regional flit overloads, triggering Ghost self-suspensions that break critical payment APIs (AEON Financial) sharing local infrastructure.\nAction: Engineering to build cross-tenant flit sensors for automated multi-map load spreading; Leadership to enforce strict dependencies preventing the premature removal of protective FOM configurations.\nExpected Outcome: Complete protection of mission-critical financial transactions from event-driven noisy-neighbor traffic spikes.",
+    "progressive_work": "Gap_Addressed: Bridges the failure to insulate premium transactional infrastructure from un-cacheable, high-frequency request spikes generated on adjacent maps.\nOutcome: Re-stabilization of Japan edge regions and AEON payment pathways via emergency restoration of manual FOM rules.\nMissing: Automated cross-map anomaly mapping and proactive telemetry overlays to detect cross-product resource friction.",
+    "patterns_trends": "Workaround Regression: Recurring pattern of localized outages re-emerging after temporary engineering guardrails are systematically dismantled.\nFunctional Divergence: Clear trend where non-cacheable, volatile web events dictate the p99 availability profiles of mission-critical stateful connections.\nSafeguard Deadlocks: Evolution of platform issues where node self-suspension logic protects the server environment but heavily penalizes global customer SLAs."
+  },
+  {
+    "ticket_id": "ERECSO-88",
+    "month": "5",
+    "outcome": "Problem: Ghost ipcache logic drops valid CNAME chains during dual-stack checks by flagging valid records with a status of IP_NEG_CACHED_HALF.\nAction: Engineering to validate code fix GHOST-3866 against asynchronous cache changes; Leadership to mandate targeted metadata overrides in unpatched canary environments.\nExpected Outcome: Continuous forward CNAME chain resolution and total elimination of dual-stack internal routing deadlocks.",
+    "progressive_work": "Gap_Addressed: Eradicates the logic failure where transient half-cached negative IP states broke full structural CNAME parsing within Ghost.\nOutcome: Successful rollout of a structural code update in GHOST-3866 to parse valid CNAME responses unconditionally.\nMissing: Low-latency asynchronous state evaluation inside the ipcache component and built-in metadata dual-stack rule checking.",
+    "patterns_trends": "Feature Conflict Trends: Rising trend where modern IPv4/IPv6 dual-stack preference tracking destabilizes legacy core DNS cache handlers.\nInvestigation Lifecycles: Evolution of hidden infrastructural bugs requiring years of tracking and deep labor footprints (1w 2d+) due to cross-component dependencies.\nPatch-Driven Stability: Persistent operational pattern of applying restrictive structural overrides to bypass ongoing systemic code execution gaps."
+  },
+  {
+    "ticket_id": "ERECSO-122",
+    "month": "5",
+    "outcome": "Problem: Edge servers are brought online prematurely during software upgrades prior to syncing mandatory channels, resulting in TLS failures (illegal_parameter) for over 49 strategic banking clients.\nAction: Engineering to implement a Channel Validation Sync Gate in post-script installers; Leadership to mandate a published Mandatory Channel Sync Matrix across all pre-release testing cycles.\nExpected Outcome: Elimination of metadata-starved node startups and total protection of sensitive financial transactional paths during release cycles.",
+    "progressive_work": "Gap_Addressed: Resolves the deployment pipeline oversight where nodes enter production without critical certificates, STG secrets, or tracking channels.\nOutcome: Structural identification of critical metadata dependencies and successful isolation of the TLS illegal_parameter exception in ERE-3255.\nMissing: Dynamic pre-release simulation modeling for keyagent updates and built-in webghost suspension logic validation within installation cleanup scripts.",
+    "patterns_trends": "Targeted Blast Radius: Persistent pattern of cryptographic state failures disproportionately crippling highly sensitive Japanese banking and premium financial platforms.\nScripting Logic Decay: Growing trend where edge maintenance actions introduce severe service delivery blocks due to a lack of synchronous component validation checks.\nEvolution of Failure: Shift in platform constraints away from physical processing capacity toward cryptographic dependency synchronization during active network deployments."
+  },
+  {
+    "ticket_id": "ERECSO-118",
+    "month": "5",
+    "outcome": "Problem: Large-scale DDoS attacks against target domains exhaust machine resources, triggering a 1.0% Freeflow Ghost roll spike and cascading retry loops.\nAction: Engineering to mandate default OHD and finalize CRP blocking logic; Leadership to automate the MAPPER-53 quarantine framework.\nExpected Outcome: Absolute containment of attack footprints and elimination of collateral multi-tenant machine crashes.",
+    "progressive_work": "Gap_Addressed: Overcomes the lack of built-in platform safeguards against shared resource starvation caused by localized request swarms.\nOutcome: Structural mapping of over 15 multi-customer attack incidents to develop automated insulation features.\nMissing: Automated, real-time Quarantine-as-a-Service workflows and dynamic client-side connection throttling based on origin health metrics.",
+    "patterns_trends": "Hardware Saturation: Escalating trend of malicious request volumes inducing physical machine anomalies like segmentation faults and memory limit breaches.\nSelf-Inflicted Amplification: Persistent pattern of cascading timeouts generating destructive retry spirals that trigger cluster-wide node self-suspensions.\nManual Deficit: Evolution of attack vectors rendering legacy, reactive workarounds (individual IP blocks) obsolete due to sheer scale and speed."
+  },
+  {
+    "ticket_id": "ERECSO-104",
+    "month": "5",
+    "outcome": "Problem: Reactive SNId mapping logic deadlocks under synchronized STB bursts and WAF-induced processing overhead, triggering midgress and edge failures.\nAction: Engineering to implement Historic Load State tracking and MPG ID-based scoring; Leadership to mandate randomized polling client policies and automate cloud agent groupings.\nExpected Outcome: Elimination of cascading connection timeouts and guaranteed p99 performance for high-concurrency Tier-1 live streams.",
+    "progressive_work": "Gap_Addressed: Eliminates the memory-less spreading restrictions of the SNId deployment that cause premature load concentration.\nOutcome: Isolation and mitigation of WrestleMania and Liberty API surges via regional maprule adjustments and custom WAF bypasses.\nMissing: Scheduled pre-warm lock-spread controls and cross-department validation for last-minute WAF rollouts prior to major broadcasts.",
+    "patterns_trends": "Security-Traffic Concurrence: Evolution of regional failures driven by the compounding weight of high flit volume hitting un-optimized WAF logic.\nSynchronized Footprints: Persistent trend of un-jittered STB applications triggering instantaneous regional collapses instead of distributed demand.\nTier Contagion: Shift in blast radius from edge-only constraints to internal midgress fabric dropouts due to downstream mapping resource exhaustion."
+  },
+  {
+    "ticket_id": "ERECSO-31",
+    "month": "5",
+    "outcome": "Problem: Preventable configuration mistakes and resource-intensive protocol reviews (WebSockets) clog the ERE pipeline due to inadequate initial triage.\nAction: Engineering to build pre-escalation linting tools for hostname syntax and traffic validation; Leadership to enforce strict 'Definition of Ready' gates and support team feedback loops.\nExpected Outcome: Substantial reduction in ERE engineering toil and faster resolution tracks for legitimate platform infrastructure anomalies.",
+    "progressive_work": "Gap_Addressed: Identifies and tracks systemic support breakdowns in KB compliance, ticket quality, and basic routing validation.\nOutcome: Successful auditing and resolution of long-standing PhonePe WebSocket issues and Mobile Rider hostname misconfigurations.\nMissing: Automated JIRA intercept scripts for data enforcement and proactive UI-driven configuration guardrails.",
+    "patterns_trends": "Human Error Cascade: Clear trend where minor misconfigurations masquerade as severe platform bugs, consuming disproportionate ERE labor.\nProtocol Triage Decay: Increasing trend of support layers passing complex stateful protocol reviews (WebSockets) directly to engineering without basic perimeter profiling.\nLifecycle Stagnation: Evolution of simple issues staying active for months due to low initial quality, highlighting the high hidden cost of unvalidated escalations."
+  },
+  {
+    "ticket_id": "ERECSO-104",
+    "month": "2",
+    "outcome": "Problem: Reactive SNId logic fails during synchronized bursts (STBs/IPL) and cloud agent spikes, causing regional overloads and SSL timeouts.\nAction: Engineering to implement 'Historic Load States' and MPG-ID-based Ghost scoring to ensure regional diversity; Leadership to automate cloud-agent grouping and enforce pre-spread policies.\nExpected Outcome: Guaranteed p99 stability and the elimination of collateral 'noisy neighbor' outages during Tier-1 events.",
+    "progressive_work": "Gap Addressed: Fixes the 'memory-less' nature of SNId that prematurely reduces spreading during momentary load dips.\nOutcome: Automated NS group breaking for flit-intensive API traffic and improved regional load state retention.\nMissing: A proactive 'pre-warm' trigger for scheduled event windows and enforced migration of flit-heavy customers to API-X maps.",
+    "patterns_trends": "Flit-Density Shift: Failures are moving from volume to request-density (flits), where short-lived spikes from TikTok/Roblox crash regions faster than high-bandwidth streams.\nSystemic Contagion: Increasing trend of 'Noisy Neighbors' (Paramount/Verizon) causing instabilities for unrelated critical customers (JPMC).\nEvolution: Moving from reactive regional FOM capping to an architecture that natively assumes peak load as the default state for high-concurrency events."
+  },
+  {
+    "ticket_id": "ERECSO-104",
+    "month": "1",
+    "outcome": "Problem: Reactive SNId logic fails during synchronized bursts (STBs/Gaming) and concentrated cloud agent spikes, causing regional overloads and SSL failures.\nAction: Engineering to implement 'Historic Load States' and MPG-ID-based Ghost scoring to ensure regional diversity; Leadership to automate cloud-agent grouping and enforce product alignment (API-X for flit-heavy loads).\nExpected Outcome: Guaranteed p99 stability and the elimination of collateral 'noisy neighbor' outages during Tier-1 events.",
+    "progressive_work": "Gap Addressed: Fixes the 'memory-less' nature of SNId that prematurely reduces spreading during momentary load dips.\nOutcome: Automated NS group breaking for flit-intensive API traffic and improved regional load state retention.\nMissing: A proactive 'pre-warm' trigger for scheduled event windows and enforced migration of flit-heavy customers to API-X maps.",
+    "patterns_trends": "Flit-Density Shift: Failures are moving from volume to request-density (flits), where short-lived spikes from betting/gaming crash regions faster than high-bandwidth streams.\nSystemic Contagion: Increasing trend of 'Noisy Neighbors' (Horse Racing) causing instabilities for unrelated critical customers (AEON) on shared maps.\nEvolution: Moving from reactive manual pre-spreading to an architecture that natively assumes peak load as the default state for high-concurrency events."
+  },
+  {
+    "ticket_id": "ERECSO-118",
+    "month": "4",
+    "outcome": "Problem: Attacks on specific domains (e.g., Walmart CP1450274) cause Ghost Rolls and regional resource exhaustion, impacting shared infrastructure.\nAction: Engineering to finalize CRP proactive blocking and implement adaptive retry logic; Leadership to automate the 'Quarantine Map' transition process.\nExpected Outcome: Automated isolation of attack-related request swarms and elimination of collateral regional instability.",
+    "progressive_work": "Gap_Addressed: Addresses the lack of platform-level protection against the resource-heavy side effects of localized attacks.\nOutcome: Identification of CRP as a proactive solution and the use of internal DNSP spreadlimiters to contain impact.\nMissing: Fully automated quarantine workflows and default OHD enforcement to stop retry amplification.",
+    "patterns_trends": "Systemic Fragility: Shift toward attacks causing hardware-level resource exhaustion (memory/CPU) and software segfaults.\nRetry Feedback Loops: Persistent pattern of cascading timeouts and retry surges accelerating regional collapse when origins are down.\nEvolution: Moving from reactive IP blocking to a requirement for autonomous, resource-aware platform shielding (CRP)."
+  },
+  {
+    "ticket_id": "ERECSO-118",
+    "outcome": "Problem: Attacks like Mass Mutual cause regional Ghost Rolls and resource exhaustion. \nAction: Deploy CRP proactive blocking and automate OHD.\n Expected Outcome: Logical isolation of attack traffic and prevention of regional cascading failures.",
+    "month": "1",
+    "progressive_work": "Gap Addressed: Lack of automated shielding between shared customers. \nOutcome: Resource-aware request limiting via CRP. \nMissing: Automated quarantine triggers and adaptive retry logic for down origins.",
+    "patterns_trends": "Systemic Fragility: Attacks impacting physical machine health (segfaults). \nRetry Spiral: Origin timeouts amplifying surges due to lack of OHD. \nEvolution: Moving from manual coordination to automated, CRP-led defense."
+  },
+  {
+    "ticket_id": "ERECSO-35",
+    "month": "3",
+    "outcome": "Problem: Manual, high-touch reviews for IPL-scale events like JioHotstar (ERE-3266) are unscalable and dependent on manual overrides.\nAction: Engineering to productize specialized TD0 profiles and native Cascading Timeout controls; Leadership to automate Map-Ops capacity reviews.\nExpected Outcome: Template-driven event readiness with guaranteed regional capacity and zero manual override dependency.",
+    "progressive_work": "Gap Addressed: Corrects the disconnect between standard platform settings and specific Media workflow requirements (Manifest vs Segment).\nOutcome: Standardized baseline for FA/QR settings and validated TD map structure for IPL 2026.\nMissing: Automated capacity sync with Map-Ops and a UI-based readiness auditor for Ad delivery setups.",
+    "patterns_trends": "Functional Specialization: Shift from general TD0 maps to distinct, isolated map rules for Manifest vs. Ad delivery.\nProcess Evolution: Movement from 'incident response' to 'pre-tournament auditing' as a standard service requirement.\nTrend: Increasing reliance on 'Advanced Overrides' for timeouts highlights a need to move these features into the core Product UI."
+  },
+  {
+    "ticket_id": "ERECSO-35",
+    "month": "2",
+    "outcome": "Problem: Manual scaling of SSAI (chc1) and slot pre-spreading for high-concurrency events like IPL and March Madness is unscalable and creates week-long bottlenecks.\nAction: Engineering to automate protocol-downgrade workflows and productize native Cascading Timeout controls; Leadership to automate the Map-Ops capacity review handshake.\nExpected Outcome: Zero-touch event readiness with guaranteed regional headroom and elimination of manual 'Advanced Override' dependencies.",
+    "progressive_work": "Gap Addressed: Corrects the lack of standardized hybrid Edge/TD workflows for SSAI and Manifest delivery.\nOutcome: Validated TD map structures (chc1) and confirmed capacity for peak hour demands for WBD and JHS.\nMissing: Automated 'Slot Pre-spread' triggers for event starts and a real-time dashboard for independent region health investigations.",
+    "patterns_trends": "Hybrid Evolution: Growing shift toward complex ESSL Edge + FF TD protocol-downgrade setups for Media events.\nScaling Friction: Persistence of manual coordination for map rule scaling (GSPMAPSTRA) and slot spreading (MAPPINGENG).\nTrend: Moving from reactive configuration checking to a requirement for dynamic, schedule-aware map scaling for global Tier-1 events."
+  },
+  {
+    "ticket_id": "ERECSO-33",
+    "outcome": "Problem: New software install is triggering Ghost Rolls in the Websocket module (isReady segfault). \nAction: Engineering to fix the websocket handle_events race condition; Leadership to halt rollout. \nExpected Outcome: Zero-roll rate for Websocket traffic and stabilized production software.",
+    "month": "4",
+    "progressive_work": "Gap Addressed: Detection of post-install software regressions through manual checklisting. \nOutcome: Identification of a critical websocket inspector bug. \nMissing: Automated canary rollback mechanisms for high roll rates.",
+    "patterns_trends": "Trend Reversal: Re-emergence of high-impact rolls after a long period of stabilization. \nThreading Evolution: Shift toward complex colib-mthread context start errors. \nFeature Risk: Monitoring/Inspection code is now a leading cause of service instability."
+  },
+  {
+    "ticket_id": "ERECSO-35",
+    "month": "4",
+    "outcome": "Problem: Manual, manual-override-heavy event reviews for the World Cup and Jio Hotstar launches are unscalable and risk human error.\nAction: Engineering to natively productize cascading timeouts and functional map isolation (Manifest vs Segment); Leadership to automate the CSO/Map-Ops capacity review handshake.\nExpected Outcome: Template-driven event readiness that guarantees regional capacity and eliminates the need for Advanced Overrides.",
+    "progressive_work": "Gap Addressed: Corrects the lack of standardized mapping profiles for high-stakes Media/Web events.\nOutcome: Validated edge map recommendations (dscw80) and optimal streaming configurations (ch970) for Mediacorp.\nMissing: Automated map-ops capacity syncing and a UI-based tool for independent Ad Delivery review and bitrate tuning.",
+    "patterns_trends": "Functional Specialization: Growing demand for separate hostnames and maprules for manifest vs segment delivery to ensure isolation.\nContent Evolution: High-frequency 'Micro Dramas' (ERE-3273) require a shift toward API-X style mapping rigor for AMD products.\nEvolution: Moving from reactive performance fixing to a standard 'Pre-Launch Readiness' requirement for all Tier-1 global events."
+  },
+  {
+    "ticket_id": "ERECSO-33",
+    "month": "3",
+    "outcome": "Problem: Ghost version 22.4.5 Phase 1 rollout is causing a high roll spike due to a null pointer crash in MemObject destructors.\nAction: Engineering to patch MemObject::ActiveInfo destructor logic; Leadership to halt 22.4.5 rollout and rollback Phase 1 regions.\nExpected Outcome: Restoration of platform stability and elimination of destructor-driven segmentation faults.",
+    "progressive_work": "Gap_Addressed: Provides a manual safety audit for software installs that bypasses automated lab testing.\nOutcome: Successful identification of a core memory management bug in the 22.4.5 release branch.\nMissing: Automated backtrace-to-rollback triggers and formalized Phase 1 roll-rate guardrails.",
+    "patterns_trends": "Memory Management Regression: Shift toward software crashes occurring during object deallocation/destruction phases.\nLibrary-Level Flaws: Evolution of bugs within the 'colib' common libraries affecting both FF and ESSL networks simultaneously.\nStability Trend: Reversal of 2025's stabilization with new high-impact regressions emerging in early 2026 release cycles."
+  },
+  {
+    "ticket_id": "ERECSO-73",
+    "month": "3",
+    "outcome": "Problem: Shared maprules for SSAI manifests and Pristine video (ERE-3219) cause 'Noisy Neighbor' latency spikes during major sports events.\nAction: Engineering to implement Functional Map Isolation as a default; Leadership to standardize specialized TD0 tiering for manifest-heavy workflows.\nExpected Outcome: Guaranteed p99 latency for pristine content and elimination of self-inflicted regional overloads.",
+    "progressive_work": "Gap_Addressed: Addresses the performance degradation caused by manifest flit-spikes on shared AMD maprules.\nOutcome: Successful mitigation of JioStar latency by migrating pristine traffic to zch3; establishing a blueprint for functional separation.\nMissing: Automated maprule isolation triggers and proactive pre-spreading for known SSAI flash-crowd windows.",
+    "patterns_trends": "Resource Contention Shift: Transition from bandwidth-based bottlenecks to request-density (flit) bottlenecks on shared infrastructure.\nSelf-Infliction Pattern: Increasing trend of high-frequency SSAI requests destabilizing core video delivery on the same parent map.\nEvolution: Moving from a 'single-map' delivery model to a multi-tiered architecture that isolates manifest, segment, and ad delivery streams."
+  },
+  {
+    "ticket_id": "ERECSO-78",
+    "month": "2",
+    "outcome": "Problem: Shared ChinaCDN capacity (ca2 maprule) is being exhausted by large software updates (Tesla), forcing luxury brands (Dior) into Out-of-Country Mapping (OOCM).\nAction: Engineering to implement map-level workload isolation for media vs. web traffic; Leadership to mandate proactive traffic migration for high-bandwidth hostnames.\nExpected Outcome: Restoration of in-country mapping stability and elimination of 'Noisy Neighbor' performance degradation in China.",
+    "progressive_work": "Gap_Addressed: Addresses the lack of workload-based functional segmentation within China's regional capacity domains.\nOutcome: Successful monitoring and identification of Tesla's update spikes as the primary driver for Dior's OOCM.\nMissing: Automated scheduled-based mapping and real-time utilization-driven hostname shunting tools.",
+    "patterns_trends": "Noisy Neighbor Evolution: Growing trend of bandwidth-heavy software updates destabilizing latency-sensitive web delivery in China.\nOperational Bottlenecks: Evolution of issues where technical mitigation (moving hostnames) is delayed by business-side reluctance.\nWorkload Mismatch: A recurring pattern showing that mixed-profile mapping (Web + Media) on the same maprule is unsustainable in capacity-strained regions."
+  },
+  {
+    "ticket_id": "ERECSO-50",
+    "month": "2",
+    "outcome": "Problem: Regional overloads occur when flit utilization hits 100%, causing stalled threads and 5xx errors (ERE-3182).\nAction: Engineering to implement Flit-Aware Load Balancing and RPS-based scoring; Leadership to automate in-region spreading logic.\nExpected Outcome: Elimination of manual FOM adjustments and guaranteed stability for high-frequency API workflows.",
+    "progressive_work": "Gap_Addressed: Addresses the misalignment between bandwidth-based mapping and flit-based regional stressors.\nOutcome: Tracking of high-flit API traffic overloads to inform the COREPERF-E-26 architectural enhancements.\nMissing: Automated regional weight adjustments and proactive pre-warming triggers for detected flit inclines.",
+    "patterns_trends": "Flit Saturation Trend: Increasing pattern of regional failure driven by request density rather than total traffic volume.\nThread Exhaustion: Evolution of issues toward internal Ghost resource stalls caused by high-concurrency 'flash crowds'.\nAutomation Imperative: Pattern of manual worklogs (3h+) for short-lived spikes proving the need for real-time, automated mapping pivots."
+  },
+  {
+    "ticket_id": "ERECSO-46",
+    "month": "2",
+    "outcome": "Problem: Flawed 'Poor Pingpoint' logic and rogue PPs cause AU traffic to map to US/APAC, resulting in high latency and OOCM (ERE-3214).\nAction: Engineering to implement geography-aware PP health checks and fix random-selection bugs; Leadership to provide ERE with direct diagnostic UI access.\nExpected Outcome: Elimination of stale-telemetry-driven OOCM and a reduction in bad PP impact duration from 8 hours to minutes.",
+    "progressive_work": "Gap_Addressed: Addresses the lack of visibility into Mapper scoring and the diagnostic dependency on external teams (CPD/CSS).\nOutcome: Successful manual reassignment of PPs to fix Australian OOCM incidents.\nMissing: Automated real-time logs for PP health and proactive assignment logic for critical low-load ASNs.",
+    "patterns_trends": "In-Country Sensitivity: Trend where PPs appear healthy to distant geos while failing locally, causing the Mapper to favor OOCM.\nTelemetry Lag: Evolution of network issues lasting 6-8 hours due to the platform's slow recovery logic for bad pingpoints.\nDiagnostic Toil: Persistent pattern of ERE needing to escalate to MPD teams for basic mapping-logic confirmation."
+  },
+  {
+    "ticket_id": "ERECSO-55",
+    "month": "2",
+    "outcome": "Problem: Concentrated MPGs from cloud providers (AWS/GCP) defeat Fractional Assignment, causing regional overloads for Hotstar and Brandlive.\nAction: Engineering to expand Fractional Assignment regional limits and automate cloud-agent MPG splitting; Leadership to standardize OIPACL and pre-spread serials for event-driven API traffic.\nExpected Outcome: Automated dispersion of 'Mega-MPGs' and guaranteed p99 stability during high-concurrency surges.",
+    "progressive_work": "Gap_Addressed: Addresses the 3-region limit in Fractional Assignment and the reactive nature of topology.xml overrides.\nOutcome: Successful mitigation of T20 WC spikes for Hotstar through FOM and traffic splitting across SS/OIPACL layers.\nMissing: Automated identification of new cloud agents and tuning of uFMP fallback safeties for extreme demand scenarios.",
+    "patterns_trends": "Cloud Funneling: Increasing trend of concentrated cloud agents creating workload spikes that bypass standard end-user distribution logic.\nFlit Volatility: Evolution of regional failures driven by fluctuating request rates rather than total bandwidth volume.\nStructural Shift: Moving from reactive regional capping (FOM) to an architectural requirement for OIPACL-based isolation for Tier-1 API customers."
+  },
+  {
+    "ticket_id": "ERECSO-42",
+    "month": "2",
+    "outcome": "Problem: Lack of in-country capacity forces Out-of-Country Mapping (OOCM) for Jio and China Azure, leading to 5xx errors and latency.\nAction: Engineering to implement 'Strict-Country' mapping and automated install-blackouts; Leadership to fund 30% headroom expansion in saturated markets.\nExpected Outcome: Elimination of international traffic spills and guaranteed geographic delivery integrity for domestic customers.",
+    "progressive_work": "Gap_Addressed: Addresses the failure to maintain domestic mapping affinity during concurrent traffic surges and hardware maintenance.\nOutcome: Identification of 'Blackout Dates' as a primary mitigation strategy for Reliance Jio (ERE-3175).\nMissing: Automated capacity pre-warming and real-time OOCM performance-penalty modeling.",
+    "patterns_trends": "Self-Inflicted OOCM: Trend where maintenance activities during peak hours are the tipping point for geographic rerouting.\nMarket Saturation: Evolution toward whole-country capacity exhaustion in India and China rather than isolated regional outages.\nInvisible Failures: Increasing reliance on retry logic to mitigate OOCM-driven 5xx errors, leading to higher overall platform resource consumption."
+  },
+  {
+    "ticket_id": "ERECSO-31",
+    "month": "2",
+    "outcome": "Problem: Significant ERE bandwidth is wasted on misrouted EdgeWorkers bugs and preventable DNS-override incidents.\nAction: Engineering to build an automated triage validator; Leadership to enforce strict 'Definition of Ready' criteria for all ERE escalations.\nExpected Outcome: Restoration of ERE focus on high-complexity platform engineering and a 25% reduction in administrative toil.",
+    "progressive_work": "Gap_Addressed: Identifies failures in diagnostic quality and correct component routing (e.g., EWDEVESC vs ERE).\nOutcome: Successful documentation of 'Toil' drivers like NBC region overloads and Brazil DNS incidents.\nMissing: Automated cross-project ticket migration and proactive customer best-practice enforcement tools.",
+    "patterns_trends": "Component Friction: Evolution of product-specific bugs (EW) being incorrectly funneled through ERE, causing routing bottlenecks.\nExternal-to-Internal Trend: Increasing trend of ERE investigating 'performance drops' caused by customer-side configuration violations (DNS/TTL).\nToil Density: Pattern showing that misrouted tickets require high engineering effort (1d+) just to disprove ERE ownership."
+  },
+  {
+    "ticket_id": "ERECSO-121",
+    "month": "3",
+    "outcome": "Problem: Logical deadlock between Region Health and Acceptance Criteria causes complete forward path exhaustion (fwdStateFree) for OIPACL customers.\nAction: Engineering to finalize GHOST-7069 and introduce error codes for bad SR2 regions; Leadership to mandate RA-Only fallback for high-traffic API customers.\nExpected Outcome: Elimination of 503 errors caused by forward-tier health fluctuations and guaranteed last-resort pathing.",
+    "progressive_work": "Gap_Addressed: Bridges the failure of Ghost to trigger forward requests when primary paths are 'bad' and backup paths are 'untrusted'.\nOutcome: Successful ESSL Ghost release rollout in Feb/March providing the structural fix.\nMissing: Automated detection of other silent SR2 failure scenarios and native UI controls for Acceptance Criteria flexibility.",
+    "patterns_trends": "API Vulnerability: Trend showing high-concurrency API traffic is most susceptible to fwdStateFree deadlocks.\nSecurity-Availability Conflict: Strong correlation (83%) between Origin IPACL usage and forward-path exhaustion incidents.\nEvolution: Shifting from reactive regional suspensions to an architectural requirement for flexible acceptance criteria during mid-tier outages."
+  },
+  {
+    "ticket_id": "ERECSO-31",
+    "month": "3",
+    "outcome": "Problem: ERE bandwidth is being wasted on incorrect routing and 'Not a Bug' escalations like ERE-3241.\nAction: Engineering to implement a mandatory pre-escalation diagnostic checklist; Leadership to enforce quality metrics for escalating teams.\nExpected Outcome: A 30% reduction in ERE toil and a focus shift toward critical platform engineering.",
+    "progressive_work": "Gap_Addressed: Identifies failures in KB adherence (ERECSO-28) and lack of detailed investigation (ERECSO-30).\nOutcome: Documentation of specific toil-drivers like external OCSP responder failures.\nMissing: Automated KB-suggestion bot and an enforced 'Definition of Ready' for all ERE-bound tickets.",
+    "patterns_trends": "Pass-Through Culture: Increasing trend of escalating third-party vendor errors to ERE without initial validation.\nDiagnostic Decay: Growing worklogs on 'Not a Bug' outcomes indicate that triage quality is not keeping pace with platform complexity.\nEvolution: Moving from simple missing data to complex 'structural validity' questions that should be handled at the support tier."
+  },
+  {
+    "ticket_id": "ERECSO-46",
+    "outcome": "Problem: Structural flaws in 'Bad Pingpoint' detection cause prolonged Out-of-Country (OOC) mapping, as seen in ERE-3247 where Bell Canada was impacted for a full 24-hour CPD cycle. \nAction: Engineering must move away from the '100% global loss' threshold to a regional-loss model and develop a bypass for CPD cycle dependencies. Leadership to fund a dedicated Pingpoint Visibility UI. \nExpected Outcome: Reduction of mapping recovery time from 24 hours to <1 hour and guaranteed p99 performance for low-load, critical ASNs.",
+    "month": "3",
+    "progressive_work": "Gap Addressed: Eliminates the 'Visibility Blackout' for CSO by documenting the lack of logs/UI for scoring; addresses the logic bug where the mapper randomly picks unpingable manual PPs. \nOutcome: Implementation of faster recovery paths and more optimal PP designations.\nMissing: A real-time Mapper Debugger for front-line teams and a mechanism to identify IPv6-specific latency disparities within the same ASN.",
+    "patterns_trends": "Recovery Lag Trend: Mapping remains 'stuck' on bad data due to fixed CPD cycles, indicating a lack of dynamic architectural responsiveness. \nLocalized Blindness: A trend where 'in-country' regions are bypassed for distant geos because the PP is still pingable globally, sacrificing performance for reachability. \nLogic Evolution: Moving from manual PP list management (which currently suffers from random-pick bugs) to a requirement for automated, health-aware PP rotation."
+  },
+  {
+    "ticket_id": "ERECSO-55",
+    "outcome": "Problem: Large Map Processing Groups (MPGs) from cloud providers (AWS/GCP) and specific ASNs (Korea/Vietnam) overwhelm regions because Fractional Assignment is limited to 3 regions, as seen in ERE-3229 where Airbnb traffic caused CPU spikes for Warner.\nAction: Engineering must evolve Fractional Assignment to support >3 regions and implement MPG-ID-based scoring to diversify regional placement. Leadership to fund automated, proactive cloud-agent grouping to replace reactive topology.xml maintenance. Expected Outcome: Elimination of 'Noisy Neighbor' regional collapses and guaranteed p99 stability for flit-intensive API traffic.",
+    "month": "3",
+    "progressive_work": "Gap Addressed: Corrects the failure of uFMP safeties and Fractional Assignment during massive, concentrated demand surges. \nOutcome: Identification of the structural limits of the current 3-region mapping cap.\nMissing: A real-time MPG density-aware monitoring system and automated triggers for SNI-map migration when traffic patterns shift from general to pre-warming/load-test profiles.",
+    "patterns_trends": "Cloud-Origin Dominance: A shift toward fewer but larger MPGs originating from AWS/GCP that do not behave like traditional distributed end-user traffic.\nResource Contagion: A trend where 'pre-warming' or high-frequency F2B traffic from one customer (Airbnb) causes physical CPU exhaustion for unrelated tenants (Warner) in the same region. Process Decay: The move from reactive FOM adjustments to a critical need for an architecture that natively assumes high MPG density as a baseline rather than an anomaly."
+  },
+  {
+    "ticket_id": "ERECSO-103",
+    "month": "4",
+    "outcome": "Problem: Regressions in recent Ghost features caused duplicated origin requests in Cloud Wrapper and incorrect 'If-none-match' forwarding.\nAction: Engineering to resolve GHOST-7550 multi-hop logic; Leadership to enforce stricter canary testing for global tag rollouts.\nExpected Outcome: Restoration of origin shielding and elimination of duplicated traffic/bandwidth waste.",
+    "progressive_work": "Gap Addressed: Tracks and mitigates regressions caused by new platform tags like 'contact-multi-protocol-next-hop-on-failure'.\nOutcome: Successful mitigation of CW origin leakage by disabling faulty sureroute tags in Advanced Overrides.\nMissing: Automated regression suites for multi-hop Ghost scenarios and a centralized 'Global Kill-Switch' for new features.",
+    "patterns_trends": "Resiliency Conflict: New failover tags are causing 'Double-Forwarding' to origins, indicating conflicts with legacy sureroute logic.\nSide-Effect Bugs: Trend of core HTTP validation (If-none-match) being destabilized by unrelated platform optimizations.\nEvolution: Moving from automated stability to a heavy reliance on manual 'Feature-OFF' overrides to stabilize production."
+  },
+  {
+    "ticket_id": "ERECSO-103",
+    "month": "2",
+    "outcome": "Problem: Platform feature rollouts are triggering core TLS regressions (ERR_FWD_SSL_HANDSHAKE), as seen in ERE-2770, causing widespread origin connectivity failures.\nAction: Engineering to implement automated 'Handshake-Canary' testing for the TLS stack; Leadership to enforce a 'Slow-Bake' rollout policy for all forward-connectivity tags.\nExpected Outcome: Elimination of feature-driven SSL failures and a hardened global checklisting process.",
+    "progressive_work": "Gap Addressed: Corrects the failure of current checklisting to catch edge-case SSL regressions in the forward path.\nOutcome: Successful long-term fix for the May 12th SSL regression and improved tracking of feature-driven failures.\nMissing: Automated real-time rollback triggers and better origin-side simulation in pre-production environments.",
+    "patterns_trends": "Forward Path Vulnerability: Shift in regressions moving from the client-facing side to the origin-facing TLS handshake.\nComplexity Trend: TLS regressions require significantly higher worklog hours (1w+) to resolve compared to simple logic bugs.\nEvolution: Moving from manual checklisting to a requirement for data-driven, automated feature validation at every stage of the rollout."
+  },
+  {
+    "ticket_id": "ERECSO-103",
+    "month": "1",
+    "outcome": "Problem: Unstable releases (Ghost v22.4.0) and feature rollouts (ES-LT) are causing high metadata latency and ICP authentication failures.\nAction: Engineering to implement metadata-latency guardrails in the CI/CD pipeline; Leadership to mandate canary-region soak periods for all core Ghost updates.\nExpected Outcome: Elimination of rogue releases and restoration of seamless peer-to-peer cache authentication.",
+    "progressive_work": "Gap_Addressed: Tracks production regressions caused by central software updates and feature flags.\nOutcome: Successful mitigation of metadata spikes through manual hardware suspension and release rollbacks.\nMissing: Automated G2G-Auth health checks and lab-based metadata stress testing.",
+    "patterns_trends": "Security-Feature Conflict: Trend where performance-oriented features (ES-LT) destabilize existing security protocols (ICP Auth).\nProcessing Overhead: Evolution of platform issues toward metadata-processing bottlenecks rather than simple software crashes.\nManual Mitigation Reliance: Persistent pattern of manual hardware suspension as the primary workaround for faulty software versions."
+  },
+  {
+    "ticket_id": "ERECSO-63",
+    "month": "4",
+    "outcome": "Problem: Third-party ISP backbone congestion (e.g., RJIL NLD in ERE-3265) causes intermittent 503/504 spikes that bypass internal Akamai monitoring.\nAction: Engineering to develop congestion-aware forward routing to automate public TD bypasses; Leadership to establish real-time telemetry handshakes with major ISP partners.\nExpected Outcome: Automated isolation of ISP network failures and a drastic reduction in manual traffic-shifting worklogs.",
+    "progressive_work": "Gap_Addressed: Addresses the lack of automated failover logic for external backbone/peering instabilities.\nOutcome: Successful manual mitigation of RJIL congestion by shifting AANP regions to public TD maps (ch2).\nMissing: Predictive network-health modeling and real-time integration with ISP backbone telemetry for automated mapping pivots.",
+    "patterns_trends": "Backbone-Centric Failures: Trend shifting from Edge-to-User issues to internal ISP backbone (NLD) congestion as a primary 5xx driver.\nStrategic Rerouting: Evolution toward using public TD maps as a standard 'bypass' for private ISP network failures.\nIntermittency: Pattern of short-lived, recurring spikes that demand automated, granular performance-based triggers rather than manual intervention."
+  },
+  {
+    "ticket_id": "ERECSO-63",
+    "month": "3",
+    "outcome": "Problem: Third-party ISP backbone failures (Airtel subsea cable flaps) and transient connectivity issues cause massive Forward-tier disruptions and SSL timeouts.\nAction: Engineering to implement Path-Aware Forward Selection for geographic bypass; Leadership to mandate proactive ISP telemetry integration.\nExpected Outcome: Automated recovery from ISP link failures and elimination of service disruption during external subsea cable repairs.",
+    "progressive_work": "Gap_Addressed: Addresses the visibility gap regarding external ISP backbone health and PoP isolation.\nOutcome: Successful manual isolation of impacted Airtel links and implementation of 'Deny-All' policies for BHARENT/GPX.\nMissing: Automated PoP cost-out logic and real-time integration of external ISP health signals into the Mapper.",
+    "patterns_trends": "Backbone Fragility: Recurring disruptions tied to specific subsea cable chokepoints (Dubai/London/Singapore) for India-to-Europe traffic.\nConcurrency Correlation: Transient ISP issues are increasingly triggered by high-traffic events (T20 WC) combined with ongoing network repairs.\nEvolution: Transitioning from manual link suspension (ERE-3227) to a requirement for a platform that natively manages ISP-driven flit overloads."
+  },
+  {
+    "ticket_id": "ERECSO-73",
+    "month": "4",
+    "outcome": "Problem: High-density SSAI manifest traffic (flit-intensive) from cloud origins overwhelms single-hostname AMD regions, causing 5xx errors (ERE-3268).\nAction: Engineering to implement Hostname Sharding and API-X Shard support for AMD; Leadership to standardize and approve API shard utilization for SSAI workflows.\nExpected Outcome: Elimination of regional CPU/flit exhaustion and guaranteed connection stability for multi-leg cloud-media flows.",
+    "progressive_work": "Gap_Addressed: Addresses the resource-handling limitations of AMD when subjected to API-style request density from SSAI flows.\nOutcome: Successful reduction of errors for Samsung TV Plus by moving Leg 2 traffic to specialized w40 maps.\nMissing: Automated detection/migration of cloud-to-cloud surges and formalized PM approval for standard API shard access on AMD properties.",
+    "patterns_trends": "Flit-Dominance: Shift in regional stressors from bandwidth volume to high-frequency manifest request density.\nCloud Grouping: Increasing trend of concentrated traffic from AWS Route 53 creating massive, localized workloads (MPGs).\nArchitecture Evolution: Moving from single-hostname legacy setups to mandatory sharding for complex, multi-leg SSAI/MT media workflows."
+  },
+  {
+    "ticket_id": "ERECSO-47",
+    "month": "4",
+    "outcome": "Problem: Persistent Ghost software regressions (Roll Codes 256/259) are causing availability drops for critical VIP slots.\nAction: Engineering to perform a deep-dive into exception-handling logic for VIP paths; Leadership to mandate stricter release gates for core Ghost updates.\nExpected Outcome: Elimination of recurring software-driven crashes and restoration of 100% availability for VIP customer slots.",
+    "progressive_work": "Gap_Addressed: Addresses the lack of specialized tracking for software-driven crashes that impact high-priority traffic profiles.\nOutcome: Successful long-term resolution of ERE-3222 and identification of software-level triggers for DSA product rolls.\nMissing: Automated real-time crash-dump correlation and predictive monitoring for 'pre-roll' memory/socket exhaustion.",
+    "patterns_trends": "VIP Vulnerability: Trend of specialized traffic slots being disproportionately affected by core Ghost software instabilities.\nDiagnosis Lag: Evolution of software bugs toward complex, intermittent patterns that require months of worklog hours (Feb to April) to resolve.\nSpecific Signal Fatigue: Recurring patterns of 256/259 roll codes indicating a systemic failure in the current Ghost signal-handling architecture."
+  },
+  {
+    "ticket_id": "ERECSO-103",
+    "month": "6",
+    "outcome": "Problem: [F-CS-10007603] ERR_FIRST_BYTE_TIMEOUT and 256 ROLLCODE impacted Mastercard traffic multiple times\nAction: Engineering team to prioritize June Platform Feature rollout escalations; Product teams to implement targeted fixes for ERE-Ghost issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in Platform Feature rollout affecting GhostRolls.\nOutcome: Identified root causes and failure patterns including Performance and availability constraints.\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Ghost; affected components include GhostRolls.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-104",
+    "month": "6",
+    "outcome": "Problem: {F-CS-11355385} Latency on r45659 (SDN-TYO3)\nAction: Engineering team to prioritize June Persisting in-region load balancing issues due to traffic spikes post SNId rollout escalations; Product teams to implement targeted fixes for ERE-Performance issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 6 June escalations in Persisting in-region load balancing issues due to traffic spikes post SNId rollout affecting AMD/DD/OD, DSA, EIPB.\nOutcome: Identified root causes and failure patterns including Expedia\u2019s migration from ChinaCDN to Tencent and Akamai is acting as an origin cache for Expedia. Tencent's pull is higher than usual for this month.\r.\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 6 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Performance; affected components include AMD/DD/OD, DSA, EIPB.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-118",
+    "month": "6",
+    "outcome": "Problem:  ESSL Roll Spike on 6/4/2025 \nAction: Engineering team to prioritize June Availability and performance issues due to attack against customer domains escalations; Product teams to implement targeted fixes for ERE-Ghost issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 2 June escalations in Availability and performance issues due to attack against customer domains affecting ION/DSA, GhostRolls.\nOutcome: Identified root causes and failure patterns including Customer seemingly under attack which caused SS and likely origin to be overwhelmed.\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 2 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Ghost; affected components include ION/DSA, GhostRolls.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-119",
+    "month": "6",
+    "outcome": "Problem: Playback Errors Linked to Ghost Installs with Stale Metadata [r47534 & r50463]\nAction: Engineering team to prioritize June End users are mapped to machines suspended for installation. escalations; Product teams to implement targeted fixes for ERE-Ghost issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in End users are mapped to machines suspended for installation. affecting dnsp.\nOutcome: Identified root causes and failure patterns including Performance and availability constraints.\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Ghost; affected components include dnsp.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-121",
+    "month": "6",
+    "outcome": "Problem: {F-CS-10050215} - ERR_READ_ERROR|fwdStateFree\u00a0 from multiple regions.\nAction: Engineering team to prioritize June Forward Region Issues causing spike in ERR_READ_ERROR|fwdStateFree escalations; Product teams to implement targeted fixes for ERE-Ghost issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in Forward Region Issues causing spike in ERR_READ_ERROR|fwdStateFree affecting metadata.\nOutcome: Identified root causes and failure patterns including Performance and availability constraints.\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Ghost; affected components include metadata.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-18",
+    "month": "6",
+    "outcome": "Problem: {F-CS-9997935} Add KR and SG regions to Alibaba's zch9 map\nAction: Engineering team to prioritize June Coverage on Edge and TD/SS maps to avoid OOC and performance issues escalations; Product teams to implement targeted fixes for ERE-Performance issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in Coverage on Edge and TD/SS maps to avoid OOC and performance issues affecting TD.\nOutcome: Identified root causes and failure patterns including Customer added SG origins for the hostname , so the previous custom setup became inefficient and stale . Low Asia capacity for zhc9 (custom Alibaba FF.\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Performance; affected components include TD.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-31",
+    "month": "6",
+    "outcome": "Problem: ZEE \u2013 Origin Shield 403 ACCESS_DENIED Errors During FIFA Event Due to Failover-Induced Origin Shield Saturation\nAction: Engineering team to prioritize June Audit ERE Escalations - Incorrect Ticket Routing, Insufficient info, KB usage gaps, Best Practices escalations; Product teams to implement targeted fixes for ERE-Ghost issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 4 June escalations in Audit ERE Escalations - Incorrect Ticket Routing, Insufficient info, KB usage gaps, Best Practices affecting AMD/DD/OD, Brave network (EIP), ECCU.\nOutcome: Identified root causes and failure patterns including Retrying back-up stream on Alternate path for a negative cache hit lead to higher number of FA requests when primary. stream fails - based on the curr.\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 4 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Ghost; affected components include AMD/DD/OD, Brave network (EIP), ECCU.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-35",
+    "month": "6",
+    "outcome": "Problem: Zee- FIFA 2026 - Media event review\nAction: Engineering team to prioritize June Customer Event Review escalations; Product teams to implement targeted fixes for ERE-Event issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in Customer Event Review affecting Core platform.\nOutcome: Identified root causes and failure patterns including Pre-event media setup review for FIFA streaming in India. No active incident was documented; the review focused on validating map selection, hostname .\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Event; affected components include Core platform.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-42",
+    "month": "6",
+    "outcome": "Problem: Performanace degradation for Saudi Telecommunications Company STC\nAction: Engineering team to prioritize June Network capacity issues causing perf degradation escalations; Product teams to implement targeted fixes for ERE-Performance issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in Network capacity issues causing perf degradation affecting DD.\nOutcome: Identified root causes and failure patterns including A shortage of in-country capacity resulted in degraded performance..\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Performance; affected components include DD.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-46",
+    "month": "6",
+    "outcome": "Problem: {F-CS-11355385}  OOC mapping due to lossy PP (172.253.72.141, 172.253.72.140)\nAction: Engineering team to prioritize June Mapping Pingpoint Issues escalations; Product teams to implement targeted fixes for ERE-Performance issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in Mapping Pingpoint Issues affecting mapping:pingpoint.\nOutcome: Identified root causes and failure patterns including Bad PP (lossy) caused out of country mapping impacting the performance ..\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Performance; affected components include mapping:pingpoint.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-47",
+    "month": "6",
+    "outcome": "Problem: Disney VPF Spikes on ASN 3292 \nAction: Engineering team to prioritize June Ghost Rolls Caused by Software Issues escalations; Product teams to implement targeted fixes for ERE-Ghost issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in Ghost Rolls Caused by Software Issues affecting GhostRolls.\nOutcome: Identified root causes and failure patterns including Race condition. Ghostmon will not clear SFLAG 256 until isredirecting.W.txt is removed. On affected machines, isredirecting.W.txt was being created af.\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Ghost; affected components include GhostRolls.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-63",
+    "month": "6",
+    "outcome": "Problem: Drop in RA Load and Spike in 200 READ_TIMEOUT on multiple regions in West Coast\nAction: Engineering team to prioritize June ISP network/configuration issues escalations; Product teams to implement targeted fixes for ERE-Performance issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 1 June escalations in ISP network/configuration issues affecting CW.\nOutcome: Identified root causes and failure patterns including Connectivity/routing issues to the origin to be fixed..\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 1 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Performance; affected components include CW.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  },
+  {
+    "ticket_id": "ERECSO-67",
+    "month": "6",
+    "outcome": "Problem: Sporadic spikes in SSL and FBTs from CTL-BUE2 regions for Disney\nAction: Engineering team to prioritize June Single customer issues related to FSS escalations; Product teams to implement targeted fixes for ERE-Performance issues; Platform to enhance monitoring for escalation patterns.\nExpected Outcome: Rapid resolution of June incidents and architectural improvements to prevent recurrence.",
+    "progressive_work": "Gap Addressed: Systematic analysis of 2 June escalations in Single customer issues related to FSS affecting siteshield:allowlist, AMD/DD/OD.\nOutcome: Identified root causes and failure patterns including Concentration of requests on a single serial at MCH leading to specific machine overloads in a region.\r\nA single serial is getting derived in hashing .\nMissing: Automated detection and preventive controls; enhanced isolation for multi-tenant scenarios.",
+    "patterns_trends": "June Volume Spike: 2 escalations in June (vs. typical monthly average) indicates seasonal or event-driven surge.\nFocus Areas: Predominant request type is ERE-Performance; affected components include siteshield:allowlist, AMD/DD/OD.\nRoot Pattern: Issues suggest capacity constraints, configuration drift, or inadequate safeguards during high-demand periods requiring architectural review."
+  }
 ]
